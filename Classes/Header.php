@@ -1,6 +1,5 @@
 <?php
 class Header {
-	private static $utf = "UTF-8";
 	
 	private static $scriptCollection = array(
 	'<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>', 
@@ -9,15 +8,27 @@ class Header {
 	'');
 	
 	public static function getMetaTags() {
-		return '<meta http-equiv="Content-type" content="text/html; charset=' . self::$utf . '" />' . PHP_EOL . 
-		'<meta http-equiv="Content-Language" content="nl" />' . PHP_EOL . 
-		'<meta name="Language" content="Dutch" />' . PHP_EOL . 
-		'<meta charset="' . self::$utf . '" />'. PHP_EOL . 
-		'<meta name="robots" content="index, follow" />'. PHP_EOL . 
-		'<meta name="revised" content="3 days" />'. PHP_EOL . 
-		'<meta name="revised-after" content="3 days" />'. PHP_EOL . 
-		'<meta name="googlebot" content="noodp" />'. PHP_EOL . 
-		'<meta name="Slurp" content="noydir" />'. PHP_EOL;
+		$ret = "";
+		$ret .= '<meta http-equiv="Content-type" content="text/html; charset=' . MktConfig::$utf . '" />' . PHP_EOL;
+		$ret .= '<meta http-equiv="Content-Language" content="nl" />' . PHP_EOL;
+		$ret .= '<meta name="Language" content="Dutch" />' . PHP_EOL;
+		$ret .= '<meta charset="' . MktConfig::$utf . '" />'. PHP_EOL;
+		if(MktConfig::$robot === true) {
+			$ret .= '<meta name="robots" content="index, follow" />'. PHP_EOL;
+			$ret .= '<meta name="revised" content="3 days" />'. PHP_EOL;
+			$ret .= '<meta name="revised-after" content="3 days" />'. PHP_EOL;
+			$ret .= '<meta name="googlebot" content="noodp" />'. PHP_EOL;
+			$ret .= '<meta name="Slurp" content="noydir" />'. PHP_EOL;
+		}
+		$ret .= '<meta name="description" content="' . MktConfig::$desc . '" />'. PHP_EOL;
+		$builder = "";
+		foreach(MktConfig::$keys as $key){
+			$builder .= $key . ', ';
+		}
+		$builder = rtrim($builder,", ");
+		$ret .= '<meta name="keywords" content="' . $builder . '" />'. PHP_EOL;
+		$ret .= '<title> ' . MktConfig::$title . ' </title>';
+		return $ret;
 	}
 	
 	public static function getDefaultHeader($MktPage) {

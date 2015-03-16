@@ -6,6 +6,7 @@
 	session_start();
 	
 	include("Parsedown.php");
+	include("MktConfig.php");
 	include("Header.php");
 	include("Menu.php");
 	include("MktPage.php");
