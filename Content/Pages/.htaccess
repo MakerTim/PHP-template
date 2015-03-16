@@ -1,0 +1,5 @@
+#No one should have access to this folder anyways
+<Limit GET>
+Order deny,allow
+Deny from all
+</Limit>

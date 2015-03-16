@@ -1,6 +1,6 @@
 <tag>
 
 </tag>
-<content>
+<md>
 	There will be content here!
-</content>
+</md>
