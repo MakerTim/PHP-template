@@ -27,7 +27,9 @@ class Header {
 		}
 		$builder = rtrim($builder,", ");
 		$ret .= '<meta name="keywords" content="' . $builder . '" />'. PHP_EOL;
-		$ret .= '<title> ' . MktConfig::$title . ' </title>';
+		$ret .= '<title> ' . MktConfig::$title . ' </title>'. PHP_EOL;
+		$ret .= '<link rel="shortcut icon" href="Pictures/favicon.ico">'. PHP_EOL;
+		$ret .= '<meta name="author" content="' . MktConfig::$domein . '" />'. PHP_EOL;
 		return $ret;
 	}
 	
