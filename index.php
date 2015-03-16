@@ -5,11 +5,11 @@
 <html>
 	<head>
 <?php echo Header::getMetaTags(); ?>
-		<title>Title of the document</title>
 	</head>
 
 	<body>
-		<?php var_dump($_GET); ?>
-		this is the main page
+		<!-- Starting Content -->
+		Heey Raphael
+		<!-- End Content -->
 	</body>
 </html>
