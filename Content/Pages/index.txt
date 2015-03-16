@@ -1,0 +1,6 @@
+<tag>
+
+</tag>
+<content>
+	There will be content here!
+</content>
