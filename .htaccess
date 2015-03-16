@@ -1,0 +1,18 @@
+#FancyUrl Stuff
+Options +FollowSymLinks
+RewriteEngine On
+
+#Users cant open dir Classes
+RewriteRule (Classes).{0,} index.php
+
+#Users cant open dir ViewCounter
+RewriteRule (ViewCounter).{0,} index.php
+
+#Pictures are not in pictures
+RewriteRule (Pictures)(.{0,}) Content/Pictures$2
+
+#cant open htaccess files
+<files .htaccess>
+order allow,deny
+deny from all
+</files>

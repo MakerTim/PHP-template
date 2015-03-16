@@ -5,7 +5,9 @@
 	
 	session_start();
 	
+	include("Parsedown.php");
 	include("Header.php");
 	include("Menu.php");
+	include("MktPage.php");
 	
 ?>
