@@ -13,9 +13,10 @@ Hierin vind je alle php class bestanden.
 *Het bestand MktConfig in deze map moet worden geconfigureerd.
 
 **Content map:**  
-Hierin vind je 2 mappen: Pages & Pictures  
-**Pages:** 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hierin vind U alle Webpages.   
-**Pictures:**		&nbsp;Hierin vind U alle Pictures.
+Hierin vind je een aantal mappen:  
+**Mainmenu:**		Hierin vind je de menu items.  
+**Pages:** 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hierin vind U alle Webpages.   
+**Pictures:**		&nbsp;&nbsp;&nbsp;&nbsp;Hierin vind U alle Pictures.
 
 **Css map:**  
 Hierin vind je alle css bestanden.
