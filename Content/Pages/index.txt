@@ -1,6 +1,0 @@
-<tag>
-
-</tag>
-<md>
-	There will be content here!
-</md>

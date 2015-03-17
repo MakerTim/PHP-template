@@ -2,14 +2,18 @@
 Options +FollowSymLinks
 RewriteEngine On
 
+#PageHandler
+RewriteRule (Page/)(.{0,}) index.php?page=$2
+RewriteRule (page/)(.{0,}) index.php?page=$2
+
 #Users cant open dir Classes
-RewriteRule (Classes).{0,} index.php
+RewriteRule (Classes).{0,} index.php?page=404
 
 #Users cant open dir ViewCounter
-RewriteRule (Design).{0,} index.php
+RewriteRule (Design).{0,} index.php?page=404
 
 #Users cant open dir Disign
-RewriteRule (ViewCounter).{0,} index.php
+RewriteRule (ViewCounter).{0,} index.php?page=404
 
 #Pictures are not in pictures
 RewriteRule (Pictures)(.{0,}) Content/Pictures$2

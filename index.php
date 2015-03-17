@@ -1,5 +1,6 @@
 <?php
 	include("/Classes/IncludeManager.php");
+	$pageContent = MktPage::getPage();
 ?>
 <!DOCTYPE html>
 <html>
@@ -9,7 +10,10 @@
 
 	<body>
 		<!-- Starting Content -->
-		Heey Raphael
+		<br />
+		<?php var_dump($pageContent); ?> 
+		<br />
+		
 		<!-- End Content -->
 	</body>
 </html>
