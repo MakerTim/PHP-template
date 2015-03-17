@@ -13,7 +13,6 @@ body{
 	clear : none;
 	height : 130px;
 	width : 940px;
-	background-color: red;
 }
 
 .Menu{
@@ -21,7 +20,7 @@ body{
 	clear : none;
 	height : 50px;
 	width : 940px;
-	background-color: black;
+	background-color: yellow;
 }
 
 .SubMenu{
@@ -29,7 +28,7 @@ body{
 	clear : none;
 	height : 600px;
 	width : 200px;
-	background-color: green;
+	background-color: #2AB6C5;
 }
 
 .Content{
@@ -37,6 +36,7 @@ body{
 	clear : none;
 	height : 600px;
 	width : 740px;
+	background-color: #FC7300;
 }
 
 .Footer{
