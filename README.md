@@ -17,13 +17,13 @@ Hierin vind je 2 mappen: Pages & Pictures
 **Pages:** 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hierin vind U alle Webpages.   
 **Pictures:**		&nbsp;Hierin vind U alle Pictures.
 
-**Css map**  
+**Css map:**  
 Hierin vind je alle css bestanden.
 
-**Design map**   
+**Design map:**   
 Hierin vind je een lo-fi van de template & de eisen van het design.
 
-**JavaScript**  
+**JavaScript map:**  
 Hierin vind je alle JavaScript bestanden.
 
 © Copyright 2015 MakerTim
