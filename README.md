@@ -20,4 +20,10 @@ Hierin vind je 2 mappen: Pages & Pictures
 **Css map**  
 Hierin vind je alle css bestanden.
 
+**Design map**   
+Hierin vind je een lo-fi van de template & de eisen van het design.
+
+**JavaScript**  
+Hierin vind je alle JavaScript bestanden.
+
 © Copyright 2015 MakerTim
