@@ -1,7 +1,8 @@
 # Design
 ---
 **Algemeen:**  
-In dit document staan alle eisen die betrekking hebben op het design.
+In dit document staan alle eisen die betrekking hebben op het design.  
+Voor wijzigingen in het design kan je contoact opnemen met Front end developer Stefan Pelgrom.   
 
 **Desktop versie:**  
 Banner: 	&nbsp;&nbsp;&nbsp;Deze staat altijd bovenaan de webpagina.  
