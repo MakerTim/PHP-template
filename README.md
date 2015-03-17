@@ -14,8 +14,9 @@ Hierin vind je alle php class bestanden.
 
 **Content map:**  
 Hierin vind je 2 mappen: Pages & Pictures  
-**Pages:** 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hierin vind U alle Webpages.   
-**Pictures:**		&nbsp;Hierin vind U alle Pictures.
+**Mainmenu:**		Hierin vind je de menu items.  
+**Pages:** 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hierin vind U alle Webpages.   
+**Pictures:**		&nbsp;&nbsp;&nbsp;&nbsp;Hierin vind U alle Pictures.
 
 **Css map:**  
 Hierin vind je alle css bestanden.
