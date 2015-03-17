@@ -11,7 +11,7 @@
 	<body>
 		<!-- Starting Content -->
 		<br />
-		<?php var_dump($pageContent); ?> 
+		<?php echo $pageContent->content; ?> 
 		<br />
 		
 		<!-- End Content -->

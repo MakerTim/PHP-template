@@ -45,7 +45,7 @@
 		
 		public static function getPage() {
 			$page = "index";
-			$type;
+			$type = "page";
 			if(!is_null($_GET) && sizeof($_GET) > 0) {
 				if(array_key_exists("page", $_GET)){
 					$page = $_GET['page'];
