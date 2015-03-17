@@ -5,13 +5,18 @@
 <!DOCTYPE html>
 <html>
 	<head>
-<?php echo Header::getMetaTags(); ?>
+<?php 
+	echo Header::getMetaTags(); 
+	echo Header::getDefaultHeader();
+?>
 	</head>
 
 	<body>
 		<!-- Starting Content -->
 		<br />
-		<?php echo $pageContent->content; ?> 
+		<div class="markdown-body">
+<?php echo $pageContent->content; ?> 
+		<div>
 		<br />
 		
 		<!-- End Content -->

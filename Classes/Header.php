@@ -7,7 +7,9 @@
 		'<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>', 
 		'<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css" />',
 		'<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>',
-		'');
+		'<link href="CSS\style.css" type="text/css" rel="stylesheet" />',
+		'<link href="CSS\markdown.css" type="text/css" rel="stylesheet" />',
+		'<script src="JavaScript\looks.js"></script>');
 		
 		public static function getMetaTags() {
 			$ret = "";
@@ -35,8 +37,12 @@
 			return $ret;
 		}
 		
-		public static function getDefaultHeader($MktPage) {
-			
+		public static function getDefaultHeader() {
+			$ret = '';
+			foreach(Header::$scriptCollection as $script){
+				$ret .= $script . PHP_EOL;
+			}
+			return $ret;
 		}
 	}
 ?>
