@@ -1,59 +1,57 @@
-*{
-padding : 0;
-margin : 0;
-border : 0;
-}
-body{
-background-attachment : fixed;
-background-size : 100% auto;
+Body{
+background-attachment: fixed;
+background-size: 100% auto;
 }
 .pagina{
-display : block;
-width : 960px;
-overflow : auto;
-margin : 30px auto 0 auto;
+display: block;
+width: 960px;
+overflow: auto;
+margin: 30px auto 0 auto;
 }
 .Header{
-background-color : rgba(0, 0, 0, 0.5);
-float : left;
-clear : none;
-height : 130px;
-width : 940px;
+background-color: rgba(0, 0, 0, 0.5);
+float: left;
+clear: none;
+height: 130px;
+width: 940px;
 background-color: red;
 }
 
 .Menu{
-background-color : rgba(0, 0, 0, 0.5);
-float : left;
-clear : none;
-height : 50px;
-width : 940px;
+background-color: rgba(0, 0, 0, 0.5);
+float: left;
+clear: none;
+height: 50px;
+width: 940px;
 background-color: black;
 }
 
 .SubMenu{
-background-color : rgba(0, 0, 0, 0.498039);
-float : left;
-clear : none;
-height : 600px;
-width : 200px;
+background-color: rgba(0, 0, 0, 0.498039);
+float: left;
+clear: none;
+height: 600px;
+width: 200px;
 background-color: green;
 }
+
 .Content{
-background-color : rgba(0, 0, 0, 0.5);
-float : left;
-clear : none;
-height : 600px;
-width : 740px;
+background-color: rgba(0, 0, 0, 0.5);
+float: left;
+clear: none;
+height: 600px;
+width: 740px;
 }
+
 .Footer{
-background-color : rgba(0, 0, 0, 0.5);
-float : left;
-clear : none;
-height : 50px;
-width : 940px;
+background-color: rgba(0, 0, 0, 0.5);
+float: left;
+clear: none;
+height: 50px;
+width: 940px;
 background-color: yellow;
 }
+
 ul {
     list-style-type: none;
     margin: 0;
