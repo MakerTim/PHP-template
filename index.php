@@ -9,8 +9,10 @@
 <?php 
 	echo Header::getMetaTags(); 
 	echo Header::getDefaultHeader();
-	//TODO script menu
 ?>
+	<script>
+		
+	</script>
 	</head>
 
 	<body>
@@ -18,10 +20,11 @@
 			<div class="Header">
 				<img src="Pictures\header.jpg" />
 			</div>
+			
 			<!-- Starting Main Menu-->
 			<div class="Menu">
 				<?php 
-					$menu->PrintMenu();
+					echo $menu->PrintMenu();
 				?>
 			</div>
 			<!-- End Main Menu -->

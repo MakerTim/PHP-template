@@ -28,13 +28,14 @@
 		}
 		
 		public function printMenu() {
-			echo PHP_EOL . '<ul>' . PHP_EOL;
+			$ret = PHP_EOL . '<ul>' . PHP_EOL;
 			foreach($this->items as $menuEntry) {
-				echo '<li>';
-				echo '<a href="' . $menuEntry->href . '">' . $menuEntry->name . '</a>';
-				echo '</li>' . PHP_EOL;
+				$ret .= '<li>';
+				$ret .= '<a href="' . $menuEntry->href . '">' . $menuEntry->name . '</a>';
+				$ret .= '</li>' . PHP_EOL;
 			}
-			echo '</ul>' . PHP_EOL;
+			$ret .= '</ul>' . PHP_EOL;
+			return $ret;
 		}
 		
 		public static function getMainMenu($MktPage){

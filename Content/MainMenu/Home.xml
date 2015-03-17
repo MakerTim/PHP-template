@@ -3,4 +3,5 @@
 	<Alt>Naar de homepage</Alt>
 	<Href>./</Href>
 	<Priority>100</Priority>
+	<Sub>false</Sub>
 </MenuItem>
