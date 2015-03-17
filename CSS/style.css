@@ -22,6 +22,23 @@
 	margin-bottom: 10px;
 }
 
+.Menu ul {
+	list-style-type: none;
+}
+
+.Menu ul li {
+	display: inline;
+	margin: 0;
+}
+
+.Menu ul li a {
+	padding: 15px;
+}
+
+.Menu ul li a:hover {
+	background-color: #ffffff;
+}
+
 .SubMenu{
 	float : left;
 	clear : none;
