@@ -1,4 +1,4 @@
-# PHP-template
+# Readme
 ---
 **Algemeen:**  
 Deze template is opgesteld voor commercieel gebruik.  
