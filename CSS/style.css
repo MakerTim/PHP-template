@@ -1,13 +1,10 @@
-body{
-	background-attachment : fixed;
-	background-size : 100% auto;
-}
-.pagina{
+.Pagina{
 	display : block;
 	width : 960px;
 	overflow : auto;
 	margin : 20px auto 0 auto;
 }
+
 .Header{
 	float : left;
 	clear : none;
