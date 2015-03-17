@@ -6,6 +6,9 @@ RewriteEngine On
 RewriteRule (Classes).{0,} index.php
 
 #Users cant open dir ViewCounter
+RewriteRule (Design).{0,} index.php
+
+#Users cant open dir Disign
 RewriteRule (ViewCounter).{0,} index.php
 
 #Pictures are not in pictures
