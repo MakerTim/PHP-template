@@ -6,13 +6,14 @@ body{
 	display : block;
 	width : 960px;
 	overflow : auto;
-	margin : 30px auto 0 auto;
+	margin : 20px auto 0 auto;
 }
 .Header{
 	float : left;
 	clear : none;
 	height : 130px;
 	width : 940px;
+	margin-bottom: 10px;
 }
 
 .Menu{
@@ -21,6 +22,7 @@ body{
 	height : 50px;
 	width : 940px;
 	background-color: yellow;
+	margin-bottom: 10px;
 }
 
 .SubMenu{
@@ -29,13 +31,14 @@ body{
 	height : 600px;
 	width : 200px;
 	background-color: #2AB6C5;
+	margin-right: 10px;
 }
 
 .Content{
 	float : left;
 	clear : none;
 	height : 600px;
-	width : 740px;
+	width : 730px;
 	background-color: #FC7300;
 }
 
@@ -45,6 +48,8 @@ body{
 	height : 50px;
 	width : 940px;
 	background-color: yellow;
+	margin-top: 10px;
+	margin-bottom: 5px;
 }
 
 ul {
