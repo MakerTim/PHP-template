@@ -5,28 +5,14 @@
 		<SubMenu>false</SubMenu>
 	</Menu>
 	<Md>
-# Readme
----
-**Algemeen:**  
-Deze template is opgesteld voor commercieel gebruik.  
-Deze template is ontwikkeld voor uitsluitend gebruik door [Vakantiestunt.nl](http://www.vakantiestunt.nl/).
+		# Index
+		---
+		**Welkom**  
+		Deze website is gemaakt in samenwerking met [Vakantiestunt.nl](http://www.vakantiestunt.nl/).
 
-**Ontwikkelaars**  
-Front end developer:	&nbsp;Stefan Pelgrom.  
-Back end developer:		&nbsp;&nbsp;Tim Biesenbeek.  
+		Op onze website kan je vakantie boeken maar ook vluchten boeken en auto's huren.   
+		Neem gerust een kijkje en wensen je nog een fijne dag.
 
-**Classes map:**  
-Hierin vind je alle php class bestanden.  
-*Het bestand MktConfig in deze map moet worden geconfigureerd.
-
-**Content map:**  
-Hierin vind je 2 mappen: Pages & Pictures  
-**Pages:** 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hierin vind U alle Webpages.   
-**Pictures:**		&nbsp;Hierin vind U alle Pictures.
-
-**Css map**  
-Hierin vind je alle css bestanden.
-
-© Copyright 2015 MakerTim
+		© Copyright 2015 MakerTim
 	</Md>
 </Page>
