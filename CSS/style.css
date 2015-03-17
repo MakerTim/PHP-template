@@ -9,7 +9,6 @@ body{
 	margin : 30px auto 0 auto;
 }
 .Header{
-	background-color : rgba(0, 0, 0, 0.5);
 	float : left;
 	clear : none;
 	height : 130px;
@@ -18,7 +17,6 @@ body{
 }
 
 .Menu{
-	background-color : rgba(0, 0, 0, 0.5);
 	float : left;
 	clear : none;
 	height : 50px;
@@ -27,7 +25,6 @@ body{
 }
 
 .SubMenu{
-	background-color : rgba(0, 0, 0, 0.498039);
 	float : left;
 	clear : none;
 	height : 600px;
@@ -36,7 +33,6 @@ body{
 }
 
 .Content{
-	background-color : rgba(0, 0, 0, 0.5);
 	float : left;
 	clear : none;
 	height : 600px;
@@ -44,7 +40,6 @@ body{
 }
 
 .Footer{
-	background-color : rgba(0, 0, 0, 0.5);
 	float : left;
 	clear : none;
 	height : 50px;
