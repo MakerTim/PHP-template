@@ -9,13 +9,13 @@ RewriteRule (Pages/)(.{0,})(.+) index.php?page=$2
 RewriteRule (pages/)(.{0,})(.+) index.php?page=$2
 
 #Users cant open dir Classes
-RewriteRule (Classes).{0,} index.php?page=404
+RewriteRule (Classes)(.{0,}) index.php?404=$2
 #Users cant open dir ViewCounter
-RewriteRule (Design).{0,} index.php?page=404
+RewriteRule (Design)(.{0,}) index.php?404=$2
 #Users cant open dir Disign
-RewriteRule (ViewCounter).{0,} index.php?page=404
+RewriteRule (ViewCounter)(.{0,}) index.php?404=$2
 #404 to index
-ErrorDocument 404 /GIT/PHP-Template/index.php?page=404
+ErrorDocument 404 /GIT/PHP-Template/index.php?404=Not_Found
 
 #Pictures are not in pictures
 RewriteRule (Pictures)(.{0,}) Content/Pictures$2

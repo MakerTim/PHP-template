@@ -51,9 +51,15 @@
 					$page = $_GET['page'];
 					$type = "page";
 				}
+				if(array_key_exists("404", $_GET)){
+					$page = $_GET['404'];
+					$type = "404";
+				}
 			}
-			if(empty($page) || empty($type)){
-				header("Location: ./Page/index/");
+			if($type == "404") {
+				header("Location: " . MktUtils::getRoot() . "/Page/404/");
+			} else if(empty($page) || empty($type)){
+				header("Location: " . MktUtils::getRoot() . "/Page/index/");
 				exit;
 			}
 			return new MktPage($type, $page);
