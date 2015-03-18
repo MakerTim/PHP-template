@@ -9,10 +9,11 @@
 		'<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>',
 		'<link href="CSS\style.css" type="text/css" rel="stylesheet" />',
 		'<link href="CSS\markdown.css" type="text/css" rel="stylesheet" />',
+		'<link href="CSS\SubMenuStyle.css" type="text/css" rel="stylesheet" />',
 		'<script src="JavaScript\looks.js"></script>');
 		
 		public static function getMetaTags() {
-			$ret = "";
+			$ret = PHP_EOL;
 			$ret .= '<meta http-equiv="Content-type" content="text/html; charset=' . MktConfig::$utf . '" />' . PHP_EOL;
 			$ret .= '<meta http-equiv="Content-Language" content="nl" />' . PHP_EOL;
 			$ret .= '<meta name="Language" content="Dutch" />' . PHP_EOL;
@@ -38,7 +39,7 @@
 		}
 		
 		public static function getDefaultHeader() {
-			$ret = '';
+			$ret = PHP_EOL;
 			foreach(Header::$scriptCollection as $script) {
 				$ret .= $script . PHP_EOL;
 			}
@@ -46,7 +47,8 @@
 		}
 		
 		public static function phpToJS($MktPage, $MktMenu) {
-			$ret = "<script>" . PHP_EOL;
+			$ret = PHP_EOL;
+			$ret .= "<script>" . PHP_EOL;
 			$ret .= "PHP = {};" . PHP_EOL;
 			
 			$ret .= "PHP.mainmenu = {};" . PHP_EOL;
@@ -71,6 +73,12 @@
 			$ret .= "PHP.page.hasSubMenu = " . json_encode($MktPage->hasSubMenu) . ";" . PHP_EOL;
 			
 			$ret .= "</script>" . PHP_EOL;
+			return $ret;
+		}
+		
+		public static function endScripts() {
+			$ret = PHP_EOL;
+			$ret .= '<script src="JavaScript\animations.js"></script>' . PHP_EOL;
 			return $ret;
 		}
 	}

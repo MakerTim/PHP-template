@@ -30,7 +30,7 @@
 		public function printMenu() {
 			$ret = PHP_EOL . '<ul>' . PHP_EOL;
 			foreach($this->items as $menuEntry) {
-				$ret .= '<li>';
+				$ret .= '<li id="Menu_' . $menuEntry->name . '">';
 				$ret .= '<a href="' . $menuEntry->href . '">' . $menuEntry->name . '</a>';
 				$ret .= '</li>' . PHP_EOL;
 			}
@@ -49,6 +49,7 @@
 	
 	class MenuItem {
 		
+		var $uuid;
 		var $name;
 		var $alt;
 		var $href;
@@ -69,6 +70,7 @@
 			}
 			libxml_clear_errors();
 			if(!is_null($xmlError) && sizeof($xmlError) == 0) {
+				$this->uuid = $this->uuid[0];
 				$this->name = (string)$xml->Name;
 				$this->alt = (string)$xml->Alt;
 				$this->href = (string)$xml->Href;
