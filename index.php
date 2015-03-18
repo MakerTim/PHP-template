@@ -40,7 +40,7 @@
 				if($pageContent->hasSideBar == "true") {
 					echo PHP_EOL .
 					'<div class="sidebar">' . PHP_EOL .
-					SideBar::createSidebar()->PrintBar();
+					SideBar::createSidebar()->PrintBar() .
 					'</div>';
 				}
 			?>
