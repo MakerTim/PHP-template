@@ -39,42 +39,13 @@
 	background-color: #ffffff;
 }
 
-.SubMenu{
-	float : left;
-	clear : none;
-	height : 600px;
-	width : 200px;
-	background-color: #2AB6C5;
-	margin-right: 10px;
-}
-
-.SubMenu ul {
-	list-style-type: none;
-	width : 140px;
-}
-.SubMenu ul li {
-	margin: 0;
-	width : 140px;
-}
-.SubMenu ul li a {
-	  display: block;
-	  padding: 15px;
-	  background-color: #44699C;
-	  width: 140px;
-	  margin-left: -25px;
-	  margin-top: 0px;
-}
-.SubMenu ul li a:hover {
-	background-color: #5F94DC;
-	width : 140px;
-}
-
 .Content{
 	float : left;
 	clear : none;
 	height : 600px;
-	width : 730px;
+	width : 710px;
 	background-color: #FC7300;
+	margin-left: 10px;
 }
 
 .Footer{
