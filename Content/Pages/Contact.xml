@@ -2,7 +2,7 @@
 	<Menu>
 		<Index>Contact</Index>
 		<Banner>true</Banner>
-		<SubMenu>false</SubMenu>
+		<SideBar>true</SideBar>
 	</Menu>
 	<Md>
 **Welkom**  

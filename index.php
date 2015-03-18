@@ -35,8 +35,16 @@
 			</div>
 			<!-- End Main Menu -->
 			
-			<!-- Starting Side Menu-->
-			<div class='cssmenu'>
+			<!-- Starting Side Bar-->
+			<?php
+				if($pageContent->hasSideBar == "true") {
+					echo PHP_EOL .
+					'<div class="sidebar">' . PHP_EOL .
+					SideBar::createSidebar()->PrintBar();
+					'</div>';
+				}
+			?>
+			<!--div class='sidebar'>
 				<ul>
 				   <li><a href='#'>Home</a></li>
 				   <li class='has-sub'><a href='#'>Item 1 </a>
@@ -57,8 +65,8 @@
 				   </li>
 				   <li><a href='#'>Item 3</a></li>
 				</ul>
-			</div>
-			<!-- End Side Menu-->
+			</div-->
+			<!-- End Side Bar-->
 			
 			<!-- Starting Content -->
 			<div class="Content Rounded">

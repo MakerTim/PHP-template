@@ -55,7 +55,6 @@
 		var $href;
 		var $prio;
 		var $errorMessage;
-		var $sub;
 		
 		public function __construct($FileLocation) {
 			$errorMessage = "";
@@ -75,8 +74,37 @@
 				$this->alt = (string)$xml->Alt;
 				$this->href = MktUtils::rootString((string)$xml->Href);
 				$this->prio = (string)$xml->Priority;
-				$this->sub = (string)$xml->Sub;
 			}
 		}	
+	}
+	
+	class SideBar {
+		
+		var $items;
+		
+		public function __construct() {
+			$this->items = array();
+		}
+		
+		private function loadSidebar() {
+			
+		}
+		
+		public function PrintBar() {
+			return "Hoi";
+		}
+		
+		public static function createSidebar() {
+			return new SideBar();
+		}
+	}
+	
+	class SideBarItem {
+		
+		var $name;
+		var $href;
+		var $hasSub;
+		var $isOpen;
+		
 	}
 ?>

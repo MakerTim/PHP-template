@@ -5,9 +5,9 @@ $(function() {
 });
 
 function registerSideMenuEvents(){
-	$('.cssmenu li.active').children('ul').show();
+	$('.sidebar li.active').children('ul').show();
 
-	$('.cssmenu li.has-sub>a').on('click', function(){
+	$('.sidebar li.has-sub>a').on('click', function(){
 		$(this).removeAttr('href');
 		var element = $(this).parent('li');
 		if (element.hasClass('open')) {

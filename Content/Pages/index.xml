@@ -2,7 +2,7 @@
 	<Menu>
 		<Index>Home</Index>
 		<Banner>true</Banner>
-		<SubMenu>false</SubMenu>
+		<SideBar>false</SideBar>
 	</Menu>
 	<Md>
 # Index
