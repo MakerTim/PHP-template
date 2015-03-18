@@ -33,10 +33,10 @@
 			</div>
 			<!-- End Main Menu -->
 			
-			<div id='cssmenu'>
+			<div class='cssmenu'>
 				<ul>
 				   <li><a href='#'>Home</a></li>
-				   <li class='active has-sub'><a href='#'>Item 1 </a>
+				   <li class='has-sub'><a href='#'>Item 1 </a>
 					  <ul>
 						 <li><a href='#'>Product 1</a>
 						 </li>
@@ -44,7 +44,7 @@
 						 </li>
 					  </ul>
 				   </li>
-				   <li class='active has-sub'><a href='#'>Item 2</a>
+				   <li class='has-sub'><a href='#'>Item 2</a>
 					  <ul>
 						 <li><a href='#'>Product 1</a>
 						 </li>

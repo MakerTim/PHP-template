@@ -1,8 +1,13 @@
-(function($){
-$(document).ready(function(){
+$(function() {
+	//When document is ready with loading
+	
+	registerSideMenuEvents();
+});
 
-$('#cssmenu li.active').addClass('open').children('ul').show();
-	$('#cssmenu li.has-sub>a').on('click', function(){
+function registerSideMenuEvents(){
+	$('.cssmenu li.active').children('ul').show();
+
+	$('.cssmenu li.has-sub>a').on('click', function(){
 		$(this).removeAttr('href');
 		var element = $(this).parent('li');
 		if (element.hasClass('open')) {
@@ -19,6 +24,4 @@ $('#cssmenu li.active').addClass('open').children('ul').show();
 			element.siblings('li').find('ul').slideUp(200);
 		}
 	});
-
-});
-})(jQuery);
+}
