@@ -28,7 +28,7 @@
 			<!-- End Banner -->
 			
 			<!-- Starting Main Menu-->
-			<div class="Menu">
+			<div class="Menu Rounded">
 				<?php 
 					echo $menu->PrintMenu();
 				?>
@@ -61,7 +61,7 @@
 			<!-- End Side Menu-->
 			
 			<!-- Starting Content -->
-			<div class="Content">
+			<div class="Content Rounded">
 				<br />
 				<div class="markdown-body">
 					<?php 
@@ -74,7 +74,7 @@
 			<!-- End Content -->
 			
 			<!-- Starting Footer -->
-			<div class="Footer">
+			<div class="Footer Rounded">
 				<div style="margin-top:20px; text-align:center;">
 					<a href="http://www.aanbiedingcyprus.nl/">www.aanbiedingcyprus.nl</a> 2015 All rights reserved. Hosted by <a href="http://www.xmlhosting.nl/">XMLHosting.nl</a> U kunt uw vakantie boeken bij:VakantieStunt & Duikreizen
 				</div>
