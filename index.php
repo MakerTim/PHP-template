@@ -8,18 +8,21 @@
 	<head>
 <?php 
 	echo Header::getMetaTags(); 
+	echo Header::phpToJS($pageContent, $menu);
 	echo Header::getDefaultHeader();
 ?>
-	<script>
-		
-	</script>
 	</head>
 
 	<body>
 		<div class="Pagina">
-			<div class="Header">
-				<img src="Pictures\header.jpg" />
-			</div>
+			<?php
+				if($pageContent->hasBanner == "true") {
+					echo PHP_EOL .
+					'<div class="Header">' . PHP_EOL . 
+					'<img src="Pictures\header.jpg" />' . PHP_EOL .
+					'</div>' . PHP_EOL;
+				}
+			?>
 			
 			<!-- Starting Main Menu-->
 			<div class="Menu">

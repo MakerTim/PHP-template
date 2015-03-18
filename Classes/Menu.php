@@ -54,6 +54,7 @@
 		var $href;
 		var $prio;
 		var $errorMessage;
+		var $sub;
 		
 		public function __construct($FileLocation) {
 			$errorMessage = "";
@@ -72,6 +73,7 @@
 				$this->alt = (string)$xml->Alt;
 				$this->href = (string)$xml->Href;
 				$this->prio = (string)$xml->Priority;
+				$this->sub = (string)$xml->Sub;
 			}
 		}	
 	}

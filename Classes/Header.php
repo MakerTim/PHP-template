@@ -26,7 +26,7 @@
 			}
 			$ret .= '<meta name="description" content="' . MktConfig::$desc . '" />'. PHP_EOL;
 			$builder = "";
-			foreach(MktConfig::$keys as $key){
+			foreach(MktConfig::$keys as $key) {
 				$builder .= $key . ', ';
 			}
 			$builder = rtrim($builder,", ");
@@ -39,9 +39,38 @@
 		
 		public static function getDefaultHeader() {
 			$ret = '';
-			foreach(Header::$scriptCollection as $script){
+			foreach(Header::$scriptCollection as $script) {
 				$ret .= $script . PHP_EOL;
 			}
+			return $ret;
+		}
+		
+		public static function phpToJS($MktPage, $MktMenu) {
+			$ret = "<script>" . PHP_EOL;
+			$ret .= "PHP = {};" . PHP_EOL;
+			
+			$ret .= "PHP.mainmenu = {};" . PHP_EOL;
+			$ret .= "PHP.mainmenu.count = " . $MktMenu->getAmount() . ";" . PHP_EOL;
+			$ret .= "PHP.mainmenu.items = {};" . PHP_EOL;
+			for($i=0; $i<$MktMenu->getAmount();$i++) {
+				$ret .= "PHP.mainmenu.items[$i] = {}" . PHP_EOL;
+				$ret .= "PHP.mainmenu.items[$i].name = " . json_encode($MktMenu->items[$i]->name) . ";" . PHP_EOL;
+				$ret .= "PHP.mainmenu.items[$i].alt = " . json_encode($MktMenu->items[$i]->alt) . ";" . PHP_EOL;
+				$ret .= "PHP.mainmenu.items[$i].href = " . json_encode($MktMenu->items[$i]->href) . ";" . PHP_EOL;
+				$ret .= "PHP.mainmenu.items[$i].prio = " . json_encode($MktMenu->items[$i]->prio) . ";" . PHP_EOL;
+				$ret .= "PHP.mainmenu.items[$i].error = " . json_encode($MktMenu->items[$i]->errorMessage) . ";" . PHP_EOL;
+				$ret .= "PHP.mainmenu.items[$i].sub = " . json_encode($MktMenu->items[$i]->sub) . ";" . PHP_EOL;
+			}
+			
+			$ret .= "PHP.page = {};" . PHP_EOL;
+			$ret .= "PHP.page.type = " . json_encode($MktPage->page) . ";" . PHP_EOL;
+			$ret .= "PHP.page.content = " . json_encode($MktPage->content) . ";" . PHP_EOL;
+			$ret .= "PHP.page.error = " . json_encode($MktPage->errorMessage) . ";" . PHP_EOL;
+			$ret .= "PHP.page.menuEntry = " . json_encode($MktPage->menuEntry) . ";" . PHP_EOL;
+			$ret .= "PHP.page.hasBanner = " . json_encode($MktPage->hasBanner) . ";" . PHP_EOL;
+			$ret .= "PHP.page.hasSubMenu = " . json_encode($MktPage->hasSubMenu) . ";" . PHP_EOL;
+			
+			$ret .= "</script>" . PHP_EOL;
 			return $ret;
 		}
 	}
