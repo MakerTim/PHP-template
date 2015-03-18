@@ -7,10 +7,10 @@
 		'<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>', 
 		'<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css" />',
 		'<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>',
-		'<link href="CSS\style.css" type="text/css" rel="stylesheet" />',
-		'<link href="CSS\markdown.css" type="text/css" rel="stylesheet" />',
-		'<link href="CSS\SubMenuStyle.css" type="text/css" rel="stylesheet" />',
-		'<script src="JavaScript\looks.js"></script>');
+		'<link href="%root%/CSS/style.css" type="text/css" rel="stylesheet" />',
+		'<link href="%root%/CSS/markdown.css" type="text/css" rel="stylesheet" />',
+		'<link href="%root%/CSS/SubMenuStyle.css" type="text/css" rel="stylesheet" />',
+		'<script src="%root%/JavaScript/looks.js"></script>');
 		
 		public static function getMetaTags() {
 			$ret = PHP_EOL;
@@ -43,7 +43,7 @@
 			foreach(Header::$scriptCollection as $script) {
 				$ret .= $script . PHP_EOL;
 			}
-			return $ret;
+			return Header::returnString($ret);
 		}
 		
 		public static function phpToJS($MktPage, $MktMenu) {
@@ -78,8 +78,12 @@
 		
 		public static function endScripts() {
 			$ret = PHP_EOL;
-			$ret .= '<script src="JavaScript\animations.js"></script>' . PHP_EOL;
-			return $ret;
+			$ret .= '<script src="%root%/JavaScript/animations.js"></script>' . PHP_EOL;
+			return Header::returnString($ret);
+		}
+		
+		private static function returnString($ret){
+			return str_replace("%root%", MktUtils::getRoot(), $ret);
 		}
 	}
 ?>

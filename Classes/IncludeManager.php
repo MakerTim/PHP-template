@@ -8,6 +8,7 @@
 	
 	include("Parsedown.php");
 	$md =  new Parsedown();
+	include("MktUtils.php");
 	include("MktConfig.php");
 	include("Header.php");
 	include("Menu.php");

@@ -44,13 +44,17 @@
 		}
 		
 		public static function getPage() {
-			$page = "index";
-			$type = "page";
+			$page = "";
+			$type = "";
 			if(!is_null($_GET) && sizeof($_GET) > 0) {
 				if(array_key_exists("page", $_GET)){
 					$page = $_GET['page'];
 					$type = "page";
 				}
+			}
+			if(empty($page) || empty($type)){
+				header("Location: ./Page/index/");
+				exit;
 			}
 			return new MktPage($type, $page);
 		}

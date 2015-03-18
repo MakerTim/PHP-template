@@ -19,6 +19,5 @@
 				"Nederland", "Localhost", "Template", 
 				"MakerTim", "CMS", "Content", 
 				"Beste Link 2015", "Responsive");
-		
 	}
 ?>
