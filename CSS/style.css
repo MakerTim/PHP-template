@@ -29,10 +29,10 @@
 .Menu ul li {
 	display: inline;
 	margin: 0;
+	padding: 15px;
 }
 
 .Menu ul li a {
-	padding: 15px;
 }
 
 .Menu ul li a:hover {
