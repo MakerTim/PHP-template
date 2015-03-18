@@ -2,9 +2,9 @@
 	<Menu>
 		<Index>Home</Index>
 		<Banner>true</Banner>
-		<SubMenu>false</SubMenu>
+		<SideBar>false</SideBar>
 	</Menu>
 	<Md>
-		404 no file found!
+	404 no file found!
 	</Md>
 </Page>

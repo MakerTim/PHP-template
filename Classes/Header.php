@@ -61,7 +61,6 @@
 				$ret .= "PHP.mainmenu.items[$i].href = " . json_encode($MktMenu->items[$i]->href) . ";" . PHP_EOL;
 				$ret .= "PHP.mainmenu.items[$i].prio = " . json_encode($MktMenu->items[$i]->prio) . ";" . PHP_EOL;
 				$ret .= "PHP.mainmenu.items[$i].error = " . json_encode($MktMenu->items[$i]->errorMessage) . ";" . PHP_EOL;
-				$ret .= "PHP.mainmenu.items[$i].sub = " . json_encode($MktMenu->items[$i]->sub) . ";" . PHP_EOL;
 			}
 			
 			$ret .= "PHP.page = {};" . PHP_EOL;
@@ -70,7 +69,7 @@
 			$ret .= "PHP.page.error = " . json_encode($MktPage->errorMessage) . ";" . PHP_EOL;
 			$ret .= "PHP.page.menuEntry = " . json_encode($MktPage->menuEntry) . ";" . PHP_EOL;
 			$ret .= "PHP.page.hasBanner = " . json_encode($MktPage->hasBanner) . ";" . PHP_EOL;
-			$ret .= "PHP.page.hasSubMenu = " . json_encode($MktPage->hasSubMenu) . ";" . PHP_EOL;
+			$ret .= "PHP.page.hasSideBar = " . json_encode($MktPage->hasSideBar) . ";" . PHP_EOL;
 			
 			$ret .= "</script>" . PHP_EOL;
 			return $ret;
