@@ -73,7 +73,7 @@
 				$this->uuid = $this->uuid[0];
 				$this->name = (string)$xml->Name;
 				$this->alt = (string)$xml->Alt;
-				$this->href = (string)$xml->Href;
+				$this->href = MktUtils::rootString((string)$xml->Href);
 				$this->prio = (string)$xml->Priority;
 				$this->sub = (string)$xml->Sub;
 			}

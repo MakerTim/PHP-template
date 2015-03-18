@@ -10,6 +10,8 @@
 		
 		// Domein van de site, exclusief http
 		public static $domein = "localhost";
+		// Dir waar template in zit
+		public static $rootDir = "/GIT/PHP-Template/";
 		// De title van de site
 		public static $title = "PHP Template No Config";
 		// Description van de site, Meestal zichtbaar in zoekmachines

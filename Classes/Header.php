@@ -43,7 +43,7 @@
 			foreach(Header::$scriptCollection as $script) {
 				$ret .= $script . PHP_EOL;
 			}
-			return Header::returnString($ret);
+			return MktUtils::rootString($ret);
 		}
 		
 		public static function phpToJS($MktPage, $MktMenu) {
@@ -79,11 +79,7 @@
 		public static function endScripts() {
 			$ret = PHP_EOL;
 			$ret .= '<script src="%root%/JavaScript/animations.js"></script>' . PHP_EOL;
-			return Header::returnString($ret);
-		}
-		
-		private static function returnString($ret){
-			return str_replace("%root%", MktUtils::getRoot(), $ret);
+			return MktUtils::rootString($ret);
 		}
 	}
 ?>
