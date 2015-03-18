@@ -57,9 +57,18 @@
 	clear : none;
 	height : 50px;
 	width : 940px;
-	background-color: #C0C0C0;
+	background-color: #DEDEDE;
 	margin-top: 10px;
 	margin-bottom: 5px;
+}
+.Footer a{ 
+    color: #E34D2C;
+	text-decoration: none;
+}
+
+.Footer a:active { 
+    color: #E34D2C;
+	text-decoration: none;
 }
 
 .Rounded{
