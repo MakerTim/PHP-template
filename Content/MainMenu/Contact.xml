@@ -1,0 +1,7 @@
+<MenuItem>
+	<Name>Contact</Name>
+	<Alt>Naar de contactpage</Alt>
+	<Href>%root%/Page/Steenfan/</Href>
+	<Priority>100</Priority>
+	<Sub>false</Sub>
+</MenuItem>
