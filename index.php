@@ -69,8 +69,10 @@
 			</div>
 			<!-- End Content -->
 			
-			<div class="Footer" style="margin-top:20px; text-align:center;">
-				www.aanbiedingcyprus.nl 2015 All rights reserved. Hosted by XMLHosting.nl U kunt uw vakantie boeken bij: VakantieStunt & Duikreizen
+			<div class="Footer">
+				<div style="margin-top:20px; text-align:center;">
+					www.aanbiedingcyprus.nl 2015 All rights reserved. Hosted by XMLHosting.nl U kunt uw vakantie boeken bij: VakantieStunt & Duikreizen
+				</div>	
 			</div>
 		</div>
 	</body>
