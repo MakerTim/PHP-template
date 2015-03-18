@@ -44,28 +44,6 @@
 					'</div>';
 				}
 			?>
-			<!--div class='sidebar'>
-				<ul>
-				   <li><a href='#'>Home</a></li>
-				   <li class='has-sub'><a href='#'>Item 1 </a>
-					  <ul>
-						 <li><a href='#'>Product 1</a>
-						 </li>
-						 <li><a href='#'>Product 2</a>
-						 </li>
-					  </ul>
-				   </li>
-				   <li class='has-sub'><a href='#'>Item 2</a>
-					  <ul>
-						 <li><a href='#'>Product 1</a>
-						 </li>
-						 <li><a href='#'>Product 2</a>
-						 </li>
-					  </ul>
-				   </li>
-				   <li><a href='#'>Item 3</a></li>
-				</ul>
-			</div-->
 			<!-- End Side Bar-->
 			
 			<!-- Starting Content -->

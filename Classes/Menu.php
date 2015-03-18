@@ -80,18 +80,52 @@
 	
 	class SideBar {
 		
-		var $items;
+		var $options;
 		
 		public function __construct() {
-			$this->items = array();
+			$this->options = array();
+			$this->loadSidebar();
 		}
 		
 		private function loadSidebar() {
-			
+			$errorMessage = "";
+			libxml_use_internal_errors(true);
+			$xml = file_get_contents("./Content/SideBar/Menu.xml");
+			$xml = str_replace("&", "\\quot\\", $xml);
+			$xml = simplexml_load_string($xml);
+			$xmlError = libxml_get_errors();
+			foreach($xmlError as $error) {
+				$this->errorMessage .= '<div class="error"><b>XML ERROR:</b> <br /> File: ' . $this->page . 
+							'.xml <br /> &nbsp;&nbsp;at line ' . $error->line . ' (' . $error->message . ')<br /></div>';
+			}
+			libxml_clear_errors();
+			if(!is_null($xmlError) && sizeof($xmlError) == 0) {
+				foreach($xml->Option as $option) {
+					array_push($this->options, new SideBarItem($option));
+				}
+			}
 		}
 		
 		public function PrintBar() {
-			return "Hoi";
+			$ret = '<ul>' . PHP_EOL;
+			foreach($this->options as $option) {
+				$hasSub = $option->hasSub == "true";
+				$isOpen = $option->isOpen == "true";
+				$ret .= '<li '. ($hasSub? ($isOpen? 'class="active has-sub open"' : 'class="has-sub"') : '') . '>' . PHP_EOL .
+				'<a href=' . $option->href . '>' . $option->name . '</a>' . PHP_EOL;
+				if($hasSub) {
+					$ret .= '<ul>';
+					foreach($option->subs as $sub) {
+						$ret .= '<li>';
+						$ret .= '<a href="' . $sub->href . '">' . $sub->name . '</a>';
+						$ret .= '</li>';
+					}
+					$ret .= '</ul>';
+				}
+				$ret .= '</li>' . PHP_EOL;
+			}
+			$ret .= '</ul>';
+			return $ret;
 		}
 		
 		public static function createSidebar() {
@@ -105,6 +139,30 @@
 		var $href;
 		var $hasSub;
 		var $isOpen;
+		var $subs;
 		
+		public function __construct($xmlOption) {
+			$this->name = $xmlOption->Name;
+			$this->href = $xmlOption->Href;
+			$this->hasSub = $xmlOption->HasSub;
+			if($this->hasSub == "true") {
+				$this->isOpen = $xmlOption->IsOpen;
+				$this->subs = array();
+				foreach($xmlOption->Sub as $sub){
+					array_push($this->subs, new SideBarSubItem($sub));
+				}
+			}
+		}
+	}
+	
+	class SideBarSubItem {
+		
+		var $name;
+		var $href;
+		
+		public function __construct($xmlSub) {
+			$this->name = $xmlSub->Name;
+			$this->href = $xmlSub->Href;
+		}
 	}
 ?>
