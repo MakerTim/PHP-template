@@ -22,7 +22,6 @@
 					echo PHP_EOL .
 					'<div class="Header">' . PHP_EOL . 
 					'<canvas id="Banner"> </canvas>' .
-					'<img src="Pictures\header.jpg" />' . PHP_EOL .
 					'</div>' . PHP_EOL;
 				}
 			?>
@@ -49,14 +48,11 @@
 			
 			<!-- Starting Content -->
 			<div class="Content Rounded">
-				<br />
 				<div class="markdown-body">
 					<?php 
-						echo $pageContent->content; 
 						echo $pageContent->errorMessage;
-					?> 
-				</div>
-				<br />
+						echo $pageContent->content; 
+					?>
 			</div>
 			<!-- End Content -->
 			
