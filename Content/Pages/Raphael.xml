@@ -1,0 +1,12 @@
+<Page>
+	<Menu>
+		<Index>Raphael</Index>
+		<Banner>true</Banner>
+		<SideBar>false</SideBar>
+	</Menu>
+	<Md>
+# Raphael
+---
+you know what to do
+	</Md>
+</Page>
