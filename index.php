@@ -53,6 +53,7 @@
 						echo $pageContent->errorMessage;
 						echo $pageContent->content; 
 					?>
+				</div>
 			</div>
 			<!-- End Content -->
 			
