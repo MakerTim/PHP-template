@@ -12,6 +12,7 @@
 		var $menuEntry;
 		var $hasBanner;
 		var $hasSideBar;
+		var $sub;
 		
 		public function __construct($type = "page", $page = "index") {
 			$this->page = str_replace(".", "", $page);
@@ -39,6 +40,7 @@
 				$this->menuEntry = (string)$xml->Menu->Index;
 				$this->hasBanner = (string)$xml->Menu->Banner;
 				$this->hasSideBar = (string)$xml->Menu->SideBar;
+				$this->Sub = (string)$xml->Menu->Sub;
 				$this->content = $GLOBALS["md"]->text(str_replace("\\quot\\", "&", $xml->Md));
 			}
 		}

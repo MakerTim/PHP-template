@@ -81,15 +81,15 @@
 		
 		var $options;
 		
-		public function __construct() {
+		public function __construct($name) {
 			$this->options = array();
-			$this->loadSidebar();
+			$this->loadSidebar($name);
 		}
 		
-		private function loadSidebar() {
+		private function loadSidebar($name) {
 			$errorMessage = "";
 			libxml_use_internal_errors(true);
-			$xml = file_get_contents("./Content/SideBar/Menu.xml");
+			$xml = file_get_contents("./Content/SideBar/$name.xml");
 			$xml = str_replace("&", "\\quot\\", $xml);
 			$xml = simplexml_load_string($xml);
 			$xmlError = libxml_get_errors();
@@ -130,8 +130,8 @@
 			return $ret;
 		}
 		
-		public static function createSidebar() {
-			return new SideBar();
+		public static function createSidebar($name) {
+			return new SideBar($name);
 		}
 	}	
 	class SideBarItem {
