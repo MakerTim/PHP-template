@@ -82,7 +82,7 @@ function resizeContent(width, height) {
 	else
 	{
 		$(".Content").width(width * 0.8 * 0.8 -16);
-		$(".Content").height(Math.max($(".markdown-body").height(), $(".sidebar").height()));
+		$(".Content").height(Math.max($(".markdown-body").height() + 20, $(".sidebar").height()));
 	}
 }
 
