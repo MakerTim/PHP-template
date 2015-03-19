@@ -12,7 +12,7 @@ $(function() {
 	$("#BannerSrc").load(function() {
 		resizeBanner(window.innerWidth, window.innerHeight);
 	});
-	onResize(window.innerWidth, window.innerHeight);
+	updateResize();
 	
 });
 
@@ -33,7 +33,12 @@ function registerSideMenuEvents() {
 			element.siblings('li').find('li').removeClass('open');
 			element.siblings('li').find('ul').slideUp(200);
 		}
+		setTimeout(updateResize, 201);
 	});
+}
+
+function updateResize(){
+	onResize(window.innerWidth, window.innerHeight);
 }
 
 function onResize(width, height) {
@@ -75,6 +80,7 @@ function resizeContent(width, height) {
 	else
 	{
 		$(".Content").width(width * 0.8 * 0.8 -16);
+		$(".Content").height($(".sidebar").height());
 	}
 }
 
