@@ -50,7 +50,7 @@ function resizeBanner(width, height) {
 	g2d = canvas.getContext("2d");
 	img = $("#BannerSrc").get(0);
 	
-	ht = 130, st = 220, ms = 1080, wh = 640;
+	ht = 130, st = 640, ms = 1920, wh = 640;
 	vw = Math.max(Math.min((width*0.8), ms), wh);
 	
 	canvas.height = ht;
