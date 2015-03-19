@@ -21,6 +21,7 @@
 				if($pageContent->hasBanner == "true") {
 					echo PHP_EOL .
 					'<div class="Header">' . PHP_EOL . 
+					'<img id="BannerSrc" src="Pictures/header.jpg" style=" position: fixed; left: 100000px; width: 0; height: 0;" />' .
 					'<canvas id="Banner"> </canvas>' .
 					'</div>' . PHP_EOL;
 				}

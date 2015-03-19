@@ -1,0 +1,7 @@
+<MenuItem>
+	<Name>Raphael</Name>
+	<Alt>Naar de Test Pagina</Alt>
+	<Href>%root%/Page/Raphael/</Href>
+	<Priority>150</Priority>
+	<Sub>false</Sub>
+</MenuItem>
