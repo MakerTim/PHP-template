@@ -64,7 +64,14 @@ function resizeMenu(width, height) {
 }
 
 function resizeContent(width, height) {
-	$(".Content").width(width * 0.8 * 0.8 -16);
+	if (PHP.page.hasSideBar == "false")
+	{
+		$(".Content").width(width * 0.8 -2);
+	}
+	else
+	{
+		$(".Content").width(width * 0.8 * 0.8 -16);
+	}
 }
 
 function resizeFooter(width, height) {
