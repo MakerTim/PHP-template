@@ -36,7 +36,7 @@ function onResize(width, height) {
 	if(d) {
 		console.log(width, height);
 	}
-	$(".Pagina").width(width*0.8);
+	$(".Pagina").width(width * 0.8);
 	resizeBanner(width, height);
 	resizeMenu(width, height);
 	resizeContent(width, height);
@@ -50,7 +50,7 @@ function resizeBanner(width, height) {
 }
 
 function resizeMenu(width, height) {
-	
+	$(".Menu").width(width * 0.8 - 2);
 }
 
 function resizeContent(width, height) {
@@ -58,7 +58,7 @@ function resizeContent(width, height) {
 }
 
 function resizeFooter(width, height) {
-	
+	$(".Footer").width(width * 0.8 - 2);
 }
 
 function resizeSidebar(width, height) {
