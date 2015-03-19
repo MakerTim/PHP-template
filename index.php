@@ -39,7 +39,7 @@
 			<?php
 				if($pageContent->hasSideBar == "true") {
 					echo PHP_EOL .
-					'<div class="sidebar">' . PHP_EOL .
+					'<div class="sidebar Rounded">' . PHP_EOL .
 					SideBar::createSidebar()->PrintBar() .
 					'</div>';
 				}
