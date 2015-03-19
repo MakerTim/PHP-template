@@ -2,7 +2,7 @@
 	<Menu>
 		<Index>Raphael</Index>
 		<Banner>true</Banner>
-		<SideBar>false</SideBar>
+		<SideBar>true</SideBar>
 	</Menu>
 	<Md>
 # Raphael

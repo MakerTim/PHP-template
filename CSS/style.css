@@ -4,14 +4,12 @@
 
 .Header{
 	float : left;
-	clear : none;
 	height : 130px;
 	margin-bottom: 10px;
 }
 
 .Menu{
 	float : left;
-	clear : none;
 	height : 50px;
 	background-color: #C0C0C0;
 	margin-bottom: 10px;
@@ -40,14 +38,12 @@
 
 .Content{
 	float : left;
-	clear : none;
 	height : 600px;
 	background-color: #DEDEDE;
 }
 
 .Footer{
 	float : left;
-	clear : none;
 	height : 50px;
 	background-color: #C0C0C0;
 	margin-top: 10px;
