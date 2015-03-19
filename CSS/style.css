@@ -34,12 +34,12 @@
 }
 
 .Menu ul li a{ 
-    color: black;
+    color: #2E2E2E;
 	text-decoration: none;
 }
 
 .Menu ul li a:active { 
-    color: black;
+    color: #2E2E2E;
 	text-decoration: none;
 }
 
@@ -49,7 +49,6 @@
 	height : 600px;
 	width : 710px;
 	background-color: #DEDEDE;
-	margin-left: 10px;
 }
 
 .Footer{
@@ -57,7 +56,7 @@
 	clear : none;
 	height : 50px;
 	width : 940px;
-	background-color: #DEDEDE;
+	background-color: #C0C0C0;
 	margin-top: 10px;
 	margin-bottom: 5px;
 }
