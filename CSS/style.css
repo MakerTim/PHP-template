@@ -44,10 +44,11 @@
 
 .Footer{
 	float : left;
-	height : 50px;
+	height : 85px;
 	background-color: #C0C0C0;
 	margin-top: 10px;
 	margin-bottom: 5px;
+	text-align:center;
 }
 .Footer a{ 
     color: #E34D2C;
