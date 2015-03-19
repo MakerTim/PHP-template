@@ -12,7 +12,7 @@ $(function() {
 	
 });
 
-function registerSideMenuEvents(){
+function registerSideMenuEvents() {
 	$('.sidebar li.active').children('ul').show();
 	$('.sidebar li.has-sub>a').on('click', function() {
 		$(this).removeAttr('href');
@@ -32,7 +32,7 @@ function registerSideMenuEvents(){
 	});
 }
 
-function onResize(width, height){
+function onResize(width, height) {
 	if(d) {
 		console.log(width, height);
 	}
@@ -43,22 +43,22 @@ function onResize(width, height){
 	resizeSidebar(width, height);
 }
 
-function resizeBanner(width, height){
+function resizeBanner(width, height) {
 	
 }
 
-function resizeMenu(width, height){
+function resizeMenu(width, height) {
 	
 }
 
-function resizeContent(width, height){
+function resizeContent(width, height) {
 	
 }
 
-function resizeFooter(width, height){
+function resizeFooter(width, height) {
 	
 }
 
-function resizeSidebar(width, height){
+function resizeSidebar(width, height) {
 	
 }
