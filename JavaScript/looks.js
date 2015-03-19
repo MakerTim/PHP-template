@@ -36,6 +36,7 @@ function onResize(width, height) {
 	if(d) {
 		console.log(width, height);
 	}
+	$(".Pagina").width(width*0.8);
 	resizeBanner(width, height);
 	resizeMenu(width, height);
 	resizeContent(width, height);
@@ -43,8 +44,9 @@ function onResize(width, height) {
 	resizeSidebar(width, height);
 }
 
+var canvas;
 function resizeBanner(width, height) {
-	
+	canvas = $("#Banner");
 }
 
 function resizeMenu(width, height) {
