@@ -9,6 +9,9 @@ $(function() {
 	$(window).resize(function(event) {
 		onResize(event.currentTarget.innerWidth, event.currentTarget.innerHeight);;
 	});
+	$("#BannerSrc").load(function() {
+		resizeBanner(window.innerWidth, window.innerHeight);
+	});
 	onResize(window.innerWidth, window.innerHeight);
 	
 });
