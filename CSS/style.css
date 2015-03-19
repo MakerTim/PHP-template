@@ -48,6 +48,7 @@
 	margin-top: 10px;
 	margin-bottom: 5px;
 	text-align:center;
+	word-break: break-all;
 }
 .Footer a{ 
     color: #E34D2C;

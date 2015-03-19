@@ -65,7 +65,7 @@ function resizeBanner(width, height) {
 	nvw = Math.min((width*0.8), ms);
 	
 	canvas.height = ht;
-	canvas.width  = vw;
+	canvas.width  = nvw;
 	
 	g2d.drawImage(img, (st-((vw-wh)/2)), 0, vw, ht, 0, 0, nvw, ht);
 }
