@@ -44,16 +44,8 @@
 	float : left;
 	clear : none;
 	height : 600px;
-	width : 710px;
 	background-color: #DEDEDE;
 }
-
-.InnerContent{
-	float : left;
-	margin-left: 10px;
-	margin-top: 10px;
-}
-
 
 .Footer{
 	float : left;
@@ -74,10 +66,21 @@
 }
 
 .Rounded{
-	border-radius: 10x;
-	-moz-border-radius: 10px;
-	-webkit-border-radius: 10px;
 	border: 1px solid #000000;
+	
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	-moz-border-radius-topleft: 10px;
+	-moz-border-radius-topright: 10px;
+	-webkit-border-top-left-radius:10px;
+	-webkit-border-top-right-radius:10px;
+	
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	-moz-border-radius-bottomleft: 10px;
+	-moz-border-radius-bottomright: 10px;
+	-webkit-border-bottom-left-radius:10px;
+	-webkit-border-bottom-right-radius:10px;
 }
 
 .RoundedTop{
@@ -85,6 +88,8 @@
 	border-top-right-radius: 10px;
 	-moz-border-radius-topleft: 10px;
 	-moz-border-radius-topright: 10px;
+	-webkit-border-top-left-radius:10px;
+	-webkit-border-top-right-radius:10px;
 }
 
 .RoundedBottom{
@@ -92,6 +97,8 @@
 	border-bottom-right-radius: 10px;
 	-moz-border-radius-bottomleft: 10px;
 	-moz-border-radius-bottomright: 10px;
+	-webkit-border-bottom-left-radius:10px;
+	-webkit-border-bottom-right-radius:10px;
 }
 
 

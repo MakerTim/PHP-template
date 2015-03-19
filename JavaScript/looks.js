@@ -58,7 +58,7 @@ function resizeMenu(width, height) {
 }
 
 function resizeContent(width, height) {
-
+	$(".Content").width(width * 0.8 * 0.8 -16);
 }
 
 function resizeFooter(width, height) {
@@ -66,5 +66,5 @@ function resizeFooter(width, height) {
 }
 
 function resizeSidebar(width, height) {
-	
+	$(".sidebar").width(width * 0.8 * 0.2);
 }
