@@ -33,7 +33,9 @@ function registerSideMenuEvents() {
 			element.siblings('li').find('li').removeClass('open');
 			element.siblings('li').find('ul').slideUp(200);
 		}
-		setTimeout(updateResize, 201);
+		for(i=0; i<201; i++){
+			setTimeout(updateResize, i);
+		}
 	});
 }
 
