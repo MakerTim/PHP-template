@@ -55,11 +55,12 @@ function resizeBanner(width, height) {
 	
 	ht = 130, st = 640, ms = 1920, wh = 640;
 	vw = Math.max(Math.min((width*0.8), ms), wh);
+	nvw = Math.min((width*0.8), ms);
 	
 	canvas.height = ht;
 	canvas.width  = vw;
 	
-	g2d.drawImage(img, (st-((vw-wh)/2)), 0, vw, ht, 0, 0, vw, ht);
+	g2d.drawImage(img, (st-((vw-wh)/2)), 0, vw, ht, 0, 0, nvw, ht);
 }
 
 function resizeMenu(width, height) {
