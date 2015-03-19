@@ -8,7 +8,7 @@
 		<Name>Item 1</Name>
 		<Href>#</Href>
 		<HasSub>true</HasSub>
-		<IsOpen>true</IsOpen>
+		<IsOpen>false</IsOpen>
 		<Sub>
 			<Name>Product 1.1</Name>
 			<Href>Contact</Href>

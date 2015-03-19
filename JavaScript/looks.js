@@ -44,9 +44,13 @@ function onResize(width, height) {
 	resizeSidebar(width, height);
 }
 
-var g2d;
+
+var g2d, img;
 function resizeBanner(width, height) {
 	g2d = $("#Banner").get(0).getContext("2d");
+	img = $("#BannerSrc").get(0);
+	maxWidth = width * 0.8;
+	g2d.drawImage(img, 90, 130, 50, 60, 10, 10, 50, 60);
 }
 
 function resizeMenu(width, height) {

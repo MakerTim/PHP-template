@@ -2,7 +2,7 @@
 	<Menu>
 		<Index>Home</Index>
 		<Banner>true</Banner>
-		<SideBar>false</SideBar>
+		<SideBar>true</SideBar>
 	</Menu>
 	<Md>
 	404 no file found!
