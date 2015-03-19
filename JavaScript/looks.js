@@ -1,5 +1,6 @@
 //Debug = Log all the things!
 var d = false;
+var mob = 640;
 
 $(function() {
 	//When document is ready with loading
@@ -44,13 +45,18 @@ function onResize(width, height) {
 	resizeSidebar(width, height);
 }
 
-
-var g2d, img;
 function resizeBanner(width, height) {
-	g2d = $("#Banner").get(0).getContext("2d");
+	canvas = $("#Banner").get(0);
+	g2d = canvas.getContext("2d");
 	img = $("#BannerSrc").get(0);
-	maxWidth = width * 0.8;
-	g2d.drawImage(img, 90, 130, 50, 60, 10, 10, 50, 60);
+	
+	ht = 130, st = 220, ms = 1080, wh = 640;
+	vw = Math.max(Math.min((width*0.8), ms), wh);
+	
+	canvas.height = ht;
+	canvas.width  = vw;
+	
+	g2d.drawImage(img, (st-((vw-wh)/2)), 0, vw, ht, 0, 0, vw, ht);
 }
 
 function resizeMenu(width, height) {
