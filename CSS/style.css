@@ -1,6 +1,5 @@
 .Pagina{
 	display : block;
-	width : 960px;
 	overflow : auto;
 	margin : 20px auto 0 auto;
 }
@@ -9,7 +8,6 @@
 	float : left;
 	clear : none;
 	height : 130px;
-	width : 940px;
 	margin-bottom: 10px;
 }
 
@@ -17,7 +15,6 @@
 	float : left;
 	clear : none;
 	height : 50px;
-	width : 940px;
 	background-color: #C0C0C0;
 	margin-bottom: 10px;
 }
@@ -30,7 +27,7 @@
 	display: inline;
 	margin: 0;
 	padding: 15px;
-	border: 0px solid #c0c0c0;
+	border: 0px solid #4A4A4A;
 }
 
 .Menu ul li a{ 
@@ -51,11 +48,17 @@
 	background-color: #DEDEDE;
 }
 
+.InnerContent{
+	float : left;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+
+
 .Footer{
 	float : left;
 	clear : none;
 	height : 50px;
-	width : 940px;
 	background-color: #C0C0C0;
 	margin-top: 10px;
 	margin-bottom: 5px;
@@ -71,8 +74,24 @@
 }
 
 .Rounded{
-	border-radius: 15px;
+	border-radius: 10x;
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
 	border: 1px solid #000000;
 }
+
+.RoundedTop{
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	-moz-border-radius-topleft: 10px;
+	-moz-border-radius-topright: 10px;
+}
+
+.RoundedBottom{
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	-moz-border-radius-bottomleft: 10px;
+	-moz-border-radius-bottomright: 10px;
+}
+
+

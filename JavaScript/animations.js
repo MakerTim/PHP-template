@@ -10,6 +10,6 @@ function highlightMenu() {
 			}, 1500)
 		.animate({
 			borderRadius: 15,
-			borderWidth: 3
+			borderWidth: 2
 			});
 }

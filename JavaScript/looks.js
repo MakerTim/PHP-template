@@ -54,7 +54,7 @@ function resizeMenu(width, height) {
 }
 
 function resizeContent(width, height) {
-	
+
 }
 
 function resizeFooter(width, height) {
