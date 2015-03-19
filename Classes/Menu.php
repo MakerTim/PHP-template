@@ -4,6 +4,10 @@
 	
 	// Main doel van de class is om makkelijk de where i am te highlighten 
 	// En op een CMS manier het menu op bouwen
+	function cmp($a, $b) {
+		return $a->prio - $b->prio;
+	}
+	
 	class Menu {
 		
 		var $items;
@@ -42,11 +46,6 @@
 			return new Menu("./Content/MainMenu");;
 		}
 	}
-	
-	function cmp($a, $b) {
-		return $a->prio - $b->prio;
-	}
-	
 	class MenuItem {
 		
 		var $uuid;
@@ -108,11 +107,13 @@
 		
 		public function PrintBar() {
 			$ret = '<ul>' . PHP_EOL;
+			$first = current($this->options);
+			$end = end($this->options);
 			foreach($this->options as $option) {
 				$hasSub = $option->hasSub == "true";
 				$isOpen = $option->isOpen == "true";
 				$ret .= '<li '. ($hasSub? ($isOpen? 'class="active has-sub open"' : 'class="has-sub"') : '') . '>' . PHP_EOL .
-				'<a href=' . $option->href . '>' . $option->name . '</a>' . PHP_EOL;
+				'<a class="' . (($end == $option)?"RoundedBottom":(($first == $option)?"RoundedTop":"")) . '" href=' . $option->href . '>' . $option->name . '</a>' . PHP_EOL;
 				if($hasSub) {
 					$ret .= '<ul>';
 					foreach($option->subs as $sub) {
@@ -131,8 +132,7 @@
 		public static function createSidebar() {
 			return new SideBar();
 		}
-	}
-	
+	}	
 	class SideBarItem {
 		
 		var $name;
@@ -154,7 +154,6 @@
 			}
 		}
 	}
-	
 	class SideBarSubItem {
 		
 		var $name;
