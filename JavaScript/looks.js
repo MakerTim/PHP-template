@@ -44,9 +44,9 @@ function onResize(width, height) {
 	resizeSidebar(width, height);
 }
 
-var canvas;
+var g2d;
 function resizeBanner(width, height) {
-	canvas = $("#Banner");
+	g2d = $("#Banner").get(0).getContext("2d");
 }
 
 function resizeMenu(width, height) {
