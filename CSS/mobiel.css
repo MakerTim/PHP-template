@@ -1,7 +1,5 @@
 .Mobiel{
-	margin-left: 10px;
-	margin-top: 10px;
-	margin-bottom: 10px;
+	margin : 20px auto 0 auto;
 }
 
 .Mobiel .Header{
@@ -47,13 +45,12 @@
 }
 
 .Mobiel .Footer{
-	float : left;
 	height : 85px;
 	background-color: #C0C0C0;
-	margin-top: 10px;
-	margin-bottom: 5px;
 	text-align:center;
 	word-break: break-all;
+	position:absolute;
+	bottom:0;
 }
 .Mobiel .Footer a{ 
     color: #E34D2C;
