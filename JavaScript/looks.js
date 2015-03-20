@@ -47,7 +47,7 @@ function onResize(width, height) {
 	if(d) {
 		console.log(width, height);
 	}
-	$(".Pagina").width(width * 0.8);
+	$("#Pagina").width(width * 0.8);
 	resizeBanner(width, height);
 	resizeMenu(width, height);
 	resizeContent(width, height);
