@@ -34,12 +34,12 @@
 	font-size: 16px;
 	text-decoration: none;
 	color: #2E2E2E;
-	background: #1AB9CE;
+	background: #C0C0C0;
 }
 
 .Pagina .sidebar > ul > li > a:hover {
 	color: #DEDEDE;
-	background-color: #34afbc;
+	background-color: #5A585A;
 }
 
 .Pagina .sidebar ul > li.has-sub > a:after {
@@ -80,7 +80,7 @@
 	font-size: 14px;
 	text-decoration: none;
 	color: #2E2E2E;
-	background: #69B5CC;
+	background: #DEDEDE;
 }
 
 .Pagina .sidebar ul ul ul li a {
@@ -89,7 +89,7 @@
 
 .Pagina .sidebar ul ul li a:hover {
 	color: #DEDEDE;
-	background-color: #34afbc;
+	background-color: #5A585A;
 }
 
 .Pagina .sidebar ul ul > li.has-sub > a:after {
