@@ -1,5 +1,7 @@
 .Mobiel{
-	margin : 0px auto 0 auto;
+	width:100%;
+	margin-top:10px;
+	margin-left: -8px;
 }
 
 .Mobiel .Header{
@@ -41,6 +43,7 @@
 .Mobiel .Content{
 	float : left;
 	background-color: #DEDEDE;
+	margin-top: 10px;
 }
 
 .Mobiel .Footer{
