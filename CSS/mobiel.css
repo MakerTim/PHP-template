@@ -49,7 +49,7 @@
 	background-color: #C0C0C0;
 	text-align:center;
 	word-break: break-all;
-	position:absolute;
+	position:fixed;
 	bottom:0;
 }
 .Mobiel .Footer a{ 
@@ -99,107 +99,9 @@
 }
 
 .Mobiel .MenuButton {
-    width: 3em;
-    height: 3em;
-    position: fixed;
-    z-index: 0;
+    width: 25px;
+    height: 25px;
+    position: relative;
 	background: #1AB9CE;
 	margin: 0 auto;
-	z-index: 100;
-}
-
-.Mobiel .MenuButton .line1::before {
-    content:'';
-    left: 0.5em;
-    top: 0.5em;
-    position: absolute;
-    width: 1em;
-    transform-origin: left bottom;
-    height: 0.3em;
-    background: #2E313C;
-    transition: transform 0.3s, top 0.3s;
-}
-
-.Mobiel .MenuButton .line1::after {
-    content:'';
-    position: absolute;
-    right: 0.5em;
-    top: 0.5em;
-    width: 1em;
-    transform-origin: right bottom;
-    height: 0.3em;
-    background: #2E313C;
-    transition: transform 0.3s, top 0.3s;
-}
-
-.Mobiel .MenuButton .line2 {
-    position: absolute;
-    width: 2em;
-    top: 50%;
-    left: 50%;
-    height: 0.3em;
-    background: #2E313C;
-    transform: translate(-50%, -50%);
-    transition: transform 0.3s 0.3s, width 0.3s 0.6s;
-}
-
-.Mobiel .MenuButton .line3::before {
-    content:'';
-    position: absolute;
-    bottom: 0.5em;
-    left: 0.5em;
-    width: 1em;
-    transform-origin: left top;
-    height: 0.3em;
-    background: #2E313C;
-    transition: transform 0.3s, bottom 0.3s;
-}
-.Mobiel .MenuButton .line3::after {
-    content:'';
-    position: absolute;
-    bottom: 0.5em;
-    right: 0.5em;
-    width: 1em;
-    transform-origin: right top;
-    height: 0.3em;
-    background: #2E313C;
-    transition: transform 0.3s, bottom 0.3s;
-}
-
-.Mobiel .MenuButton.open .line1:before {
-    top: 0.4em;
-    width: 1.2em;
-    transform: rotate(45deg);
-    transform-origin: left bottom;
-    transition: transform 0.3s 0.3s, width 0.3s 0.3s, top 0.3s 0.3s;
-}
-
-.Mobiel .MenuButton.open .line1:after {
-    top: 0.4em;
-    width: 1.2em;
-    transform: rotate(-45deg);
-    transform-origin: right bottom;
-    transition: transform 0.3s 0.3s, width 0.3s 0.3s, top 0.3s 0.3s;
-}
-
-.Mobiel .MenuButton.open .line2 {
-    width: 0.3em;
-    transform: translate(-50%, -50%) rotate(45deg);
-    transition: transform 0.3s 0.3s, width 0.3s;
-}
-
-.Mobiel .MenuButton.open .line3:before {
-    bottom: 0.4em;
-    width: 1.2em;
-    transform: rotate(-45deg);
-    transform-origin: left top;
-    transition: transform 0.3s 0.3s, width 0.3s 0.3s, bottom 0.3s 0.3s;
-}
-
-.Mobiel .MenuButton.open .line3:after {
-    bottom: 0.4em;
-    width: 1.2em;
-    transform: rotate(45deg);
-    transform-origin: right top;
-    transition: transform 0.3s 0.3s, width 0.3s 0.3s, bottom 0.3s 0.3s;
 }

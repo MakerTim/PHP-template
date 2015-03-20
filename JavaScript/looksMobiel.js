@@ -75,6 +75,7 @@ function resizeMenuMobiel(width, height) {
 
 function resizeContentMobiel(width, height) {
 	$(".Content").width(width -20);
+	$(".Content").height($(".markdown-body").height() + 20 + $(".Footer").height());
 }
 
 function resizeFooterMobiel(width, height) {
