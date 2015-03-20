@@ -101,10 +101,11 @@
 .Mobiel .MenuButton {
     width: 3em;
     height: 3em;
-    position: relative;
+    position: fixed;
     z-index: 0;
 	background: #1AB9CE;
 	margin: 0 auto;
+	z-index: 100;
 }
 
 .Mobiel .MenuButton .line1::before {
