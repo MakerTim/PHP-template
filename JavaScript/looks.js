@@ -97,6 +97,7 @@ function resizeContent(width, height) {
 		$(".Content").width(width * 0.8 * 0.8 -16);
 		$(".Content").height(Math.max($(".markdown-body").height() + 20, $(".sidebar").height()));
 	}
+	$(".Content").css("margin-bottom", 15);
 }
 
 function resizeFooter(width, height) {
