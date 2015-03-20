@@ -15,7 +15,9 @@
 	</head>
 
 	<body>
-		<div id="Pagina" class="Mobiel">
+		<?php 
+			echo '<div id="Pagina" class="' . ($GLOBALS["mob"]->isMobile() ? "Mobiel" : "Pagina") . '">';
+		?>
 			<!-- Banner -->
 			<?php
 				if($pageContent->hasBanner == "true") {

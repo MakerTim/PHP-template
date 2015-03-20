@@ -1,20 +1,18 @@
 //Debug = Log all the things!
 var d = false;
 var mob = 640;
-var isMob = true;
+var isMob;
 
 $(function() {
 	//When document is ready with loading
 	registerSideMenuEvents();
 	
 	$(window).resize(function(event) {
-		onResize(event.currentTarget.innerWidth, event.currentTarget.innerHeight);;
+		updateResize();
 	});
 	$("#BannerSrc").load(function() {
-			updateResize();
-	});
-	updateResize();
-	
+		updateResize();
+	});	
 });
 
 function registerSideMenuEvents() {
@@ -40,8 +38,30 @@ function registerSideMenuEvents() {
 	});
 }
 
-function updateResize(){
+function updateResize() {
+	if(isMob == undefined){
+		isMob = $("#Pagina").hasClass("Mobiel");
+	}else{
+		setMob(window.innerWidth < 640, false);
+	}
 	onResize(window.innerWidth, window.innerHeight);
+}
+
+function setMob(bool, r) {
+	isMob = bool;
+	pagina = $("#Pagina");
+	console.log(pagina);
+	console.log(isMob, window.innerWidth);
+	if(bool) {
+		pagina.removeClass("Pagina");
+		pagina.addClass("Mobiel");
+	} else {
+		pagina.removeClass("Mobiel");
+		pagina.addClass("Pagina");
+	}
+	if(r){
+		updateResize();
+	}
 }
 
 function onResize(width, height) {

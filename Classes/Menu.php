@@ -89,19 +89,26 @@
 		private function loadSidebar($name) {
 			$errorMessage = "";
 			libxml_use_internal_errors(true);
-			$xml = file_get_contents("./Content/SideBar/$name.xml");
-			$xml = str_replace("&", "\\quot\\", $xml);
-			$xml = simplexml_load_string($xml);
-			$xmlError = libxml_get_errors();
-			foreach($xmlError as $error) {
-				$this->errorMessage .= '<div class="error"><b>XML ERROR:</b> <br /> File: ' . $this->page . 
-							'.xml <br /> &nbsp;&nbsp;at line ' . $error->line . ' (' . $error->message . ')<br /></div>';
-			}
-			libxml_clear_errors();
-			if(!is_null($xmlError) && sizeof($xmlError) == 0) {
-				foreach($xml->Option as $option) {
-					array_push($this->options, new SideBarItem($option));
+			try{
+				if(!file_exists("./Content/SideBar/$name.xml")){
+					throw new Exception('Sidebar not found');
 				}
+				$xml = file_get_contents("./Content/SideBar/$name.xml");
+				$xml = str_replace("&", "\\quot\\", $xml);
+				$xml = simplexml_load_string($xml);
+				$xmlError = libxml_get_errors();
+				foreach($xmlError as $error) {
+					$this->errorMessage .= '<div class="error"><b>XML ERROR:</b> <br /> File: ' . $this->page . 
+								'.xml <br /> &nbsp;&nbsp;at line ' . $error->line . ' (' . $error->message . ')<br /></div>';
+				}
+				libxml_clear_errors();
+				if(!is_null($xmlError) && sizeof($xmlError) == 0) {
+					foreach($xml->Option as $option) {
+						array_push($this->options, new SideBarItem($option));
+					}
+				}
+			} catch(Exception $ex) { 
+				$this->errorMessage = "No Sidebar File";
 			}
 		}
 		

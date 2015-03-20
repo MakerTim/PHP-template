@@ -17,7 +17,7 @@ function resizeBannerMobiel(width, height) {
 	
 	ht = 130, st = 640, ms = 1920;
 	vw = width;
-	nvw = Math.min((width), ms);
+	nvw = Math.min((width), ms) - 2;
 	
 	canvas.height = ht;
 	canvas.width  = nvw;
