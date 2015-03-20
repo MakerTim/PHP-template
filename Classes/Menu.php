@@ -113,7 +113,7 @@
 		}
 		
 		public function PrintBar() {
-			$ret = '<ul>' . PHP_EOL;
+			$ret = '<ul class="ulSidebar">' . PHP_EOL;
 			$first = current($this->options);
 			$end = end($this->options);
 			foreach($this->options as $option) {

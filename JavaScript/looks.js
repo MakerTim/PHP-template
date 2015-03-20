@@ -13,6 +13,7 @@ $(function() {
 	$("#BannerSrc").load(function() {
 		updateResize();
 	});	
+	updateResize();
 });
 
 function registerSideMenuEvents() {
@@ -42,26 +43,9 @@ function updateResize() {
 	if(isMob == undefined){
 		isMob = $("#Pagina").hasClass("Mobiel");
 	}else{
-	//	setMob(window.innerWidth < 640, false);
+		setMob(window.innerWidth < 640, false);
 	}
 	onResize(window.innerWidth, window.innerHeight);
-}
-
-function setMob(bool, r) {
-	isMob = bool;
-	pagina = $("#Pagina");
-	console.log(pagina);
-	console.log(isMob, window.innerWidth);
-	if(bool) {
-		pagina.removeClass("Pagina");
-		pagina.addClass("Mobiel");
-	} else {
-		pagina.removeClass("Mobiel");
-		pagina.addClass("Pagina");
-	}
-	if(r){
-		updateResize();
-	}
 }
 
 function onResize(width, height) {
@@ -120,5 +104,5 @@ function resizeFooter(width, height) {
 }
 
 function resizeSidebar(width, height) {
-	$(".sidebar").width(width * 0.8 * 0.2);
+	$(".sidebar").width(width * 0.5);
 }

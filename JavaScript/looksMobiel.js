@@ -10,6 +10,23 @@ function resizeMobiel(width, height) {
 	resizeSidebarMobiel(width, height);
 }
 
+function setMob(bool, r) {
+	if(isMob != bool){
+		isMob = bool;
+		pagina = $("#Pagina");
+		if(bool) {
+			pagina.removeClass("Pagina");
+			pagina.addClass("Mobiel");
+		} else {
+			pagina.removeClass("Mobiel");
+			pagina.addClass("Pagina");
+		}
+		if(r){
+			updateResize();
+		}
+	}
+}
+
 function resizeBannerMobiel(width, height) {
 	canvas = $("#Banner").get(0);
 	g2d = canvas.getContext("2d");
@@ -38,5 +55,5 @@ function resizeFooterMobiel(width, height) {
 }
 
 function resizeSidebarMobiel(width, height) {
-
+	$("sidebar")
 }
