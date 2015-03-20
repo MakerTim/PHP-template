@@ -26,15 +26,15 @@ function resizeBannerMobiel(width, height) {
 }
 
 function resizeMenuMobiel(width, height) {
-	$(".Menu").width(width -2);
+	$(".Menu").width(width);
 }
 
 function resizeContentMobiel(width, height) {
-	$(".Content").width(width  -2);
+	$(".Content").width(width);
 }
 
 function resizeFooterMobiel(width, height) {
-	$(".Footer").width(width  - 2);
+	$(".Footer").width(width);
 }
 
 function resizeSidebarMobiel(width, height) {
