@@ -42,7 +42,7 @@ function updateResize() {
 	if(isMob == undefined){
 		isMob = $("#Pagina").hasClass("Mobiel");
 	}else{
-		setMob(window.innerWidth < 640, false);
+	//	setMob(window.innerWidth < 640, false);
 	}
 	onResize(window.innerWidth, window.innerHeight);
 }
