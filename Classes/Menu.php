@@ -80,9 +80,11 @@
 	class SideBar {
 		
 		var $options;
+		var $hasError;
 		
 		public function __construct($name) {
 			$this->options = array();
+			$this->hasError = false;
 			$this->loadSidebar($name);
 		}
 		
@@ -108,7 +110,7 @@
 					}
 				}
 			} catch(Exception $ex) { 
-				$this->errorMessage = "No Sidebar File";
+				$this->hasError = true;
 			}
 		}
 		

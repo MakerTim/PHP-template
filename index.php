@@ -41,12 +41,18 @@
 			<!-- Starting Side Bar-->
 			<?php
 				if($pageContent->hasSideBar == "true") {
-					echo PHP_EOL .
-					'<div class="sidebar Rounded">' . PHP_EOL .
-					'
-					<div class="MenuButton RoundedTop RoundedBottom"> <img src="Pictures/menu.png" /> </div>' . PHP_EOL .
-					SideBar::createSidebar($pageContent->Sub)->PrintBar() .
-					'</div>';
+					$SIDEBAR = SideBar::createSidebar($pageContent->Sub);
+					if(!$SIDEBAR->hasError){
+						echo PHP_EOL .
+						'<div class="sidebar Rounded">' . PHP_EOL .
+						'
+						<div class="MenuButton RoundedTop RoundedBottom"> <img src="Pictures/menu.png" /> </div>' . PHP_EOL .
+						$SIDEBAR->PrintBar() .
+						'</div>';
+					} else {
+						echo PHP_EOL .
+						'<div class="sidebar"> </div>' . PHP_EOL;
+					}
 				}
 			?>
 			<!-- End Side Bar-->
