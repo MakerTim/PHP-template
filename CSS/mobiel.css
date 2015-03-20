@@ -21,11 +21,16 @@
 .Mobiel .Menu ul li {
 	padding: 15px;
 	border: 0px solid #4A4A4A;
+	margin-left: -40px;
 }
 
 .Mobiel .Menu ul li a{ 
     color: #2E2E2E;
 	text-decoration: none;
+	margin:auto; 
+	text-align:center; 
+	display:block;
+	
 }
 
 .Mobiel .Menu ul li a:active { 
