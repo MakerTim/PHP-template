@@ -1,3 +1,5 @@
+var f;
+
 $(function() {
 	
 	function toggleMenu() {
@@ -32,6 +34,10 @@ function toggleMobiel(enabled){
 function resizeMobiel(width, height) {
 	if(d) {
 		console.log(width, height);
+	}
+	if(f == undefined){
+		f = "a";
+		toggleMobiel(true);
 	}
 	$("#Pagina").width(width);
 	resizeBannerMobiel(width, height);
