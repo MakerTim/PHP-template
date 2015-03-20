@@ -44,7 +44,7 @@
 					echo PHP_EOL .
 					'<div class="sidebar Rounded">' . PHP_EOL .
 					'
-					<div class="MenuButton RoundedTop RoundedBottom"> </div>' . PHP_EOL .
+					<div class="MenuButton RoundedTop RoundedBottom"> <img src="Pictures/menu.png" /> </div>' . PHP_EOL .
 					SideBar::createSidebar($pageContent->Sub)->PrintBar() .
 					'</div>';
 				}

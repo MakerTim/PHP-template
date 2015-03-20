@@ -42,7 +42,7 @@ function registerSideMenuEvents() {
 function updateResize() {
 	if(isMob == undefined){
 		isMob = $("#Pagina").hasClass("Mobiel");
-	}else{
+	}else if(!PHP.isMobiel) {
 		setMob(window.innerWidth < 640, false);
 	}
 	onResize(window.innerWidth, window.innerHeight);
@@ -105,4 +105,5 @@ function resizeFooter(width, height) {
 
 function resizeSidebar(width, height) {
 	$(".sidebar").width(width * 0.8 * 0.2);
+	$(".MenuButton img").hide();
 }

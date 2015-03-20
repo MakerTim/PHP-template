@@ -73,6 +73,7 @@
 			$ret .= "PHP.page.menuEntry = " . json_encode($MktPage->menuEntry) . ";" . PHP_EOL;
 			$ret .= "PHP.page.hasBanner = " . json_encode($MktPage->hasBanner) . ";" . PHP_EOL;
 			$ret .= "PHP.page.hasSideBar = " . json_encode($MktPage->hasSideBar) . ";" . PHP_EOL;
+			$ret .= "PHP.isMobiel = " . json_encode($GLOBALS["mob"]->isMobile()) . ";" . PHP_EOL;
 			
 			$ret .= "</script>" . PHP_EOL;
 			return $ret;

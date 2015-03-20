@@ -47,10 +47,10 @@
 .Mobiel .Footer{
 	height : 85px;
 	background-color: #C0C0C0;
-	text-align:center;
+	text-align: center;
 	word-break: break-all;
-	position:fixed;
-	bottom:0;
+	position: fixed;
+	bottom: 10px;
 }
 .Mobiel .Footer a{ 
     color: #E34D2C;
@@ -103,5 +103,16 @@
     height: 25px;
     position: relative;
 	background: #1AB9CE;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.Mobiel .min {
+  margin-bottom: -6px;
+}
+
+.Mobiel .MenuButton img {
+	width: 25px;
+	height: 25px;
 	margin: 0 auto;
 }

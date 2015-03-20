@@ -14,7 +14,7 @@
 	margin-right: 20px;
 	top: 50px;
 	position: fixed;
-	z-index: 100px;
+	z-index: 100;
 }
 
 .Mobiel .sidebar ul ul {

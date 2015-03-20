@@ -13,7 +13,3 @@ function highlightMenu() {
 			borderWidth: 2
 			});
 }
-
-function menuButton() {
-	
-}
