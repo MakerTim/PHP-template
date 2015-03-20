@@ -12,7 +12,8 @@
 		'<link href="%root%/CSS/markdown.css" type="text/css" rel="stylesheet" />',
 		'<link href="%root%/CSS/SubMenuStyle.css" type="text/css" rel="stylesheet" />',
 		'<link href="%root%/CSS/SubMenuStyleMobiel.css" type="text/css" rel="stylesheet" />',
-		'<script src="%root%/JavaScript/looks.js"></script>');
+		'<script src="%root%/JavaScript/looks.js"></script>',
+		'<script src="%root%/JavaScript/looksMobiel.js"></script>');
 		
 		public static function getMetaTags() {
 			$ret = PHP_EOL;

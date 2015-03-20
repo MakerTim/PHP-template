@@ -1,6 +1,7 @@
 //Debug = Log all the things!
 var d = false;
 var mob = 640;
+var isMob = true;
 
 $(function() {
 	//When document is ready with loading
@@ -44,6 +45,14 @@ function updateResize(){
 }
 
 function onResize(width, height) {
+	if(isMob) {
+		resizeMobiel(width, height);
+	} else {
+		resizeDesktop(width, height);
+	}
+}
+
+function resizeDesktop(width, height) {
 	if(d) {
 		console.log(width, height);
 	}
@@ -60,14 +69,14 @@ function resizeBanner(width, height) {
 	g2d = canvas.getContext("2d");
 	img = $("#BannerSrc").get(0);
 	
-	ht = 130, st = 640, ms = 1920, wh = 640;
-	vw = Math.max(Math.min((width*0.8), ms), wh);
+	ht = 130, ms = 1920;
+	vw = Math.max(Math.min((width*0.8), ms), mob);
 	nvw = Math.min((width*0.8), ms);
 	
 	canvas.height = ht;
 	canvas.width  = nvw;
 	
-	g2d.drawImage(img, (st-((vw-wh)/2)), 0, vw, ht, 0, 0, nvw, ht);
+	g2d.drawImage(img, (mob-((vw-mob)/2)), 0, vw, ht, 0, 0, nvw, ht);
 }
 
 function resizeMenu(width, height) {
