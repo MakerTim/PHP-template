@@ -1,5 +1,5 @@
 .Mobiel{
-	margin : 20px auto 0 auto;
+	margin : 0px auto 0 auto;
 }
 
 .Mobiel .Header{
@@ -10,7 +10,6 @@
 
 .Mobiel .Menu{
 	float : left;
-	height : 50px;
 	background-color: #C0C0C0;
 	margin-bottom: 10px;
 }
@@ -20,8 +19,6 @@
 }
 
 .Mobiel .Menu ul li {
-	display: inline;
-	margin: 0;
 	padding: 15px;
 	border: 0px solid #4A4A4A;
 }

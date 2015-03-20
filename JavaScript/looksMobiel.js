@@ -26,7 +26,7 @@ function resizeBannerMobiel(width, height) {
 }
 
 function resizeMenuMobiel(width, height) {
-	
+		$(".Menu").width(width * 0.8 - 2);
 }
 
 function resizeContentMobiel(width, height) {
