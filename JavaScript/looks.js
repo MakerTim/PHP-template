@@ -11,7 +11,7 @@ $(function() {
 		onResize(event.currentTarget.innerWidth, event.currentTarget.innerHeight);;
 	});
 	$("#BannerSrc").load(function() {
-		resizeBanner(window.innerWidth, window.innerHeight);
+			updateResize();
 	});
 	updateResize();
 	

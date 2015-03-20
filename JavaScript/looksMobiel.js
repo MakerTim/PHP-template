@@ -2,7 +2,7 @@ function resizeMobiel(width, height) {
 	if(d) {
 		console.log(width, height);
 	}
-	$("#Pagina").width(width * 0.8);
+	$("#Pagina").width(width);
 	resizeBannerMobiel(width, height);
 	resizeMenuMobiel(width, height);
 	resizeContentMobiel(width, height);
@@ -17,7 +17,7 @@ function resizeBannerMobiel(width, height) {
 	
 	ht = 130, st = 640, ms = 1920;
 	vw = width;
-	nvw = Math.min((width*0.8), ms);
+	nvw = Math.min((width), ms);
 	
 	canvas.height = ht;
 	canvas.width  = nvw;
@@ -26,7 +26,7 @@ function resizeBannerMobiel(width, height) {
 }
 
 function resizeMenuMobiel(width, height) {
-		$(".Menu").width(width * 0.8 - 2);
+	$(".Menu").width(width * 0.8 - 2);
 }
 
 function resizeContentMobiel(width, height) {
