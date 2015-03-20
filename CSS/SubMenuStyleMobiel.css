@@ -9,10 +9,11 @@
 }
 
 .Mobiel .sidebar {
-	width: 220px;
 	color:#2E2E2E;
 	float : left;
-	margin-right: 10px;
+	margin-right: 20px;
+	top: 175px;
+	position: absolute;
 }
 
 .Mobiel .sidebar ul ul {

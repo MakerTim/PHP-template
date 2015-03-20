@@ -104,5 +104,5 @@ function resizeFooter(width, height) {
 }
 
 function resizeSidebar(width, height) {
-	$(".sidebar").width(width * 0.5);
+	$(".sidebar").width(width * 0.8 * 0.2);
 }

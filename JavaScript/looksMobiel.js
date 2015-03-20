@@ -1,3 +1,29 @@
+$(function() {
+	
+	function toggleMenu() {
+		$('.MenuButton').toggleClass('open');
+		$('.ulSidebar').slideToggle(1000);
+		$('.MenuButton').toggleClass("RoundedBottom");
+		$('.MenuButton').toggleClass("RoundedTop");
+		updateResize();
+	}
+	$('.MenuButton').click(toggleMenu);
+});
+
+function toggleMobiel(enabled){
+	if(enabled) {
+		$('.MenuButton').removeClass('open');
+		$('.ulSidebar').hide();
+		$('.MenuButton').addClass("RoundedBottom");
+		$('.MenuButton').addClass("RoundedTop");
+	} else {
+		$('.MenuButton').removeClass('open');
+		$('.ulSidebar').show();
+		$('.MenuButton').addClass("RoundedBottom");
+		$('.MenuButton').addClass("RoundedTop");
+	}
+}
+
 function resizeMobiel(width, height) {
 	if(d) {
 		console.log(width, height);
@@ -13,6 +39,7 @@ function resizeMobiel(width, height) {
 function setMob(bool, r) {
 	if(isMob != bool){
 		isMob = bool;
+		toggleMobiel(isMob);
 		pagina = $("#Pagina");
 		if(bool) {
 			pagina.removeClass("Pagina");
@@ -55,5 +82,9 @@ function resizeFooterMobiel(width, height) {
 }
 
 function resizeSidebarMobiel(width, height) {
-	$("sidebar")
+	if($('.MenuButton').hasClass("open")){
+		$(".sidebar").width(width/2);
+	}else{
+		$(".sidebar").removeAttr("style");
+	}
 }
