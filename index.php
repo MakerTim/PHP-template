@@ -15,7 +15,7 @@
 	</head>
 
 	<body>
-		<div class="Pagina">
+		<div id="Pagina" class="Pagina">
 			<!-- Banner -->
 			<?php
 				if($pageContent->hasBanner == "true") {

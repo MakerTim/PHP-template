@@ -1,47 +1,47 @@
-.Pagina{
+.Mobiel{
 	margin : 20px auto 0 auto;
 }
 
-.Pagina .Header{
+.Mobiel .Header{
 	float : left;
 	height : 130px;
 	margin-bottom: 10px;
 }
 
-.Pagina .Menu{
+.Mobiel .Menu{
 	float : left;
 	height : 50px;
 	background-color: #C0C0C0;
 	margin-bottom: 10px;
 }
 
-.Pagina .Menu ul {
+.Mobiel .Menu ul {
 	list-style-type: none;
 }
 
-.Pagina .Menu ul li {
+.Mobiel .Menu ul li {
 	display: inline;
 	margin: 0;
 	padding: 15px;
 	border: 0px solid #4A4A4A;
 }
 
-.Pagina .Menu ul li a{ 
+.Mobiel .Menu ul li a{ 
     color: #2E2E2E;
 	text-decoration: none;
 }
 
-.Pagina .Menu ul li a:active { 
+.Mobiel .Menu ul li a:active { 
     color: #2E2E2E;
 	text-decoration: none;
 }
 
-.Pagina .Content{
+.Mobiel .Content{
 	float : left;
 	background-color: #DEDEDE;
 }
 
-.Pagina .Footer{
+.Mobiel .Footer{
 	float : left;
 	height : 85px;
 	background-color: #C0C0C0;
@@ -50,17 +50,17 @@
 	text-align:center;
 	word-break: break-all;
 }
-.Pagina .Footer a{ 
+.Mobiel .Footer a{ 
     color: #E34D2C;
 	text-decoration: none;
 }
 
-.Pagina .Footer a:active { 
+.Mobiel .Footer a:active { 
     color: #E34D2C;
 	text-decoration: none;
 }
 
-.Pagina .Rounded{
+.Mobiel .Rounded{
 	border: 1px solid #000000;
 	
 	border-top-left-radius: 10px;
@@ -78,7 +78,7 @@
 	-webkit-border-bottom-right-radius:10px;
 }
 
-.Pagina .RoundedTop{
+.Mobiel .RoundedTop{
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
 	-moz-border-radius-topleft: 10px;
@@ -87,7 +87,7 @@
 	-webkit-border-top-right-radius:10px;
 }
 
-.Pagina .RoundedBottom{
+.Mobiel .RoundedBottom{
 	border-bottom-left-radius: 10px;
 	border-bottom-right-radius: 10px;
 	-moz-border-radius-bottomleft: 10px;
