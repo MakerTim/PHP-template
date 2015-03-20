@@ -1,8 +1,5 @@
 .Mobiel{
-	height: 100%;
-	margin-right: 10px;
-	margin-top: 10px;
-	margin-bottom: 10px;
+	margin : 20px auto 0 auto;
 }
 
 .Mobiel .Header{
