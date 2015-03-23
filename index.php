@@ -24,14 +24,14 @@
 					echo PHP_EOL .
 					'<div class="Header">' . PHP_EOL . 
 					'<img id="BannerSrc" src="Pictures/header.jpg" style=" position: fixed; left: 1px; top: 1px; width: 1px; height: 1px;" />' .
-					'<canvas id="Banner"> </canvas>' .
+					'<canvas id="Banner" class="RoundedTop"> </canvas>' .
 					'</div>' . PHP_EOL;
 				}
 			?>
 			<!-- End Banner -->
 			
 			<!-- Starting Main Menu-->
-			<div class="Menu Rounded">
+			<div class="Menu TopBorder">
 				<?php 
 					echo $menu->PrintMenu();
 				?>
@@ -44,7 +44,7 @@
 					$SIDEBAR = SideBar::createSidebar($pageContent->Sub);
 					if(!$SIDEBAR->hasError){
 						echo PHP_EOL .
-						'<div class="sidebar Rounded">' . PHP_EOL .
+						'<div class="sidebar TopBorder">' . PHP_EOL .
 						'
 						<div class="MenuButton RoundedTop RoundedBottom"> <img src="Pictures/menu.png" /> </div>' . PHP_EOL .
 						$SIDEBAR->PrintBar() .
@@ -58,7 +58,7 @@
 			<!-- End Side Bar-->
 			
 			<!-- Starting Content -->
-			<div class="Content Rounded">
+			<div class="Content TopBorder">
 				<div class="markdown-body">
 					<?php 
 						echo $pageContent->errorMessage;
@@ -69,7 +69,7 @@
 			<!-- End Content -->
 			
 			<!-- Starting Footer -->
-			<div class="Footer Rounded">
+			<div class="Footer TopBorder RoundedBottom">
 				<p><a href="http://www.aanbiedingcyprus.nl/">www.aanbiedingcyprus.nl</a> 2015 All rights reserved.</p>
 				<p>Hosted by <a href="http://www.xmlhosting.nl/">XMLHosting.nl</a> U kunt uw vakantie boeken bij:VakantieStunt & Duikreizen</p>
 			</div>
