@@ -12,7 +12,7 @@
 	color:#2E2E2E;
 	float : left;
 	margin-right: 20px;
-	top: 50px;
+	top: 60px;
 	position: fixed;
 	z-index: 100;
 }
@@ -36,12 +36,12 @@
 	font-size: 16px;
 	text-decoration: none;
 	color: #2E2E2E;
-	background: #1AB9CE;
+	background: #C0C0C0;
 }
 
 .Mobiel .sidebar > ul > li > a:hover {
 	color: #DEDEDE;
-	background-color: #34afbc;
+	background-color: #5A585A;
 }
 
 .Mobiel .sidebar ul > li.has-sub > a:after {
@@ -82,7 +82,7 @@
 	font-size: 14px;
 	text-decoration: none;
 	color: #2E2E2E;
-	background: #69B5CC;
+	background: #DEDEDE;
 }
 
 .Mobiel .sidebar ul ul ul li a {
@@ -91,7 +91,7 @@
 
 .Mobiel .sidebar ul ul li a:hover {
 	color: #DEDEDE;
-	background-color: #34afbc;
+	background-color: #5A585A;
 }
 
 .Mobiel .sidebar ul ul > li.has-sub > a:after {
