@@ -84,13 +84,13 @@ function resizeBanner(width, height) {
 }
 
 function resizeMenu(width, height) {
-	$(".Menu").width(width * 0.8 - 2);
+	$(".Menu").width(width * 0.8);
 }
 
 function resizeContent(width, height) {
 	if (PHP.page.hasSideBar == "false")
 	{
-		$(".Content").width(width * 0.8 -2);
+		$(".Content").width(width * 0.8);
 	}
 	else
 	{
@@ -101,7 +101,7 @@ function resizeContent(width, height) {
 }
 
 function resizeFooter(width, height) {
-	$(".Footer").width(width * 0.8 - 2);
+	$(".Footer").width(width * 0.8);
 }
 
 function resizeSidebar(width, height) {
