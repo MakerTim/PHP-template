@@ -10,7 +10,6 @@
 	echo Header::getMetaTags(); 
 	echo Header::phpToJS($pageContent, $menu);
 	echo Header::getDefaultHeader();
-	echo Header::endScripts();
 ?>
 	</head>
 
@@ -67,6 +66,18 @@
 				</div>
 			</div>
 			<!-- End Content -->
+			
+			<!-- Start Cookie Popup -->
+			<div class="CookiePopup">
+				<h4>
+					Deze website gebruikt cookies
+				</h4>
+				<p> Deze website gebruikt cookies om te functioneren en de gebruikers ervaring te kunnen te verbeteren. 
+				Door verder gebruik te maken van deze website accepteer je dat we cookies gebruiken naar onze Cookie Policy.</p>
+				<div id="accept"> Accepteer </div>
+				<div id="policy"> Cookie Policy </div>
+			</div>
+			<!-- End Cookie Popup -->
 			
 			<!-- Starting Footer -->
 			<div class="Footer TopBorder RoundedBottom">
