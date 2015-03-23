@@ -5,7 +5,7 @@
 		<HasSub>false</HasSub>
 	</Option>
 	<Option>
-		<Name>![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")</Name>
+		<Name>Sub 1</Name>
 		<Href>#</Href>
 		<HasSub>true</HasSub>
 		<IsOpen>false</IsOpen>

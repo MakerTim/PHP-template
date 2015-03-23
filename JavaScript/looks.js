@@ -10,7 +10,7 @@ $(function() {
 	$(window).resize(function() {
 		updateResize();
 	});
-	$("#BannerSrc").load(function() {
+	$("img").load(function() {
 		updateResize();
 	});	
 	updateResize();
