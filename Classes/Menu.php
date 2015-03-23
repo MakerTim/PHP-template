@@ -122,7 +122,7 @@
 				$hasSub = $option->hasSub == "true";
 				$isOpen = $option->isOpen == "true";
 				$ret .= '<li '. ($hasSub? ($isOpen? 'class="active has-sub open"' : 'class="has-sub"') : '') . '>' . PHP_EOL .
-				'<a class="' . (($end == $option)?"RoundedBottom":(($first == $option)?"RoundedTop":"")) . '" href=' . $option->href . '>' 
+				'<a href=' . $option->href . '>' 
 					. $option->name . '</a>' . PHP_EOL;
 				if($hasSub) {
 					$ret .= '<ul>';

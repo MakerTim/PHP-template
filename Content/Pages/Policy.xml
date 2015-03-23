@@ -1,0 +1,30 @@
+<Page>
+	<Menu>
+		<Index>Raphael</Index>
+		<Banner>true</Banner>
+		<SideBar>true</SideBar>
+		<Sub>Test</Sub>
+	</Menu>
+	<Md>
+#Cookies
+Om deze website goed te laten werken, moeten we soms kleine bestanden op uw computer zetten, zogenaamde cookies. De meeste grote websites doen dit.  
+
+##Wat zijn cookies?
+Een cookie is een klein tekstbestand dat een website op uw computer of mobiel toestel opslaat wanneer u die site bezoekt. Zo onthoudt de website de pagina's die u heeft bezocht en uw voorkeuren (zoals gebruikersnaam, taal, lettergrootte en andere voorkeuren) zodat u die niet bij ieder bezoek aan de site opnieuw hoeft in te vullen.  
+
+##Hoe gebruiken we cookies?
+```
+Op enkele pagina's registreren we:
++ Hoe vaak je op elke pagina bent geweest
++ Hoe vaak je terug komt op onze website
++ De layout, Mobiel/Desktop variant opslaan, voor betere weergaven
+
+All deze gegevens worden onder goed toezicht opgeslagen en worden alleen voor deze website gebruikt.
+Cookies worden niet verkocht, gedeelt of iets van die geest. 
+Het is puur voor eigen gebruik en blijft ook voor eigen gebruik.
+```
+
+##Hoe komt u meer te weten en wat kunt u met de cookies doen?
+U kunt cookies altijd controleren en/of wissen. Meer hierover leest u op [aboutcookies.org](http://aboutcookies.org/). U kunt alle cookies op uw computer wissen en u kunt uw browser zo instellen dat cookies geblokkeerd worden. Dit betekent wel dat u daarna uw voorkeuren bij ieder bezoek opnieuw moet instellen en dat sommige delen van de website niet (naar behoren) werken.
+	</Md>
+</Page>

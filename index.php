@@ -70,8 +70,10 @@
 			
 			<!-- Starting Footer -->
 			<div class="Footer Rounded">
-				<p><a href="http://www.aanbiedingcyprus.nl/">www.aanbiedingcyprus.nl</a> 2015 All rights reserved.</p>
-				<p>Hosted by <a href="http://www.xmlhosting.nl/">XMLHosting.nl</a> U kunt uw vakantie boeken bij:VakantieStunt & Duikreizen</p>
+				<?php 
+					echo '<p><a href="http://'. MKTConfig::$domein. MKTConfig::$rootDir .'">'. MKTConfig::$domein .'</a> 2015 All rights reserved.</p>';
+					echo MKTConfig::$footer;
+				?>
 			</div>
 			<!-- End Footer -->
 		</div>

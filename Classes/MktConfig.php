@@ -21,5 +21,7 @@
 				"Nederland", "Localhost", "Template", 
 				"MakerTim", "CMS", "Content", 
 				"Beste Link 2015", "Responsive");
+		// De text dat in de footer van elke pagina komt!
+		public static $footer = '<p>Hosted by <a href="http://www.xmlhosting.nl/">XMLHosting.nl</a> U kunt uw vakantie boeken bij:VakantieStunt & Duikreizen</p>';
 	}
 ?>
