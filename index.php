@@ -81,10 +81,12 @@
 			
 			<!-- Starting Footer -->
 			<div class="Footer TopBorder RoundedBottom">
-				<?php 
-					echo '<p><a href="http://'. MKTConfig::$domein. MKTConfig::$rootDir .'">'. MKTConfig::$domein .'</a> 2015 All rights reserved.</p>';
-					echo MKTConfig::$footer;
-				?>
+				<div class="markdown-body">
+					<?php 
+						echo '<p><a href="http://'. MKTConfig::$domein. MKTConfig::$rootDir .'">'. MKTConfig::$domein .'</a> 2015 All rights reserved.</p>';
+						echo MKTConfig::$footer;
+					?>
+				</div>
 			</div>
 			<!-- End Footer -->
 		</div>
