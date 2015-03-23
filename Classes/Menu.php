@@ -5,7 +5,7 @@
 	// Main doel van de class is om makkelijk de where i am te highlighten 
 	// En op een CMS manier het menu op bouwen
 	function cmp($a, $b) {
-		return $a->prio - $b->prio;
+		return  $b->prio - $a->prio;
 	}
 	
 	class Menu {
