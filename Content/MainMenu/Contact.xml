@@ -2,6 +2,6 @@
 	<Name>Contact</Name>
 	<Alt>Naar de contactpage</Alt>
 	<Href>%root%/Page/Contact/</Href>
-	<Priority>200</Priority>
+	<Priority>300</Priority>
 	<Sub>false</Sub>
 </MenuItem>

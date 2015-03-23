@@ -1,0 +1,15 @@
+<Page>
+	<Menu>
+		<Index>stefan</Index>
+		<Banner>true</Banner>
+		<SideBar>true</SideBar>
+		<Sub>Test</Sub>
+	</Menu>
+	<Md>
+# stefan
+---
+Dit is de pagina van stefan
+
+© Copyright 2015 MakerTim
+	</Md>
+</Page>

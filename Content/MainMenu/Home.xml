@@ -2,6 +2,6 @@
 	<Name>Home</Name>
 	<Alt>Naar de homepage</Alt>
 	<Href>%root%/Page/Index/</Href>
-	<Priority>100</Priority>
+	<Priority>400</Priority>
 	<Sub>false</Sub>
 </MenuItem>
