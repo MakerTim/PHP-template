@@ -1,5 +1,6 @@
 .Pagina{
 	margin : 20px auto 0 auto;
+	font-family: 'Varela Round', Helvetica, Arial, sans-serif;
 }
 
 .Pagina .Header{
@@ -61,8 +62,6 @@
 }
 
 .Pagina .Rounded{
-	border: 1px solid #000000;
-	
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
 	-moz-border-radius-topleft: 10px;
