@@ -1,9 +1,9 @@
 <Page>
 	<Menu>
-		<Index>Raphael</Index>
+		<Index></Index>
 		<Banner>true</Banner>
-		<SideBar>true</SideBar>
-		<Sub>Test</Sub>
+		<SideBar>false</SideBar>
+		<Sub></Sub>
 	</Menu>
 	<Md>
 #Cookies
