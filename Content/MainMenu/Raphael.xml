@@ -3,5 +3,4 @@
 	<Alt>Naar de Test Pagina</Alt>
 	<Href>%root%/Page/Raphael/</Href>
 	<Priority>100</Priority>
-	<Sub>false</Sub>
 </MenuItem>

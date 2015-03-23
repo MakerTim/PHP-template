@@ -1,6 +1,6 @@
 <Page>
 	<Menu>
-		<Index>stefan</Index>
+		<Index>Stefan</Index>
 		<Banner>true</Banner>
 		<SideBar>true</SideBar>
 		<Sub>Test</Sub>
@@ -9,6 +9,8 @@
 # stefan
 ---
 Dit is de pagina van stefan
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Habes, inquam, Cato, formam eorum, de quibus loquor, philosophorum. Hanc quoque iucunditatem, si vis, transfer in animum; Quae hic rei publicae vulnera inponebat, eadem ille sanabat. Ut nemo dubitet, eorum omnia officia quo spectare, quid sequi, quid fugere debeant?
 
 © Copyright 2015 MakerTim
 	</Md>
