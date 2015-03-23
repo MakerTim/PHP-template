@@ -7,7 +7,7 @@ $(function() {
 	//When document is ready with loading
 	registerSideMenuEvents();
 	
-	$(window).resize(function(event) {
+	$(window).resize(function() {
 		updateResize();
 	});
 	$("#BannerSrc").load(function() {

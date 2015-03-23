@@ -44,8 +44,7 @@
 					if(!$SIDEBAR->hasError){
 						echo PHP_EOL .
 						'<div class="sidebar TopBorder">' . PHP_EOL .
-						'
-						<div class="MenuButton RoundedTop RoundedBottom"> <img src="Pictures/menu.png" /> </div>' . PHP_EOL .
+						'<div class="MenuButton RoundedTop RoundedBottom"> <img src="Pictures/menu.png" /> </div>' . PHP_EOL .
 						$SIDEBAR->PrintBar() .
 						'</div>';
 					} else {

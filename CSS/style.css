@@ -41,6 +41,10 @@ body {
 	text-decoration: none;
 }
 
+.Pagina .MenuButton{
+	display: none;
+}
+
 .Pagina .Content{
 	float : left;
 	background-color: #DEDEDE;

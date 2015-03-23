@@ -32,7 +32,7 @@
 		}
 		
 		public function printMenu() {
-			$ret = PHP_EOL . '<ul>' . PHP_EOL;
+			$ret = PHP_EOL . '<ul class="ulMainMenu">' . PHP_EOL;
 			foreach($this->items as $menuEntry) {
 				$ret .= '<li id="Menu_' . $menuEntry->name . '">';
 				$ret .= '<a href="' . $menuEntry->href . '">' . $menuEntry->name . '</a>';
