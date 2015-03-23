@@ -1,7 +1,6 @@
 var f;
 
 $(function() {
-	setTimeout(function(){ setMob(true);}, 100);
 	function toggleMenu() {
 		$('.MenuButton').toggleClass('open');
 		$('.ulSidebar').slideToggle(1000);

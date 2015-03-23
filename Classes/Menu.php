@@ -152,7 +152,7 @@
 		var $subs;
 		
 		public function __construct($xmlOption) {
-			$this->name = $xmlOption->Name;
+			$this->name = $GLOBALS["md"]->text($xmlOption->Name);
 			$this->href = $xmlOption->Href;
 			$this->hasSub = $xmlOption->HasSub;
 			if($this->hasSub == "true") {
@@ -170,7 +170,7 @@
 		var $href;
 		
 		public function __construct($xmlSub) {
-			$this->name = $xmlSub->Name;
+			$this->name = $GLOBALS["md"]->text($xmlSub->Name);
 			$this->href = $xmlSub->Href;
 		}
 	}
