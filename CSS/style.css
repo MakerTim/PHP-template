@@ -13,7 +13,7 @@
 	float : left;
 	height : 50px;
 	background-color: #C0C0C0;
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 }
 
 .Pagina .Menu ul {
@@ -24,6 +24,7 @@
 	display: inline;
 	margin: 0;
 	padding: 15px;
+	padding-top: 15px;
 	border: 0px solid #4A4A4A;
 }
 
@@ -49,7 +50,7 @@
 	margin-top: 10px;
 	margin-bottom: 5px;
 	text-align:center;
-	word-break: break-all;
+	word-break: break-word;
 }
 .Pagina .Footer a{ 
     color: #E34D2C;
@@ -95,4 +96,7 @@
 	-webkit-border-bottom-right-radius:10px;
 }
 
+.Pagina .TopBorder{
+	border-top: 6px solid #5A585A;
+}
 
