@@ -46,12 +46,12 @@
 }
 
 .Mobiel .Footer{
-	height : 85px;
 	background-color: #C0C0C0;
 	text-align: center;
-	word-break: break-all;
 	position: fixed;
 	bottom: 5px;
+	word-wrap: break-word;
+	margin-bottom: 5px;
 }
 .Mobiel .Footer a{ 
     color: #E34D2C;
@@ -116,4 +116,7 @@
 	width: 50px;
 	height: 50px;
 	margin: 0 auto;
+}
+.Mobiel .TopBorder{
+	border-top: 6px solid #5A585A;
 }
