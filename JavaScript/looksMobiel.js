@@ -2,15 +2,7 @@ var f;
 
 $(function() {
 	function toggleMenu() {
-		$('.MenuButton').toggleClass('open');
-		$('.ulSidebar').slideToggle(1000);
-		$('.MenuButton').toggleClass("RoundedBottom");
-		$('.MenuButton').toggleClass("min");
-		if($('.MenuButton').hasClass("RoundedBottom")) {
-			$('.MenuButton').width("50px");
-		} else {
-			$('.MenuButton').width("100%");
-		}
+		//TODO show / hide menu
 		updateResize();
 	}
 	$('.MenuButton').click(toggleMenu);
@@ -18,15 +10,9 @@ $(function() {
 
 function toggleMobiel(enabled){
 	if(enabled) {
-		$('.MenuButton').removeClass('open');
-		$('.ulSidebar').hide();
-		$('.MenuButton').addClass("RoundedBottom");
-		$('.MenuButton').addClass("RoundedTop");
+		// zet mobiel aan
 	} else {
-		$('.MenuButton').removeClass('open');
-		$('.ulSidebar').show();
-		$('.MenuButton').addClass("RoundedBottom");
-		$('.MenuButton').addClass("RoundedTop");
+		// zet mobiel uit
 	}
 }
 
