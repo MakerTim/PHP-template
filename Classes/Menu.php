@@ -22,7 +22,7 @@
 				if($file == "." || $file == "..") {
 					continue;
 				}
-				array_push($this->items, new MenuItem(MktUtils::file($menuLocation ,$file)));
+				array_push($this->items, new MenuItem(MktUtils::file(array($menuLocation ,$file))));
 			}
 			usort($this->items, "cmp");
 		}
@@ -43,7 +43,7 @@
 		}
 		
 		public static function getMainMenu($MktPage){
-			return new Menu(MktUtils::file('.', 'Content', 'MainMenu'));
+			return new Menu(MktUtils::file(array('.', 'Content', 'MainMenu')));
 		}
 	}
 	class MenuItem {
@@ -92,10 +92,10 @@
 			$errorMessage = "";
 			libxml_use_internal_errors(true);
 			try{
-				if(!file_exists(MktUtils::file('.', 'Content', 'SideBar', "$name.xml"))){
+				if(!file_exists(MktUtils::file(array('.', 'Content', 'SideBar', "$name.xml")))){
 					throw new Exception('Sidebar not found');
 				}
-				$xml = file_get_contents(MktUtils::file('.', 'Content', 'SideBar', "$name.xml"));
+				$xml = file_get_contents(MktUtils::file(array('.', 'Content', 'SideBar', "$name.xml")));
 				$xml = str_replace("&", "\\quot\\", $xml);
 				$xml = simplexml_load_string($xml);
 				$xmlError = libxml_get_errors();

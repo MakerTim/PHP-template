@@ -23,11 +23,11 @@
 		}
 		
 		private function loadPage() {
-			if(!file_exists(MktUtils::file('.', 'Content', 'Pages', $this->page . '.xml'))) {
+			if(!file_exists(MktUtils::file(array('.', 'Content', 'Pages', $this->page . '.xml')))) {
 				$this->page = "404";
 			}
 			libxml_use_internal_errors(true);
-			$xml = file_get_contents(MktUtils::file('.', 'Content', 'Pages', $this->page . '.xml'));
+			$xml = file_get_contents(MktUtils::file(array('.', 'Content', 'Pages', $this->page . '.xml')));
 			$xml = str_replace("&", "\\quot\\", $xml);
 			$xml = simplexml_load_string($xml);
 			$xmlError = libxml_get_errors();

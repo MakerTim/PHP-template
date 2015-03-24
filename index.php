@@ -1,5 +1,5 @@
 <?php
-	include(join(DIRECTORY_SEPARATOR, array('', 'Classes', 'IncludeManager.php')));
+	require(join(DIRECTORY_SEPARATOR, array('.', 'Classes', 'IncludeManager.php')));
 	$pageContent = MktPage::getPage();
 	$menu = Menu::getMainMenu($pageContent);
 ?>

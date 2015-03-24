@@ -7,14 +7,14 @@
 	
 	session_start();
 	
-	include("Parsedown.php");
-	include("MobileDetect.php");
+	require("Parsedown.php");
+	require("MobileDetect.php");
 	$md =  new Parsedown();
 	$mob =  new Mobile_Detect();
-	include("MktUtils.php");
-	include("MktConfig.php");
-	include("Header.php");
-	include("Menu.php");
-	include("MktPage.php");
+	require("MktUtils.php");
+	require("MktConfig.php");
+	require("Header.php");
+	require("Menu.php");
+	require("MktPage.php");
 	
 ?>

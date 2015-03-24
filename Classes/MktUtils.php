@@ -8,8 +8,8 @@
 			return str_replace("%root%", MktUtils::getRoot(), $ret);
 		}
 		
-		public static function file(...$pathToFile){
-			return join(DIRECTORY_SEPARATOR, $pathToFile);
+		public static function file($ArrayPathToFile){
+			return join(DIRECTORY_SEPARATOR, $ArrayPathToFile);
 		}
 	}
 ?>
