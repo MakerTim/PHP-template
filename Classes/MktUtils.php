@@ -7,5 +7,9 @@
 		public static function rootString($ret){
 			return str_replace("%root%", MktUtils::getRoot(), $ret);
 		}
+		
+		public static function file(...$pathToFile){
+			return join(DIRECTORY_SEPARATOR, $pathToFile);
+		}
 	}
 ?>
