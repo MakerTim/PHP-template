@@ -4,21 +4,22 @@
 	
 	class Header {
 		private static $scriptCollection = array(
-		'<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>', 
-		'<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css" />',
-		'<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>',
-		'<link href="http://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" type="text/css" />',
-		'<link href="%root%/CSS/style.css" type="text/css" rel="stylesheet" />',
-		'<link href="%root%/CSS/mobiel.css" type="text/css" rel="stylesheet" />',
-		'<link href="%root%/CSS/cookie.css" type="text/css" rel="stylesheet" />',
-		'<link href="%root%/CSS/markdown.css" type="text/css" rel="stylesheet" />',
-		'<link href="%root%/CSS/SubMenuStyle.css" type="text/css" rel="stylesheet" />',
-		'<link href="%root%/CSS/SubMenuStyleMobiel.css" type="text/css" rel="stylesheet" />',
-		'<script src="%root%/JavaScript/jCookie.js"></script>',
-		'<script src="%root%/JavaScript/cookie.js"></script>',
-		'<script src="%root%/JavaScript/looks.js"></script>',
-		'<script src="%root%/JavaScript/looksMobiel.js"></script>',
-		'<script src="%root%/JavaScript/animations.js"></script>');
+			'<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>', 
+			'<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css" />',
+			'<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>',
+			'<link href="http://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" type="text/css" />',
+			'<link href="%root%/CSS/style.css" type="text/css" rel="stylesheet" />',
+			'<link href="%root%/CSS/mobiel.css" type="text/css" rel="stylesheet" />',
+			'<link href="%root%/CSS/cookie.css" type="text/css" rel="stylesheet" />',
+			'<link href="%root%/CSS/markdown.css" type="text/css" rel="stylesheet" />',
+			'<link href="%root%/CSS/SubMenuStyle.css" type="text/css" rel="stylesheet" />',
+			'<link href="%root%/CSS/SubMenuStyleMobiel.css" type="text/css" rel="stylesheet" />',
+			'<script src="%root%/JavaScript/jCookie.js"></script>',
+			'<script src="%root%/JavaScript/cookie.js"></script>',
+			'<script src="%root%/JavaScript/looks.js"></script>',
+			'<script src="%root%/JavaScript/looksMobiel.js"></script>',
+			'<script src="%root%/JavaScript/animations.js"></script>'
+		);		
 		
 		public static function getMetaTags() {
 			$ret = PHP_EOL;
