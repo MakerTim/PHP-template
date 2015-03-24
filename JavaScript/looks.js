@@ -88,14 +88,15 @@ function resizeMenu(width, height) {
 }
 
 function resizeContent(width, height) {
-	if (PHP.page.hasSideBar == "false")
-	{
+	if (PHP.page.hasSideBar == "false") {
 		$(".Content").width(width * 0.8);
-	}
-	else
-	{
+	} else {
 		$(".Content").width(width * 0.8 * 0.8 -16);
-		$(".Content").height(Math.max($(".markdown-body").height() + 20, $(".sidebar").height()));
+		if($(".sidebar").height() > $(".markdown-body").height()) {
+			$(".Content").height(Math.max($(".markdown-body").height() + 20, $(".sidebar").height()));
+		} else { 
+			$(".Content").height("auto");
+		}
 	}
 	$(".Content").css("margin-bottom", 15);
 }

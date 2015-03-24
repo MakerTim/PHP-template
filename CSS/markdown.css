@@ -1,12 +1,12 @@
 .markdown-body {
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  color: #333;
-  overflow: hidden;
-  font-family: 'Varela Round', Helvetica, 'Segoe UI', Arial, freesans, sans-serif;
-  font-size: 16px;
-  line-height: 1.6;
-  word-wrap: break-word;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	color: #333;
+	overflow: hidden;
+	font-family: 'Varela Round', Helvetica, 'Segoe UI', Arial, freesans, sans-serif;
+	font-size: 16px;
+	line-height: 1.6;
+	word-wrap: break-word;
 	margin-left: 10px;
 	margin-top: 10px;
 	margin-right: 10px;
