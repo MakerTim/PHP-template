@@ -61,7 +61,7 @@
 			if($type == "404") {
 				header("Location: " . MktUtils::getRoot() . "/Page/404/");
 			} else if(empty($page) || empty($type)){
-				header("Location: " . MktUtils::getRoot() . "/Page/index/");
+				header("Location: " . MktUtils::getRoot() . "/Page/Index/");
 				exit;
 			}
 			return new MktPage($type, $page);
