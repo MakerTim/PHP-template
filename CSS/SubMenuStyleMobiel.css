@@ -118,11 +118,10 @@
 	margin: 0 auto;
 }
 
-.Mobiel .SubOpen{
-	
-
+.Mobiel .sidebar  .ulSidebar:hover {
+	display: none;
 }
 
-.Mobiel .SubClose {
-
+.Mobiel .sidebar  .ulSidebar {
+	display: none;
 }

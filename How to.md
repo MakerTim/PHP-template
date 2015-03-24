@@ -1,5 +1,8 @@
 # How to
 ---
+**MktConfig:**
+
+
 **Pagina aanmaken:**  
 1. Open content map.  
 2. Open Pages map.  
