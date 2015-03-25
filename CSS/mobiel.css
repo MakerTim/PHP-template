@@ -52,6 +52,7 @@
 	bottom: 5px;
 	word-wrap: break-word;
 	margin-bottom: 5px;
+	font-size: 16px;
 }
 .Mobiel .Footer a{ 
     color: #E34D2C;
@@ -97,12 +98,4 @@
 	-moz-border-radius-bottomright: 10px;
 	-webkit-border-bottom-left-radius:10px;
 	-webkit-border-bottom-right-radius:10px;
-}
-
-.Mobiel .min {
-  margin-bottom: -6px;
-}
-
-.Mobiel .TopBorder{
-	border-top: 6px solid #5A585A;
 }
