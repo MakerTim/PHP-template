@@ -104,7 +104,6 @@
 			'`' => array('FencedCode'),
 			'|' => array('Table'),
 			'~' => array('FencedCode'),
-			'{' => array('Iframe'),
 		);
 
 		# ~
@@ -941,25 +940,6 @@
 			}
 		}
 		
-		# Iframe block - Made by MakerTim
-		
-		protected function blockIframe($Line) {
-			if (isset($Line['text'][1]))
-			{
-				$text = str_replace(array('{' , '}'), '', $Line['text']);
-
-				$Block = array(
-					'element' => array(
-						'name' => 'iframe',
-						'text' => '',
-						'attributes' => array(
-							'src' => $text,
-						),
-					),
-				);
-				return $Block;
-			}
-		}
 
 		#
 		# ~
@@ -995,11 +975,12 @@
 			'`' => array('Code'),
 			'~' => array('Strikethrough'),
 			'\\' => array('EscapeSequence'),
+			'{' => array('Iframe'),
 		);
 
 		# ~
 
-		protected $inlineMarkerList = '!"*_&[:<>`~\\';
+		protected $inlineMarkerList = '!"*_&[:<>`~\\{';
 
 		#
 		# ~
@@ -1378,6 +1359,47 @@
 					),
 				);
 			}
+		}
+		
+		
+		# Iframe block - Made by MakerTim
+		
+		protected function inlineIframe($Excerpt) {
+			if(strpos($Excerpt['text'], '}') === false) {
+				return;
+			}
+			$Iframe = explode(' ', substr($Excerpt['text'], 1, strpos($Excerpt['text'], '}')-1));
+			$src = '';
+			$width = '100%';
+			$heigth = 'auto';
+			$border = '0';
+			for($i = 0; $i < count($Iframe); $i++) {
+				if($i === 0) {
+					$src = $Iframe[$i];
+				} else if(strpos($Iframe[$i], '=') === 0) {
+					$wh = explode("x", substr($Iframe[$i], 1, strlen($Iframe[$i])));
+					if(count($wh) == 2) {
+						$width = $wh[0];
+						$heigth = $wh[1];
+					}
+				} else if(strpos($Iframe[$i], '~') === 0) {
+					$border = substr($Iframe[$i], 1, strlen($Iframe[$i]));
+				}
+			}
+			
+			return array(
+				'extent' => strpos($Excerpt['text'], '}')+1,
+				'element' => array(
+					'name' => 'iframe',
+					'text' => '',
+					'attributes' => array(
+						'src' => $src,
+						'width' => $width,
+						'heigth' => $heigth,
+						'frameborder' => $border,
+					),
+				),
+			);
 		}
 
 		# ~
