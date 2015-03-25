@@ -30,7 +30,7 @@
 **Iframe maken:**  
 Om een Iframe te maken vul je de onderstaande code in (op de plek waar je hem wilt hebben).    
 
-1.{ $link[ =$width x$height][ ~$border]}
+{ $link[ =$width x$height][ ~$border]}
 
 **{$link}** 				= hierkomt de link van je iframe testaan.  
 
@@ -41,9 +41,9 @@ Om een Iframe te maken vul je de onderstaande code in (op de plek waar je hem wi
 
 |**Voorbeeld:**  					   | **Uitleg:**  																|
 |--------------------------------------|----------------------------------------------------------------------------|
-| **{http://makertim.nl}**             | = Dit zorgt voor een iframe.                                               |
-| **{http://makertim.nl =200x200}**    | = Dit zorgt voor een iframe met aangepaste hoogte en breedte.              |
-| **{http://makertim.nl =200x200 ~0}** | = Dit zorgt voor een iframe met aangepaste hoogte en breedte & een border. |
-| **{http://makertim.nl ~0}**          | = Dit zorgt voor een iframe met  een border.                               |                            
+| **{https://www.google.nl/}**             | = Dit zorgt voor een iframe.                                               |
+| **{https://www.google.nl/ =200x200}**    | = Dit zorgt voor een iframe met aangepaste hoogte en breedte.              |
+| **{https://www.google.nl/ =200x200 ~0}** | = Dit zorgt voor een iframe met aangepaste hoogte en breedte & een border. |
+| **{https://www.google.nl/ ~0}**          | = Dit zorgt voor een iframe met  een border.                               |                            
  
 © Copyright 2015 MakerTim
