@@ -8,11 +8,11 @@
 }
 
 .Mobiel .sidebar {
-	color:#2E2E2E;
 	float : left;
 	position: fixed;
 	z-index: 100;
 	width: 33%;
+	height: 100%;
 }
 
 .Mobiel .sidebar ul ul {
@@ -102,17 +102,20 @@
 }
 
 .Mobiel .MenuButton {
-    width: 50px;
     height: 50px;
     position: relative;
 	background: #C0C0C0;
 	text-align: center;
 	border-top: 6px solid #5A585A;
-	margin-left: 0;
 }
 
 .Mobiel .MenuButton  img {
 	width: 50px;
 	height: 50px;
 	margin-left: 0 auto;
+}
+.Mobiel .ulSidebar{
+	background-color: #C0C0C0;
+	height: 100%;
+	overflow-x: hidden;
 }

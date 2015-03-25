@@ -14,11 +14,13 @@ function toggleMobiel(enabled){
 		$('.sidebar').css("margin-left",  "-" + $('body').css("margin"));
 		$('.sidebar').css("margin-top",  "-" + $('body').css("margin"));
 		$('.sidebar').css("top",  "8px");
+		$('.MenuButton').css("width",  "50px");
 	} else {
 		$('.ulSidebar').show();
 		$('.sidebar').css("margin-left",  "auto");
 		$('.sidebar').css("margin-top",  "auto");
 		$('.sidebar').css("top",  "auto");
+		$('.MenuButton').css("width",  "auto");
 	}
 }
 
