@@ -1,0 +1,129 @@
+<SideBar>
+	<Option>
+		<Name>Home</Name>
+		<Href>#</Href>
+		<HasSub>false</HasSub>
+	</Option>
+	<Option>
+		<Name>Sub 1</Name>
+		<Href>#</Href>
+		<HasSub>true</HasSub>
+		<IsOpen>false</IsOpen>
+		<Sub>
+			<Name>Product 1.1</Name>
+			<Href>Contact</Href>
+		</Sub>
+		<Sub>
+			<Name>Product 1.2</Name>
+			<Href>Contact</Href>
+		</Sub>
+	</Option>
+	<Option>
+		<Name>Item 2</Name>
+		<Href>#</Href>
+		<HasSub>true</HasSub>
+		<IsOpen>false</IsOpen>
+		<Sub>
+			<Name>Product 2.1</Name>
+			<Href>Contact</Href>
+		</Sub>
+		<Sub>
+			<Name>Product 2.2</Name>
+			<Href>Contact</Href>
+		</Sub>
+	</Option>
+	<Option>
+		<Name>Sub 1</Name>
+		<Href>#</Href>
+		<HasSub>true</HasSub>
+		<IsOpen>false</IsOpen>
+		<Sub>
+			<Name>Product 1.1</Name>
+			<Href>Contact</Href>
+		</Sub>
+		<Sub>
+			<Name>Product 1.2</Name>
+			<Href>Contact</Href>
+		</Sub>
+	</Option>
+	<Option>
+		<Name>Item 3</Name>
+		<Href>#</Href>
+		<HasSub>true</HasSub>
+		<IsOpen>false</IsOpen>
+		<Sub>
+			<Name>Product 2.1</Name>
+			<Href>Contact</Href>
+		</Sub>
+		<Sub>
+			<Name>Product 2.2</Name>
+			<Href>Contact</Href>
+		</Sub>
+	</Option>
+	<Option>
+		<Name>Item 4</Name>
+		<Href>#</Href>
+		<HasSub>false</HasSub>
+	</Option>
+	<Option>
+		<Name>Sub 1</Name>
+		<Href>#</Href>
+		<HasSub>true</HasSub>
+		<IsOpen>false</IsOpen>
+		<Sub>
+			<Name>Product 1.1</Name>
+			<Href>Contact</Href>
+		</Sub>
+		<Sub>
+			<Name>Product 1.2</Name>
+			<Href>Contact</Href>
+		</Sub>
+	</Option>
+	<Option>
+		<Name>Item 2</Name>
+		<Href>#</Href>
+		<HasSub>true</HasSub>
+		<IsOpen>false</IsOpen>
+		<Sub>
+			<Name>Product 2.1</Name>
+			<Href>Contact</Href>
+		</Sub>
+		<Sub>
+			<Name>Product 2.2</Name>
+			<Href>Contact</Href>
+		</Sub>
+	</Option>
+	<Option>
+		<Name>Sub 1</Name>
+		<Href>#</Href>
+		<HasSub>true</HasSub>
+		<IsOpen>false</IsOpen>
+		<Sub>
+			<Name>Product 1.1</Name>
+			<Href>Contact</Href>
+		</Sub>
+		<Sub>
+			<Name>Product 1.2</Name>
+			<Href>Contact</Href>
+		</Sub>
+	</Option>
+	<Option>
+		<Name>Item 3</Name>
+		<Href>#</Href>
+		<HasSub>true</HasSub>
+		<IsOpen>false</IsOpen>
+		<Sub>
+			<Name>Product 2.1</Name>
+			<Href>Contact</Href>
+		</Sub>
+		<Sub>
+			<Name>Product 2.2</Name>
+			<Href>Contact</Href>
+		</Sub>
+	</Option>
+	<Option>
+		<Name>Item 4</Name>
+		<Href>#</Href>
+		<HasSub>false</HasSub>
+	</Option>
+</SideBar>
