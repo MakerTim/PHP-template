@@ -2,7 +2,7 @@ var f;
 
 $(function() {
 	function toggleMenu() {
-		//TODO show / hide menu
+		$('.ulSidebar').slideToggle();
 		updateResize();
 	}
 	$('.MenuButton').click(toggleMenu);
@@ -10,9 +10,9 @@ $(function() {
 
 function toggleMobiel(enabled){
 	if(enabled) {
-		// zet mobiel aan
+		$('.ulSidebar').hide();
 	} else {
-		// zet mobiel uit
+		$('.ulSidebar').show();
 	}
 }
 

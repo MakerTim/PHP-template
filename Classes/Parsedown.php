@@ -12,7 +12,7 @@
 	# For the full license information, view the LICENSE file that was distributed
 	# with this source code.
 	#
-	#
+	# Changed by MakerTim for {LINK} for an iframe
 
 	class Parsedown
 	{
@@ -104,6 +104,7 @@
 			'`' => array('FencedCode'),
 			'|' => array('Table'),
 			'~' => array('FencedCode'),
+			'{' => array('Iframe'),
 		);
 
 		# ~
@@ -936,6 +937,26 @@
 
 				$Block['element']['text'][1]['text'] []= $Element;
 
+				return $Block;
+			}
+		}
+		
+		# Iframe block - Made by MakerTim
+		
+		protected function blockIframe($Line) {
+			if (isset($Line['text'][1]))
+			{
+				$text = str_replace(array('{' , '}'), '', $Line['text']);
+
+				$Block = array(
+					'element' => array(
+						'name' => 'iframe',
+						'text' => '',
+						'attributes' => array(
+							'src' => $text,
+						),
+					),
+				);
 				return $Block;
 			}
 		}
