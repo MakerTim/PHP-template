@@ -11,8 +11,14 @@ $(function() {
 function toggleMobiel(enabled){
 	if(enabled) {
 		$('.ulSidebar').hide();
+		$('.sidebar').css("margin-left",  "-" + $('body').css("margin"));
+		$('.sidebar').css("margin-top",  "-" + $('body').css("margin"));
+		$('.sidebar').css("top",  "8px");
 	} else {
 		$('.ulSidebar').show();
+		$('.sidebar').css("margin-left",  "auto");
+		$('.sidebar').css("margin-top",  "auto");
+		$('.sidebar').css("top",  "auto");
 	}
 }
 
@@ -21,7 +27,7 @@ function resizeMobiel(width, height) {
 		console.log(width, height);
 	}
 	if(f == undefined){
-		f = "a";
+		f = 0;
 		toggleMobiel(true);
 	}
 	$("#Pagina").width(width);
@@ -83,6 +89,6 @@ function resizeSidebarMobiel(width, height) {
 	if($('.MenuButton').hasClass("open")) {
 		$(".sidebar").width(width / 2);
 	} else {
-		$(".sidebar").removeAttr("style");
+		$(".sidebar").attr("style", $(".sidebar").attr("style").replace(/width:.{0,}?;/i, ""));
 	}
 }
