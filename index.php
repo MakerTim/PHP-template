@@ -6,6 +6,8 @@
 <!DOCTYPE html>
 <html>
 	<head>
+	<!-- This page is buid by MktPhpTemplate -->
+	<!-- Fork us on github https://github.com/MakerTim/PHP-template -->
 <?php 
 	echo Header::getMetaTags(); 
 	echo Header::phpToJS($pageContent, $menu);
