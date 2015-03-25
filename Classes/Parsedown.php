@@ -1378,9 +1378,12 @@
 					$src = $Iframe[$i];
 				} else if(strpos($Iframe[$i], '=') === 0) {
 					$wh = explode("x", substr($Iframe[$i], 1, strlen($Iframe[$i])));
-					if(count($wh) == 2) {
+					$c = count($wh);
+					if($c == 2) {
 						$width = $wh[0];
 						$heigth = $wh[1];
+					} else if($c == 1) {
+						$heigth = $wh[0];
 					}
 				} else if(strpos($Iframe[$i], '~') === 0) {
 					$border = substr($Iframe[$i], 1, strlen($Iframe[$i]));
@@ -1394,8 +1397,7 @@
 					'text' => '',
 					'attributes' => array(
 						'src' => $src,
-						'width' => $width,
-						'heigth' => $heigth,
+						'style' => "width: $width; heigth: $heigth;",
 						'frameborder' => $border,
 					),
 				),
