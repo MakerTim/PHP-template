@@ -24,7 +24,19 @@
 6. Verander bij NAME menu naam.  
 7. Verander alt.   
 8. Verander <%root%/Page/Index/ in <%root%/Page/(naam van de pagina)/.  
-9. Stel Priority in (de hoogste kom aan de linker kant).  
+9. Stel Priority in (de hoogste komt aan de linker kant).  
 10. Opslaan.
+
+**Iframe maken:**  
+Om een Iframe te maken vul je de onderstaande code in (op de plek waar je hem wilt hebben).  
+{$link[ =$width x$height][ ~$border]}
+
+
+**Voorbeeld:**  
+| **{http://makertim.nl}**             | = Dit zorgt voor een iframe.                                               |
+|--------------------------------------|----------------------------------------------------------------------------|
+| **{http://makertim.nl =200x200}**    | = Dit zorgt voor een iframe met aangepaste hoogte en breedte.              |
+| **{http://makertim.nl =200x200 ~0}** | = Dit zorgt voor een iframe met aangepaste hoogte en breedte & een border. |
+| **{http://makertim.nl ~0}**          | = Dit zorgt voor een iframe met  een border.                               |
  
 © Copyright 2015 MakerTim
