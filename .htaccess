@@ -4,7 +4,7 @@ RewriteEngine On
 
 #404 to index
 
-ErrorDocument 404 %{PATH}/index.php?404=Not_Found
+ErrorDocument 404 /GIT/PHP-Template/Page/index.php?404=404
 
 #PageHandler
 RewriteRule (Page/)(.{0,})(.+) index.php?page=$2
