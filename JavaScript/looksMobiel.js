@@ -2,7 +2,28 @@ var f;
 
 $(function() {
 	function toggleMenu() {
-		$('.ulSidebar').slideToggle();
+		t = 750;
+		$(".ulSidebar").toggleClass("isOpen");
+		if($(".ulSidebar").hasClass("isOpen")) {
+			j = 0; mp = 1;
+		} else {
+			j = t; mp = -1;
+			
+		}
+		for(i = 0; i < t; i++) {
+			setTimeout(function() {
+				j += mp;
+				$(".ulSidebar").height((window.innerHeight - $(".ulSidebar").position().top) * (j / t));
+				nw = Math.max((($(".sidebar").width()) * (j / t)), 50);
+				$('.MenuButton').css("width", nw);
+				$('.ulSidebar').css("width", nw);
+				if(j == 0) { 
+					$(".ulSidebar").hide();
+				} else if(j == 1) {
+					$(".ulSidebar").show();
+				}
+			}, i);
+		}
 		updateResize();
 	}
 	$('.MenuButton').click(toggleMenu);
@@ -20,7 +41,8 @@ function toggleMobiel(enabled){
 		$('.sidebar').css("margin-left",  "auto");
 		$('.sidebar').css("margin-top",  "auto");
 		$('.sidebar').css("top",  "auto");
-		$('.MenuButton').css("width",  "auto");
+		$(".ulSidebar").removeClass("isOpen");
+		$('.ulSidebar').css("width",  "auto");
 	}
 }
 
@@ -51,6 +73,7 @@ function setMob(bool, r) {
 		} else {
 			pagina.removeClass("Mobiel");
 			pagina.addClass("Pagina");
+			$(".sidebar").attr("style", $(".sidebar").attr("style").replace(/height:.{0,}?;/i, ""));
 		}
 		if(r){
 			updateResize();
@@ -93,4 +116,5 @@ function resizeSidebarMobiel(width, height) {
 	} else {
 		$(".sidebar").attr("style", $(".sidebar").attr("style").replace(/width:.{0,}?;/i, ""));
 	}
+	$(".ulSidebar").height(height - $(".ulSidebar").position().top);
 }
