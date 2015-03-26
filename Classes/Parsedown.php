@@ -1382,7 +1382,6 @@
 					if($c == 2) {
 						$width = $wh[0];
 						$heigth = $wh[1];
-						var_dump(array(is_numeric($width), is_numeric($heigth)));
 						if(is_numeric($width)){
 							$width .= 'px';
 						}
