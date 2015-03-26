@@ -4,6 +4,7 @@
 	list-style: none;
 	display: block;
 	position: relative;
+	border-bottom: 1px solid #5A585A;
 }
 
 .Mobiel .sidebar {
@@ -116,4 +117,5 @@
 .Mobiel .ulSidebar{
 	background-color: #C0C0C0;
 	overflow-y: auto;
+	border-top: 1px solid #5A585A;
 }
