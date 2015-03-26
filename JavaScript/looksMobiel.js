@@ -8,7 +8,6 @@ $(function() {
 			j = 0; mp = 1;
 		} else {
 			j = t; mp = -1;
-			
 		}
 		for(i = 0; i < t; i++) {
 			setTimeout(function() {
@@ -42,6 +41,7 @@ function toggleMobiel(enabled){
 		$('.sidebar').css("margin-top",  "auto");
 		$('.sidebar').css("top",  "auto");
 		$(".ulSidebar").removeClass("isOpen");
+		$('.MenuButton').css("width",  "auto");
 		$('.ulSidebar').css("width",  "auto");
 	}
 }
