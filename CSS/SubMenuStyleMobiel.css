@@ -2,7 +2,6 @@
 	margin: 0;
 	padding: 0;
 	list-style: none;
-	line-height: 1;
 	display: block;
 	position: relative;
 }
@@ -116,6 +115,5 @@
 }
 .Mobiel .ulSidebar{
 	background-color: #C0C0C0;
-	height: 100%;
-	overflow-x: hidden;
+	overflow-y: auto;
 }
