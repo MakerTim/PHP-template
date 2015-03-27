@@ -1,6 +1,8 @@
 <?php
+	//error_reporting(E_ERROR & E_PARSE);
 	require(join(DIRECTORY_SEPARATOR, array('.', 'Classes', 'IncludeManager.php')));
 	$pageContent = MktPage::getPage();
+	Counter::Count($pageContent);
 	$menu = Menu::getMainMenu($pageContent);
 ?>
 <!DOCTYPE html>
@@ -84,6 +86,7 @@
 			<div class="Footer TopBorder RoundedBottom">
 				<div class="markdown-body">
 					<?php 
+						echo Counter::loadStats(MKTConfig::$footerStats) . PHP_EOL;
 						echo '<p><a href="http://'. MKTConfig::$domein. MKTConfig::$rootDir .'">'. MKTConfig::$domein .'</a> 2015 All rights reserved.</p>';
 						echo MKTConfig::$footer;
 					?>

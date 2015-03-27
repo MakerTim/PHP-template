@@ -13,8 +13,8 @@
 	$mob =  new Mobile_Detect();
 	require("MktUtils.php");
 	require("MktConfig.php");
+	require("Counter.php");
 	require("Header.php");
 	require("Menu.php");
 	require("MktPage.php");
-	
 ?>

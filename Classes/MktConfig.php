@@ -7,6 +7,12 @@
 		public static $utf = "UTF-8";
 		// Hoort site bezocht te worden door robot's / zoek machines
 		public static $robot = true;
+		// Telt per pagina hoeveel pagina word bezocht
+		public static $pageCount = true;
+		// Telt hoeveel de site word bezocht
+		public static $siteCount = true;
+		// Telt hoeveel de site word bezocht in unieke bezoekers
+		public static $siteUniqueCount = true;
 		
 		// Domein van de site, exclusief http
 		public static $domein = "localhost";
@@ -21,6 +27,8 @@
 				"Nederland", "Localhost", "Template", 
 				"MakerTim", "CMS", "Content", 
 				"Beste Link 2015", "Responsive");
+		// Pagina footer text, variable zijn: {pageCount} {siteCount} {siteUniqueCount}
+		public static $footerStats = '<p>Pagina aantal keer bekeken:{pageCount}, Site bezocht:{siteCount}, waarvan unieke bezoekers:{siteUniqueCount}</p>';
 		// De text dat in de footer van elke pagina komt!
 		public static $footer = '<p>Hosted by <a href="http://www.xmlhosting.nl/">XMLHosting.nl</a> U kunt uw vakantie boeken bij:VakantieStunt & Duikreizen</p>';
 	}
