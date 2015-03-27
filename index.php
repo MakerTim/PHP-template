@@ -1,5 +1,5 @@
 <?php
-	//error_reporting(E_ERROR & E_PARSE);
+	error_reporting(E_ERROR & E_PARSE);
 	require(join(DIRECTORY_SEPARATOR, array('.', 'Classes', 'IncludeManager.php')));
 	$pageContent = MktPage::getPage();
 	Counter::Count($pageContent);
