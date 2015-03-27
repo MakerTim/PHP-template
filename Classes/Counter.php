@@ -6,6 +6,7 @@
 		public static $thisPageCount = -1;
 		
 		public static function count($page = "") {
+			mkdir("ViewCounter");
 			if(MktConfig::$siteUniqueCount) {
 				Counter::countUnique();
 			}
