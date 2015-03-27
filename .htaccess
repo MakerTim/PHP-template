@@ -12,6 +12,8 @@ RewriteRule (page/)(.{0,})(.+) index.php?page=$2
 RewriteRule (Pages/)(.{0,})(.+) index.php?page=$2
 RewriteRule (pages/)(.{0,})(.+) index.php?page=$2
 
+#Users cant open dir .git
+RewriteRule (\.git)(.{0,}) index.php?404=$2
 #Users cant open dir Classes
 RewriteRule (Classes)(.{0,}) index.php?404=$2
 #Users cant open dir ViewCounter
