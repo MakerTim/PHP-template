@@ -36,8 +36,11 @@ $(function() {
 	
 	function innerLink() {
 		$(this).children().each(function(key, value) {
-			if($(value).attr("href") !== undefined) {
+			j = $(value);
+			if(j.attr("href") !== undefined) {
 				window.location.href = $(value).attr("href");
+			} else if(j.hasClass("menuImg")) {
+				j.click();
 			}
 		});
 	}
@@ -58,6 +61,7 @@ function toggleMobiel(enabled){
 		$('.MenuButton').css("width",  "100px");
 		$(".menuImg").show();
 		$(".menuItem:not(.menuSelected)").hide();
+		$(".menuSelected").css("display", "list-item");
 	} else {
 		if($(".ulSidebar").size() > 0){
 			$('.ulSidebar').show();
@@ -101,7 +105,9 @@ function setMob(bool, r) {
 		} else {
 			pagina.removeClass("Mobiel");
 			pagina.addClass("Pagina");
-			$(".sidebar").attr("style", $(".sidebar").attr("style").replace(/height:.{0,}?;/i, ""));
+			if($(".ulSidebar").size() > 0){
+				$(".sidebar").attr("style", $(".sidebar").attr("style").replace(/height:.{0,}?;/i, ""));
+			}
 		}
 		if(r){
 			updateResize();

@@ -1371,25 +1371,28 @@
 			$Iframe = explode(' ', substr($Excerpt['text'], 1, strpos($Excerpt['text'], '}')-1));
 			$src = '';
 			$width = '100%';
-			$heigth = 'auto';
+			$height = 'auto';
 			$border = '0';
 			for($i = 0; $i < count($Iframe); $i++) {
 				if($i === 0) {
 					$src = $Iframe[$i];
 				} else if(strpos($Iframe[$i], '=') === 0) {
-					$wh = explode("x", substr($Iframe[$i], 1, strlen($Iframe[$i])));
-					$c = count($wh);
-					if($c == 2) {
-						$width = $wh[0];
-						$heigth = $wh[1];
-						if(is_numeric($width)){
-							$width .= 'px';
+					$str = substr($Iframe[$i], 1, strlen($Iframe[$i]));
+					if($str[strlen($str)-1] == 'x'){
+						$height = $str;
+					} else {
+						$wh = explode("x", $str);
+						$c = count($wh);
+						if($c == 2) {
+							$width = $wh[0];
+							$height = $wh[1];
+							if(is_numeric($width)){
+								$width .= 'px';
+							}
+							if(is_numeric($height)){
+								$height .= 'px';
+							}
 						}
-						if(is_numeric($heigth)){
-							$heigth .= 'px';
-						}
-					} else if($c == 1) {
-						$heigth = $wh[0];
 					}
 				} else if(strpos($Iframe[$i], '~') === 0) {
 					$border = substr($Iframe[$i], 1, strlen($Iframe[$i]));
@@ -1403,7 +1406,7 @@
 					'text' => '',
 					'attributes' => array(
 						'src' => $src,
-						'style' => "width: $width; heigth: $heigth;",
+						'style' => "width: $width; height: $height;",
 						'frameborder' => $border,
 					),
 				),
