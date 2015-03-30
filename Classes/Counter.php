@@ -16,7 +16,6 @@
 					array($_SERVER['REMOTE_ADDR'], $_COOKIE["PHPSESSID"], session_id()), 
 					MktConfig::$siteUniqueKey);
 				Counter::countUnique();
-				var_dump(Counter::$uniqueKey);
 			}
 			if(MktConfig::$siteCount) {
 				Counter::countTotal();
