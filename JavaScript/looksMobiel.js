@@ -2,7 +2,7 @@ var f;
 
 $(function() {
 	function toggleMenu() {
-		t = 750;
+		t = 300;
 		$(".ulSidebar").toggleClass("isOpen");
 		if($(".ulSidebar").hasClass("isOpen")) {
 			j = 0; mp = 1;
@@ -13,7 +13,7 @@ $(function() {
 			setTimeout(function() {
 				j += mp;
 				$(".ulSidebar").height((window.innerHeight - $(".ulSidebar").position().top) * (j / t));
-				nw = Math.max((($(".sidebar").width()) * (j / t)), 50);
+				nw = Math.max((($(".sidebar").width()) * (j / t)), 100);
 				$('.MenuButton').css("width", nw);
 				$('.ulSidebar').css("width", nw);
 				if(j == 0) { 
@@ -34,7 +34,7 @@ function toggleMobiel(enabled){
 		$('.sidebar').css("margin-left",  "-" + $('body').css("margin"));
 		$('.sidebar').css("margin-top",  "-" + $('body').css("margin"));
 		$('.sidebar').css("top",  "8px");
-		$('.MenuButton').css("width",  "50px");
+		$('.MenuButton').css("width",  "100px");
 	} else {
 		$('.ulSidebar').show();
 		$('.sidebar').css("margin-left",  "auto");
