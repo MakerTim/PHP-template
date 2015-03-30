@@ -37,11 +37,6 @@
 	background: #C0C0C0;
 }
 
-.Mobiel .sidebar > ul > li > a:hover {
-	color: #DEDEDE;
-	background-color: #5A585A;
-}
-
 .Mobiel .sidebar ul > li.has-sub > a:after {
 	position: absolute;
 	right: 26px;
@@ -87,11 +82,6 @@
 	padding-left: 32px;
 }
 
-.Mobiel .sidebar ul ul li a:hover {
-	color: #DEDEDE;
-	background-color: #5A585A;
-}
-
 .Mobiel .sidebar ul ul > li.has-sub > a:after {
 	top: 16px;
 	right: 26px;
@@ -102,7 +92,7 @@
 }
 
 .Mobiel .MenuButton {
-    height: 50px;
+    height: 100px;
     position: relative;
 	background: #C0C0C0;
 	text-align: center;
@@ -110,8 +100,8 @@
 }
 
 .Mobiel .MenuButton  img {
-	width: 50px;
-	height: 50px;
+	width: 100px;
+	height: 100px;
 	margin-left: 0 auto;
 }
 .Mobiel .ulSidebar{
