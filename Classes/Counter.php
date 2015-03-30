@@ -25,7 +25,7 @@
 				if($File !== false){
 					Counter::$thisPageCount = explode(PHP_EOL, $File)[0];
 				} else {
-					++Counter::$thisPageCount;
+					Counter::$thisPageCount = 0;
 				}
 				file_put_contents($file, ++Counter::$thisPageCount);
 			}
@@ -37,7 +37,7 @@
 			if($File !== false){
 				Counter::$siteCount = explode(PHP_EOL, $File)[0];
 			} else {
-				++Counter::$siteCount;
+				Counter::$siteCount = 0;
 			}
 			file_put_contents($file, ++Counter::$siteCount);
 		}

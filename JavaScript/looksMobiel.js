@@ -68,7 +68,7 @@ function toggleMobiel(enabled){
 		$('.MenuButton').css("width",  "auto");
 		$('.ulSidebar').css("width",  "auto");
 		$(".menuImg").hide();
-		$(".menuItem").css("display", "list-item");
+		$(".menuItem").css("display", "inline");
 	}
 }
 
