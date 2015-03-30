@@ -40,6 +40,10 @@ body {
 	text-decoration: none;
 }
 
+.Pagina .menuItem{
+	line-height: 38px;
+}
+
 .Pagina .menuImg{
 	display: none !important;
 }

@@ -1,0 +1,6 @@
+<MenuItem>
+	<Name>Stefan</Name>
+	<Alt>Naar de homepage</Alt>
+	<Href>%root%/Page/Stefan/</Href>
+	<Priority>200</Priority>
+</MenuItem>
