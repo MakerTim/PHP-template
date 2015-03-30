@@ -15,7 +15,7 @@
 		public static $siteUniqueCount = true;
 		// Op basis van wat telt de unique counter?
 		// Opties zijn: IP, COOKIE, SESSION
-		public static $siteUniqueKey = "SESSION";
+		public static $siteUniqueKey = "COOKIE";
 		
 		// Domein van de site, exclusief http
 		public static $domein = "localhost";

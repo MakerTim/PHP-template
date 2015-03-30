@@ -11,11 +11,12 @@
 				mkdir("ViewCounter");
 			}
 			if(MktConfig::$siteUniqueCount) {
-				$uniqueKey = str_replace(
+				Counter::$uniqueKey = str_replace(
 					array('IP', 'COOKIE', 'SESSION'), 
 					array($_SERVER['REMOTE_ADDR'], $_COOKIE["PHPSESSID"], session_id()), 
 					MktConfig::$siteUniqueKey);
 				Counter::countUnique();
+				var_dump(Counter::$uniqueKey);
 			}
 			if(MktConfig::$siteCount) {
 				Counter::countTotal();
