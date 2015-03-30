@@ -1,0 +1,12 @@
+<Page>
+	<Menu>
+		<Index>Test1</Index>
+		<Banner>true</Banner>
+		<SideBar>false</SideBar>
+	</Menu>
+	<Md>
+# Test1
+---
+
+	</Md>
+</Page>

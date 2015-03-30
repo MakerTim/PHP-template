@@ -4,7 +4,6 @@
 	position: fixed; 
 	padding: 15px; 
 	width: 300px; 
-	font-size: 13px; 
 	font-weight: normal; 
 	text-align: left; 
 	color: rgb(255, 255, 255); 
@@ -20,7 +19,6 @@
 .CookiePopup h4 {
 	padding: 0px 0px 7px; 
 	text-align: center; 
-	font-size: 15px; 
 	font-weight: bold; 
 	margin: 0px; 
 	background-color: #343234;
