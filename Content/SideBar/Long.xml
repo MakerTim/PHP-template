@@ -1,7 +1,7 @@
 <SideBar>
 	<Option>
 		<Name>Home</Name>
-		<Href>#</Href>
+		<Href>../Index/</Href>
 		<HasSub>false</HasSub>
 	</Option>
 	<Option>
