@@ -13,6 +13,9 @@
 		public static $siteCount = true;
 		// Telt hoeveel de site word bezocht in unieke bezoekers
 		public static $siteUniqueCount = true;
+		// Op basis van wat telt de unique counter?
+		// Opties zijn: IP, COOKIE, SESSION
+		public static $siteUniqueKey = "SESSION";
 		
 		// Domein van de site, exclusief http
 		public static $domein = "localhost";

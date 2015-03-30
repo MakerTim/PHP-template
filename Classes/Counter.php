@@ -4,10 +4,17 @@
 		public static $siteCount = -1;
 		public static $uniqueCount = -1;
 		public static $thisPageCount = -1;
+		private static $uniqueKey = "";
 		
 		public static function count($page = "") {
-			mkdir("ViewCounter");
+			if(!file_exists("ViewCounter")){
+				mkdir("ViewCounter");
+			}
 			if(MktConfig::$siteUniqueCount) {
+				$uniqueKey = str_replace(
+					array('IP', 'COOKIE', 'SESSION'), 
+					array($_SERVER['REMOTE_ADDR'], $_COOKIE["PHPSESSID"], session_id()), 
+					MktConfig::$siteUniqueKey);
 				Counter::countUnique();
 			}
 			if(MktConfig::$siteCount) {
@@ -50,7 +57,7 @@
 			Counter::$uniqueCount = -1;
 			if($File !== false) {
 				foreach(explode(PHP_EOL, $File) as $user) {
-					if(htmlentities($_COOKIE["PHPSESSID"]) == $user){
+					if(htmlentities(Counter::$uniqueKey) == $user){
 						$hasBeenThere = true;
 					}
 					Counter::$uniqueCount++;
@@ -59,7 +66,7 @@
 				Counter::$uniqueCount = 1;
 			}
 			if(!$hasBeenThere) {
-				file_put_contents($file, htmlentities($_COOKIE["PHPSESSID"]) . PHP_EOL, FILE_APPEND);
+				file_put_contents($file, htmlentities(Counter::$uniqueKey) . PHP_EOL, FILE_APPEND);
 			}
 		}
 		
