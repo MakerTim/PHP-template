@@ -24,7 +24,6 @@
 		public static function getMetaTags() {
 			$ret = PHP_EOL;
 			$ret .= '<meta http-equiv="Content-type" content="text/html; charset=' . MktConfig::$utf . '" />' . PHP_EOL;
-			$ret .= '<meta http-equiv="Content-Language" content="nl" />' . PHP_EOL;
 			$ret .= '<meta name="Language" content="Dutch" />' . PHP_EOL;
 			$ret .= '<meta charset="' . MktConfig::$utf . '" />'. PHP_EOL;
 			if(MktConfig::$robot === true) {

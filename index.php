@@ -26,7 +26,7 @@
 				if($pageContent->hasBanner == "true") {
 					echo PHP_EOL .
 					'<div class="Header">' . PHP_EOL . 
-					'<img id="BannerSrc" src="Pictures/header.jpg" style=" position: fixed; left: 1px; top: 1px; width: 1px; height: 1px;" />' .
+					'<img id="BannerSrc" alt="" src="Pictures/header.jpg" style=" position: fixed; left: 1px; top: 1px; width: 1px; height: 1px;" />' .
 					'<canvas id="Banner" class="RoundedTop"> </canvas>' .
 					'</div>' . PHP_EOL;
 				}
@@ -48,7 +48,7 @@
 					if(!$SIDEBAR->hasError){
 						echo PHP_EOL .
 						'<div class="sidebar TopBorder">' . PHP_EOL .
-						'<div class="MenuButton"> <img src="Pictures/menu.svg" /> </div>' . PHP_EOL .
+						'<div class="MenuButton"> <img alt="" src="Pictures/menu.svg" /> </div>' . PHP_EOL .
 						$SIDEBAR->PrintBar() .
 						'</div>';
 					} else {
