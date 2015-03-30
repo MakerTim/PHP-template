@@ -50,7 +50,7 @@
 			Counter::$uniqueCount = -1;
 			if($File !== false) {
 				foreach(explode(PHP_EOL, $File) as $user) {
-					if($_COOKIE["PHPSESSID"] == $user){
+					if(htmlentities($_COOKIE["PHPSESSID"]) == $user){
 						$hasBeenThere = true;
 					}
 					Counter::$uniqueCount++;
@@ -59,7 +59,7 @@
 				Counter::$uniqueCount = 1;
 			}
 			if(!$hasBeenThere) {
-				file_put_contents($file, $_COOKIE["PHPSESSID"] . PHP_EOL, FILE_APPEND);
+				file_put_contents($file, htmlentities($_COOKIE["PHPSESSID"]) . PHP_EOL, FILE_APPEND);
 			}
 		}
 		
