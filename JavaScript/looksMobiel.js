@@ -59,8 +59,10 @@ function toggleMobiel(enabled){
 		$(".menuImg").show();
 		$(".menuItem:not(.menuSelected)").hide();
 	} else {
-		$('.ulSidebar').show();
-		$(".ulSidebar").attr("style", $(".ulSidebar").attr("style").replace(/height:.{0,}?;/i, ""));
+		if($(".ulSidebar").size() > 0){
+			$('.ulSidebar').show();
+			$(".ulSidebar").attr("style", $(".ulSidebar").attr("style").replace(/height:.{0,}?;/i, ""));
+		}
 		$('.sidebar').css("margin-left",  "auto");
 		$('.sidebar').css("margin-top",  "auto");
 		$('.sidebar').css("top",  "auto");

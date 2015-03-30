@@ -39,7 +39,8 @@
 			} else {
 				Counter::$siteCount = 0;
 			}
-			file_put_contents($file, ++Counter::$siteCount);
+			Counter::$siteCount += 1;
+			file_put_contents($file, Counter::$siteCount);
 		}
 		
 		private static function countUnique() {
