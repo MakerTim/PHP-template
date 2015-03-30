@@ -1,6 +1,7 @@
 .Mobiel{
 	margin : 20px auto 0 auto;
 	font-family: 'Varela Round', Helvetica, Arial, sans-serif;
+	font-size: 1em;
 }
 
 .Mobiel .Header{
@@ -14,6 +15,7 @@
 	background-color: #C0C0C0;
 	margin-bottom: 10px;
 	border-top: 6px solid #5A585A;
+	font-size: 250% !important;
 }
 
 .Mobiel .Menu ul {
@@ -41,6 +43,12 @@
 
 .Mobiel .menuImg{
 	text-align: center;
+	padding: 0px !important;
+}
+
+.Mobiel .menuImg img{
+	width: 50px;
+	height: 50px;
 }
 
 .Mobiel .menuItem{
@@ -66,6 +74,7 @@
 	word-wrap: break-word;
 	margin-bottom: 5px;
 	border-top: 6px solid #5A585A;
+	font-size: 180% !important;
 }
 .Mobiel .Footer a{ 
     color: #E34D2C;

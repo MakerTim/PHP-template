@@ -4,8 +4,16 @@ var mob = 640;
 var isMob;
 
 $(function() {
-	//When document is ready with loading
-	registerSideMenuEvents();
+	loadAnimations();
+	loadCookies();
+	loadLooks();
+	loadLooksMobiel();
+});
+
+function loadLooks() {
+	if(PHP.page.hasSideBar == "true"){
+		registerSideMenuEvents();
+	}
 	
 	$(window).resize(function() {
 		updateResize();
@@ -14,7 +22,7 @@ $(function() {
 		updateResize();
 	});	
 	updateResize();
-});
+}
 
 function registerSideMenuEvents() {
 	$('.sidebar li.active').children('ul').show();
@@ -65,7 +73,9 @@ function resizeDesktop(width, height) {
 	resizeMenu(width, height);
 	resizeContent(width, height);
 	resizeFooter(width, height);
-	resizeSidebar(width, height);
+	if(PHP.page.hasSideBar == "true"){
+		resizeSidebar(width, height);
+	}
 }
 
 function resizeBanner(width, height) {
@@ -88,15 +98,15 @@ function resizeMenu(width, height) {
 }
 
 function resizeContent(width, height) {
-	if (PHP.page.hasSideBar == "false") {
-		$(".Content").width(width * 0.8);
-	} else {
+	if(PHP.page.hasSideBar == "true"){
 		$(".Content").width(width * 0.8 * 0.8 -16);
 		if($(".sidebar").height() > $(".markdown-body").height()) {
 			$(".Content").height(Math.max($(".markdown-body").height() + 20, $(".sidebar").height()));
 		} else { 
 			$(".Content").height("auto");
 		}
+	} else {
+		$(".Content").width(width * 0.8);
 	}
 	$(".Content").css("margin-bottom", 15);
 }

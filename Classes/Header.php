@@ -4,10 +4,10 @@
 	
 	class Header {
 		private static $scriptCollection = array(
-			'<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>', 
-			'<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css" />',
-			'<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>',
-			'<link href="http://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" type="text/css" />',
+			'<script src="%root%/JavaScript/libs/jquery.min.js"></script>',
+			'<link rel="stylesheet" href="%root%/CSS/libs/jquery-ui.css" />',
+			'<script src="%root%/JavaScript/libs/jquery-ui.min.js"></script>',
+			'<link href="%root%/CSS/libs/css_VarelaRound.css" rel="stylesheet" type="text/css" />',
 			'<link href="%root%/CSS/style.css" type="text/css" rel="stylesheet" />',
 			'<link href="%root%/CSS/mobiel.css" type="text/css" rel="stylesheet" />',
 			'<link href="%root%/CSS/cookie.css" type="text/css" rel="stylesheet" />',
@@ -56,29 +56,29 @@
 		
 		public static function phpToJS($MktPage, $MktMenu) {
 			$ret = PHP_EOL;
-			$ret .= "<script>" . PHP_EOL;
-			$ret .= "PHP = {};" . PHP_EOL;
+			$ret .= "<script>";
+			$ret .= "PHP = {};";
 			
-			$ret .= "PHP.mainmenu = {};" . PHP_EOL;
-			$ret .= "PHP.mainmenu.count = " . $MktMenu->getAmount() . ";" . PHP_EOL;
-			$ret .= "PHP.mainmenu.items = {};" . PHP_EOL;
+			$ret .= "PHP.mainmenu = {};";
+			$ret .= "PHP.mainmenu.count = " . $MktMenu->getAmount() . ";";
+			$ret .= "PHP.mainmenu.items = {};";
 			for($i=0; $i<$MktMenu->getAmount();$i++) {
-				$ret .= "PHP.mainmenu.items[$i] = {}" . PHP_EOL;
-				$ret .= "PHP.mainmenu.items[$i].name = " . json_encode($MktMenu->items[$i]->name) . ";" . PHP_EOL;
-				$ret .= "PHP.mainmenu.items[$i].alt = " . json_encode($MktMenu->items[$i]->alt) . ";" . PHP_EOL;
-				$ret .= "PHP.mainmenu.items[$i].href = " . json_encode($MktMenu->items[$i]->href) . ";" . PHP_EOL;
-				$ret .= "PHP.mainmenu.items[$i].prio = " . json_encode($MktMenu->items[$i]->prio) . ";" . PHP_EOL;
-				$ret .= "PHP.mainmenu.items[$i].error = " . json_encode($MktMenu->items[$i]->errorMessage) . ";" . PHP_EOL;
+				$ret .= "PHP.mainmenu.items[$i] = {};";
+				$ret .= "PHP.mainmenu.items[$i].name = " . json_encode($MktMenu->items[$i]->name) . ";";
+				$ret .= "PHP.mainmenu.items[$i].alt = " . json_encode($MktMenu->items[$i]->alt) . ";";
+				$ret .= "PHP.mainmenu.items[$i].href = " . json_encode($MktMenu->items[$i]->href) . ";";
+				$ret .= "PHP.mainmenu.items[$i].prio = " . json_encode($MktMenu->items[$i]->prio) . ";";
+				$ret .= "PHP.mainmenu.items[$i].error = " . json_encode($MktMenu->items[$i]->errorMessage) . ";";
 			}
 			
-			$ret .= "PHP.page = {};" . PHP_EOL;
-			$ret .= "PHP.page.type = " . json_encode($MktPage->page) . ";" . PHP_EOL;
-			$ret .= "PHP.page.content = " . json_encode($MktPage->content) . ";" . PHP_EOL;
-			$ret .= "PHP.page.error = " . json_encode($MktPage->errorMessage) . ";" . PHP_EOL;
-			$ret .= "PHP.page.menuEntry = " . json_encode($MktPage->menuEntry) . ";" . PHP_EOL;
-			$ret .= "PHP.page.hasBanner = " . json_encode($MktPage->hasBanner) . ";" . PHP_EOL;
-			$ret .= "PHP.page.hasSideBar = " . json_encode($MktPage->hasSideBar) . ";" . PHP_EOL;
-			$ret .= "PHP.isMobiel = " . json_encode($GLOBALS["mob"]->isMobile()) . ";" . PHP_EOL;
+			$ret .= "PHP.page = {};";
+			$ret .= "PHP.page.type = " . json_encode($MktPage->page) . ";";
+			$ret .= "PHP.page.content = " . json_encode($MktPage->content) . ";";
+			$ret .= "PHP.page.error = " . json_encode($MktPage->errorMessage) . ";";
+			$ret .= "PHP.page.menuEntry = " . json_encode($MktPage->menuEntry) . ";";
+			$ret .= "PHP.page.hasBanner = " . json_encode($MktPage->hasBanner) . ";";
+			$ret .= "PHP.page.hasSideBar = " . json_encode($MktPage->hasSideBar) . ";";
+			$ret .= "PHP.isMobiel = " . json_encode($GLOBALS["mob"]->isMobile()) . ";";
 			
 			$ret .= "</script>" . PHP_EOL;
 			return $ret;

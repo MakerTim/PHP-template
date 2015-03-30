@@ -1,16 +1,18 @@
-$(function() {
+function loadAnimations() {
 	highlightMenu();
-});
+};
 
 function highlightMenu() {
 	$("#Menu_" + PHP.page.menuEntry).addClass("menuSelected");
-	$("#Menu_" + PHP.page.menuEntry).show();
-	$("#Menu_" + PHP.page.menuEntry)
+	if(PHP.isMobiel) {
+		$(".menuSelected").css("display", "block");
+	} else {
+		$(".menuSelected").css("display", "inline");
+	}
+	$(".menuSelected")
 		.animate({
 			backgroundColor: "#ffffff",
-			opacity: 0.5 
-			}, 1500)
-		.animate({
+			opacity: 0.5,
 			borderBottomRightRadius: 15,
 			borderBottomLeftRadius: 15,
 			paddingBottom: 25,

@@ -1,4 +1,4 @@
-$(function() {
+function loadCookies() {
 	if($.cookie('cookies') == undefined) {
 		$('.CookiePopup').show();
 	}else{
@@ -14,4 +14,4 @@ $(function() {
 	$(".CookiePopup #policy").click(function(t) {
 		location.href = "../Policy/";
 	});
-});
+};

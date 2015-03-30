@@ -1,6 +1,7 @@
 body {
 	overflow-x: hidden;
 }
+
 .Pagina{
 	margin : 20px auto 0 auto;
 	font-family: 'Varela Round', Helvetica, Arial, sans-serif;
@@ -16,6 +17,7 @@ body {
 	float : left;
 	background-color: #C0C0C0;
 	margin-bottom: 20px;
+	font-size: 125% !important;
 }
 
 .Pagina .Menu ul {
