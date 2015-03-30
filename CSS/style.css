@@ -40,8 +40,8 @@ body {
 	text-decoration: none;
 }
 
-.Pagina .ulSidebar p {
-	display: inline;
+.Pagina .menuImg{
+	display: none !important;
 }
 
 .Pagina .MenuButton{

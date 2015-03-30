@@ -3,6 +3,8 @@ $(function() {
 });
 
 function highlightMenu() {
+	$("#Menu_" + PHP.page.menuEntry).addClass("menuSelected");
+	$("#Menu_" + PHP.page.menuEntry).show();
 	$("#Menu_" + PHP.page.menuEntry)
 		.animate({
 			backgroundColor: "#ffffff",
