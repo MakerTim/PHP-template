@@ -41,7 +41,13 @@ body {
 }
 
 .Pagina .menuItem{
-	line-height: 38px;
+	line-height: 45px;
+	top: -10px;
+	position: relative;
+}
+
+.Pagina .ulMainMenu{
+	margin-bottom: 0px;
 }
 
 .Pagina .menuImg{
