@@ -20,7 +20,7 @@ Hierin vind je een aantal mappen:
 **Sidebar:**		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hierin vind je alle Sidebar bestanden.
 
 **Css map:**  
-Hierin vind je alle css bestanden.
+Hierin vind je alle css bestanden. (voor meer uitleg zie How to.md)
 
 **Design map:**   
 Hierin vind je een lo-fi van de template & de eisen van het design.

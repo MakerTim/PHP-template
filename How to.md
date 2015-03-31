@@ -58,4 +58,14 @@ Om de counter aan te passen voer je de volgende handelingen uit:
 4. Pas dit getal aan (naar het getal wat je wilt hebben)  
 5. Opslaan.
 
+**Css aanpassen:**  
+Als je de css bestanden wilt aanpassen kijk dan goed of je de juiste aanpast. (allen doen als je over de juiste kennis beschikt)  
+1. **cookie:** In dit bestand kan je het uiterlijk van de cookie popup aanpassen.  
+2. **markdown:** In dit bestand kan je de Markdown style aanpassen (liever deze niet aanpassen)   
+3. **mobiel:** In dit bestand kan je het uiterlijk van de mobiele weergave aanpassen.   
+4. **style:**  In dit bestand kan je het uiterlijk van de desktop weergave aanpassen.  
+5. **SubMenuStyle:**  In dit bestand kan je het uiterlijk van het submenu aanpassen.  
+6. **SubMenuStyleMobiel:**  In dit bestand kan je het uiterlijk van het submenu van de mobiele weergave aanpassen.  
+
+
 © Copyright 2015 MakerTim
