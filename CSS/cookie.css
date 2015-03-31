@@ -25,9 +25,10 @@
 }
 
 .CookiePopup .button {
-	width: 50%;
 	display: inline;
 	text-align: center;
+	margin: 0 auto;
+	padding: 10px;
 }
 
 .CookiePopup div {

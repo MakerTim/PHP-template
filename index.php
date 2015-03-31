@@ -77,10 +77,8 @@
 				</h4>
 				<p> Deze website gebruikt cookies om te functioneren en de gebruikers ervaring te kunnen te verbeteren. 
 				Door verder gebruik te maken van deze website accepteer je dat we cookies gebruiken naar onze Cookie Policy.</p>
-				<center>
-					<div class="button" id="accept"> Accepteer </div>
-					<div class="button" id="policy"> Cookie Policy </div>
-				</center>
+				<div class="button" id="accept" style="float: left; "> Accepteer </div>
+				<div class="button" id="policy" style="float: right; "> Cookie Policy </div>
 			</div>
 			<!-- End Cookie Popup -->
 			
