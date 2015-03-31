@@ -7,7 +7,6 @@
 	font-weight: normal; 
 	text-align: left; 
 	color: rgb(255, 255, 255); 
-	line-height: 21px; 
 	-webkit-box-shadow: rgb(0, 0, 0) 0px 0px 8px; 
 	box-shadow: rgb(0, 0, 0) 0px 0px 8px;
 	bottom: 20px; 
@@ -23,6 +22,12 @@
 	font-weight: bold; 
 	margin: 0px; 
 	background-color: #343234;
+}
+
+.CookiePopup .button {
+	width: 50%;
+	display: inline;
+	text-align: center;
 }
 
 .CookiePopup div {

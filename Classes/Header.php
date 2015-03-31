@@ -33,14 +33,14 @@
 				$ret .= '<meta name="googlebot" content="noodp" />'. PHP_EOL;
 				$ret .= '<meta name="Slurp" content="noydir" />'. PHP_EOL;
 			}
-			$ret .= '<meta name="description" content="' . MktConfig::$desc . '" />'. PHP_EOL;
+			$ret .= '<meta name="description" content=' . str_replace('\n', ' ', json_encode(strip_tags(implode(' ', array_slice(explode(' ', $GLOBALS['pageContent']->content), 0, 20))))) . ' />'. PHP_EOL;
 			$builder = "";
 			foreach(MktConfig::$keys as $key) {
 				$builder .= $key . ', ';
 			}
 			$builder = rtrim($builder,", ");
 			$ret .= '<meta name="keywords" content="' . $builder . '" />'. PHP_EOL;
-			$ret .= '<title> ' . MktConfig::$title . ' </title>'. PHP_EOL;
+			$ret .= '<title> ' . $GLOBALS['pageContent']->page . ' - ' . MktConfig::$domein . ' </title>'. PHP_EOL;
 			$ret .= '<link rel="shortcut icon" href="Pictures/favicon.ico">'. PHP_EOL;
 			$ret .= '<meta name="author" content="' . MktConfig::$domein . '" />'. PHP_EOL;
 			return $ret;

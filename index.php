@@ -1,5 +1,5 @@
 <?php
-	error_reporting(E_ERROR & E_PARSE);
+	//error_reporting(E_ERROR & E_PARSE);
 	require(join(DIRECTORY_SEPARATOR, array('.', 'Classes', 'IncludeManager.php')));
 	$pageContent = MktPage::getPage();
 	Counter::Count($pageContent);
@@ -77,8 +77,10 @@
 				</h4>
 				<p> Deze website gebruikt cookies om te functioneren en de gebruikers ervaring te kunnen te verbeteren. 
 				Door verder gebruik te maken van deze website accepteer je dat we cookies gebruiken naar onze Cookie Policy.</p>
-				<div id="accept"> Accepteer </div>
-				<div id="policy"> Cookie Policy </div>
+				<center>
+					<div class="button" id="accept"> Accepteer </div>
+					<div class="button" id="policy"> Cookie Policy </div>
+				</center>
 			</div>
 			<!-- End Cookie Popup -->
 			

@@ -21,10 +21,6 @@
 		public static $domein = "localhost";
 		// Dir waar template in zit
 		public static $rootDir = "/GIT/PHP-Template/";
-		// De title van de site
-		public static $title = "PHP Template No Config";
-		// Description van de site, Meestal zichtbaar in zoekmachines
-		public static $desc = "A local site that gets hosted some where else";
 		// Zoek Keys, gebruikt in oude zoek machines en geavenceerde site beheer systemen
 		public static $keys = array(
 				"Nederland", "Localhost", "Template", 
