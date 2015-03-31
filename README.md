@@ -15,8 +15,9 @@ Hierin vind je alle php class bestanden.
 **Content map:**  
 Hierin vind je een aantal mappen:  
 **Mainmenu:**		Hierin vind je de menu items.  
-**Pages:** 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hierin vind U alle Webpages.   
-**Pictures:**		&nbsp;&nbsp;&nbsp;&nbsp;Hierin vind U alle Pictures.
+**Pages:** 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hierin vind je alle Webpages.   
+**Pictures:**		&nbsp;&nbsp;&nbsp;&nbsp;Hierin vind je alle Pictures.  
+**Sidebar:**		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hierin vind je alle Sidebar bestanden.
 
 **Css map:**  
 Hierin vind je alle css bestanden.
@@ -26,5 +27,8 @@ Hierin vind je een lo-fi van de template & de eisen van het design.
 
 **JavaScript map:**  
 Hierin vind je alle JavaScript bestanden.
+
+**ViewCounter map:**  
+Hierin vind je alle bestanden voor de counter.
 
 © Copyright 2015 MakerTim

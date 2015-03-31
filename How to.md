@@ -4,7 +4,7 @@
 
 
 **Pagina aanmaken:**  
-1. Open content map.  
+1. Open Content map.  
 2. Open Pages map.  
 3. Kopier index.xml
 4. Hernoem hem (naam van pagina)  
@@ -16,7 +16,7 @@
 9. Opslaan.  
 
 **Menu item aanmaken:**  
-1. Open content map.  
+1. Open Content map.  
 2. Open MainMenu map.  
 3. Kopier home.xml
 4. Hernoem hem (naam van menu item)  
@@ -48,4 +48,14 @@ Om een Iframe te maken vul je de onderstaande code in (op de plek waar je hem wi
 | **{https://www.google.nl/ =200x200 ~0}** | = Dit zorgt voor een iframe met aangepaste hoogte en breedte & een border. |
 | **{https://www.google.nl/ ~0}**          | = Dit zorgt voor een iframe met  een border.                               |                            
  
+**Counter waarde aanpassen:**  
+Om de counter aan te passen voer je de volgende handelingen uit:  
+1. Open ViewCounter map.  
+	* je ziet nu alle counter bestanden  
+2. Kies de counter welke je wilt aanpassen (pagina)  
+3. Open dit bestand.  
+	* je ziet nu een getal (dit is het aantal bezoekers)   
+4. Pas dit getal aan (naar het getal wat je wilt hebben)  
+5. Opslaan.
+
 © Copyright 2015 MakerTim
