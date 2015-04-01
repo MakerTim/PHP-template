@@ -64,7 +64,7 @@ Als je de css bestanden wilt aanpassen kijk dan goed of je de juiste aanpast. (a
 4. **style.css:**  In dit bestand kan je het uiterlijk van de desktop weergave aanpassen.  
 5. **SubMenuStyle.css:**  In dit bestand kan je het uiterlijk van het submenu aanpassen.  
 6. **SubMenuStyleMobiel.css:**  In dit bestand kan je het uiterlijk van het submenu van de mobiele weergave aanpassen.  
-7. **SocialMedia.css:**  In dit bestand kan je het uiterlijk van de social media linkjes aanpassen. 
+7. **socialMedia.css:**  In dit bestand kan je het uiterlijk van de socialMedia linkjes aanpassen. 
 
 
 © Copyright 2015 MakerTim
