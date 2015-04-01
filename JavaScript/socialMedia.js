@@ -1,6 +1,8 @@
 function loadMedia() {
+	$('.SocialMedia').hide();
 	loadFacebook();
 	loadTwitter();
+	$('.SocialMedia').delay(500).fadeIn(300);
 }
 
 function loadFacebook() {
