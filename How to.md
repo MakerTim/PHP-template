@@ -58,12 +58,13 @@ Om de counter aan te passen voer je de volgende handelingen uit:
 
 **Css aanpassen:**  
 Als je de css bestanden wilt aanpassen kijk dan goed of je de juiste aanpast. (allen doen als je over de juiste kennis beschikt)  
-1. **cookie:** In dit bestand kan je het uiterlijk van de cookie popup aanpassen.  
-2. **markdown:** In dit bestand kan je de Markdown style aanpassen (liever deze niet aanpassen)   
-3. **mobiel:** In dit bestand kan je het uiterlijk van de mobiele weergave aanpassen.   
-4. **style:**  In dit bestand kan je het uiterlijk van de desktop weergave aanpassen.  
-5. **SubMenuStyle:**  In dit bestand kan je het uiterlijk van het submenu aanpassen.  
-6. **SubMenuStyleMobiel:**  In dit bestand kan je het uiterlijk van het submenu van de mobiele weergave aanpassen.  
+1. **cookie.css:** In dit bestand kan je het uiterlijk van de cookie popup aanpassen.  
+2. **markdown.css:** In dit bestand kan je de Markdown style aanpassen (liever deze niet aanpassen)   
+3. **mobiel.css:** In dit bestand kan je het uiterlijk van de mobiele weergave aanpassen.   
+4. **style.css:**  In dit bestand kan je het uiterlijk van de desktop weergave aanpassen.  
+5. **SubMenuStyle.css:**  In dit bestand kan je het uiterlijk van het submenu aanpassen.  
+6. **SubMenuStyleMobiel.css:**  In dit bestand kan je het uiterlijk van het submenu van de mobiele weergave aanpassen.  
+7. **SocialMedia.css:**  In dit bestand kan je het uiterlijk van de social media linkjes aanpassen. 
 
 
 © Copyright 2015 MakerTim
