@@ -7,10 +7,8 @@ RewriteEngine On
 ErrorDocument 404 /GIT/PHP-Template/Page/index.php?404=404
 
 #PageHandler
-RewriteRule (Page/)(.{0,})(.+) index.php?page=$2
-RewriteRule (page/)(.{0,})(.+) index.php?page=$2
-RewriteRule (Pages/)(.{0,})(.+) index.php?page=$2
-RewriteRule (pages/)(.{0,})(.+) index.php?page=$2
+RewriteRule (page/)(.{0,})(.+) index.php?page=$2 [NC]
+RewriteRule (pages/)(.{0,})(.+) index.php?page=$2 [NC]
 
 #Users cant open dir .git
 RewriteRule (\.git)(.{0,}) index.php?404=$2
