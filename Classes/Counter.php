@@ -28,10 +28,14 @@
 		private static function pageTotal($page) {
 			if(!empty($page)) {
 				$file = MktUtils::file(array('ViewCounter', 'page_' . $page->page . '.txt'));
-				$File = file_get_contents($file);
-				if($File !== false){
-					$t = explode(PHP_EOL, $File);
-					Counter::$thisPageCount = $t[0];
+				if(file_exists($file)){
+					$File = file_get_contents($file);
+					if($File !== false){
+						$t = explode(PHP_EOL, $File);
+						Counter::$thisPageCount = $t[0];
+					} else {
+						Counter::$thisPageCount = 0;
+					}
 				} else {
 					Counter::$thisPageCount = 0;
 				}
@@ -41,11 +45,15 @@
 		
 		private static function countTotal() {
 			$file = MktUtils::file(array('ViewCounter', 'rawUsers.txt'));
-			$File = file_get_contents($file);
-			if($File !== false){
-				$t = explode(PHP_EOL, $File);
-				Counter::$siteCount = $t[0];
-			} else {
+			if(file_exists($file)){
+				$File = file_get_contents($file);
+				if($File !== false){
+					$t = explode(PHP_EOL, $File);
+					Counter::$siteCount = $t[0];
+				} else {
+					Counter::$siteCount = 0;
+				}
+			}else {
 				Counter::$siteCount = 0;
 			}
 			Counter::$siteCount += 1;
@@ -54,15 +62,19 @@
 		
 		private static function countUnique() {
 			$file = MktUtils::file(array('ViewCounter', 'uniqueUsers.txt'));
-			$File = file_get_contents($file);
 			$hasBeenThere = false;
-			Counter::$uniqueCount = -1;
-			if($File !== false) {
-				foreach(explode(PHP_EOL, $File) as $user) {
-					if(htmlentities(Counter::$uniqueKey) == $user){
-						$hasBeenThere = true;
+			if(file_exists($file)){
+				$File = file_get_contents($file);
+				Counter::$uniqueCount = -1;
+				if($File !== false) {
+					foreach(explode(PHP_EOL, $File) as $user) {
+						if(htmlentities(Counter::$uniqueKey) == $user){
+							$hasBeenThere = true;
+						}
+						Counter::$uniqueCount++;
 					}
-					Counter::$uniqueCount++;
+				} else {
+					Counter::$uniqueCount = 1;
 				}
 			} else {
 				Counter::$uniqueCount = 1;
