@@ -8,6 +8,7 @@ $(function() {
 	loadCookies();
 	loadLooks();
 	loadLooksMobiel();
+	loadMedia();
 });
 
 function loadLooks() {

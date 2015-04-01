@@ -13,7 +13,7 @@
 			if(MktConfig::$siteUniqueCount) {
 				Counter::$uniqueKey = str_replace(
 					array('IP', 'COOKIE', 'SESSION'), 
-					array($_SERVER['REMOTE_ADDR'], $_COOKIE["PHPSESSID"], session_id()), 
+					array($_SERVER['REMOTE_ADDR'], (array_key_exists('PHPSESSID', $_COOKIE)?$_COOKIE["PHPSESSID"]:"new"), session_id()), 
 					MktConfig::$siteUniqueKey);
 				Counter::countUnique();
 			}
@@ -30,7 +30,8 @@
 				$file = MktUtils::file(array('ViewCounter', 'page_' . $page->page . '.txt'));
 				$File = file_get_contents($file);
 				if($File !== false){
-					Counter::$thisPageCount = explode(PHP_EOL, $File)[0];
+					$t = explode(PHP_EOL, $File);
+					Counter::$thisPageCount = $t[0];
 				} else {
 					Counter::$thisPageCount = 0;
 				}
@@ -42,7 +43,8 @@
 			$file = MktUtils::file(array('ViewCounter', 'rawUsers.txt'));
 			$File = file_get_contents($file);
 			if($File !== false){
-				Counter::$siteCount = explode(PHP_EOL, $File)[0];
+				$t = explode(PHP_EOL, $File);
+				Counter::$siteCount = $t[0];
 			} else {
 				Counter::$siteCount = 0;
 			}

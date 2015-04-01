@@ -21,13 +21,18 @@
 		<?php 
 			echo '<div id="Pagina" class="' . ($GLOBALS["mob"]->isMobile() ? "Mobiel" : "Pagina") . '">';
 		?>
+			<!-- FB default script -->
+			<div id="fb-root"> </div>
+			<!-- end FB -->
+		
 			<!-- Banner -->
 			<?php
 				if($pageContent->hasBanner == "true") {
 					echo PHP_EOL .
 					'<div class="Header">' . PHP_EOL . 
 					'<img id="BannerSrc" alt="" src="Pictures/header.jpg" style=" position: fixed; left: 1px; top: 1px; width: 1px; height: 1px;" />' .
-					'<canvas id="Banner" class="RoundedTop"> </canvas>' .
+					'<canvas id="Banner" class="RoundedTop"> </canvas>' . PHP_EOL .
+					MktPage::buildSocialBanner() .
 					'</div>' . PHP_EOL;
 				}
 			?>

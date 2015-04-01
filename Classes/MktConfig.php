@@ -17,6 +17,11 @@
 		// Opties zijn: IP, COOKIE, SESSION
 		public static $siteUniqueKey = "COOKIE";
 		
+		// SocialMedia - Laat leeg voor geen knop
+		public static $google = "MakerTim";
+		public static $facebook = "https://www.facebook.com/MakerTimm";
+		public static $twitter = "MakerTim";
+		
 		// Domein van de site, exclusief http
 		public static $domein = "localhost";
 		// Dir waar template in zit
@@ -27,7 +32,7 @@
 				"MakerTim", "CMS", "Content", 
 				"Beste Link 2015", "Responsive");
 		// Pagina footer text, variable zijn: {pageCount} {siteCount} {siteUniqueCount}
-		public static $footerStats = '<p>Pagina aantal keer bekeken:{pageCount}, Site bezocht:{siteCount}, waarvan unieke bezoekers:{siteUniqueCount}</p>';
+		public static $footerStats = '<p>Pagina aantal keer bekeken:{pageCount}, site bezocht:{siteCount}, waarvan unieke bezoekers:{siteUniqueCount}</p>';
 		// De text dat in de footer van elke pagina komt!
 		public static $footer = '<p>Hosted by <a href="http://www.xmlhosting.nl/">XMLHosting.nl</a> U kunt uw vakantie boeken bij:VakantieStunt & Duikreizen</p>';
 	}

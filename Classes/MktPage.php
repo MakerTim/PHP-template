@@ -66,5 +66,23 @@
 			}
 			return new MktPage($type, $page);
 		}
+		
+		public static function buildSocialBanner() {
+			$ret = '<div class="SocialMedia">';
+			if(!empty(MktConfig::$facebook)){
+				$ret .= '<div class="sub"><div class="tweet"><iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com/vakantiestunt/&amp;layout=button_count&amp;show_faces=true&amp;width=450&amp;action=like&amp;colorscheme=light&amp;height=80" scrolling="no" class="socialm" frameborder="0" style="border:none; overflow:hidden; width:85px; height:20px;" allowTransparency="true"></iframe></div></div>';
+			}
+			if(!empty(MktConfig::$google)){
+				$ret .= '<div class="sub"><div class="tweet"><div class="g-plusone" data-annotation="none" data-size="medium" data-href="https://plus.google.com/+' . MktConfig::$google . '/posts"></div></div></div>';
+			}
+			if(!empty(MktConfig::$twitter)){
+				$ret .= '<div class="sub"><div class="tweet"><a href="https://twitter.com/share" class="twitter-share-button" data-via="' . MktConfig::$twitter . '" data-count="none" data-dnt="true">Tweet</a></div></div>';
+			}
+			$ret .= '</div>';
+			
+
+			
+			return $ret;
+		}
 	}
 ?>

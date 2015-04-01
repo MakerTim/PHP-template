@@ -1,0 +1,21 @@
+.SocialMedia {
+	display: block;
+	position: relative;
+	top: -33px;
+	height: 50px;
+	float: right;
+	right: 30px;
+}
+
+.SocialMedia .sub{
+	display: inline;
+	margin: 2px;
+	background: rgba(222, 222, 222, 0.5);
+	padding: 6px 6px 5px 6px;
+}
+
+.SocialMedia .tweet{
+	position: relative;
+	top: 5px;
+	display: inline;
+}
