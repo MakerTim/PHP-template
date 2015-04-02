@@ -4,15 +4,17 @@
 }
 
 .Mobiel .Header{
+	float : left;
 	height : 130px;
 	margin-bottom: 10px;
 }
 
 .Mobiel .Menu{
+	float : left;
 	background-color: #C0C0C0;
 	margin-bottom: 10px;
 	border-top: 6px solid #5A585A;
-	font-size: 250% !important;
+	font-size: 400% !important;
 }
 
 .Mobiel .Menu ul {
