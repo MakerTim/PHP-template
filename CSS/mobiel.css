@@ -14,7 +14,16 @@
 	background-color: #C0C0C0;
 	margin-bottom: 10px;
 	border-top: 6px solid #5A585A;
-	font-size: 400% !important;
+	font-size: 400% !important; 
+	/* 
+		Dear Future me,
+		I spend the last few weeks fixing the mobile version the menu
+		Now i did the 400% trick, it has magical working great and we will leave it as it is
+		
+		now like my dick size, will only ignore the !important, will have a look after this problem in the future...
+		greetings
+		past me
+	*/
 }
 
 .Mobiel .Menu ul {
