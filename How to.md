@@ -66,5 +66,9 @@ Als je de css bestanden wilt aanpassen kijk dan goed of je de juiste aanpast. (a
 5. **SubMenuStyle.css:**  In dit bestand kan je het uiterlijk van het submenu aanpassen.  
 6. **SubMenuStyleMobiel.css:**  In dit bestand kan je het uiterlijk van het submenu van de mobiele weergave aanpassen.  
 
+**Favicon veranderen:**    
+1. Open Content map.  
+2. Open Pictures map.  
+3. Vervang favicon.ico (naar je eigen favicon.ico)
 
 © Copyright 2015 MakerTim
