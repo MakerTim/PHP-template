@@ -61,10 +61,10 @@ Als je de css bestanden wilt aanpassen kijk dan goed of je de juiste aanpast. (a
 1. **cookie.css:** In dit bestand kan je het uiterlijk van de cookie popup aanpassen.  
 2. **markdown.css:** In dit bestand kan je de Markdown style aanpassen (liever deze niet aanpassen)   
 3. **mobiel.css:** In dit bestand kan je het uiterlijk van de mobiele weergave aanpassen.   
-7. **SocialMedia.css:**  In dit bestand kan je het uiterlijk van de socialMedia linkjes aanpassen. 
-4. **style.css:**  In dit bestand kan je het uiterlijk van de desktop weergave aanpassen.  
-5. **SubMenuStyle.css:**  In dit bestand kan je het uiterlijk van het submenu aanpassen.  
-6. **SubMenuStyleMobiel.css:**  In dit bestand kan je het uiterlijk van het submenu van de mobiele weergave aanpassen.  
+4. **SocialMedia.css:**  In dit bestand kan je het uiterlijk van de socialMedia linkjes aanpassen. 
+5. **style.css:**  In dit bestand kan je het uiterlijk van de desktop weergave aanpassen.  
+6. **SubMenuStyle.css:**  In dit bestand kan je het uiterlijk van het submenu aanpassen.  
+7. **SubMenuStyleMobiel.css:**  In dit bestand kan je het uiterlijk van het submenu van de mobiele weergave aanpassen.  
 
 **Favicon veranderen:**    
 1. Open Content map.  
