@@ -1,8 +1,5 @@
 # How to
 ---
-**MktConfig:**
-
-
 **Pagina aanmaken:**  
 1. Open Content map.  
 2. Open Pages map.  
@@ -70,5 +67,23 @@ Als je de css bestanden wilt aanpassen kijk dan goed of je de juiste aanpast. (a
 1. Open Content map.  
 2. Open Pictures map.  
 3. Vervang favicon.ico (naar je eigen favicon.ico)
+
+**Sidebar toevoegen:**    
+1. Open Content map.  
+2. Open SideBar map.
+3. Kopier test.xml  
+4. Hernoem hem (naam van submenu)  
+5. Open het bestand.   
+6. Verander bij < name > de naam van je menu item.  
+7. Vul bij < Href > de link waar je naar toe wilt gaan in.  
+8a. Geef aan bij < HasSub > of je item en subitem heeft (true/false)  
+8b. Als < HasSub > true voeg <IsOpen></IsOpen> toe.  
+8c. Vul bij <IsOpen></IsOpen> of je item standaard open is of niet
+
+**Sidebar toevoegen extra uitleg**  
+< Name > hier komt de naam van het menu item.  
+< Href > hier komt de link waar je naar toe wilt gaan.  
+< HasSub > hier geef je doormidel van true/false aan of je een subitem wilt (wel sub = true, geen sub = false)   
+< IsOpen > geeft aan of je subitem standaard open of dicht staat. (dicht= false, open=true)
 
 © Copyright 2015 MakerTim
