@@ -11,16 +11,16 @@ RewriteRule (page/)(.{0,})(.+) index.php?page=$2 [NC]
 RewriteRule (pages/)(.{0,})(.+) index.php?page=$2 [NC]
 
 #Users cant open dir .git
-RewriteRule (\.git)(.{0,}) index.php?404=$2
+RewriteRule (\.git)(.{0,}) index.php?404=$2 [NC]
 #Users cant open dir Classes
-RewriteRule (Classes)(.{0,}) index.php?404=$2
+RewriteRule (Classes)(.{0,}) index.php?404=$2 [NC]
 #Users cant open dir ViewCounter
-RewriteRule (Design)(.{0,}) index.php?404=$2
+RewriteRule (Design)(.{0,}) index.php?404=$2 [NC]
 #Users cant open dir Disign
-RewriteRule (ViewCounter)(.{0,}) index.php?404=$2
+RewriteRule (ViewCounter)(.{0,}) index.php?404=$2 [NC]
 
 #Pictures are not in pictures
-RewriteRule (Pictures)(.{0,}) Content/Pictures$2
+RewriteRule (Pictures)(.{0,}) Content/Pictures$2 [NC]
 
 #cant open htaccess files
 <files .htaccess>
