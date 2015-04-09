@@ -3,61 +3,61 @@
 **Pagina aanmaken:**  
 1. Open Content map.  
 2. Open Pages map.  
-3. Kopier index.xml
+3. Kopier index.xml  
 4. Hernoem hem (naam van pagina)  
 5. Open het bestand.  
-6. Verander bij INDEX pagina naam.   
+6. Verander bij `<Index>` pagina naam.   
 7. Kies voor banner ja of nee.  
 8a. Kies voor submenu ja of nee.  
-8b. Als submenu ja voeg < Sub >Submenu naam< /Sub > toe.  
-9. Extra optie < Title > < /Title> hier kan je een titel van je pagina toevoegen.
+8b. Als submenu ja voeg `<Sub>`Submenu naam`<Sub>` toe.  
+9. Extra optie `<Title>` `</Title>` hier kan je een titel van je pagina toevoegen.  
 10. Opslaan.  
 
 **Pagina aanmaken extra uitleg**   
-< Index >  hier komt de naam van de pagina.  
-< Banner > hier geef je aan of je een banner wilt. (wel banner = true, geen banner = false)  
-< SideBar > hier geef je aan of je een Sidemenu wilt. (wel Sidemenu = true, geen sidemenu = false)   
-< Sub >   hier geef je de naam op van welk submenu je wilt hebben. (alllen nodig als je bij < sidebar > true hebt staan  
-< Title > hier kan je de naam van je pagina invulen (dit is niet verplicht)
+`<Index>` hier komt de naam van de pagina.  
+`<Banner>` hier geef je aan of je een banner wilt. (wel banner = true, geen banner = false)  
+`<SideBar>` hier geef je aan of je een Sidemenu wilt. (wel Sidemenu = true, geen sidemenu = false)   
+`<Sub>`   hier geef je de naam op van welk submenu je wilt hebben. (alllen nodig als je bij `<SideBar>` true hebt staan  
+`<Title>` hier kan je de naam van je pagina invulen (dit is niet verplicht)
 
 ---
 **Menu item aanmaken:**  
 1. Open Content map.  
 2. Open MainMenu map.  
-3. Kopier home.xml
+3. Kopier home.xml  
 4. Hernoem hem (naam van menu item)  
 5. Open het bestand.  
-6. Verander bij NAME menu naam.  
-7. Verander alt.   
+6. Verander bij `<Name>` menu naam.  
+7. Verander bij `<Alt>`alt tekst.   
 8. Verander <%root%/Page/Index/ in <%root%/Page/(naam van de pagina)/.  
 9. Stel Priority in (de hoogste komt aan de linker kant).  
 10. Opslaan.
 
 **Menu item aanmaken extra uitleg**   
-< Name >  hier komt de naam van je menu item.  
-< Alt >  hier komt de alt tekst.  
-< Href >  hier komt de link naar je page.  
-< Priority > hier geef je hem een priority (dit geeft aan op welke plek in de menu hij komt).
+`<Name>`  hier komt de naam van je menu item.  
+`<Alt>`  hier komt de alt tekst.  
+`<Href>`  hier komt de link naar je page.  
+`<Priority>` hier geef je hem een priority (dit geeft aan op welke plek in de menu hij komt).
 
 ---
 
 **Sidebar toevoegen:**    
 1. Open Content map.  
-2. Open SideBar map.
+2. Open SideBar map.  
 3. Kopier test.xml  
 4. Hernoem hem (naam van submenu)  
 5. Open het bestand.   
-6. Verander bij < name > de naam van je menu item.  
-7. Vul bij < Href > de link waar je naar toe wilt gaan in.  
-8a. Geef aan bij < HasSub > of je item en subitem heeft (true/false)  
-8b. Als < HasSub > true voeg <IsOpen></IsOpen> toe.  
-8c. Vul bij <IsOpen></IsOpen> of je item standaard open is of niet
+6. Verander bij `<Name>` de naam van je menu item.  
+7. Vul bij `<Href>` de link waar je naar toe wilt gaan in.  
+8a. Geef aan bij `<HasSub>` of je item en subitem heeft (true/false)  
+8b. Als `<HasSub>` true voeg <IsOpen></IsOpen> toe.  
+8c. Vul bij `<IsOpen>``</IsOpen>` of je menu item standaard open is of niet
 
 **Sidebar toevoegen extra uitleg**  
-< Name > hier komt de naam van het menu item.  
-< Href > hier komt de link waar je naar toe wilt gaan.  
-< HasSub > hier geef je doormidel van true/false aan of je een subitem wilt (wel sub = true, geen sub = false)   
-< IsOpen > geeft aan of je subitem standaard open of dicht staat. (dicht= false, open=true)
+`<Name>` hier komt de naam van het menu item.  
+`<Href>`> hier komt de link waar je naar toe wilt gaan.  
+`<HasSub>` hier geef je doormidel van true/false aan of je een subitem wilt (wel sub = true, geen sub = false)   
+`<IsOpen>` geeft aan of je subitem standaard open of dicht staat. (dicht= false, open=true)
 
 ---
 
