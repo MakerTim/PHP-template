@@ -8,7 +8,7 @@ Omdat we gebruik maken van Markdown vind je hieronder twee linkjes met uitleg.
 **Advanced Markdown:**   
 (https://help.github.com/articles/github-flavored-markdown/)  
 **Markdown Iframe:**   
-(https://help.github.com/articles/github-flavored-markdown/)  
+(https://github.com/MakerTim/PHP-template/blob/master/Markdown%20iframe.md)  
 
 ---
 **Pagina aanmaken:**  
