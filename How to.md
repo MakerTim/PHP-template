@@ -1,5 +1,15 @@
 # How to
 ---
+**Gebruik maken van Markdown.**  
+Omdat we gebruik maken van Markdown vind je hieronder twee linkjes met uitleg.
+  
+**Basic Markdown:**   
+(https://help.github.com/articles/markdown-basics/)  
+**Advanced Markdown:**   
+(https://help.github.com/articles/github-flavored-markdown/)  
+
+
+---
 **Pagina aanmaken:**  
 1. Open Content map.  
 2. Open Pages map.  
