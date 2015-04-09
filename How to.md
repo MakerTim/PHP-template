@@ -17,7 +17,7 @@
 < Index >  hier komt de naam van de pagina.  
 < Banner > hier geef je aan of je een banner wilt. (wel banner = true, geen banner = false)  
 < SideBar > hier geef je aan of je een Sidemenu wilt. (wel Sidemenu = true, geen sidemenu = false)   
-< Sub >   hier geef je de naam op van welk submenu je wilt hebben. (alllen nodig als je bij <sidebar> true hebt staan
+< Sub >   hier geef je de naam op van welk submenu je wilt hebben. (alllen nodig als je bij < sidebar > true hebt staan  
 < Title > hier kan je de naam van je pagina invulen (dit is niet verplicht)
 
 ---
