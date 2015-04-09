@@ -102,8 +102,13 @@
 	width: 100px;
 	height: 100px;
 }
+
 .Mobiel .ulSidebar{
 	background-color: #C0C0C0;
 	overflow-y: auto;
 	border-top: 1px solid #5A585A;
+}
+
+.Mobiel .ulSidebar p{
+	line-height: 0%;
 }
