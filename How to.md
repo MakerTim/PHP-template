@@ -18,7 +18,7 @@ Omdat we gebruik maken van Markdown vind je hieronder twee linkjes met uitleg.
 4. Hernoem hem (naam van pagina)  
 5. Open het bestand.  
 6. Verander bij `<Index>` pagina naam.   
-7. Kies voor banner ja of nee. (deze altijd op true zetten) 
+7. Kies voor banner ja of nee. (deze altijd op true zetten)   
 8a. Kies voor submenu ja of nee.  
 8b. Als submenu ja voeg `<Sub>`Submenu naam`<Sub>` toe.  
 9. Extra optie `<Title>` `</Title>` hier kan je een titel van je pagina toevoegen.  
