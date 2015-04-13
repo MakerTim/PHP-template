@@ -123,6 +123,9 @@ function setMob(bool, r) {
 
 function resizeBannerMobiel(width, height) {
 	canvas = $("#Banner").get(0);
+	if(canvas == undefined){
+		return;
+	}
 	g2d = canvas.getContext("2d");
 	img = $("#BannerSrc").get(0);
 	

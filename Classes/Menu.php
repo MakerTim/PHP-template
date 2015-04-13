@@ -64,7 +64,7 @@
 			$xml = simplexml_load_string($xml);
 			$xmlError = libxml_get_errors();
 			foreach($xmlError as $error) {
-				$this->errorMessage .= '<div class="error"><b>XML ERROR:</b> <br /> File: ' . $this->page . 
+				$this->errorMessage .= '<div class="error"><b>XML ERROR:</b> <br /> File: ' . $FileLocation . 
 							'.xml <br /> &nbsp;&nbsp;at line ' . $error->line . ' (' . $error->message . ')<br /></div>';
 			}
 			libxml_clear_errors();

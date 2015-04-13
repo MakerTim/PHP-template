@@ -2,5 +2,5 @@
 	<Name>Raphael</Name>
 	<Alt>Naar de Test Pagina</Alt>
 	<Href>%root%/Page/Raphael/</Href>
-	<Priority>100</Priority>
+	<Priority>500</Priority>
 </MenuItem>
