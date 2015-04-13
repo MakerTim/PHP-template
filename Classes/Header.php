@@ -11,7 +11,7 @@
 			'<link href="%root%/CSS/style.css" type="text/css" rel="stylesheet" />',
 			'<link href="%root%/CSS/mobiel.css" type="text/css" rel="stylesheet" />',
 			'<link href="%root%/CSS/cookie.css" type="text/css" rel="stylesheet" />',
-			'<link href="%root%/CSS/SocialMedia.css" type="text/css" rel="stylesheet" />',
+			'<link href="%root%/CSS/socialMedia.css" type="text/css" rel="stylesheet" />',
 			'<link href="%root%/CSS/markdown.css" type="text/css" rel="stylesheet" />',
 			'<link href="%root%/CSS/SubMenuStyle.css" type="text/css" rel="stylesheet" />',
 			'<link href="%root%/CSS/SubMenuStyleMobiel.css" type="text/css" rel="stylesheet" />',
