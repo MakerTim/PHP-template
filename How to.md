@@ -97,4 +97,10 @@ Als je de css bestanden wilt aanpassen kijk dan goed of je de juiste aanpast. (a
 2. Open Pictures map.  
 3. Vervang favicon.ico (naar je eigen favicon.ico)
 
+---
+**Header aanpassen:**    
+1. Open Content map.  
+2. Open Pictures map.  
+3. Vervang header.jpg (naar je eigen header.jpg)
+
 © Copyright 2015 MakerTim
