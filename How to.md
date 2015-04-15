@@ -14,13 +14,25 @@ Omdat we gebruik maken van Markdown vind je hieronder twee linkjes met uitleg.
 **Pagina aanmaken:**  
 1. Open Content map.  
 2. Open Pages map.  
-3. Kopier index.xml  
-4. Hernoem hem (naam van pagina)  
-5. Open het bestand.  
-6. Verander bij `<Index>` pagina naam.   
-7. Kies voor banner ja of nee. (deze altijd op true zetten)   
-8a. Kies voor submenu ja of nee.  
-8b. Als submenu ja voeg `<Sub>`Submenu naam`<Sub>` toe.  
+3. Maak een nieuw xml bestand aan met de naam van je pagina.  
+4. Zet onderstaande code in je document.
+>`<Page>`  
+	`<Menu>`  
+		`<Index>Stefan</Index>`  
+		`<Banner>true</Banner>`  
+		`<SideBar>true</SideBar>`  
+		`<Sub>Long</Sub>`  
+	`</Menu>`  
+	`<Md>`  
+`# Context`    
+	`</Md>`  
+`</Page>`
+> 
+ 
+5. Verander bij `<Index>` pagina naam.   
+6. Kies voor banner ja of nee.   
+7. Kies voor submenu ja of nee.  
+8. Als submenu ja voeg `<Sub>`Submenu naam`<Sub>` toe.  
 9. Extra optie `<Title>` `</Title>` hier kan je een titel van je pagina toevoegen.  
 10. Opslaan.  
 
@@ -28,21 +40,28 @@ Omdat we gebruik maken van Markdown vind je hieronder twee linkjes met uitleg.
 `<Index>` hier komt de naam van de pagina.  
 `<Banner>` hier geef je aan of je een banner wilt. (wel banner = true, geen banner = false)  
 `<SideBar>` hier geef je aan of je een Sidemenu wilt. (wel Sidemenu = true, geen sidemenu = false)   
-`<Sub>`   hier geef je de naam op van welk submenu je wilt hebben. (alllen nodig als je bij `<SideBar>` true hebt staan  
+`<Sub>`   hier geef je de naam op van welk submenu je wilt hebben. (alllen nodig als je bij `<SideBar>` true hebt staan.)  
 `<Title>` hier kan je de naam van je pagina invulen (dit is niet verplicht)
 
 ---
 **Menu item aanmaken:**  
 1. Open Content map.  
 2. Open MainMenu map.  
-3. Kopier home.xml  
-4. Hernoem hem (naam van menu item)  
-5. Open het bestand.  
-6. Verander bij `<Name>` menu naam.  
-7. Verander bij `<Alt>`alt tekst.   
-8. Verander <%root%/Page/Index/ in <%root%/Page/(naam van de pagina)/.  
-9. Stel Priority in (de hoogste komt aan de linker kant).  
-10. Opslaan.
+3. Maak een nieuw xml bestand aan met de naam van je menuitem.  
+4. Zet onderstaande code in je document.
+>`<MenuItem>`  
+	`<Name>Stefan</Name>`  
+	`<Alt>Naar de homepage</Alt>`   
+	`<Href>%root%/Page/Stefan/</Href>`  
+	`<Priority>600</Priority>`  
+`</MenuItem>`
+> 
+
+5. Verander bij `<Name>` menu naam.  
+6. Verander bij `<Alt>`alt tekst.   
+7. Verander <%root%/Page/Index/ in <%root%/Page/(naam van de pagina)/.  
+8. Stel Priority in (de hoogste komt aan de linker kant).  
+9. Opslaan.
 
 **Menu item aanmaken extra uitleg**   
 `<Name>`  hier komt de naam van je menu item.  
@@ -54,30 +73,52 @@ Omdat we gebruik maken van Markdown vind je hieronder twee linkjes met uitleg.
 **Sidebar toevoegen:**    
 1. Open Content map.  
 2. Open SideBar map.  
-3. Kopier test.xml  
-4. Hernoem hem (naam van submenu)  
-5. Open het bestand.   
-6. Verander bij `<Name>` de naam van je menu item.  
-7. Vul bij `<Href>` de link waar je naar toe wilt gaan in.  
-8a. Geef aan bij `<HasSub>` of je item en subitem heeft (true/false)  
-8b. Als `<HasSub>` true voeg <IsOpen></IsOpen> toe.  
-8c. Vul bij `<IsOpen>``</IsOpen>` of je menu item standaard open is of niet
+3. Maak een nieuw xml bestand aan met de naam van je submenu.  
+4. Zet onderstaande code in je document.  
+>`<SideBar>`  
+	`<Option>`  
+		`<Name>Home</Name>`  
+		`<Href>#</Href>`  
+		`<HasSub>false</HasSub>`  
+	`</Option>`  
+	`<Option>`  
+		`<Name>Sub 1</Name>`  
+		`<Href>#</Href>`  
+		`<HasSub>true</HasSub>`  
+		`<IsOpen>false</IsOpen>`  
+		`<Sub>`  
+			`<Name>Product 1.1</Name>`  
+			`<Href>Contact</Href>`  
+		`</Sub>`  
+		`<Sub>`  
+			`<Name>Product 1.2</Name>`  
+			`<Href>Contact</Href>`  
+		`</Sub>`   
+	`</Option>`  
+	`</SideBar>`  
+> 
+ 
+5. Verander bij `<Name>` de naam van je menu item.  
+6. Vul bij `<Href>` de link waar je naar toe wilt gaan in.  
+7. Geef aan bij `<HasSub>` of je item en subitem heeft (true/false)  
+8. Als `<HasSub>` true voeg `<IsOpen></IsOpen>` toe.  
+9. Vul bij `<IsOpen>``</IsOpen>` of je menu item standaard open is of niet.
 
 **Sidebar toevoegen extra uitleg**  
 `<Name>` hier komt de naam van het menu item.  
 `<Href>`> hier komt de link waar je naar toe wilt gaan.  
-`<HasSub>` hier geef je doormidel van true/false aan of je een subitem wilt (wel sub = true, geen sub = false)   
-`<IsOpen>` geeft aan of je subitem standaard open of dicht staat. (dicht= false, open=true)
+`<HasSub>` hier geef je doormidel van true/false aan of je een subitem wilt (wel sub = true, geen sub = false).   
+`<IsOpen>` geeft aan of je subitem standaard open of dicht staat. (dicht= false, open=true).
 
 ---
 **Counter waarde aanpassen:**  
 Om de counter aan te passen voer je de volgende handelingen uit:  
 1. Open ViewCounter map.  
-	* je ziet nu alle counter bestanden  
-2. Kies de counter welke je wilt aanpassen (pagina)  
+	* je ziet nu alle counter bestanden.  
+2. Kies de counter welke je wilt aanpassen (pagina).  
 3. Open dit bestand.  
-	* je ziet nu een getal (dit is het aantal bezoekers)   
-4. Pas dit getal aan (naar het getal wat je wilt hebben)  
+	* je ziet nu een getal (dit is het aantal bezoekers).   
+4. Pas dit getal aan (naar het getal wat je wilt hebben).  
 5. Opslaan.
 
 ---
