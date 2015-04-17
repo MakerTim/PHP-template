@@ -10,7 +10,6 @@ function highlightMenu() {
 		$(".menuSelected").css("display", "inline");
 	}
 	color = $(".menuSelected").css("border").split("(")[1].split(")")[0].split(", ");
-	console.log(color)
 	$(".menuSelected")
 		.animate({
 			backgroundColor: "rgba(" + color[0] + "," + color[1] + "," + color[2] + ",0.5)",

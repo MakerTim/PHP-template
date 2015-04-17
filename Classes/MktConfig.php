@@ -42,27 +42,27 @@
 		// Gebruik alleen 'rgba(255,255,255,1.0);'
 		
 		// Algemeen
-		public static $Lijntje = 					'rgba(255, 255, 255, 0.0);';
+		public static $Lijntje = 					'rgba(90,  90,  90,   1.0);';
 		
 		// Menu
-		public static $Menu_Text = 					'rgba(255, 255, 255, 1.0);';
-		public static $Menu_Background = 			'rgba(1,   141, 211, 1.0);';
-		public static $Menu_Outline = 				'rgba(253, 203, 25,  1.0);';
+		public static $Menu_Text = 					'rgba(46,  46,  46,   1.0);';
+		public static $Menu_Background = 			'rgba(192, 192, 192,  1.0);';
+		public static $Menu_Outline = 				'rgba(74,  74,  74,   1.0);';
 		
 		// SubMenu
-		public static $Sub_Text = 					'rgba(255, 255, 255, 1.0);';
-		public static $Sub_Item = 					'rgba(1,   141, 211, 1.0);';
-		public static $Sub_Item_Hover = 			'rgba(253, 203, 25,  1.0);';
-		public static $Sub_Item_Sub = 				'rgba(82,  191, 244, 1.0);';
-		public static $Sub_Item_Sub_Hover = 		'rgba(253, 203, 25,  1.0);';
-		public static $Sub_Item_Border = 			'rgba(34,  61,  214, 1.0);';
+		public static $Sub_Text = 					'rgba(46,  46,  46,   1.0);';
+		public static $Sub_Item = 					'rgba(192, 192, 192,  1.0);';
+		public static $Sub_Item_Hover = 			'rgba(90,  90,  90,   1.0);';
+		public static $Sub_Item_Sub = 				'rgba(222, 222, 222,  1.0);';
+		public static $Sub_Item_Sub_Hover = 		'rgba(100, 100, 100,  1.0);';
+		public static $Sub_Item_Border = 			'rgba(90,  90,  90,   1.0);';
 		
 		// Content
-		public static $Markdown_Background = 		'rgba(255, 255, 255, 0.0);';
-		public static $Markdown_Outline =	 		'rgba(255, 255, 255, 0.0);';
+		public static $Markdown_Background = 		'rgba(222, 222, 222, 1.0);';
+		public static $Markdown_Outline =	 		'rgba(90,  90,  90,  1.0);';
 		public static $Markdown_Text = 				'rgba(51,  51,  51,  1.0);';
-		public static $Markdown_Link = 				'rgba(253, 203, 25,  1.0);';
-		public static $Markdown_Balk = 				'rgba(253, 203, 25,  1.0);';
+		public static $Markdown_Link = 				'rgba(65,  131, 196, 1.0);';
+		public static $Markdown_Balk = 				'rgba(231, 231, 231, 1.0);';
 		public static $Markdown_HeaderLine = 		'rgba(238, 238, 238, 1.0);';
 		public static $Markdown_Highlight = 		'rgba(0,   0,   0,   0.2);';
 		public static $Markdown_TableBorder = 		'rgba(215, 215, 215, 1.0);';
@@ -70,16 +70,16 @@
 		public static $Markdown_TableBackground2 =	'rgba(245, 245, 245, 0.5);';
 		
 		// Footer
-		public static $Footer_Text =				'rgba(255, 255, 255, 1.0);';
-		public static $Footer_Link =				'rgba(253, 203, 25,  1.0);';
-		public static $Footer_Background =			'rgba(1,   141, 211, 1.0);';
+		public static $Footer_Text =				'rgba(51,  51,  51,  1.0);';
+		public static $Footer_Link =				'rgba(227, 77,  44,  1.0);';
+		public static $Footer_Background =			'rgba(192, 192, 192, 1.0);';
 		
 		// SocialMedia
-		public static $Media_Background =			'rgba(253, 203, 25,  0.3);';
+		public static $Media_Background =			'rgba(222, 222, 222, 0.5);';
 		
 		// Cookie popup
 		public static $Cookie_Text = 				'rgba(255, 255, 255, 1.0);';
-		public static $Cookie_Background = 			'rgba(1,   141, 211, 0.7);';
+		public static $Cookie_Background = 			'rgba(0,   0,   0,   0.7);';
 		public static $Cookie_Button = 				'rgba(91,  183, 91,  1.0);';
 	}
 ?>
