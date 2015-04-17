@@ -14,7 +14,7 @@ Om een Iframe te maken vul je de onderstaande code in (op de plek waar je hem wi
 | **{https://www.google.nl/}**             | = Dit zorgt voor een iframe.                                               |
 | **{https://www.google.nl/ =200px}** 	   | = Dit zorgt voor een iframe met aangepaste hoogte. (breedte = 100%)        |
 | **{https://www.google.nl/ =200x200}**    | = Dit zorgt voor een iframe met aangepaste hoogte en breedte.              |
-| **{https://www.google.nl/ =200x200 ~0}** | = Dit zorgt voor een iframe met aangepaste hoogte en breedte & een border. |
-| **{https://www.google.nl/ ~0}**          | = Dit zorgt voor een iframe met  een border.                               |    
+| **{https://www.google.nl/ =200x200 ~1}** | = Dit zorgt voor een iframe met aangepaste hoogte en breedte & een border. |
+| **{https://www.google.nl/ ~1}**          | = Dit zorgt voor een iframe met  een border.                               |    
 
 © Copyright 2015 MakerTim               
