@@ -76,15 +76,18 @@ body {
 	margin-bottom: 5px;
 	text-align:center;
 	word-wrap: break-word;
-
 }
+.Pagina .Footer p{
+	color:  <?php echo MktColor::$Footer_Text; ?>
+}
+
 .Pagina .Footer a{ 
-    color: <?php echo MktColor::$Footer_Text; ?>
+    color: <?php echo MktColor::$Footer_Link; ?>
 	text-decoration: none;
 }
 
 .Pagina .Footer a:active { 
-    color: <?php echo MktColor::$Footer_Text; ?>
+    color: <?php echo MktColor::$Footer_Link; ?>
 	text-decoration: none;
 }
 

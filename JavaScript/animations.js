@@ -9,10 +9,11 @@ function highlightMenu() {
 	} else {
 		$(".menuSelected").css("display", "inline");
 	}
+	color = $(".menuSelected").css("border").split("(")[1].split(")")[0].split(", ");
+	console.log(color)
 	$(".menuSelected")
 		.animate({
-			backgroundColor: "#ffffff",
-			opacity: 0.5,
+			backgroundColor: "rgba(" + color[0] + "," + color[1] + "," + color[2] + ",0.5)",
 			borderBottomRightRadius: 15,
 			borderBottomLeftRadius: 15,
 			paddingBottom: 25,
