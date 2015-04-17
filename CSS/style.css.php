@@ -1,3 +1,7 @@
+<?php 
+	header('Content-Type: text/css');
+	require(join(DIRECTORY_SEPARATOR, array('..', 'Classes', 'IncludeManager.php')));
+ ?>
 body {
 	overflow-x: hidden;
 }
@@ -15,7 +19,7 @@ body {
 
 .Pagina .Menu{
 	float : left;
-	background-color: #C0C0C0;
+	background-color: <?php echo MktColor::$Menu_Background; ?>
 	margin-bottom: 20px;
 	font-size: 125% !important;
 }
@@ -29,16 +33,16 @@ body {
 	margin: 0;
 	padding: 15px;
 	padding-top: 18px;
-	border: 0px solid #4A4A4A;
+	border: 0px solid <?php echo MktColor::$Menu_Outline; ?>
 }
 
 .Pagina .Menu ul li a{ 
-    color: #2E2E2E;
+    color: <?php echo MktColor::$Menu_Text; ?>
 	text-decoration: none;
 }
 
 .Pagina .Menu ul li a:active { 
-    color: #2E2E2E;
+    color: <?php echo MktColor::$Menu_Text; ?>
 	text-decoration: none;
 }
 
@@ -62,12 +66,12 @@ body {
 
 .Pagina .Content{
 	float : left;
-	background-color: #DEDEDE;
+	background-color: <?php echo MktColor::$Markdown_Background; ?>
 }
 
 .Pagina .Footer{
 	float : left;
-	background-color: #C0C0C0;
+	background-color: <?php echo MktColor::$Footer_Background; ?>
 	margin-top: 10px;
 	margin-bottom: 5px;
 	text-align:center;
@@ -75,12 +79,12 @@ body {
 
 }
 .Pagina .Footer a{ 
-    color: #E34D2C;
+    color: <?php echo MktColor::$Footer_Text; ?>
 	text-decoration: none;
 }
 
 .Pagina .Footer a:active { 
-    color: #E34D2C;
+    color: <?php echo MktColor::$Footer_Text; ?>
 	text-decoration: none;
 }
 
@@ -119,5 +123,5 @@ body {
 }
 
 .Pagina .TopBorder{
-	border-top: 6px solid #5A585A;
+	border-top: 6px solid <?php echo MktColor::$Lijntje; ?>
 }

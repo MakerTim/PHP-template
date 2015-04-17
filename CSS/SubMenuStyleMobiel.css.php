@@ -1,10 +1,14 @@
-.Mobiel .sidebar ul, .Mobiel .sidebar ul li a, .Mobiel .sidebar ul li  {
+<?php 
+	header('Content-Type: text/css');
+	require(join(DIRECTORY_SEPARATOR, array('..', 'Classes', 'IncludeManager.php')));
+ ?>
+ .Mobiel .sidebar ul, .Mobiel .sidebar ul li a, .Mobiel .sidebar ul li  {
 	margin: 0;
 	padding: 0;
 	list-style: none;
 	display: block;
 	position: relative;
-	border-bottom: 1px solid #5A585A;
+	border-bottom: 1px solid <?php echo MktColor::$Sub_Item_Border; ?>
 }
 
 .Mobiel .sidebar {
@@ -33,8 +37,8 @@
 	cursor: pointer;
 	z-index: 2;
 	text-decoration: none;
-	color: #2E2E2E;
-	background: #C0C0C0;
+	color: <?php echo MktColor::$Sub_Text; ?>
+	background: <?php echo MktColor::$Sub_Item; ?>
 }
 
 .Mobiel .sidebar ul > li.has-sub > a:after {
@@ -45,7 +49,7 @@
 	display: block;
 	height: 10px;
 	width: 2px;
-	background: #2E2E2E;
+	background: <?php echo MktColor::$Sub_Item_Hover; ?>
 	content: "";
 }
 
@@ -56,7 +60,7 @@
 	display: block;
 	width: 10px;
 	height: 2px;
-	background: #2E2E2E;
+	background: <?php echo MktColor::$Sub_Item_Hover; ?>
 	content: "";
 }
 
@@ -73,8 +77,8 @@
 	cursor: pointer;
 	z-index: 2;
 	text-decoration: none;
-	color: #2E2E2E;
-	background: #DEDEDE;
+	color: <?php echo MktColor::$Sub_Text; ?>
+	background: <?php echo MktColor::$Sub_Item_Sub; ?>
 }
 
 .Mobiel .sidebar ul ul ul li a {
@@ -93,9 +97,9 @@
 .Mobiel .MenuButton {
     height: 100px;
     position: relative;
-	background: #C0C0C0;
+	background: <?php echo MktColor::$Sub_Item; ?>
 	text-align: center;
-	border-top: 6px solid #5A585A;
+	border-top: 6px solid <?php echo MktColor::$Lijntje; ?>
 }
 
 .Mobiel .MenuButton  img {
@@ -104,9 +108,9 @@
 }
 
 .Mobiel .ulSidebar{
-	background-color: #C0C0C0;
+	background-color: <?php echo MktColor::$Sub_Item; ?>
 	overflow-y: auto;
-	border-top: 1px solid #5A585A;
+	border-top: 1px solid <?php echo MktColor::$Lijntje; ?>
 }
 
 .Mobiel .ulSidebar p{

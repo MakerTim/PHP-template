@@ -3,6 +3,7 @@
 		
 		public static $siteCount = -1;
 		public static $uniqueCount = -1;
+		public static $ipCount = -1;
 		public static $thisPageCount = -1;
 		private static $uniqueKey = "";
 		
@@ -81,6 +82,30 @@
 			}
 			if(!$hasBeenThere) {
 				file_put_contents($file, htmlentities(Counter::$uniqueKey) . PHP_EOL, FILE_APPEND);
+			}
+		}
+		
+		private static function countIP() {
+			$file = MktUtils::file(array('ViewCounter', 'ipUsers.txt'));
+			$hasBeenThere = false;
+			if(file_exists($file)){
+				$File = file_get_contents($file);
+				Counter::$ipCount = -1;
+				if($File !== false) {
+					foreach(explode(PHP_EOL, $File) as $user) {
+						if($_SERVER['REMOTE_ADDR'] == $user){
+							$hasBeenThere = true;
+						}
+						Counter::$ipCount++;
+					}
+				} else {
+					Counter::$ipCount = 1;
+				}
+			} else {
+				Counter::$ipCount = 1;
+			}
+			if(!$hasBeenThere) {
+				file_put_contents($file, $_SERVER['REMOTE_ADDR'] . PHP_EOL, FILE_APPEND);
 			}
 		}
 		

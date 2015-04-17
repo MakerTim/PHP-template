@@ -1,4 +1,8 @@
-.Pagina .sidebar ul, .Pagina .sidebar ul li a, .Pagina .sidebar ul li  {
+<?php 
+	header('Content-Type: text/css');
+	require(join(DIRECTORY_SEPARATOR, array('..', 'Classes', 'IncludeManager.php')));
+ ?>
+ .Pagina .sidebar ul, .Pagina .sidebar ul li a, .Pagina .sidebar ul li  {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -10,8 +14,8 @@
 
 .Pagina .sidebar {
 	width: 220px;
-	color:#2E2E2E;
-	float : left;
+	color: <?php echo MktColor::$Sub_Text; ?>
+	float: left;
 	margin-right: 15px;
 }
 
@@ -32,13 +36,13 @@
 	cursor: pointer;
 	z-index: 2;
 	text-decoration: none;
-	color: #2E2E2E;
-	background: #C0C0C0;
+	color: <?php echo MktColor::$Sub_Text; ?>
+	background: <?php echo MktColor::$Sub_Item; ?>
 }
 
 .Pagina .sidebar > ul > li > a:hover {
-	color: #DEDEDE;
-	background-color: #5A585A;
+	color: <?php echo MktColor::$Sub_Text; ?>
+	background-color: <?php echo MktColor::$Sub_Item_Hover; ?>
 }
 
 .Pagina .sidebar ul > li.has-sub > a:after {
@@ -49,7 +53,7 @@
 	display: block;
 	height: 10px;
 	width: 2px;
-	background: #2E2E2E;
+	background: <?php echo MktColor::$Sub_Item_Hover; ?>
 	content: "";
 }
 
@@ -60,7 +64,7 @@
 	display: block;
 	width: 10px;
 	height: 2px;
-	background: #2E2E2E;
+	background: <?php echo MktColor::$Sub_Item_Hover; ?>
 	content: "";
 }
 
@@ -73,12 +77,12 @@
 }
 
 .Pagina .sidebar ul ul li a {
-	padding: 14px 22px;
+	padding: 8px 22px;
 	cursor: pointer;
 	z-index: 2;
 	text-decoration: none;
-	color: #2E2E2E;
-	background: #DEDEDE;
+	color: <?php echo MktColor::$Sub_Text; ?>
+	background: <?php echo MktColor::$Sub_Item_Sub; ?>
 }
 
 .Pagina .sidebar ul ul ul li a {
@@ -86,8 +90,8 @@
 }
 
 .Pagina .sidebar ul ul li a:hover {
-	color: #DEDEDE;
-	background-color: #5A585A;
+	color: <?php echo MktColor::$Sub_Text; ?>
+	background-color: <?php echo MktColor::$Sub_Item_Sub_Hover; ?>
 }
 
 .Pagina .sidebar ul ul > li.has-sub > a:after {

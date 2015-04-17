@@ -10,7 +10,6 @@
 ---
 **Iframe maken:**  
 Om een Iframe te maken vul je de onderstaande code in (op de plek waar je hem wilt hebben).    
-{http://localhost/partners.php =800px}
 \{$link[ =$width x$height][ ~$border]}
 
 **\{$link}** 				= hierkomt de link van je iframe testaan.  

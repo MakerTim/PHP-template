@@ -1,19 +1,32 @@
+<?php 
+	header('Content-Type: text/css');
+	require(join(DIRECTORY_SEPARATOR, array('..', 'Classes', 'IncludeManager.php')));
+ ?>
+
 .CookiePopup {
 	z-index: 999999; 
 	opacity: 0.9; 
 	position: fixed; 
 	padding: 15px; 
-	width: 50%; 
 	font-weight: normal; 
 	text-align: left; 
-	color: rgb(255, 255, 255); 
+	color: <?php echo MktColor::$Cookie_Text; ?>
 	-webkit-box-shadow: rgb(0, 0, 0) 0px 0px 8px; 
 	box-shadow: rgb(0, 0, 0) 0px 0px 8px;
 	bottom: 20px; 
 	right: 20px; 
-	background-color: #403E40;
+	background-color: <?php echo MktColor::$Cookie_Background; ?>
 	border-top: 6px #343234;
+}
+
+.Mobiel .CookiePopup {
 	font-size: xx-large !important;
+	width: 50%; 
+}
+
+.Pobiel .CookiePopup {
+	font-size: large !important;
+	width: 30%; 
 }
 
 .CookiePopup h4 {
@@ -21,7 +34,7 @@
 	text-align: center; 
 	font-weight: bold; 
 	margin: 0px; 
-	background-color: #343234;
+	background-color: <?php echo MktColor::$Cookie_Background; ?>
 }
 
 .CookiePopup .button {
@@ -38,5 +51,5 @@
 	cursor: pointer; 
 	margin: 5px 10px; 
 	text-shadow: rgb(0, 0, 0) 0px 0px 2px;
-	background-color: #5BB75B;
+	background-color: <?php echo MktColor::$Cookie_Button; ?>
 }

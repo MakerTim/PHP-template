@@ -1,7 +1,11 @@
-.markdown-body {
+<?php 
+	header('Content-Type: text/css');
+	require(join(DIRECTORY_SEPARATOR, array('..', 'Classes', 'IncludeManager.php')));
+ ?>
+ .markdown-body {
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
-	color: #333;
+	color: <?php echo MktColor::$Markdown_Text; ?>
 	overflow: hidden;
 	font-family: 'Varela Round', Helvetica, 'Segoe UI', Arial, freesans, sans-serif;
 	line-height: 1.6;
@@ -32,11 +36,6 @@
 
 .markdown-body img {
   border: 0;
-}
-
-.markdown-body hr {
-  box-sizing: content-box;
-  height: 0;
 }
 
 .markdown-body pre {
@@ -88,7 +87,7 @@
 }
 
 .markdown-body a {
-  color: #4183c4;
+  color: <?php echo MktColor::$Markdown_Link; ?>
   text-decoration: none;
 }
 
@@ -98,12 +97,11 @@
 }
 
 .markdown-body hr {
-  height: 0;
-  margin: 15px 0;
-  overflow: hidden;
-  background: transparent;
-  border: 0;
-  border-bottom: 1px solid #ddd;
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: <?php echo MktColor::$Markdown_Balk; ?>
+  border: 0 none;
 }
 
 .markdown-body hr:before {
@@ -254,7 +252,7 @@
 .markdown-body h5 .octicon-link,
 .markdown-body h6 .octicon-link {
   display: none;
-  color: #000;
+  color: <?php echo MktColor::$Markdown_Text; ?>
   vertical-align: middle;
 }
 
@@ -282,7 +280,7 @@
   padding-bottom: 0.3em;
   font-size: 2.25em;
   line-height: 1.2;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid <?php echo MktColor::$Markdown_HeaderLine; ?>
 }
 
 .markdown-body h1 .anchor {
@@ -293,7 +291,7 @@
   padding-bottom: 0.3em;
   font-size: 1.75em;
   line-height: 1.225;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid <?php echo MktColor::$Markdown_HeaderLine; ?>
 }
 
 .markdown-body h2 .anchor {
@@ -327,7 +325,7 @@
 
 .markdown-body h6 {
   font-size: 1em;
-  color: #777;
+  color: <?php echo MktColor::$Markdown_Text; ?>
 }
 
 .markdown-body h6 .anchor {
@@ -343,14 +341,6 @@
 .markdown-body pre {
   margin-top: 0;
   margin-bottom: 16px;
-}
-
-.markdown-body hr {
-  height: 4px;
-  padding: 0;
-  margin: 16px 0;
-  background-color: #e7e7e7;
-  border: 0 none;
 }
 
 .markdown-body ul,
@@ -389,8 +379,8 @@
 
 .markdown-body blockquote {
   padding: 0 15px;
-  color: #777;
-  border-left: 4px solid #ddd;
+  color: <?php echo MktColor::$Markdown_Text; ?>
+  border-left: 4px solid <?php echo MktColor::$Markdown_HeaderLine; ?>
 }
 
 .markdown-body blockquote>:first-child {
@@ -416,16 +406,16 @@
 .markdown-body table th,
 .markdown-body table td {
   padding: 6px 13px;
-  border: 1px solid #ddd;
+  border: 1px solid <?php echo MktColor::$Markdown_TableBorder; ?>
 }
 
 .markdown-body table tr {
-  background-color: #fff;
-  border-top: 1px solid #ccc;
+  background-color: <?php echo MktColor::$Markdown_TableBackground; ?>
+  border-top: 1px solid <?php echo MktColor::$Markdown_HeaderLine; ?>
 }
 
 .markdown-body table tr:nth-child(2n) {
-  background-color: #f8f8f8;
+  background-color: <?php echo MktColor::$Markdown_TableBackground2; ?>
 }
 
 .markdown-body img {
@@ -469,7 +459,7 @@
   overflow: auto;
   font-size: 85%;
   line-height: 1.45;
-  background-color: #f7f7f7;
+  background-color: <?php echo MktColor::$Markdown_TableBackground; ?>
   border-radius: 3px;
 }
 
@@ -504,13 +494,13 @@
   padding: 3px 5px;
   font-size: 11px;
   line-height: 10px;
-  color: #555;
+  color: <?php echo MktColor::$Markdown_Text; ?>
   vertical-align: middle;
-  background-color: #fcfcfc;
-  border: solid 1px #ccc;
-  border-bottom-color: #bbb;
+  background-color: <?php echo MktColor::$Markdown_Highlight; ?>
+  border: solid 1px <?php echo MktColor::$Markdown_HeaderLine; ?>
+  border-bottom-color: <?php echo MktColor::$Markdown_HeaderLine; ?>
   border-radius: 3px;
-  box-shadow: inset 0 -1px 0 #bbb;
+  box-shadow: inset 0 -1px 0 <?php echo MktColor::$Markdown_HeaderLine; ?>
 }
 
 .markdown-body .pl-c {
@@ -633,13 +623,13 @@
   padding: 3px 5px;
   font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
   line-height: 10px;
-  color: #555;
+  color: <?php echo MktColor::$Markdown_Text; ?>
   vertical-align: middle;
-  background-color: #fcfcfc;
-  border: solid 1px #ccc;
-  border-bottom-color: #bbb;
+  background-color: <?php echo MktColor::$Markdown_TableBackground; ?>
+  border: solid 1px <?php echo MktColor::$Markdown_TableBorder; ?>;
+  border-bottom-color: <?php echo MktColor::$Markdown_TableBorder; ?>
   border-radius: 3px;
-  box-shadow: inset 0 -1px 0 #bbb;
+  box-shadow: inset 0 -1px 0 <?php echo MktColor::$Markdown_Text; ?>
 }
 
 .markdown-body .task-list-item {
@@ -658,5 +648,5 @@
 .markdown-body :checked+.radio-label {
   z-index: 1;
   position: relative;
-  border-color: #4183c4;
+  border-color: <?php echo MktColor::$Markdown_Link; ?>
 }
