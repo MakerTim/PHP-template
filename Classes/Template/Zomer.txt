@@ -28,6 +28,7 @@
 		
 		// Footer
 		public static $Footer_Text =				'rgba(255, 255, 255, 1.0);';
+		public static $Footer_Link =				'rgba(253, 203, 25,  1.0);';
 		public static $Footer_Background =			'rgba(1,   141, 211, 1.0);';
 		
 		// SocialMedia
