@@ -1,0 +1,6 @@
+<MenuItem>
+	<Name>Partners</Name>
+	<Alt>Al onze partners</Alt>
+	<Href>%root%/Page/Partners/</Href>
+	<Priority>10</Priority>
+</MenuItem>

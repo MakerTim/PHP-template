@@ -1,0 +1,11 @@
+<Page>
+	<Menu>
+		<Index>Partners</Index>
+		<Banner>true</Banner>
+		<SideBar>false</SideBar>
+		<Title>Partners</Title>
+	</Menu>
+	<Md>
+{http://localhost/partners.php =800px}
+	</Md>
+</Page>

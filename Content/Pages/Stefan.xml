@@ -10,7 +10,7 @@
 ---
 **Iframe maken:**  
 Om een Iframe te maken vul je de onderstaande code in (op de plek waar je hem wilt hebben).    
-
+{http://localhost/partners.php =800px}
 \{$link[ =$width x$height][ ~$border]}
 
 **\{$link}** 				= hierkomt de link van je iframe testaan.  
@@ -26,7 +26,6 @@ Om een Iframe te maken vul je de onderstaande code in (op de plek waar je hem wi
 | **\{https://www.google.nl/ =200x200}**    | = Dit zorgt voor een iframe met aangepaste hoogte en breedte.              |
 | **\{https://www.google.nl/ =200x200 ~1}** | = Dit zorgt voor een iframe met aangepaste hoogte en breedte & een border. |
 | **\{https://www.google.nl/ ~1}**          | = Dit zorgt voor een iframe met  een border.                               |
- 
 © Copyright 2015 MakerTim
 	</Md>
 </Page>
