@@ -19,7 +19,7 @@
 		public static $Markdown_Outline =	 		'rgba(255, 255, 255, 0.0);';
 		public static $Markdown_Text = 				'rgba(51,  51,  51,  1.0);';
 		public static $Markdown_Link = 				'rgba(253, 203, 25,  1.0);';
-		public static $Markdown_Balk = 				'rgba(231, 231, 231, 1.0);';
+		public static $Markdown_Balk = 				'rgba(253, 203, 25,  1.0);';
 		public static $Markdown_HeaderLine = 		'rgba(238, 238, 238, 1.0);';
 		public static $Markdown_Highlight = 		'rgba(0,   0,   0,   0.2);';
 		public static $Markdown_TableBorder = 		'rgba(215, 215, 215, 1.0);';
@@ -32,7 +32,7 @@
 		public static $Footer_Background =			'rgba(1,   141, 211, 1.0);';
 		
 		// SocialMedia
-		public static $Media_Background =			'rgba(222, 222, 222, 0.5);';
+		public static $Media_Background =			'rgba(253, 203, 25,  0.3);';
 		
 		// Cookie popup
 		public static $Cookie_Text = 				'rgba(255, 255, 255, 1.0);';
