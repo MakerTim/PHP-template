@@ -32,7 +32,7 @@ body {
 	display: inline;
 	margin: 0;
 	padding: 15px;
-	padding-top: 18px;
+	padding-top: 24px;
 	border: 0px solid <?php echo MktColor::$Menu_Outline; ?>
 }
 
