@@ -21,10 +21,10 @@
 
 .Mobiel .CookiePopup {
 	font-size: xx-large !important;
-	width: 50%; 
+	width: 88%; 
 }
 
-.Pobiel .CookiePopup {
+.Pagina .CookiePopup {
 	font-size: large !important;
 	width: 30%; 
 }
