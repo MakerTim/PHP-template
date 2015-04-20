@@ -1,5 +1,6 @@
 		// Algemeen
 		public static $Lijntje = 					'rgba(255, 255, 255, 0.0);';
+		public static $LijntjeDikte = 				'0px';
 		
 		// Menu
 		public static $Menu_Text = 					'rgba(255, 255, 255, 1.0);';
@@ -16,7 +17,6 @@
 		
 		// Content
 		public static $Markdown_Background = 		'rgba(255, 255, 255, 0.0);';
-		public static $Markdown_Outline =	 		'rgba(255, 255, 255, 0.0);';
 		public static $Markdown_Text = 				'rgba(51,  51,  51,  1.0);';
 		public static $Markdown_Link = 				'rgba(253, 203, 25,  1.0);';
 		public static $Markdown_Balk = 				'rgba(253, 203, 25,  1.0);';

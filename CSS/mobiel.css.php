@@ -17,7 +17,7 @@
 	float : left;
 	background-color: <?php echo MktColor::$Menu_Background; ?>
 	margin-bottom: 10px;
-	border-top: 6px solid <?php echo MktColor::$Lijntje; ?>
+	border-top: <?php echo MktColor::$LijntjeDikte; ?> solid <?php echo MktColor::$Lijntje; ?>
 	font-size: 400% !important; 
 	/* 
 		Dear Future me,
@@ -75,7 +75,7 @@
 	float : left;
 	background-color: <?php echo MktColor::$Markdown_Background; ?>
 	margin-top: 10px;
-	border-top: 6px solid <?php echo MktColor::$Markdown_Outline; ?>
+	border-top: <?php echo MktColor::$LijntjeDikte; ?> solid <?php echo MktColor::$Lijntje; ?>
 }
 
 .Mobiel .Footer{
@@ -85,7 +85,7 @@
 	bottom: 5px;
 	word-wrap: break-word;
 	margin-bottom: 5px;
-	border-top: 6px solid <?php echo MktColor::$Lijntje; ?>
+	border-top: <?php echo MktColor::$LijntjeDikte; ?> solid <?php echo MktColor::$Lijntje; ?>
 	font-size: 180% !important;
 }
 .Mobiel .Footer a{ 

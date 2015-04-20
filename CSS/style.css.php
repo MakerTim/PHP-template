@@ -126,5 +126,5 @@ body {
 }
 
 .Pagina .TopBorder{
-	border-top: 6px solid <?php echo MktColor::$Lijntje; ?>
+	border-top: <?php echo MktColor::$LijntjeDikte; ?> solid <?php echo MktColor::$Lijntje; ?>
 }
