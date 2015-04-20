@@ -22,6 +22,7 @@
 		public static $google = "MakerTim";
 		public static $facebook = "https://www.facebook.com/MakerTimm";
 		public static $twitter = "MakerTim";
+		public static $customButton = '<div style="no-repeat url(//s.ytimg.com/yts/imgbin/www-hitchhiker-vflZaxMsj.webp) -296px -290px"></div>';
 		
 		// Domein van de site, exclusief http
 		public static $domein = "localhost";

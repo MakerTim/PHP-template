@@ -53,7 +53,7 @@
 	display: block;
 	height: 10px;
 	width: 2px;
-	background: <?php echo MktColor::$Sub_Item_Hover; ?>
+	background: <?php echo MktColor::$Sub_Text; ?>
 	content: "";
 }
 
@@ -64,7 +64,7 @@
 	display: block;
 	width: 10px;
 	height: 2px;
-	background: <?php echo MktColor::$Sub_Item_Hover; ?>
+	background: <?php echo MktColor::$Sub_Text; ?>
 	content: "";
 }
 

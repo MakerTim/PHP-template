@@ -78,6 +78,9 @@
 		
 		public static function buildSocialBanner() {
 			$ret = '<div class="SocialMedia">';
+			// if(!empty(MktConfig::$customButton)){
+				$ret .= '<div class="sub">test</div>';
+			// }
 			if(!empty(MktConfig::$facebook)){
 				$ret .= '<div class="sub"><div class="tweet"><iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com/vakantiestunt/&amp;layout=button_count&amp;show_faces=true&amp;width=450&amp;action=like&amp;colorscheme=light&amp;height=80" class="socialm" style="border:none; overflow:hidden; width:85px; height:20px;"> </iframe></div></div>';
 			}
