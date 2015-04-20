@@ -13,6 +13,7 @@
 		public static $siteCount = true;
 		// Telt hoeveel de site word bezocht in unieke bezoekers
 		public static $siteUniqueCount = true;
+		public static $siteUniqueIPCount = true;
 		// Op basis van wat telt de unique counter?
 		// Opties zijn: IP, COOKIE, SESSION
 		public static $siteUniqueKey = "COOKIE";
@@ -31,8 +32,8 @@
 				"Nederland", "Localhost", "Template", 
 				"MakerTim", "CMS", "Content", 
 				"Beste Link 2015", "Responsive");
-		// Pagina footer text, variable zijn: {pageCount} {siteCount} {siteUniqueCount}
-		public static $footerStats = '<p>Pagina aantal keer bekeken:{pageCount}, site bezocht:{siteCount}, waarvan unieke bezoekers:{siteUniqueCount}</p>';
+		// Pagina footer text, variable zijn: {pageCount} {siteCount} {siteUniqueCount} {siteUniqueIPCount}
+		public static $footerStats = '<p>Pagina bekeken {pageCount}, Site bezocht {siteCount}, Unieke bezoekers {siteUniqueCount}, Unieke IPs {siteUniqueIPCount}</p>';
 		// De text dat in de footer van elke pagina komt!
 		public static $footer = '<p>Hosted by <a href="http://www.xmlhosting.nl/">XMLHosting.nl</a> U kunt uw vakantie boeken bij:VakantieStunt & Duikreizen</p>';
 	}
@@ -40,6 +41,10 @@
 	class MktColor {
 		// Gebruik alleen kleuren van http://html-color-codes.info/
 		// Gebruik alleen 'rgba(255,255,255,1.0);'
+		// Templates eventueel beschikbaar in /Templates/
+		// rgba staat voor Rood, Groen, Blauw, Alpha
+		// Een combinatie van de 3 kleuren maken alle kleuren mogelijk
+		// Alpha is de transparantie van de kleur, 1 = niet transparant, 0 = 100% transparant, komma getal toegestaan
 		
 		// Algemeen
 		public static $Lijntje = 					'rgba(90,  90,  90,   1.0);';

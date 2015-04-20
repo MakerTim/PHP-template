@@ -24,6 +24,9 @@
 			if(MktConfig::$pageCount) {
 				Counter::pageTotal($page);
 			}
+			if(MktConfig::$siteUniqueIPCount) {
+				Counter::countIP();
+			}
 		}
 		
 		private static function pageTotal($page) {
@@ -111,8 +114,8 @@
 		
 		public static function loadStats($input) {
 			return str_replace(
-				array("{siteCount}", "{siteUniqueCount}", "{pageCount}"), 
-				array(Counter::$siteCount, Counter::$uniqueCount, Counter::$thisPageCount), 
+				array("{siteCount}", "{siteUniqueCount}", "{pageCount}", "{siteUniqueIPCount}"), 
+				array(Counter::$siteCount, Counter::$uniqueCount, Counter::$thisPageCount, Counter::$ipCount), 
 				$input
 			);
 		}
