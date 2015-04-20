@@ -13,6 +13,12 @@
 	margin-bottom: 10px;
 }
 
+.Mobiel .tweet>*, .Mobiel .tweet>*>*, .Mobiel .tweet>*>*>* {
+    height: inherit;
+    width: inherit;
+	text-decoration: none;
+}
+
 .Mobiel .Menu{
 	float : left;
 	background-color: <?php echo MktColor::$Menu_Background; ?>

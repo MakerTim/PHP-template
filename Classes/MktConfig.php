@@ -22,7 +22,10 @@
 		public static $google = "MakerTim";
 		public static $facebook = "https://www.facebook.com/MakerTimm";
 		public static $twitter = "MakerTim";
-		public static $customButton = '<div style="no-repeat url(//s.ytimg.com/yts/imgbin/www-hitchhiker-vflZaxMsj.webp) -296px -290px"></div>';
+		public static $customButton = array( 
+			'<a href="http://example.com/"> <img src="http://www.mailbox-belgium.com/wp-content/uploads/2014/06/newsletter.png" /> </a>',
+			'<a href="http://google.nl/"> <img src="http://www.seomofo.com/downloads/new-google-logo-knockoff.png" /> </a>',
+		);
 		
 		// Domein van de site, exclusief http
 		public static $domein = "localhost";

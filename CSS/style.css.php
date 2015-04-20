@@ -17,6 +17,12 @@ body {
 	margin-bottom: 10px;
 }
 
+.Pagina .tweet>*, .Pagina .tweet>*>*, .Pagina .tweet>*>*>* {
+    height: inherit;
+    width: inherit;
+	text-decoration: none;
+}
+
 .Pagina .Menu{
 	float : left;
 	background-color: <?php echo MktColor::$Menu_Background; ?>
