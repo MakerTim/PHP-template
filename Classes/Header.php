@@ -43,6 +43,7 @@
 			}
 			$builder = rtrim($builder,", ");
 			$ret .= '<meta name="keywords" content="' . $builder . '" />'. PHP_EOL;
+			$ret .= '<meta name="generator" content="MakerTim_Generator 1.0.0" />'. PHP_EOL;
 			$ret .= '<title> ' . $GLOBALS['pageContent']->getTitle() . ' </title>'. PHP_EOL;
 			$ret .= '<link rel="shortcut icon" href="Pictures/favicon.ico">'. PHP_EOL;
 			$ret .= '<meta name="author" content="' . MktConfig::$domein . '" />'. PHP_EOL;
