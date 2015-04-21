@@ -15,7 +15,7 @@
 		var $sub;
 		var $title;
 		
-		public function __construct($type = "page", $page = "index") {
+		public function __construct($type = "page", $page = "Index") {
 			$this->page = str_replace(".", "", $page);
 			$this->errorMessage = "";
 			if($type == "page"){
