@@ -16,7 +16,7 @@
 	bottom: 20px; 
 	right: 20px; 
 	background-color: <?php echo MktColor::$Cookie_Background; ?>
-	border-top: 6px #343234;
+	border-top: <?php echo MktColor::$LijntjeDikte; ?> solid <?php echo MktColor::$Lijntje; ?>
 }
 
 .Mobiel .CookiePopup {
