@@ -7,7 +7,7 @@ function loadCookies() {
 	
 	
 	$(".CookiePopup #accept").click(function(t) {
-		$.cookie('cookies', true, { path: '/' });
+		$.cookie('cookies', true, { expires: 28, path: '/' });
 		$('.CookiePopup').animate({ opacity: 0 }, 1500);
 	});
 
