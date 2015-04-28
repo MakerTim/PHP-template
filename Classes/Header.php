@@ -36,7 +36,7 @@
 				$ret .= '<meta name="googlebot" content="noodp" />'. PHP_EOL;
 				$ret .= '<meta name="Slurp" content="noydir" />'. PHP_EOL;
 			}
-			$ret .= '<meta name="description" content=' . str_replace(array('\n.', '\n\n', '\n'), array('. ', '. ', '. '), json_encode(strip_tags(implode(' ', array_slice(explode(' ', $GLOBALS['pageContent']->content), 0, 100))))) . ' />'. PHP_EOL;
+			$ret .= '<meta name="description" content=' . str_replace(array('\n.', '\n\n', '\n'), ' ', json_encode(strip_tags(implode(' ', array_slice(explode(' ', $GLOBALS['pageContent']->content), 0, 100))))) . ' />'. PHP_EOL;
 			$builder = "";
 			foreach(MktConfig::$keys as $key) {
 				$builder .= $key . ', ';
