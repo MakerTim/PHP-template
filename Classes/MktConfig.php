@@ -58,6 +58,7 @@
 		public static $Menu_Text = 					'rgba(46,  46,  46,   1.0);';
 		public static $Menu_Background = 			'rgba(192, 192, 192,  1.0);';
 		public static $Menu_Outline = 				'rgba(74,  74,  74,   1.0);';
+		public static $Menu_Highlight = 			';';
 		
 		// SubMenu
 		public static $Sub_Text = 					'rgba(46,  46,  46,   1.0);';

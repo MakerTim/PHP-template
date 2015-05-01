@@ -13,7 +13,7 @@
 		var $hasBanner;
 		var $hasSideBar;
 		var $sub;
-		var $title;
+		var $Title;
 		
 		public function __construct($type = "page", $page = "Index") {
 			$this->page = str_replace(".", "", $page);
@@ -24,8 +24,8 @@
 		}
 		
 		public function getTitle() {
-			if(isset($this->title)) {
-				return $this->title;
+			if(isset($this->Title) && !empty($this->Title)) {
+				return $this->Title;
 			}
 			return $this->page . ' - ' . MktConfig::$domein;
 		}
@@ -48,9 +48,11 @@
 				$this->menuEntry = (string)$xml->Menu->Index;
 				$this->hasBanner = (string)$xml->Menu->Banner;
 				$this->hasSideBar = (string)$xml->Menu->SideBar;
-				$this->title = (string)$xml->Menu->Title;
+				$this->Title = (string)$xml->Menu->Title;
 				$this->Sub = (string)$xml->Menu->Sub;
 				$this->content = $GLOBALS["md"]->text(str_replace("\\quot\\", "&", $xml->Md));
+			} else {
+				echo $this->errorMessage;
 			}
 		}
 		
