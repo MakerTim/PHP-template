@@ -145,4 +145,18 @@ Als je de css bestanden wilt aanpassen kijk dan goed of je de juiste aanpast. (a
 2. Open Pictures map.  
 3. Vervang header.jpg (naar je eigen header.jpg)
 
+---
+**Link maken die naar nieuw tabblad gaat:**    
+>` [#Text](http://google.nl/)`  
+
+
+Zet een # voor de tekst van de link, dan gaat hij naar een nieuwe tabblad
+
+---
+**Custom button**  
+1. Open Classes map.  
+2. Open MktConfig.php  
+3. Zoek op `public static $customButton = array(`  
+4. Plaats in de array je custom button. 
+
 © Copyright 2015 MakerTim
