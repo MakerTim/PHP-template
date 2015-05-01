@@ -22,6 +22,7 @@ Omdat we gebruik maken van Markdown vind je hieronder twee linkjes met uitleg.
 		`<Banner>true</Banner>`  
 		`<SideBar>true</SideBar>`  
 		`<Sub>Long</Sub>`  
+		`<Title>Dit word de titel van de pagina</Title>`    
 	`</Menu>`  
 	`<Md>`  
 `# Context`    

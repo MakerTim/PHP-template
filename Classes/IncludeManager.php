@@ -5,6 +5,7 @@
 	// $GLOBALS["md"] = MarkDown parser *http://parsedown.org/
 	// $GLOBALS["mob"] = MarkDown parser *http://mobiledetect.net/
 	
+	session_set_cookie_params(60 * 60 * 24 * 28, '/');
 	session_start();
 	
 	require("Parsedown.php");
