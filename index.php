@@ -10,6 +10,7 @@
 	<head>
 	<!-- This page is buid by MktPhpTemplate -->
 	<!-- Fork us on github https://github.com/MakerTim/PHP-template -->
+	<!-- <?php echo phpversion(); ?> -->
 <?php 
 	echo Header::getMetaTags(); 
 	echo Header::phpToJS($pageContent, $menu);
