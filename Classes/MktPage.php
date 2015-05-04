@@ -12,7 +12,7 @@
 		var $menuEntry;
 		var $hasBanner;
 		var $sub;
-		var $subNav;
+		var $SubIndex;
 		var $Title;
 		
 		public function __construct($type = "page", $page = "Index") {
@@ -49,7 +49,7 @@
 				$this->hasBanner = (string)$xml->Menu->Banner;
 				$this->Title = (string)$xml->Menu->Title;
 				$this->sub = (string)$xml->Menu->Sub;
-				$this->subNav = (string)$xml->Menu->SubNav;
+				$this->SubIndex = (string)$xml->Menu->SubIndex;
 				$this->content = $GLOBALS["md"]->text(str_replace("\\quot\\", "&", $xml->Md));
 			} else {
 				echo $this->errorMessage;

@@ -21,7 +21,7 @@
 			'<script src="%root%/JavaScript/cookie.js"></script>',
 			'<script src="%root%/JavaScript/looks.js"></script>',
 			'<script src="%root%/JavaScript/looksMobiel.js"></script>',
-			'<script src="%root%/JavaScript/animations.js"></script>'
+			'<script src="%root%/JavaScript/highlight.js"></script>'
 		);		
 		
 		public static function getMetaTags() {
@@ -90,6 +90,8 @@
 			$ret .= "PHP.page.menuEntry = " . json_encode($MktPage->menuEntry) . ";";
 			$ret .= "PHP.page.hasBanner = " . json_encode($MktPage->hasBanner) . ";";
 			$ret .= "PHP.page.hasSideBar = " . json_encode(isset($MktPage->sub) && !empty($MktPage->sub)) . ";";
+			$ret .= "PHP.page.highlightSubMenu = " . json_encode($MktPage->SubIndex) . ";";
+			$ret .= "PHP.page.highlightSubColor = " . json_encode(MktColor::$Sub_Item_Highlight) . ";";
 			$ret .= "PHP.isMobiel = " . json_encode($GLOBALS["mob"]->isMobile()) . ";";
 			
 			$ret .= "</script>" . PHP_EOL;

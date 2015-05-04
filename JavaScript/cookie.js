@@ -1,14 +1,15 @@
 function loadCookies() {
-	if($.cookie('cookies') == undefined) {
+	if($.cookie('AcceptCookie') == undefined) {
 		$('.CookiePopup').show();
 	}else{
 		$('.CookiePopup').hide();
+		$.cookie('AcceptCookie', true, { expires: 28, path: '/' });
 	}
 	
 	
 	$(".CookiePopup #accept").click(function(t) {
-		$.cookie('cookies', true, { expires: 28, path: '/' });
-		$('.CookiePopup').animate({ opacity: 0 }, 1500);
+		$.cookie('AcceptCookie', true, { expires: 28, path: '/' });
+		$('.CookiePopup').hide(1500);
 	});
 
 	$(".CookiePopup #policy").click(function(t) {

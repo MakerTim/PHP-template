@@ -35,7 +35,7 @@
 			$ret = PHP_EOL . '<ul class="ulMainMenu">' . PHP_EOL
 			. '<li class="menuImg"> <img src="Pictures/menu.svg" alt="" /> </li>' . PHP_EOL;
 			foreach($this->items as $menuEntry) {
-				$ret .= '<li class="menuItem" id="Menu_' . str_replace(" ", "-", $menuEntry->name) . '">';
+				$ret .= '<li class="menuItem" id="Menu_' . str_replace(" ", "", $menuEntry->name) . '">';
 				$ret .= '<a href="' . $menuEntry->href . '">' . $menuEntry->name . '</a>';
 				$ret .= '</li>' . PHP_EOL;
 			}
@@ -119,13 +119,13 @@
 			$ret = '<ul class="ulSidebar">' . PHP_EOL;
 			foreach($this->options as $option) {
 				$hasSub = isset($option->subs) && !empty($option->subs);
-				$ret .= '<li '. ($hasSub ? 'class="has-sub"' : '') . '>' . PHP_EOL .
-				'<a href=' . $option->href . '>' 
+				$ret .= '<li id="Side_' . $option->id . '"'. ($hasSub ? 'class="has-sub"' : '') . '>' . PHP_EOL .
+				'<a data-href=' . $option->href . '>' 
 					. $option->name . '</a>' . PHP_EOL;
 				if($hasSub) {
 					$ret .= '<ul>';
 					foreach($option->subs as $sub) {
-						$ret .= '<li>';
+						$ret .= '<li id="Side_Sub_' . $sub->id . '">';
 						$ret .= '<a href="' . $sub->href . '">' . $sub->name . '</a>';
 						$ret .= '</li>';
 					}
@@ -143,11 +143,13 @@
 	}	
 	class SideBarItem {
 		
+		var $id;
 		var $name;
 		var $href;
 		var $subs;
 		
 		public function __construct($xmlOption) {
+			$this->id = str_replace(" ", "", $xmlOption->Name);
 			$this->name = $GLOBALS["md"]->text($xmlOption->Name);
 			$this->href = $xmlOption->Href;
 			if(isset($xmlOption->Sub) && !empty($xmlOption->Sub)){
@@ -161,9 +163,11 @@
 	class SideBarSubItem {
 		
 		var $name;
+		var $id;
 		var $href;
 		
 		public function __construct($xmlSub) {
+			$this->id = str_replace(" ", "", $xmlSub->Name);
 			$this->name = $GLOBALS["md"]->text($xmlSub->Name);
 			$this->href = $xmlSub->Href;
 		}

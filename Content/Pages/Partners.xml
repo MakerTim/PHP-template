@@ -2,7 +2,9 @@
 	<Menu>
 		<Index>Partners</Index>
 		<Banner>true</Banner>
-		<Title>Not mine partners</Title>
+		<Title>Not best partners</Title>
+		<Sub>Test</Sub>
+		<SubIndex>Page Content>Partners</SubIndex>
 	</Menu>
 	<Md>
 {http://localhost/partners.php =800px}

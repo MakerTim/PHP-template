@@ -2,8 +2,8 @@
 	<Menu>
 		<Index>Raphael</Index>
 		<Banner>true</Banner>
-		<SideBar>true</SideBar>
 		<Sub>Test</Sub>
+		<SubIndex>Page Content>Raphael</SubIndex>
 	</Menu>
 	<Md>
 # Raphael

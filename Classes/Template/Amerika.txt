@@ -11,15 +11,16 @@
 		// SubMenu
 		public static $Sub_Text = 					'rgba(255, 255, 255, 1.0);';
 		public static $Sub_Item = 					'rgba(1,   141, 211, 1.0);';
+		public static $Sub_Item_Highlight = 		'rgba(178,  34, 42,  0.5);';
 		public static $Sub_Item_Hover = 			'rgba(178,  34, 42,  1.0);';
-		public static $Sub_Item_Sub = 				'rgba(5,  165, 210,  1.0);';
+		public static $Sub_Item_Sub = 				'rgba(5,   165, 210, 1.0);';
 		public static $Sub_Item_Sub_Hover = 		'rgba(178,  34, 42,  1.0);';
-		public static $Sub_Item_Border = 			'rgba(34,  61,  214, 1.0);';
+		public static $Sub_Item_Border = 			'rgba(34,   61, 214, 1.0);';
 
 		// Content
 		public static $Markdown_Background = 		'rgba(255, 255, 255, 1.0);';
 		public static $Markdown_Text = 				'rgba(51,  51,  51,  1.0);';
-		public static $Markdown_Link = 				'rgba(178,  34, 42,  1.0);';
+		public static $Markdown_Link = 				'rgba(178, 34,  42,  1.0);';
 		public static $Markdown_Balk = 				'rgba(255, 255, 255, 1.0);';
 		public static $Markdown_HeaderLine = 		'rgba(238, 238, 238, 1.0);';
 		public static $Markdown_Highlight = 		'rgba(0,   0,   0,   0.2);';

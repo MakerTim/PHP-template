@@ -4,27 +4,31 @@
 		<Href>#</Href>
 	</Option>
 	<Option>
-		<Name>Sub 1</Name>
-		<Href>#</Href>
+		<Name>Page Content</Name>
+		<Href>../Index/</Href>
 		<Sub>
-			<Name>Product 1.1</Name>
-			<Href>../Contact/</Href>
+			<Name>Partners</Name>
+			<Href>../Partners/</Href>
 		</Sub>
 		<Sub>
-			<Name>Product 1.2</Name>
-			<Href>../Contact/</Href>
+			<Name>Raphael</Name>
+			<Href>../Raphael/</Href>
 		</Sub>
 	</Option>
 	<Option>
-		<Name>Item 2</Name>
+		<Name>Handige links</Name>
 		<Href>#</Href>
 		<Sub>
-			<Name>Product 2.1</Name>
-			<Href>../Contact/</Href>
+			<Name>MakerTim</Name>
+			<Href>http://MakerTim.nl/</Href>
 		</Sub>
 		<Sub>
-			<Name>Product 2.2</Name>
-			<Href>../Contact/</Href>
+			<Name>W3 Scools</Name>
+			<Href>http://www.w3schools.com/</Href>
+		</Sub>
+		<Sub>
+			<Name>MarkDown</Name>
+			<Href>https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet</Href>
 		</Sub>
 	</Option>
 	<Option>
