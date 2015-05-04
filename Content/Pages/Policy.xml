@@ -2,8 +2,6 @@
 	<Menu>
 		<Index></Index>
 		<Banner>true</Banner>
-		<SideBar>false</SideBar>
-		<Sub></Sub>
 	</Menu>
 	<Md>
 #Cookies

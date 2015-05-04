@@ -2,8 +2,7 @@
 	<Menu>
 		<Index>Partners</Index>
 		<Banner>true</Banner>
-		<SideBar>false</SideBar>
-		<Title>Partners</Title>
+		<Title>Not mine partners</Title>
 	</Menu>
 	<Md>
 {http://localhost/partners.php =800px}

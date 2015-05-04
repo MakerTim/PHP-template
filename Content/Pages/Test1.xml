@@ -2,7 +2,6 @@
 	<Menu>
 		<Index>Test1</Index>
 		<Banner>true</Banner>
-		<SideBar>true</SideBar>
 		<Sub>Test</Sub>
 	</Menu>
 	<Md>
