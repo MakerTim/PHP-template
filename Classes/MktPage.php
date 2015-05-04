@@ -15,10 +15,10 @@
 		var $SubIndex;
 		var $Title;
 		
-		public function __construct($type = "page", $page = "Index") {
-			$this->page = str_replace(".", "", $page);
-			$this->errorMessage = "";
-			if($type == "page"){
+		public function __construct($type = 'page', $page = 'Index') {
+			$this->page = str_replace('.', '', $page);
+			$this->errorMessage = '';
+			if($type == 'page'){
 				$this->loadPage();
 			}
 		}
@@ -32,11 +32,11 @@
 		
 		private function loadPage() {
 			if(!file_exists(MktUtils::file(array('.', 'Content', 'Pages', $this->page . '.xml')))) {
-				$this->page = "404";
+				$this->page = '404';
 			}
 			libxml_use_internal_errors(true);
 			$xml = file_get_contents(MktUtils::file(array('.', 'Content', 'Pages', $this->page . '.xml')));
-			$xml = str_replace("&", "\\quot\\", $xml);
+			$xml = str_replace('&', '\\quot\\', $xml);
 			$xml = simplexml_load_string($xml);
 			$xmlError = libxml_get_errors();
 			foreach($xmlError as $error) {
@@ -50,29 +50,29 @@
 				$this->Title = (string)$xml->Menu->Title;
 				$this->sub = (string)$xml->Menu->Sub;
 				$this->SubIndex = (string)$xml->Menu->SubIndex;
-				$this->content = $GLOBALS["md"]->text(str_replace("\\quot\\", "&", $xml->Md));
+				$this->content = $GLOBALS['md']->text(str_replace('\\quot\\', '&', $xml->Md));
 			} else {
 				echo $this->errorMessage;
 			}
 		}
 		
 		public static function getPage() {
-			$page = "";
-			$type = "";
+			$page = '';
+			$type = '';
 			if(!is_null($_GET) && sizeof($_GET) > 0) {
-				if(array_key_exists("page", $_GET)){
+				if(array_key_exists('page', $_GET)){
 					$page = $_GET['page'];
-					$type = "page";
+					$type = 'page';
 				}
-				if(array_key_exists("404", $_GET)){
+				if(array_key_exists('404', $_GET)){
 					$page = $_GET['404'];
-					$type = "404";
+					$type = '404';
 				}
 			}
-			if($type == "404") {
-				header("Location: " . MktUtils::getRoot() . "/Page/404/");
+			if($type == '404') {
+				header('Location: ' . MktUtils::getRoot() . '/Page/404/');
 			} else if(empty($page) || empty($type)){
-				header("Location: " . MktUtils::getRoot() . "/Page/Index/");
+				header('Location: ' . MktUtils::getRoot() . '/Page/Index/');
 				exit;
 			}
 			return new MktPage($type, $page);
@@ -92,10 +92,7 @@
 			if(!empty(MktConfig::$twitter)){
 				$ret .= '<div class="sub"><div class="tweet"><a href="https://twitter.com/share" class="twitter-share-button" data-via="' . MktConfig::$twitter . '" data-count="none" data-dnt="true">Tweet</a></div></div>';
 			}
-			$ret .= '</div>';
-			
-
-			
+			$ret .= '</div>';			
 			return $ret;
 		}
 	}

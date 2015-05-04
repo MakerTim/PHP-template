@@ -37,7 +37,7 @@
 				$ret .= '<meta name="Slurp" content="noydir" />'. PHP_EOL;
 			}
 			$ret .= '<meta name="description" content=' . str_replace(array('\n.', '\n\n', '\n', '  '), ' ', json_encode(strip_tags(implode(' ', array_slice(explode(' ', $GLOBALS['pageContent']->content), 0, 200))))) . ' />'. PHP_EOL;
-			$builder = "";
+			$builder = '';
 			foreach(MktConfig::$keys as $key) {
 				$builder .= $key . ', ';
 			}
@@ -47,7 +47,7 @@
 			if(isset($GLOBALS['pageContent']->sub) && !empty($GLOBALS['pageContent']->sub)){
 				$builder .= $GLOBALS['pageContent']->sub . ', ';
 			}
-			$builder = rtrim($builder,", ");
+			$builder = rtrim($builder, ', ');
 			$ret .= '<meta name="keywords" content="' . $builder . '" />'. PHP_EOL;
 			$ret .= '<meta name="generator" content="PHP-Template 1.0" />'. PHP_EOL;
 			$ret .= '<title> ' . $GLOBALS['pageContent']->getTitle() . ' </title>'. PHP_EOL;
@@ -66,39 +66,39 @@
 		
 		public static function phpToJS($MktPage, $MktMenu) {
 			$ret = PHP_EOL;
-			$ret .= "<script>";
-			$ret .= "PHP = {};";
+			$ret .= '<script>';
+			$ret .= 'PHP = {};';
 			
-			$ret .= "PHP.mainmenu = {};";
-			$tmp = explode("(", MktColor::$Menu_Outline);
+			$ret .= 'PHP.mainmenu = {};';
+			$tmp = explode('(', MktColor::$Menu_Outline);
 			$tmp = $tmp[1];
-			$tmp = explode(")", $tmp);
+			$tmp = explode(')', $tmp);
 			$tmp = $tmp[0];
-			$ret .= "PHP.mainmenu.color = \"" . $tmp . '";';
-			$ret .= "PHP.mainmenu.opacity = " .  MktColor::$Menu_Highlight;
-			$ret .= "PHP.mainmenu.count = " . $MktMenu->getAmount() . ";";
-			$ret .= "PHP.mainmenu.items = {};";
+			$ret .= 'PHP.mainmenu.color = "' . $tmp . '";';
+			$ret .= 'PHP.mainmenu.opacity = ' .  MktColor::$Menu_Highlight;
+			$ret .= 'PHP.mainmenu.count = ' . $MktMenu->getAmount() . ';';
+			$ret .= 'PHP.mainmenu.items = {};';
 			for($i=0; $i<$MktMenu->getAmount();$i++) {
-				$ret .= "PHP.mainmenu.items[$i] = {};";
-				$ret .= "PHP.mainmenu.items[$i].name = " . json_encode($MktMenu->items[$i]->name) . ";";
-				$ret .= "PHP.mainmenu.items[$i].alt = " . json_encode($MktMenu->items[$i]->alt) . ";";
-				$ret .= "PHP.mainmenu.items[$i].href = " . json_encode($MktMenu->items[$i]->href) . ";";
-				$ret .= "PHP.mainmenu.items[$i].prio = " . json_encode($MktMenu->items[$i]->prio) . ";";
-				$ret .= "PHP.mainmenu.items[$i].error = " . json_encode($MktMenu->items[$i]->errorMessage) . ";";
+				$ret .= 'PHP.mainmenu.items[$i] = {};';
+				$ret .= 'PHP.mainmenu.items[$i].name = ' . json_encode($MktMenu->items[$i]->name) . ';';
+				$ret .= 'PHP.mainmenu.items[$i].alt = ' . json_encode($MktMenu->items[$i]->alt) . ';';
+				$ret .= 'PHP.mainmenu.items[$i].href = ' . json_encode($MktMenu->items[$i]->href) . ';';
+				$ret .= 'PHP.mainmenu.items[$i].prio = ' . json_encode($MktMenu->items[$i]->prio) . ';';
+				$ret .= 'PHP.mainmenu.items[$i].error = ' . json_encode($MktMenu->items[$i]->errorMessage) . ';';
 			}
 			
-			$ret .= "PHP.page = {};";
-			$ret .= "PHP.page.type = " . json_encode($MktPage->page) . ";";
-			$ret .= "PHP.page.content = " . json_encode($MktPage->content) . ";";
-			$ret .= "PHP.page.error = " . json_encode($MktPage->errorMessage) . ";";
-			$ret .= "PHP.page.menuEntry = " . json_encode($MktPage->menuEntry) . ";";
-			$ret .= "PHP.page.hasBanner = " . json_encode($MktPage->hasBanner) . ";";
-			$ret .= "PHP.page.hasSideBar = " . json_encode(isset($MktPage->sub) && !empty($MktPage->sub)) . ";";
-			$ret .= "PHP.page.highlightSubMenu = " . json_encode($MktPage->SubIndex) . ";";
-			$ret .= "PHP.page.highlightSubColor = " . json_encode(MktColor::$Sub_Item_Highlight) . ";";
-			$ret .= "PHP.isMobiel = " . json_encode($GLOBALS["mob"]->isMobile()) . ";";
+			$ret .= 'PHP.page = {};';
+			$ret .= 'PHP.page.type = ' . json_encode($MktPage->page) . ';';
+			$ret .= 'PHP.page.content = ' . json_encode($MktPage->content) . ';';
+			$ret .= 'PHP.page.error = ' . json_encode($MktPage->errorMessage) . ';';
+			$ret .= 'PHP.page.menuEntry = ' . json_encode($MktPage->menuEntry) . ';';
+			$ret .= 'PHP.page.hasBanner = ' . json_encode($MktPage->hasBanner) . ';';
+			$ret .= 'PHP.page.hasSideBar = ' . json_encode(isset($MktPage->sub) && !empty($MktPage->sub)) . ';';
+			$ret .= 'PHP.page.highlightSubMenu = ' . json_encode($MktPage->SubIndex) . ';';
+			$ret .= 'PHP.page.highlightSubColor = ' . json_encode(MktColor::$Sub_Item_Highlight) . ';';
+			$ret .= 'PHP.isMobiel = ' . json_encode($GLOBALS['mob']->isMobile()) . ';';
 			
-			$ret .= "</script>" . PHP_EOL;
+			$ret .= '</script>' . PHP_EOL;
 			return $ret;
 		}
 	}

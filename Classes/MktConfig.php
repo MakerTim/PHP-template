@@ -4,7 +4,7 @@
 	class MktConfig {
 		
 		// UTF van de website
-		public static $utf = "UTF-8";
+		public static $utf = 'UTF-8';
 		// Hoort site bezocht te worden door robot's / zoek machines
 		public static $robot = true;
 		// Telt per pagina hoeveel pagina word bezocht
@@ -16,20 +16,20 @@
 		public static $siteUniqueIPCount = true;
 		// Op basis van wat telt de unique counter?
 		// Opties zijn: IP, COOKIE, SESSION
-		public static $siteUniqueKey = "COOKIE";
+		public static $siteUniqueKey = 'COOKIE';
 		
 		// SocialMedia - Laat leeg voor geen knop
-		public static $google = "MakerTim";
-		public static $facebook = "https://www.facebook.com/MakerTimm";
-		public static $twitter = "MakerTim";
+		public static $google = 'MakerTim';
+		public static $facebook = 'https://www.facebook.com/MakerTimm';
+		public static $twitter = 'MakerTim';
 		public static $customButton = array( 
 			'<a href="http://example.com/"> <img src="http://www.mailbox-belgium.com/wp-content/uploads/2014/06/newsletter.png" /> </a>',
 		);
 		
 		// Domein van de site, exclusief http
-		public static $domein = "localhost";
+		public static $domein = 'localhost';
 		// Dir waar template in zit
-		public static $rootDir = "/GIT/PHP-Template/";
+		public static $rootDir = '/GIT/PHP-Template/';
 		// Zoek Keys, gebruikt in oude zoek machines en geavenceerde site beheer systemen
 		public static $keys = array(
 				"Nederland", "Localhost", "Template", 

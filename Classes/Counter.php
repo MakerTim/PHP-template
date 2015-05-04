@@ -5,16 +5,16 @@
 		public static $uniqueCount = -1;
 		public static $ipCount = -1;
 		public static $thisPageCount = -1;
-		private static $uniqueKey = "";
+		private static $uniqueKey = '';
 		
-		public static function count($page = "") {
-			if(!file_exists("ViewCounter")){
-				mkdir("ViewCounter");
+		public static function count($page = '') {
+			if(!file_exists('ViewCounter')){
+				mkdir('ViewCounter');
 			}
 			if(MktConfig::$siteUniqueCount) {
 				Counter::$uniqueKey = str_replace(
 					array('IP', 'COOKIE', 'SESSION'), 
-					array($_SERVER['REMOTE_ADDR'], (array_key_exists('PHPSESSID', $_COOKIE)?$_COOKIE["PHPSESSID"]:"new"), session_id()), 
+					array($_SERVER['REMOTE_ADDR'], (array_key_exists('PHPSESSID', $_COOKIE)?$_COOKIE["PHPSESSID"]:'new'), session_id()), 
 					MktConfig::$siteUniqueKey);
 				Counter::countUnique();
 			}
@@ -114,7 +114,7 @@
 		
 		public static function loadStats($input) {
 			return str_replace(
-				array("{siteCount}", "{siteUniqueCount}", "{pageCount}", "{siteUniqueIPCount}"), 
+				array('{siteCount}', '{siteUniqueCount}', '{pageCount}', '{siteUniqueIPCount}'), 
 				array(Counter::$siteCount, Counter::$uniqueCount, Counter::$thisPageCount, Counter::$ipCount), 
 				$input
 			);

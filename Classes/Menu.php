@@ -19,12 +19,12 @@
 		
 		private function loadMenu($menuLocation) {
 			foreach(scandir($menuLocation) as $file) {
-				if($file == "." || $file == "..") {
+				if($file == '.' || $file == '..') {
 					continue;
 				}
 				array_push($this->items, new MenuItem(MktUtils::file(array($menuLocation ,$file))));
 			}
-			usort($this->items, "cmp");
+			usort($this->items, 'cmp');
 		}
 		
 		public function getAmount() {
@@ -57,10 +57,10 @@
 		var $errorMessage;
 		
 		public function __construct($FileLocation) {
-			$errorMessage = "";
+			$errorMessage = '';
 			libxml_use_internal_errors(true);
 			$xml = file_get_contents($FileLocation);
-			$xml = str_replace("&", "\\quot\\", $xml);
+			$xml = str_replace('&', '\\quot\\', $xml);
 			$xml = simplexml_load_string($xml);
 			$xmlError = libxml_get_errors();
 			foreach($xmlError as $error) {
@@ -90,14 +90,14 @@
 		}
 		
 		private function loadSidebar($name) {
-			$errorMessage = "";
+			$errorMessage = '';
 			libxml_use_internal_errors(true);
 			try{
 				if(!file_exists(MktUtils::file(array('.', 'Content', 'SideBar', "$name.xml")))){
 					throw new Exception('Sidebar not found');
 				}
 				$xml = file_get_contents(MktUtils::file(array('.', 'Content', 'SideBar', "$name.xml")));
-				$xml = str_replace("&", "\\quot\\", $xml);
+				$xml = str_replace('&', '\\quot\\', $xml);
 				$xml = simplexml_load_string($xml);
 				$xmlError = libxml_get_errors();
 				foreach($xmlError as $error) {
@@ -149,8 +149,8 @@
 		var $subs;
 		
 		public function __construct($xmlOption) {
-			$this->id = str_replace(" ", "", $xmlOption->Name);
-			$this->name = $GLOBALS["md"]->text($xmlOption->Name);
+			$this->id = str_replace(' ', '', $xmlOption->Name);
+			$this->name = $GLOBALS['md']->text($xmlOption->Name);
 			$this->href = $xmlOption->Href;
 			if(isset($xmlOption->Sub) && !empty($xmlOption->Sub)){
 				$this->subs = array();
@@ -167,8 +167,8 @@
 		var $href;
 		
 		public function __construct($xmlSub) {
-			$this->id = str_replace(" ", "", $xmlSub->Name);
-			$this->name = $GLOBALS["md"]->text($xmlSub->Name);
+			$this->id = str_replace(' ', '', $xmlSub->Name);
+			$this->name = $GLOBALS['md']->text($xmlSub->Name);
 			$this->href = $xmlSub->Href;
 		}
 	}
