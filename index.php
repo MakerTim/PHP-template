@@ -8,9 +8,6 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	<!-- This page is buid by MktPhpTemplate -->
-	<!-- Fork us on github https://github.com/MakerTim/PHP-template -->
-	<!-- <?php echo phpversion(); ?> -->
 <?php 
 	echo Header::getMetaTags(); 
 	echo Header::phpToJS($pageContent, $menu);
@@ -49,8 +46,8 @@
 			
 			<!-- Starting Side Bar-->
 			<?php
-				if($pageContent->hasSideBar == "true") {
-					$SIDEBAR = SideBar::createSidebar($pageContent->Sub);
+				if(isset($pageContent->sub) && !empty($pageContent->sub)) {
+					$SIDEBAR = SideBar::createSidebar($pageContent->sub);
 					if(!$SIDEBAR->hasError){
 						echo PHP_EOL .
 						'<div class="sidebar TopBorder">' . PHP_EOL .
@@ -99,6 +96,8 @@
 				</div>
 			</div>
 			<!-- End Footer -->
+<!-- <?php echo 'PHP versie ' . phpversion() . ' on ' . PHP_OS; ?> -->
+<!-- https://github.com/MakerTim/PHP-template -->
 		</div>
 	</body>
 </html>

@@ -10,11 +10,11 @@
 		<HasSub>true</HasSub>
 		<IsOpen>false</IsOpen>
 		<Sub>
-			<Name>Product 1.1</Name>
+			<Name>Product 1.2</Name>
 			<Href>Contact</Href>
 		</Sub>
 		<Sub>
-			<Name>Product 1.2</Name>
+			<Name>Product 1.1</Name>
 			<Href>Contact</Href>
 		</Sub>
 	</Option>

@@ -1186,6 +1186,13 @@
 			$extent = 0;
 
 			$remainder = $Excerpt['text'];
+			
+			// _blank when starts with HashTag
+			if($remainder[1] == '#') { 
+				$remainder[1] = '';
+				$Element['attributes']['target'] = '_blank';
+				$Element['attributes']['class'] = 'buddon Rounded';
+			}
 
 			if (preg_match('/\[((?:[^][]|(?R))*)\]/', $remainder, $matches))
 			{

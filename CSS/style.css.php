@@ -6,6 +6,13 @@ body {
 	overflow-x: hidden;
 }
 
+.buddon {
+    padding: 4px 10px 4px 45px !important;
+    background:#00c400 url('../Pictures/buddon.png') no-repeat 10px center !important;
+    text-decoration: none !important;
+    color: whitesmoke !important;
+}
+
 .Pagina{
 	margin : 20px auto 0 auto;
 	font-family: 'Varela Round', Helvetica, Arial, sans-serif;
@@ -97,23 +104,7 @@ body {
 	text-decoration: none;
 }
 
-.Pagina .Rounded{
-	border-top-left-radius: 10px;
-	border-top-right-radius: 10px;
-	-moz-border-radius-topleft: 10px;
-	-moz-border-radius-topright: 10px;
-	-webkit-border-top-left-radius:10px;
-	-webkit-border-top-right-radius:10px;
-	
-	border-bottom-left-radius: 10px;
-	border-bottom-right-radius: 10px;
-	-moz-border-radius-bottomleft: 10px;
-	-moz-border-radius-bottomright: 10px;
-	-webkit-border-bottom-left-radius:10px;
-	-webkit-border-bottom-right-radius:10px;
-}
-
-.Pagina .RoundedTop{
+.Pagina .RoundedTop, .Pagina .Rounded{
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
 	-moz-border-radius-topleft: 10px;
@@ -122,7 +113,7 @@ body {
 	-webkit-border-top-right-radius:10px;
 }
 
-.Pagina .RoundedBottom{
+.Pagina .RoundedBottom, .Pagina .Rounded{
 	border-bottom-left-radius: 10px;
 	border-bottom-right-radius: 10px;
 	-moz-border-radius-bottomleft: 10px;

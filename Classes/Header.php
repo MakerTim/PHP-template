@@ -36,14 +36,20 @@
 				$ret .= '<meta name="googlebot" content="noodp" />'. PHP_EOL;
 				$ret .= '<meta name="Slurp" content="noydir" />'. PHP_EOL;
 			}
-			$ret .= '<meta name="description" content=' . str_replace(array('\n.', '\n\n', '\n'), ' ', json_encode(strip_tags(implode(' ', array_slice(explode(' ', $GLOBALS['pageContent']->content), 0, 100))))) . ' />'. PHP_EOL;
+			$ret .= '<meta name="description" content=' . str_replace(array('\n.', '\n\n', '\n', '  '), ' ', json_encode(strip_tags(implode(' ', array_slice(explode(' ', $GLOBALS['pageContent']->content), 0, 200))))) . ' />'. PHP_EOL;
 			$builder = "";
 			foreach(MktConfig::$keys as $key) {
 				$builder .= $key . ', ';
 			}
+			if(isset($GLOBALS['pageContent']->menuEntry) && !empty($GLOBALS['pageContent']->menuEntry)){
+				$builder .= $GLOBALS['pageContent']->menuEntry . ', ';
+			}
+			if(isset($GLOBALS['pageContent']->sub) && !empty($GLOBALS['pageContent']->sub)){
+				$builder .= $GLOBALS['pageContent']->sub . ', ';
+			}
 			$builder = rtrim($builder,", ");
 			$ret .= '<meta name="keywords" content="' . $builder . '" />'. PHP_EOL;
-			$ret .= '<meta name="generator" content="MakerTim_Generator 1.0.0" />'. PHP_EOL;
+			$ret .= '<meta name="generator" content="PHP-Template 1.0" />'. PHP_EOL;
 			$ret .= '<title> ' . $GLOBALS['pageContent']->getTitle() . ' </title>'. PHP_EOL;
 			$ret .= '<link rel="shortcut icon" href="Pictures/favicon.ico">'. PHP_EOL;
 			$ret .= '<meta name="author" content="' . MktConfig::$domein . '" />'. PHP_EOL;
@@ -64,6 +70,7 @@
 			$ret .= "PHP = {};";
 			
 			$ret .= "PHP.mainmenu = {};";
+			$ret .= "PHP.mainmenu.color = \"" . explode(")", explode("(", MktColor::$Menu_Outline)[1])[0] . '";';
 			$ret .= "PHP.mainmenu.count = " . $MktMenu->getAmount() . ";";
 			$ret .= "PHP.mainmenu.items = {};";
 			for($i=0; $i<$MktMenu->getAmount();$i++) {
@@ -81,7 +88,7 @@
 			$ret .= "PHP.page.error = " . json_encode($MktPage->errorMessage) . ";";
 			$ret .= "PHP.page.menuEntry = " . json_encode($MktPage->menuEntry) . ";";
 			$ret .= "PHP.page.hasBanner = " . json_encode($MktPage->hasBanner) . ";";
-			$ret .= "PHP.page.hasSideBar = " . json_encode($MktPage->hasSideBar) . ";";
+			$ret .= "PHP.page.hasSideBar = " . json_encode(isset($MktPage->sub) && !empty($MktPage->sub)) . ";";
 			$ret .= "PHP.isMobiel = " . json_encode($GLOBALS["mob"]->isMobile()) . ";";
 			
 			$ret .= "</script>" . PHP_EOL;

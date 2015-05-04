@@ -1,7 +1,7 @@
 var f;
 
 function loadLooksMobiel() {
-	if(PHP.page.hasSideBar == "true"){
+	if(PHP.page.hasSideBar){
 		$('.MenuButton').click(toggleSideBar);
 	}
 	$('.menuImg').click(toggleMenu);
@@ -55,7 +55,7 @@ function innerLink() {
 
 function toggleMobiel(enabled){
 	if(enabled) {
-		if(PHP.page.hasSideBar == "true"){
+		if(PHP.page.hasSideBar){
 			$('.ulSidebar').hide();
 			$(".ulSidebar").css("height", "0px");
 			$('.sidebar').css("margin-left",  "-" + $('body').css("margin"));
@@ -67,7 +67,7 @@ function toggleMobiel(enabled){
 		$(".menuItem:not(.menuSelected)").hide();
 		$(".menuSelected").css("display", "list-item");
 	} else {
-		if(PHP.page.hasSideBar == "true"){
+		if(PHP.page.hasSideBar){
 			$('.ulSidebar').show();
 			$(".ulSidebar").attr("style", $(".ulSidebar").attr("style").replace(/height:.{0,}?;/i, ""));
 			$('.sidebar').css("margin-left",  "auto");
@@ -95,7 +95,7 @@ function resizeMobiel(width, height) {
 	resizeMenuMobiel(width, height);
 	resizeContentMobiel(width, height);
 	resizeFooterMobiel(width, height);
-	if(PHP.page.hasSideBar == "true"){
+	if(PHP.page.hasSideBar){
 		resizeSidebarMobiel(width, height);
 	}
 }
@@ -111,7 +111,7 @@ function setMob(bool, r) {
 		} else {
 			pagina.removeClass("Mobiel");
 			pagina.addClass("Pagina");
-			if(PHP.page.hasSideBar == "true"){
+			if(PHP.page.hasSideBar){
 				$(".sidebar").attr("style", $(".sidebar").attr("style").replace(/height:.{0,}?;/i, ""));
 			}
 		}

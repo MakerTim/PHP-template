@@ -12,7 +12,7 @@ $(function() {
 });
 
 function loadLooks() {
-	if(PHP.page.hasSideBar == "true"){
+	if(PHP.page.hasSideBar){
 		registerSideMenuEvents();
 	}
 	
@@ -74,7 +74,7 @@ function resizeDesktop(width, height) {
 	resizeMenu(width, height);
 	resizeContent(width, height);
 	resizeFooter(width, height);
-	if(PHP.page.hasSideBar == "true"){
+	if(PHP.page.hasSideBar){
 		resizeSidebar(width, height);
 	}
 }
@@ -105,7 +105,7 @@ function resizeMenu(width, height) {
 }
 
 function resizeContent(width, height) {
-	if(PHP.page.hasSideBar == "true"){
+	if(PHP.page.hasSideBar){
 		$(".Content").width(width * 0.8 * 0.8 -16);
 		if($(".sidebar").height() > $(".markdown-body").height()) {
 			$(".Content").height(Math.max($(".markdown-body").height() + 20, $(".sidebar").height()));

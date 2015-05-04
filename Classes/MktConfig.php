@@ -24,7 +24,6 @@
 		public static $twitter = "MakerTim";
 		public static $customButton = array( 
 			'<a href="http://example.com/"> <img src="http://www.mailbox-belgium.com/wp-content/uploads/2014/06/newsletter.png" /> </a>',
-			'<a href="http://google.nl/"> <img src="http://www.seomofo.com/downloads/new-google-logo-knockoff.png" /> </a>',
 		);
 		
 		// Domein van de site, exclusief http
