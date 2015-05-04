@@ -6,6 +6,7 @@
 		public static $Menu_Text = 					'rgba(255, 255, 255, 1.0);';
 		public static $Menu_Background = 			'rgba(1,   141, 211, 1.0);';
 		public static $Menu_Outline = 				'rgba(253, 203, 25,  1.0);';
+		public static $Menu_Highlight = 			'0.5;';
 		
 		// SubMenu
 		public static $Sub_Text = 					'rgba(255, 255, 255, 1.0);';

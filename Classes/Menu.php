@@ -117,12 +117,9 @@
 		
 		public function PrintBar() {
 			$ret = '<ul class="ulSidebar">' . PHP_EOL;
-			$first = current($this->options);
-			$end = end($this->options);
 			foreach($this->options as $option) {
-				$hasSub = $option->hasSub == "true";
-				$isOpen = $option->isOpen == "true";
-				$ret .= '<li '. ($hasSub? ($isOpen? 'class="active has-sub open"' : 'class="has-sub"') : '') . '>' . PHP_EOL .
+				$hasSub = isset($option->subs) && !empty($option->subs);
+				$ret .= '<li '. ($hasSub ? 'class="has-sub"' : '') . '>' . PHP_EOL .
 				'<a href=' . $option->href . '>' 
 					. $option->name . '</a>' . PHP_EOL;
 				if($hasSub) {
@@ -148,16 +145,12 @@
 		
 		var $name;
 		var $href;
-		var $hasSub;
-		var $isOpen;
 		var $subs;
 		
 		public function __construct($xmlOption) {
 			$this->name = $GLOBALS["md"]->text($xmlOption->Name);
 			$this->href = $xmlOption->Href;
-			$this->hasSub = $xmlOption->HasSub;
-			if($this->hasSub == "true") {
-				$this->isOpen = $xmlOption->IsOpen;
+			if(isset($xmlOption->Sub) && !empty($xmlOption->Sub)){
 				$this->subs = array();
 				foreach($xmlOption->Sub as $sub){
 					array_push($this->subs, new SideBarSubItem($sub));

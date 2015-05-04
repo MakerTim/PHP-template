@@ -2,13 +2,10 @@
 	<Option>
 		<Name>Home</Name>
 		<Href>../Index/</Href>
-		<HasSub>false</HasSub>
 	</Option>
 	<Option>
 		<Name>Sub 1</Name>
 		<Href>#</Href>
-		<HasSub>true</HasSub>
-		<IsOpen>false</IsOpen>
 		<Sub>
 			<Name>Product 1.2</Name>
 			<Href>Contact</Href>
@@ -21,8 +18,6 @@
 	<Option>
 		<Name>Item 2</Name>
 		<Href>#</Href>
-		<HasSub>true</HasSub>
-		<IsOpen>false</IsOpen>
 		<Sub>
 			<Name>Product 2.1</Name>
 			<Href>Contact</Href>
@@ -35,8 +30,6 @@
 	<Option>
 		<Name>Sub 1</Name>
 		<Href>#</Href>
-		<HasSub>true</HasSub>
-		<IsOpen>false</IsOpen>
 		<Sub>
 			<Name>Product 1.1</Name>
 			<Href>Contact</Href>
@@ -49,8 +42,6 @@
 	<Option>
 		<Name>Item 3</Name>
 		<Href>#</Href>
-		<HasSub>true</HasSub>
-		<IsOpen>false</IsOpen>
 		<Sub>
 			<Name>Product 2.1</Name>
 			<Href>Contact</Href>
@@ -63,13 +54,10 @@
 	<Option>
 		<Name>Item 4</Name>
 		<Href>#</Href>
-		<HasSub>false</HasSub>
 	</Option>
 	<Option>
 		<Name>Sub 1</Name>
 		<Href>#</Href>
-		<HasSub>true</HasSub>
-		<IsOpen>false</IsOpen>
 		<Sub>
 			<Name>Product 1.1</Name>
 			<Href>Contact</Href>
@@ -82,8 +70,6 @@
 	<Option>
 		<Name>Item 2</Name>
 		<Href>#</Href>
-		<HasSub>true</HasSub>
-		<IsOpen>false</IsOpen>
 		<Sub>
 			<Name>Product 2.1</Name>
 			<Href>Contact</Href>
@@ -96,8 +82,6 @@
 	<Option>
 		<Name>Sub 1</Name>
 		<Href>#</Href>
-		<HasSub>true</HasSub>
-		<IsOpen>false</IsOpen>
 		<Sub>
 			<Name>Product 1.1</Name>
 			<Href>Contact</Href>
@@ -110,8 +94,6 @@
 	<Option>
 		<Name>Item 3</Name>
 		<Href>#</Href>
-		<HasSub>true</HasSub>
-		<IsOpen>false</IsOpen>
 		<Sub>
 			<Name>Product 2.1</Name>
 			<Href>Contact</Href>
@@ -124,6 +106,5 @@
 	<Option>
 		<Name>Item 4</Name>
 		<Href>#</Href>
-		<HasSub>false</HasSub>
 	</Option>
 </SideBar>
