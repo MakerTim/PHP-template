@@ -36,7 +36,7 @@
 			?>
 			<!-- End Banner -->
 			
-			<div id="Errnor"></div>
+			<div id="Errnor" style="color:LightCoral"></div>
 			
 			<!-- Starting Main Menu-->
 			<div class="Menu TopBorder">
