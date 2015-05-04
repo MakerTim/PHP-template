@@ -8,11 +8,11 @@
 		<Href>#</Href>
 		<Sub>
 			<Name>Product 1.1</Name>
-			<Href>../Contact</Href>
+			<Href>../Contact/</Href>
 		</Sub>
 		<Sub>
 			<Name>Product 1.2</Name>
-			<Href>../Contact</Href>
+			<Href>../Contact/</Href>
 		</Sub>
 	</Option>
 	<Option>
@@ -20,11 +20,11 @@
 		<Href>#</Href>
 		<Sub>
 			<Name>Product 2.1</Name>
-			<Href>../Contact</Href>
+			<Href>../Contact/</Href>
 		</Sub>
 		<Sub>
 			<Name>Product 2.2</Name>
-			<Href>../Contact</Href>
+			<Href>../Contact/</Href>
 		</Sub>
 	</Option>
 	<Option>

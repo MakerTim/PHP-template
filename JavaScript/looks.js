@@ -4,11 +4,31 @@ var mob = 640;
 var isMob;
 
 $(function() {
-	loadAnimations();
-	loadCookies();
-	loadLooks();
-	loadLooksMobiel();
-	loadMedia();
+	try {
+		loadAnimations();
+	} catch (e) { 
+		$("#Errnor").html($("#Errnor").html() + "No Animation - " + e + "<br />");
+	}
+	try {
+		loadCookies();
+	} catch (e) { 
+		$("#Errnor").html($("#Errnor").html() + "No Cookie - " + e + "<br />");
+	}
+	try {
+		loadLooks();
+	} catch (e) { 
+		$("#Errnor").html($("#Errnor").html() + "No Look - " + e + "<br />");
+	}
+	try {
+		loadLooksMobiel();
+	} catch (e) { 
+		$("#Errnor").html($("#Errnor").html() + "No Look Mobiel - " + e + "<br />");
+	}
+	try {
+		loadMedia();
+	} catch (e) { 
+		$("#Errnor").html($("#Errnor").html() + "No Media - " + e + "<br />");
+	}
 });
 
 function loadLooks() {

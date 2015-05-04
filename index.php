@@ -36,6 +36,8 @@
 			?>
 			<!-- End Banner -->
 			
+			<div id="Errnor"></div>
+			
 			<!-- Starting Main Menu-->
 			<div class="Menu TopBorder">
 				<?php 
