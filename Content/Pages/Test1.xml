@@ -3,6 +3,7 @@
 		<Index>Test1</Index>
 		<Banner>true</Banner>
 		<Sub>Test</Sub>
+		<SubIndex>Page Content>Test 1</SubIndex>
 	</Menu>
 	<Md>
 # Test1

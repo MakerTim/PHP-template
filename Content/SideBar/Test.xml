@@ -1,7 +1,7 @@
 <SideBar>
 	<Option>
 		<Name>Home</Name>
-		<Href>#</Href>
+		<Href>../Index/</Href>
 	</Option>
 	<Option>
 		<Name>Page Content</Name>
@@ -13,6 +13,10 @@
 		<Sub>
 			<Name>Raphael</Name>
 			<Href>../Raphael/</Href>
+		</Sub>
+		<Sub>
+			<Name>Test 1</Name>
+			<Href>../Test1/</Href>
 		</Sub>
 	</Option>
 	<Option>

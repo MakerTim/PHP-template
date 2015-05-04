@@ -1187,11 +1187,16 @@
 
 			$remainder = $Excerpt['text'];
 			
-			// _blank when starts with HashTag
-			if($remainder[1] == '#') { 
-				$remainder[1] = '';
-				$Element['attributes']['target'] = '_blank';
+			// button en nieuw tabblad - MKT
+			$i = strpos($remainder, '#');
+			if($i === 1 || $i === 2) { 
+				$remainder[$i] = '';
 				$Element['attributes']['class'] = 'buddon Rounded';
+			}
+			$i = strpos($remainder, '!');
+			if($i === 1 || $i === 2) { 
+				$remainder[$i] = '';
+				$Element['attributes']['target'] = '_blank';
 			}
 
 			if (preg_match('/\[((?:[^][]|(?R))*)\]/', $remainder, $matches))
