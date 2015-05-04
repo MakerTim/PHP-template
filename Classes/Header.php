@@ -71,6 +71,7 @@
 			
 			$ret .= "PHP.mainmenu = {};";
 			$ret .= "PHP.mainmenu.color = \"" . explode(")", explode("(", MktColor::$Menu_Outline)[1])[0] . '";';
+			$ret .= "PHP.mainmenu.opacity = " .  MktColor::$Menu_Highlight;
 			$ret .= "PHP.mainmenu.count = " . $MktMenu->getAmount() . ";";
 			$ret .= "PHP.mainmenu.items = {};";
 			for($i=0; $i<$MktMenu->getAmount();$i++) {

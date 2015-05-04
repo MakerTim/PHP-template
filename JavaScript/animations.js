@@ -13,7 +13,7 @@ function highlightMenu() {
 		color = PHP.mainmenu.color.split(", ");
 		$(".menuSelected")
 		.animate({
-			backgroundColor: "rgba(" + color[0] + "," + color[1] + "," + color[2] + ",0.5)",
+			backgroundColor: "rgba(" + color[0] + "," + color[1] + "," + color[2] + "," + PHP.mainmenu.opacity + ")",
 			borderBottomRightRadius: 15,
 			borderBottomLeftRadius: 15,
 			paddingBottom: 25,
