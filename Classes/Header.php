@@ -70,7 +70,11 @@
 			$ret .= "PHP = {};";
 			
 			$ret .= "PHP.mainmenu = {};";
-			$ret .= "PHP.mainmenu.color = \"" . explode(")", explode("(", MktColor::$Menu_Outline)[1])[0] . '";';
+			$tmp = explode("(", MktColor::$Menu_Outline);
+			$tmp = $tmp[1];
+			$tmp = explode(")", $tmp);
+			$tmp = $tmp[0];
+			$ret .= "PHP.mainmenu.color = \"" . $tmp . '";';
 			$ret .= "PHP.mainmenu.opacity = " .  MktColor::$Menu_Highlight;
 			$ret .= "PHP.mainmenu.count = " . $MktMenu->getAmount() . ";";
 			$ret .= "PHP.mainmenu.items = {};";
