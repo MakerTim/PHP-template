@@ -20,7 +20,6 @@
 }
 
 .Mobiel .CookiePopup {
-	font-size: xx-large !important;
 	width: 88%; 
 }
 

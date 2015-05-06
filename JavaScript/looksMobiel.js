@@ -27,7 +27,7 @@ function toggleSideBar() {
 			$(".ulSidebar").hide();
 		});
 		$('.MenuButton').animate({
-			width : 100,
+			width : 50,
 		}, 300);
 	}
 	updateResize();
@@ -61,7 +61,7 @@ function toggleMobiel(enabled){
 			$('.sidebar').css("margin-left",  "-" + $('body').css("margin"));
 			$('.sidebar').css("margin-top",  "-" + $('body').css("margin"));
 			$('.sidebar').css("top",  "8px");
-			$('.MenuButton').css("width",  "100px");
+			$('.MenuButton').css("width",  "50px");
 		}
 		$(".menuImg").show();
 		$(".menuItem:not(.menuSelected)").hide();

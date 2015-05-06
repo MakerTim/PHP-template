@@ -66,8 +66,10 @@ function registerSideMenuEvents() {
 			element.siblings('li').find('li').removeClass('open');
 			element.siblings('li').find('ul').slideUp(200);
 		}
-		for(i=0; i<201; i++){
-			setTimeout(updateForSide, i);
+		if(!isMob) {
+			for(i=0; i<201; i++){
+				setTimeout(updateForSide, i);
+			}
 		}
 	});
 }

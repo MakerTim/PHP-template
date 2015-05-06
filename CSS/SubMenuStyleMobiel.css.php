@@ -2,7 +2,7 @@
 	header('Content-Type: text/css');
 	require(join(DIRECTORY_SEPARATOR, array('..', 'Classes', 'IncludeManager.php')));
  ?>
- .Mobiel .sidebar ul, .Mobiel .sidebar ul li a, .Mobiel .sidebar ul li  {
+ .Mobiel .sidebar ul, .Mobiel .sidebar ul li a {
 	margin: 0;
 	padding: 0;
 	list-style: none;
@@ -11,13 +11,16 @@
 	border-bottom: 1px solid <?php echo MktColor::$Sub_Item_Border; ?>
 }
 
+.Mobiel .ulSidebar>li>ul>li:last-child>a {
+	border-bottom: 0px;
+}
+
 .Mobiel .sidebar {
 	float : left;
 	position: fixed;
 	z-index: 100;
 	width: 33%;
 	height: 100%;
-	font-size: 250% !important;
 }
 
 .Mobiel .sidebar ul ul {
@@ -95,7 +98,7 @@
 }
 
 .Mobiel .MenuButton {
-    height: 100px;
+    height: 50px;
     position: relative;
 	background: <?php echo MktColor::$Sub_Item; ?>
 	text-align: center;
@@ -103,8 +106,8 @@
 }
 
 .Mobiel .MenuButton  img {
-	width: 100px;
-	height: 100px;
+	width: 50px;
+	height: 50px;
 }
 
 .Mobiel .ulSidebar{
@@ -114,5 +117,5 @@
 }
 
 .Mobiel .ulSidebar p{
-	line-height: 0%;
+	margin: 0px;
 }

@@ -4,6 +4,7 @@
  ?>
 body {
 	overflow-x: hidden;
+	word-wrap: break-word;
 }
 
 .buddon {

@@ -24,16 +24,7 @@
 	background-color: <?php echo MktColor::$Menu_Background; ?>
 	margin-bottom: 10px;
 	border-top: <?php echo MktColor::$LijntjeDikte; ?> solid <?php echo MktColor::$Lijntje; ?>
-	font-size: 400% !important; 
-	/* 
-		Dear Future me,
-		I spend the last few weeks fixing the mobile version the menu
-		Now i did the 400% trick, it has magical working great and we will leave it as it is
-		
-		now like my dick size, someone will only ignore the !important, should have a look after this problem in the future...
-		greetings
-		past me
-	*/
+	font-size: 125% !important;
 }
 
 .Mobiel .Menu ul {
@@ -73,6 +64,7 @@
 	cursor: hand;
 	cursor: pointer;
 }
+
 .Mobiel .menuSelected{
 	margin-bottom: -16px;
 }
@@ -92,8 +84,8 @@
 	word-wrap: break-word;
 	margin-bottom: 5px;
 	border-top: <?php echo MktColor::$LijntjeDikte; ?> solid <?php echo MktColor::$Lijntje; ?>
-	font-size: 180% !important;
 }
+
 .Mobiel .Footer a{ 
     color: <?php echo MktColor::$Footer_Text; ?>
 	text-decoration: none;
