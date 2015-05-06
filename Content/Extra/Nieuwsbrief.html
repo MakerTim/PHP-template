@@ -1,6 +1,3 @@
-<script>
-	console.log("Nieuws uit de natuur");
-</script>
 <div id="NieuwsPopup" style="z-index: 999; position: fixed; width: 50%; left: 25%; top: 100px; text-align: center;">
 	<h2>Meld je aan voor onze nieuwsbrief!</h2>
 	<form style="width: 100%; text-align: center;" method="post" target="_blank" action="http://app.simpel-mail.com/public/user/subscribe">
@@ -8,4 +5,10 @@
 		<input style="width: 100%" type="text" name="email" placeholder="Jouw e-mailadres">
 		<input style="width: 100%" type="submit" name="optin" value="Onze aanbiedingen">
 	</form>
+	<button id="NieuwsButton" style="width: 100%">Close</button>
+	<script>
+		$("#NieuwsButton").click(function(){
+			$("#NieuwsButton").parent().remove();
+		});
+	</script>
 </div>
