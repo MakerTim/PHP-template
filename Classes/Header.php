@@ -79,12 +79,12 @@
 			$ret .= 'PHP.mainmenu.count = ' . $MktMenu->getAmount() . ';';
 			$ret .= 'PHP.mainmenu.items = {};';
 			for($i=0; $i<$MktMenu->getAmount();$i++) {
-				$ret .= 'PHP.mainmenu.items[$i] = {};';
-				$ret .= 'PHP.mainmenu.items[$i].name = ' . json_encode($MktMenu->items[$i]->name) . ';';
-				$ret .= 'PHP.mainmenu.items[$i].alt = ' . json_encode($MktMenu->items[$i]->alt) . ';';
-				$ret .= 'PHP.mainmenu.items[$i].href = ' . json_encode($MktMenu->items[$i]->href) . ';';
-				$ret .= 'PHP.mainmenu.items[$i].prio = ' . json_encode($MktMenu->items[$i]->prio) . ';';
-				$ret .= 'PHP.mainmenu.items[$i].error = ' . json_encode($MktMenu->items[$i]->errorMessage) . ';';
+				$ret .= "PHP.mainmenu.items[$i] = {};";
+				$ret .= "PHP.mainmenu.items[$i].name = " . json_encode($MktMenu->items[$i]->name) . ';';
+				$ret .= "PHP.mainmenu.items[$i].alt = " . json_encode($MktMenu->items[$i]->alt) . ';';
+				$ret .= "PHP.mainmenu.items[$i].href = " . json_encode($MktMenu->items[$i]->href) . ';';
+				$ret .= "PHP.mainmenu.items[$i].prio = " . json_encode($MktMenu->items[$i]->prio) . ';';
+				$ret .= "PHP.mainmenu.items[$i].error = " . json_encode($MktMenu->items[$i]->errorMessage) . ';';
 			}
 			
 			$ret .= 'PHP.page = {};';
