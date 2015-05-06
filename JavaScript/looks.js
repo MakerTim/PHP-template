@@ -82,7 +82,7 @@ function Popup(jqElement){
 				jqElement.attr("data-load") != "TRUE") {
 			jqElement.attr("data-load", "TRUE");
 			$.ajax(jqElement.attr("data-page")).done(function(e){
-				$(".Pagina").append(e);
+				$("#Pagina").append(e);
 				jqElement.removeAttr("data-load");
 			});
 		}
