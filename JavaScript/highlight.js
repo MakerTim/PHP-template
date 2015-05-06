@@ -24,14 +24,16 @@ function highlightMenu() {
 			.css("borderBottomLeftRadius", 15);
 	}
 }
-var highlight;
+
 function highlightSubMenu() {
 	if(PHP.page.highlightSubMenu != undefined && PHP.page.highlightSubMenu != ""){
 		highlight = PHP.page.highlightSubMenu.replace(/\s/g, "").split(">");
-		if(highlight.length > 0){ 
+		if(highlight.length > 0) { 
 			$("#Side_" + highlight[0]).addClass("open");
-			if(highlight.length > 1){
+			if(highlight.length > 1) {
 				$("#Side_Sub_" + highlight[1] + ">a").attr("style", "background-color: " + PHP.page.highlightSubColor);
+			} else {
+				$("#Side_" + highlight[0] + ">a").attr("style", "background-color: " + PHP.page.highlightSubColor);
 			}
 		}
 	}

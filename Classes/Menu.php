@@ -120,8 +120,7 @@
 			foreach($this->options as $option) {
 				$hasSub = isset($option->subs) && !empty($option->subs);
 				$ret .= '<li id="Side_' . $option->id . '"'. ($hasSub ? 'class="has-sub"' : '') . '>' . PHP_EOL .
-				'<a ' . ($hasSub? 'data-':'') . 'href=' . $option->href . '>' 
-					. $option->name . '</a>' . PHP_EOL;
+				'<a ' . ($hasSub? 'data-':'') . 'href=' . $option->href . '>' . $option->name . '</a>' . PHP_EOL;
 				if($hasSub) {
 					$ret .= '<ul>';
 					foreach($option->subs as $sub) {

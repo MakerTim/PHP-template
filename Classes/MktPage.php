@@ -16,7 +16,7 @@
 		var $Title;
 		
 		public function __construct($type = 'page', $page = 'Index') {
-			$this->page = str_replace('.', '', $page);
+			$this->page = str_replace(array('.', ' '), array('', '-'), $page);
 			$this->errorMessage = '';
 			if($type == 'page'){
 				$this->loadPage();
