@@ -419,8 +419,12 @@
 }
 
 .markdown-body img {
-  max-width: 100%;
   box-sizing: border-box;
+  border-radius:3px;
+  float:right;
+  width:330px;
+  margin-left: 10px;
+  margin-top: 10px;
 }
 
 .markdown-body code {
