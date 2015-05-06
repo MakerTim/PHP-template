@@ -35,7 +35,9 @@ function loadLooks() {
 	if(PHP.page.hasSideBar){
 		registerSideMenuEvents();
 	}
-	
+	$(".Popup").each(function(i, element){
+		Popup($(element));
+	});
 	$(window).resize(function() {
 		updateResize();
 	});
@@ -71,6 +73,14 @@ function registerSideMenuEvents() {
 				setTimeout(updateForSide, i);
 			}
 		}
+	});
+}
+
+function Popup(jqElement){
+	jqElement.click(function(){
+		$.ajax(jqElement.attr("data-page")).done(function(e){
+			$("body").append(e);
+		});
 	});
 }
 
