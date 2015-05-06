@@ -102,7 +102,6 @@
     position: relative;
 	background: <?php echo MktColor::$Sub_Item; ?>
 	text-align: center;
-	border-top: <?php echo MktColor::$LijntjeDikte; ?> solid <?php echo MktColor::$Lijntje; ?>
 }
 
 .Mobiel .MenuButton  img {

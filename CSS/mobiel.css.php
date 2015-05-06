@@ -23,7 +23,6 @@
 	float : left;
 	background-color: <?php echo MktColor::$Menu_Background; ?>
 	margin-bottom: 10px;
-	border-top: <?php echo MktColor::$LijntjeDikte; ?> solid <?php echo MktColor::$Lijntje; ?>
 	font-size: 125% !important;
 }
 
@@ -73,7 +72,6 @@
 	float : left;
 	background-color: <?php echo MktColor::$Markdown_Background; ?>
 	margin-top: 10px;
-	border-top: <?php echo MktColor::$LijntjeDikte; ?> solid <?php echo MktColor::$Lijntje; ?>
 }
 
 .Mobiel .Footer{
@@ -83,7 +81,6 @@
 	bottom: 5px;
 	word-wrap: break-word;
 	margin-bottom: 5px;
-	border-top: <?php echo MktColor::$LijntjeDikte; ?> solid <?php echo MktColor::$Lijntje; ?>
 }
 
 .Mobiel .Footer a{ 
@@ -96,23 +93,7 @@
 	text-decoration: none;
 }
 
-.Mobiel .Rounded{
-	border-top-left-radius: 10px;
-	border-top-right-radius: 10px;
-	-moz-border-radius-topleft: 10px;
-	-moz-border-radius-topright: 10px;
-	-webkit-border-top-left-radius:10px;
-	-webkit-border-top-right-radius:10px;
-	
-	border-bottom-left-radius: 10px;
-	border-bottom-right-radius: 10px;
-	-moz-border-radius-bottomleft: 10px;
-	-moz-border-radius-bottomright: 10px;
-	-webkit-border-bottom-left-radius:10px;
-	-webkit-border-bottom-right-radius:10px;
-}
-
-.Mobiel .RoundedTop{
+.Mobiel .RoundedTop, .Mobiel .Rounded{
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
 	-moz-border-radius-topleft: 10px;
@@ -121,11 +102,15 @@
 	-webkit-border-top-right-radius:10px;
 }
 
-.Mobiel .RoundedBottom{
+.Mobiel .RoundedBottom, .Mobiel .Rounded{
 	border-bottom-left-radius: 10px;
 	border-bottom-right-radius: 10px;
 	-moz-border-radius-bottomleft: 10px;
 	-moz-border-radius-bottomright: 10px;
 	-webkit-border-bottom-left-radius:10px;
 	-webkit-border-bottom-right-radius:10px;
+}
+
+.Mobiel .TopBorder{
+	border-top: <?php echo MktColor::$LijntjeDikte; ?> solid <?php echo MktColor::$Lijntje; ?>
 }

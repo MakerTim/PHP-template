@@ -12,6 +12,7 @@ function loadLooksMobiel() {
 function toggleSideBar() {
 	$(".ulSidebar").toggleClass("isOpen");
 	if($(".ulSidebar").hasClass("isOpen")) {
+		$(".sidebar").attr("style", $(".sidebar").attr("style").replace(/width:.{0,}?;/i, ""));
 		$(".ulSidebar").show().animate({
 			height : (window.innerHeight - $(".ulSidebar").position().top),
 			width : $(".sidebar").width(),
@@ -20,6 +21,7 @@ function toggleSideBar() {
 			width : $(".sidebar").width(),
 		}, 300);
 	} else {
+		$(".sidebar").attr("style", $(".sidebar").attr("style").replace(/width:.{0,}?;/i, ""));
 		$(".ulSidebar").animate({
 			height : "0px",
 			width : "0px",
@@ -60,10 +62,10 @@ function toggleMobiel(enabled){
 			$(".ulSidebar").css("height", "0px");
 			$('.sidebar').css("margin-left",  "-" + $('body').css("margin"));
 			$('.sidebar').css("margin-top",  "-" + $('body').css("margin"));
-			$('.sidebar').css("height",  "auto");
 			$('.sidebar').css("top",  "8px");
 			$('.MenuButton').css("width",  "50px");
 		}
+		$('.sidebar').css("height",  "auto");
 		$(".menuImg").show();
 		$(".menuItem:not(.menuSelected)").hide();
 		$(".menuSelected").css("display", "list-item");
@@ -161,7 +163,7 @@ function resizeSidebarMobiel(width, height) {
 	if($('.MenuButton').hasClass("open")) {
 		$(".sidebar").width(width / 2);
 	} else {
-		$(".sidebar").attr("style", $(".sidebar").attr("style").replace(/width:.{0,}?;/i, ""));
+		$(".sidebar").css("width", "auto");
 	}
 	$(".ulSidebar").height(height - $(".ulSidebar").position().top);
 }
