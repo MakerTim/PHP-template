@@ -5,10 +5,10 @@
 		<input style="width: 100%; margin-bottom: 5px;" type="email" name="email" placeholder="Jouw e-mailadres">
 		<input style="width: 100%" class="buddon" type="submit" name="optin" value="Onze aanbiedingen">
 	</form>
-	<button id="NieuwsButton"  class="buddon" style="width: 100%">Close</button>
+	<button class="NieuwsButton"  class="buddon" style="width: 100%">Close</button>
 	<script>
-		$("#NieuwsButton").click(function(){
-			$("#NieuwsButton").parent().remove();
+		$(".NieuwsButton").click(function(){
+			$(".NieuwsButton").parent().remove();
 		});
 	</script>
 </div>

@@ -78,9 +78,14 @@ function registerSideMenuEvents() {
 
 function Popup(jqElement){
 	jqElement.click(function(){
-		$.ajax(jqElement.attr("data-page")).done(function(e){
-			$(".Pagina").append(e);
-		});
+		if(jqElement.attr("data-load") == undefined && 
+				jqElement.attr("data-load") != "TRUE") {
+			jqElement.attr("data-load", "TRUE");
+			$.ajax(jqElement.attr("data-page")).done(function(e){
+				$("#Pagina").append(e);
+				jqElement.removeAttr("data-load");
+			});
+		}
 	});
 }
 
