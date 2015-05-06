@@ -7,6 +7,10 @@ body {
 	word-wrap: break-word;
 }
 
+.bcColor {
+	background-color: <?php echo MktColor::$Menu_Background; ?>
+}
+
 .buddon {
     padding: 4px 10px 4px 45px !important;
     background:#00c400 url('../Pictures/buddon.png') no-repeat 10px center !important;

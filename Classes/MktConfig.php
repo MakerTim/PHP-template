@@ -23,7 +23,7 @@
 		public static $facebook = 'https://www.facebook.com/MakerTimm';
 		public static $twitter = 'MakerTim';
 		public static $customButton = array( 
-			'<img src="../../Pictures/Mail.png" alt="Nieuwsbrief" style="cursor: pointer;" class="Popup" data-page="../../Content/extra/Nieuwsbrief.html" />',
+			'<img src="../../Pictures/Mail.png" alt="Nieuwsbrief" style="cursor: pointer;" class="Popup" data-page="../../Content/Extra/Nieuwsbrief.html" />',
 		);
 		
 		// Domein van de site, exclusief http
