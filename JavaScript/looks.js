@@ -79,7 +79,7 @@ function registerSideMenuEvents() {
 function Popup(jqElement){
 	jqElement.click(function(){
 		$.ajax(jqElement.attr("data-page")).done(function(e){
-			$("body").append(e);
+			$(".Pagina").append(e);
 		});
 	});
 }
