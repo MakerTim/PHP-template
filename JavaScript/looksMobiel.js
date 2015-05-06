@@ -60,6 +60,7 @@ function toggleMobiel(enabled){
 			$(".ulSidebar").css("height", "0px");
 			$('.sidebar').css("margin-left",  "-" + $('body').css("margin"));
 			$('.sidebar').css("margin-top",  "-" + $('body').css("margin"));
+			$('.sidebar').css("height",  "auto");
 			$('.sidebar').css("top",  "8px");
 			$('.MenuButton').css("width",  "50px");
 		}
