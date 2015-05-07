@@ -15,7 +15,7 @@
 			'<link href="%root%/CSS/markdown.css.php" type="text/css" rel="stylesheet" />',
 			'<link href="%root%/CSS/SubMenuStyle.css.php" type="text/css" rel="stylesheet" />',
 			'<link href="%root%/CSS/SubMenuStyleMobiel.css.php" type="text/css" rel="stylesheet" />',
-			'<script src="https://apis.google.com/js/platform.js" async defer> {lang: \'nl\'} </script>',
+			'<script src="https://apis.google.com/js/platform.js" async defer></script>',
 			'<script src="%root%/JavaScript/jCookie.js"></script>',
 			'<script src="%root%/JavaScript/socialMedia.js"></script>',
 			'<script src="%root%/JavaScript/cookie.js"></script>',
