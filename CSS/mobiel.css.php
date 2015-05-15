@@ -75,12 +75,12 @@
 }
 
 .Mobiel .Footer{
+	float : left;
 	background-color: <?php echo MktColor::$Footer_Background; ?>
-	text-align: center;
-	position: fixed;
-	bottom: 5px;
-	word-wrap: break-word;
+	margin-top: 10px;
 	margin-bottom: 5px;
+	text-align:center;
+	word-wrap: break-word;
 }
 
 .Mobiel .Footer a{ 
