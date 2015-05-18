@@ -120,7 +120,7 @@
 			foreach($this->options as $option) {
 				$hasSub = isset($option->subs) && !empty($option->subs);
 				$ret .= '<li id="Side_' . $option->id . '" '. ($hasSub ? 'class="has-sub"' : '') . '>' . PHP_EOL .
-				'<a ' . ($hasSub? 'data-':'') . 'href=' . $option->href . '>' . $option->name . '</a>' . PHP_EOL;
+				'<a ' . ($hasSub? 'data-':'') . 'href="' . $option->href . '">' . $option->name . '</a>' . PHP_EOL;
 				if($hasSub) {
 					$ret .= '<ul>';
 					foreach($option->subs as $sub) {
@@ -149,8 +149,8 @@
 		
 		public function __construct($xmlOption) {
 			$this->id = str_replace(' ', '', $xmlOption->Name);
-			$this->name = $GLOBALS['md']->text($xmlOption->Name);
-			$this->href = $xmlOption->Href;
+			$this->name = $GLOBALS['md']->text(str_replace('\\quot\\', '&', $xmlOption->Name));
+			$this->href = str_replace('\\quot\\', '&', $xmlOption->Href);
 			if(isset($xmlOption->Sub) && !empty($xmlOption->Sub)){
 				$this->subs = array();
 				foreach($xmlOption->Sub as $sub){
@@ -167,8 +167,8 @@
 		
 		public function __construct($xmlSub) {
 			$this->id = str_replace(' ', '', $xmlSub->Name);
-			$this->name = $GLOBALS['md']->text($xmlSub->Name);
-			$this->href = $xmlSub->Href;
+			$this->name = $GLOBALS['md']->text(str_replace('\\quot\\', '&', $xmlSub->Name));
+			$this->href = str_replace('\\quot\\', '&', $xmlSub->Href);
 		}
 	}
 ?>

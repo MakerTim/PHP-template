@@ -1,6 +1,9 @@
 <?php
 	//error_reporting(E_ERROR & E_PARSE);
 	require(join(DIRECTORY_SEPARATOR, array('.', 'Classes', 'IncludeManager.php')));
+	if(strpos("http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]", '&') !== false) {
+		header('Location: ' . str_replace('&', '-', "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"));
+	}
 	$pageContent = MktPage::getPage();
 	Counter::Count($pageContent);
 	$menu = Menu::getMainMenu($pageContent);

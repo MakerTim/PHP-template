@@ -32,8 +32,8 @@
 			$ret .= '<meta charset="' . MktConfig::$utf . '" />'. PHP_EOL;
 			if(MktConfig::$robot === true) {
 				$ret .= '<meta name="robots" content="index, follow" />'. PHP_EOL;
-				$ret .= '<meta name="revised" content="3 days" />'. PHP_EOL;
-				$ret .= '<meta name="revised-after" content="3 days" />'. PHP_EOL;
+				$ret .= '<meta name="revisit" content="3 days" />'. PHP_EOL;
+				$ret .= '<meta name="revisit-after" content="3 days" />'. PHP_EOL;
 				$ret .= '<meta name="googlebot" content="noodp" />'. PHP_EOL;
 				$ret .= '<meta name="Slurp" content="noydir" />'. PHP_EOL;
 			}

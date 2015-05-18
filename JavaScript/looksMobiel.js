@@ -165,5 +165,7 @@ function resizeSidebarMobiel(width, height) {
 	} else {
 		$(".sidebar").css("width", "auto");
 	}
-	$(".ulSidebar").height(height - $(".ulSidebar").position().top);
+	try {
+		$(".ulSidebar").height(height - $(".ulSidebar").position().top);
+	}catch(ex){ }
 }
