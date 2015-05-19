@@ -15,7 +15,7 @@
 		public static $Sub_Item_Hover = 			'rgba(227, 0, 28, 1.0);';
 		public static $Sub_Item_Sub = 				'rgba(160,255, 170, 1.0);';
 		public static $Sub_Item_Sub_Hover = 		'rgba(227, 0, 28, 1.0);';
-		public static $Sub_Item_Border = 			'rgba(34,  61,  214, 1.0);';
+		public static $Sub_Item_Border = 			'rgba(227,  0,  28, 1.0);';
 		
 		// Content
 		public static $Markdown_Background = 		'rgba(255, 255, 255, 1.0);';
