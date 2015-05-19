@@ -21,6 +21,7 @@ RewriteRule (ViewCounter)(.{0,}) index.php?404=$2 [NC]
 
 #Pictures are not in pictures
 RewriteRule (Pictures)(.{0,}) Content/Pictures$2 [NC]
+RewriteRule (Picture)(.{0,}) Content/Pictures$2 [NC]
 
 #cant open htaccess files
 <files .htaccess>

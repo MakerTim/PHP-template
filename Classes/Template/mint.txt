@@ -40,4 +40,3 @@
 		public static $Cookie_Text = 				'rgba(0, 0, 0, 1.0);';
 		public static $Cookie_Background = 			'rgba(204, 255, 204, 1.0);';
 		public static $Cookie_Button = 				'rgba(91,  183, 91,  1.0);';
-	}
