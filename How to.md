@@ -11,6 +11,21 @@ Omdat we gebruik maken van Markdown vind je hieronder twee linkjes met uitleg.
 (https://github.com/MakerTim/PHP-template/blob/master/Markdown%20iframe.md)  
 
 ---
+**MktConfig configureren:**  
+MktConfig is class om makkelijk van een plek de hele server variable te bedienen.  
+de volgende dingen moet je voor elk nieuw domain aanpassen.
+
+// SocialMedia - Laat leeg voor geen knop  
+public static $google = "#google+ account";  
+public static $facebook = "#facebook account";  
+public static $twitter = "#twitter account";  
+
+// Domein van de site, exclusief http  
+public static $domein = "#domain naam";  
+public static $rootDir = '#root directory';   
+public static $keys = array( "#key", "#key", "#key", "#key", "#key", #key", "#key", "#key");  
+
+---
 **Pagina aanmaken:**  
 1. Open Content map.  
 2. Open Pages map.  
@@ -20,7 +35,7 @@ Omdat we gebruik maken van Markdown vind je hieronder twee linkjes met uitleg.
 	`<Menu>`  
 		`<Index>Stefan</Index>`  
 		`<Banner>true</Banner>`  
-		`<SideBar>true</SideBar>`  
+		`<SubIndex>New York>Skyline</SubIndex>`   
 		`<Sub>Long</Sub>`  
 		`<Title>Dit word de titel van de pagina</Title>`    
 	`</Menu>`  
@@ -32,16 +47,15 @@ Omdat we gebruik maken van Markdown vind je hieronder twee linkjes met uitleg.
  
 5. Verander bij `<Index>` pagina naam.   
 6. Kies voor banner ja of nee.   
-7. Kies voor submenu ja of nee.  
-8. Als submenu ja voeg `<Sub>`Submenu naam`<Sub>` toe.  
-9. Extra optie `<Title>` `</Title>` hier kan je een titel van je pagina toevoegen.  
-10. Opslaan.  
+7. Vul bij `<SubIndex>` de naam van het submenu item > naam hotel.   
+8. Extra optie `<Title>` `</Title>` hier kan je een titel van je pagina toevoegen.  
+9. Opslaan.  
 
 **Pagina aanmaken extra uitleg**   
 `<Index>` hier komt de naam van de pagina.  
 `<Banner>` hier geef je aan of je een banner wilt. (wel banner = true, geen banner = false)  
-`<SideBar>` hier geef je aan of je een Sidemenu wilt. (wel Sidemenu = true, geen sidemenu = false)   
-`<Sub>`   hier geef je de naam op van welk submenu je wilt hebben. (alllen nodig als je bij `<SideBar>` true hebt staan.)  
+`<SubIndex>` je geef hier de hightlight van het submenu item mee aan.
+`<Sub>`   hier geef je de naam op van welk submenu je wilt hebben.
 `<Title>` hier kan je de naam van je pagina invulen (dit is niet verplicht)
 
 ---
@@ -123,17 +137,6 @@ Om de counter aan te passen voer je de volgende handelingen uit:
 5. Opslaan.
 
 ---
-**Css aanpassen:**  
-Als je de css bestanden wilt aanpassen kijk dan goed of je de juiste aanpast. (allen doen als je over de juiste kennis beschikt)  
-1. **cookie.css:** In dit bestand kan je het uiterlijk van de cookie popup aanpassen.  
-2. **markdown.css:** In dit bestand kan je de Markdown style aanpassen (liever deze niet aanpassen)   
-3. **mobiel.css:** In dit bestand kan je het uiterlijk van de mobiele weergave aanpassen.   
-4. **SocialMedia.css:**  In dit bestand kan je het uiterlijk van de socialMedia linkjes   aanpassen.   
-5. **style.css:**  In dit bestand kan je het uiterlijk van de desktop weergave aanpassen.  
-6. **SubMenuStyle.css:**  In dit bestand kan je het uiterlijk van het submenu aanpassen.  
-7. **SubMenuStyleMobiel.css:**  In dit bestand kan je het uiterlijk van het submenu van de mobiele weergave aanpassen.  
-
----
 **Favicon veranderen:**    
 1. Open Content map.  
 2. Open Pictures map.  
@@ -158,5 +161,24 @@ Zet een # voor de tekst van de link, dan gaat hij naar een nieuwe tabblad
 2. Open MktConfig.php  
 3. Zoek op `public static $customButton = array(`  
 4. Plaats in de array je custom button. 
+
+---
+**Kleuren aanpassen:**  
+het aanpassen van de kleuren gebeurd in de Mktconfig.  
+In dit bestaand zie je de class "class MktColor" hierin verander je de kleuren.
+
+**Kleuren aanpassen extra uitleg**  
+Gebruik alleen kleuren van http://html-color-codes.info/  
+Gebruik alleen 'rgba(255,255,255,1.0);'  
+Templates eventueel beschikbaar in /Templates/  
+rgba staat voor Rood, Groen, Blauw, Alpha  
+Een combinatie van de 3 kleuren maken alle kleuren mogelijk  
+Alpha is de transparantie van de kleur, 1 = niet transparant, 0 = 100% transparant, komma getal toegestaan
+
+---
+**Eigen script toevoegen:**  
+voor het toevoegen van je eigen script hebben we een bestand gemaakt ("IncludeScripts")  
+Dit bestand vind je in de root van de template.  
+1. het enige wat je moet doen is dit bestand je script neerzetten
 
 © Copyright 2015 MakerTim

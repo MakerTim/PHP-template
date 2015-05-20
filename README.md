@@ -14,6 +14,7 @@ Hierin vind je alle php class bestanden.
 
 **Content map:**  
 Hierin vind je een aantal mappen:  
+**Extra**			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hier vind je de nieuwsbief  
 **Mainmenu:**		Hierin vind je de menu items.  
 **Pages:** 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hierin vind je alle Webpages.   
 **Pictures:**		&nbsp;&nbsp;&nbsp;&nbsp;Hierin vind je alle Pictures.  
