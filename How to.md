@@ -149,11 +149,12 @@ Om de counter aan te passen voer je de volgende handelingen uit:
 3. Vervang header.jpg (naar je eigen header.jpg)
 
 ---
-**Link maken die naar nieuw tabblad gaat:**    
->` [#Text](http://google.nl/)`  
-
-
-Zet een # voor de tekst van de link, dan gaat hij naar een nieuwe tabblad
+**Linkjes:**    
+>
+`[Raphael](http://makertim.nl/) = Standaard link`  
+`[!Raphael](http://makertim.nl/) = Standaard link die naar een nieuw tabblad gaat.`
+`[#Raphael](http://makertim.nl/) = Button Look.`  
+`[#!Raphael](http://makertim.nl/) = Button look.`
 
 ---
 **Custom button**  
