@@ -70,9 +70,9 @@
 			libxml_clear_errors();
 			if(!is_null($xmlError) && sizeof($xmlError) == 0) {
 				$this->uuid = $this->uuid[0];
-				$this->name = (string)$xml->Name;
-				$this->alt = (string)$xml->Alt;
-				$this->href = MktUtils::rootString((string)$xml->Href);
+				$this->name = str_replace('\\quot\\', '&', (string)$xml->Name);
+				$this->alt = str_replace('\\quot\\', '&', (string)$xml->Alt);
+				$this->href = str_replace('\\quot\\', '&', MktUtils::rootString((string)$xml->Href));
 				$this->prio = (string)$xml->Priority;
 			}
 		}	

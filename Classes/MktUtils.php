@@ -12,11 +12,14 @@
 			return join(DIRECTORY_SEPARATOR, $ArrayPathToFile);
 		}
 		
-		public static function htmlsymbols($toReplace, $LTGT = false) {
+		public static function htmlsymbols($toReplace, $LTGT = false, $qout = false, $undo = false) {
 			if($LTGT) {
 				$toReplace = str_replace(array("<", ">"), array("&lt;", "&gt;"), $toReplace);
 			}
-			$find = array("\"", "'", "&", "¡", "¢", "£", "¤", "¥", "¦", "§", "¨", 
+			if($qout) {
+				$toReplace = str_replace(array("\"", "'"), array("&quot;", "&#39;"), $toReplace);
+			}
+			$find = array("&", "¡", "¢", "£", "¤", "¥", "¦", "§", "¨", 
 					"©", "ª", "«", "¬", "®", "¯", "°", "±", "²", "³", "´", "µ", "¶", "·", "¸", 
 					"¹", "º", "»", "¼", "½", "¾", "¿", "À", "Á", "Â", "Ã", "Ä", "Å", "Æ", "Ç", 
 					"È", "É", "Ê", "Ë", "Ì", "Í", "Î", "Ï", "Ð", "Ñ", "Ò", "Ó", "Ô", "Õ", "Ö", 
@@ -25,7 +28,7 @@
 					"õ", "ö", "÷", "ø", "ù", "ú", "û", "ü", "ý", "þ", "ÿ", "Œ", "œ", "Š", "š", 
 					"Ÿ", "ƒ", "–", "—", "‘", "’", "‚", "“", "”", "„", "†", "‡", "•", "…", "‰", 
 					"€", "™");
-			$for = array("&quot;", "&#39;", "&amp;", "&iexcl;", "&cent;", "&pound;", 
+			$for = array("&amp;", "&iexcl;", "&cent;", "&pound;", 
 					"&curren;", "&yen;", "&brvbar;", "&sect;", "&uml;", "&copy;", "&ordf;", "&laquo;", 
 					"&not;", "&shy;", "&reg;", "&macr;", "&deg;", "&plusmn;", "&sup2;", "&sup3;", "&acute;", 
 					"&micro;", "&para;", "&middot;", "&cedil;", "&sup1;", "&ordm;", "&raquo;", "&frac14;", 
@@ -40,7 +43,7 @@
 					"&uuml;", "&yacute;", "&thorn;", "&yuml;", "&#338;", "&#339;", "&#352;", "&#353;", "&#376;", 
 					"&#402;", "&#8211;", "&#8212;", "&#8216;", "&#8217;", "&#8218;", "&#8220;", "&#8221;", "&#8222;", 
 					"&#8224;", "&#8225;", "&#8226;", "&#8230;", "&#8240;", "&euro;", "&#8482;");
-			return str_replace($find, $for, $toReplace);
+			return str_replace(($undo?$for:$find), ($undo?$find:$for), $toReplace);
 		}
 	}
 ?>
