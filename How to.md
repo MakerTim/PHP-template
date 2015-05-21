@@ -52,7 +52,7 @@ de volgende dingen moet je voor elk nieuw domain aanpassen.
 `git push`  
 volg de stappen om in te loggen bij git. 
 
-Voor een betere uitleg over hoe git werkt, klik hier (http://rogerdudler.github.io/git-guide/)
+Voor een betere uitleg over hoe git werkt, klik hier (http://rogerdudler.github.io/git-guide/index.nl.html)
 
 ---
 **Pagina aanmaken:**  
