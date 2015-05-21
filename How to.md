@@ -11,19 +11,26 @@ Omdat we gebruik maken van Markdown vind je hieronder twee linkjes met uitleg.
 (https://github.com/MakerTim/PHP-template/blob/master/Markdown%20iframe.md)  
 
 ---
+**Website opzetten:**  
+1. Ga naar de design server.  
+2. Open map "Backup php template".  
+3. Upload deze bestanden op je domain.  
+
+---
 **MktConfig configureren:**  
 MktConfig is class om makkelijk van een plek de hele server variable te bedienen.  
 de volgende dingen moet je voor elk nieuw domain aanpassen.
 
-// SocialMedia - Laat leeg voor geen knop  
-public static $google = "#google+ account";  
-public static $facebook = "#facebook account";  
-public static $twitter = "#twitter account";  
+>
+`public static $domein = "AanbiedingTurkije.nl"; `   
+`public static $rootDir = "/";`    
+`public static $keys = array("aanbieding", "turkije", "vakantie", "reizen", "hotels", "last minute", "all inclusive", "Goedkope Vakanties naar Turkije","zon", "zee", "strand");`  
 
-// Domein van de site, exclusief http  
-public static $domein = "#domain naam";  
-public static $rootDir = '#root directory';   
-public static $keys = array( "#key", "#key", "#key", "#key", "#key", #key", "#key", "#key");  
+**MktConfig configureren extra uitleg:**   
+`public static $domein = " ";`  Hier vul je tussen de " "de naam van je domain in.  
+`public static $rootDir = " ";` Hier vul je tussen de " " de rootdirectory in.  
+`public static $keys = array();`  
+
 
 ---
 **Pagina aanmaken:**  
@@ -31,30 +38,30 @@ public static $keys = array( "#key", "#key", "#key", "#key", "#key", #key", "#ke
 2. Open Pages map.  
 3. Maak een nieuw xml bestand aan met de naam van je pagina.  
 4. Zet onderstaande code in je document.
->`<Page>`  
-	`<Menu>`  
-		`<Index>Stefan</Index>`  
-		`<Banner>true</Banner>`  
-		`<SubIndex>New York>Skyline</SubIndex>`   
-		`<Sub>Long</Sub>`  
-		`<Title>Dit word de titel van de pagina</Title>`    
-	`</Menu>`  
-	`<Md>`  
-`# Context`    
-	`</Md>`  
+>
+`<Page>`  
+`<Menu>`  
+`<Index>Hotels</Index>`  
+`<Banner>true</Banner>`  
+`<SubIndex>Belek>Adam en Eve</SubIndex>`  
+`<Sub>Hotelsidebar</Sub>`  
+`</Menu>`  
+`<Md>`  
+`</Md>`  
 `</Page>`
 > 
  
 5. Verander bij `<Index>` pagina naam.   
 6. Kies voor banner ja of nee.   
-7. Vul bij `<SubIndex>` de naam van het submenu item > naam hotel.   
-8. Extra optie `<Title>` `</Title>` hier kan je een titel van je pagina toevoegen.  
-9. Opslaan.  
+7. Vul bij `<SubIndex>` de naam van het submenu item > naam hotel.
+8. Vul bij `<Sub>` welk submenu je wilt  
+9. Extra optie `<Title>` `</Title>` hier kan je een titel van je pagina toevoegen.  
+10. Opslaan.  
 
 **Pagina aanmaken extra uitleg**   
 `<Index>` hier komt de naam van de pagina.  
 `<Banner>` hier geef je aan of je een banner wilt. (wel banner = true, geen banner = false)  
-`<SubIndex>` je geef hier de hightlight van het submenu item mee aan.
+`<SubIndex>` je geef hier de hightlight van het submenu item mee aan.  
 `<Sub>`   hier geef je de naam op van welk submenu je wilt hebben.
 `<Title>` hier kan je de naam van je pagina invulen (dit is niet verplicht)
 
@@ -64,18 +71,19 @@ public static $keys = array( "#key", "#key", "#key", "#key", "#key", #key", "#ke
 2. Open MainMenu map.  
 3. Maak een nieuw xml bestand aan met de naam van je menuitem.  
 4. Zet onderstaande code in je document.
->`<MenuItem>`  
-	`<Name>Stefan</Name>`  
-	`<Alt>Naar de homepage</Alt>`   
-	`<Href>%root%/Page/Stefan/</Href>`  
-	`<Priority>600</Priority>`  
+>
+`<MenuItem>`  
+`<Name>Home</Name>`  
+`<Alt>Naar de homepage</Alt>`  
+`<Href>%root%/Pages/Index/</Href>`  
+`<Priority>900</Priority>`  
 `</MenuItem>`
 > 
 
 5. Verander bij `<Name>` menu naam.  
 6. Verander bij `<Alt>`alt tekst.   
 7. Verander <%root%/Page/Index/ in <%root%/Page/(naam van de pagina)/.  
-8. Stel Priority in (de hoogste komt aan de linker kant).  
+8. Stel Priority in (hoe hoger hoe meer naar links).  
 9. Opslaan.
 
 **Menu item aanmaken extra uitleg**   
@@ -90,40 +98,33 @@ public static $keys = array( "#key", "#key", "#key", "#key", "#key", #key", "#ke
 2. Open SideBar map.  
 3. Maak een nieuw xml bestand aan met de naam van je submenu.  
 4. Zet onderstaande code in je document.  
->`<SideBar>`  
-	`<Option>`  
-		`<Name>Home</Name>`  
-		`<Href>#</Href>`  
-		`<HasSub>false</HasSub>`  
-	`</Option>`  
-	`<Option>`  
-		`<Name>Sub 1</Name>`  
-		`<Href>#</Href>`  
-		`<HasSub>true</HasSub>`  
-		`<IsOpen>false</IsOpen>`  
-		`<Sub>`  
-			`<Name>Product 1.1</Name>`  
-			`<Href>Contact</Href>`  
-		`</Sub>`  
-		`<Sub>`  
-			`<Name>Product 1.2</Name>`  
-			`<Href>Contact</Href>`  
-		`</Sub>`   
-	`</Option>`  
-	`</SideBar>`  
+>
+`<SideBar>`  
+`<Option>`  
+`<Name>Alanya</Name>`  
+`<Href>../Alanya/</Href>`  
+`<Sub>`  
+`<Name>Tac Premier Hotel</Name>`  
+`<Href>../Tac-Premier-Hotel/</Href>`  
+`</Sub>`  
+`<Sub>`  
+`<Name>Titan Select</Name>`  
+`<Href>../Titan-Select/</Href>`  
+`</Sub>`  
+`<Sub>`  
+`<Name>Eftalia Aytur Hotel en appartementen</Name>`  
+`<Href>../Eftalia-Aytur-Hotel-en-appartementen/</Href>`  
+`</Sub>`  
+`</Option>`  
+`</SideBar>`
 > 
  
 5. Verander bij `<Name>` de naam van je menu item.  
 6. Vul bij `<Href>` de link waar je naar toe wilt gaan in.  
-7. Geef aan bij `<HasSub>` of je item en subitem heeft (true/false)  
-8. Als `<HasSub>` true voeg `<IsOpen></IsOpen>` toe.  
-9. Vul bij `<IsOpen>``</IsOpen>` of je menu item standaard open is of niet.
 
 **Sidebar toevoegen extra uitleg**  
 `<Name>` hier komt de naam van het menu item.  
 `<Href>`> hier komt de link waar je naar toe wilt gaan.  
-`<HasSub>` hier geef je doormidel van true/false aan of je een subitem wilt (wel sub = true, geen sub = false).   
-`<IsOpen>` geeft aan of je subitem standaard open of dicht staat. (dicht= false, open=true).
 
 ---
 **Counter waarde aanpassen:**  
