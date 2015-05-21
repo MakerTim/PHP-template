@@ -52,7 +52,7 @@
 				$this->SubIndex = (string)$xml->Menu->SubIndex;
 				$this->content = $GLOBALS['md']->text(str_replace('\\quot\\', '&', $xml->Md));
 			} else {
-				echo $this->errorMessage;
+				$this->content = $this->errorMessage;
 			}
 		}
 		
