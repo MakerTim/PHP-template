@@ -31,6 +31,28 @@ de volgende dingen moet je voor elk nieuw domain aanpassen.
 `public static $rootDir = " ";` Hier vul je tussen de " " de rootdirectory in.  
 `public static $keys = array();`  
 
+---
+**Updaten:**  
+1. Download de nieuwste versie van git.    
+2. Open de map classes en verwijder MktConfig.php  
+3. Verwijder de map content.  
+4. Upload alle bestanden naar de server.
+
+**Update uitbrengen:**  
+1. Maak een fork van de nieuwste versie van Git. 
+2. Open de Git Terminal - https://msysgit.github.io/  
+3. Ga naar een map waar je de site wilt plaatsen op je Computer.  
+4. Gebruik de onderstaande git commands in de terminal:   
+`git clone` https link van je eigen git fork.  
+`git status`  - controle of alles goed gegaan is.  
+*Voer de aanpassingen uit*  
+`git add -A`  
+`git commit` *Vul hier in een duidelijke uitleg wat je hebt veranderd en waarom*.  
+`escape en dan :wq [enter]`, wq staat voor sla aanpassingen op en quit.   
+`git push`  
+volg de stappen om in te loggen bij git. 
+
+Voor een betere uitleg over hoe git werkt, klik hier (http://rogerdudler.github.io/git-guide/)
 
 ---
 **Pagina aanmaken:**  
