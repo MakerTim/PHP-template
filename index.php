@@ -71,7 +71,6 @@
 			<div class="Content TopBorder">
 				<div class="markdown-body">
 					<?php 
-						echo $pageContent->errorMessage;
 						echo $pageContent->content; 
 					?>
 				</div>
