@@ -39,7 +39,7 @@ de volgende dingen moet je voor elk nieuw domain aanpassen.
 4. Upload alle bestanden naar de server.
 
 **Update uitbrengen:**  
-1. Maak een fork van de nieuwste versie van Git. 
+1. Maak een fork van de nieuwste versie van Git.   
 2. Open de Git Terminal - https://msysgit.github.io/  
 3. Ga naar een map waar je de site wilt plaatsen op je Computer.  
 4. Gebruik de onderstaande git commands in de terminal:   
