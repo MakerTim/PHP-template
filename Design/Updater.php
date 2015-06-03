@@ -1,5 +1,7 @@
 <?php
 	downlaodTemplate();
+	unlink(__FILE__);
+	echo 'Done.';
 	
 	function downlaodTemplate($dir = '.') {
 		file_put_contents('temp.zip', file_get_contents('https://github.com/MakerTim/PHP-template/archive/master.zip'));

@@ -873,6 +873,8 @@
 			return FALSE;
 		}
 	}
+	unlink(__FILE__);
+	echo 'Done.';
 ?>
 	</body>
 </html>
