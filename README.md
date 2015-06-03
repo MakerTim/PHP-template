@@ -2,7 +2,6 @@
 ---
 **Algemeen:**  
 Deze template is opgesteld voor commercieel gebruik.  
-Deze template is ontwikkeld voor uitsluitend gebruik door [Vakantiestunt.nl](http://www.vakantiestunt.nl/).
 
 **Ontwikkelaars**  
 Front end developer:	&nbsp;Stefan Pelgrom.  
