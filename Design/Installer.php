@@ -127,7 +127,7 @@
 	$keys 	  	= str_replace("\'", "'", "$_POST[Sleutel]");
 	
 	downlaodTemplate($rootF);
-	config($domein, $root, $rootF, $google, $twitter, $facebook, $keys);
+	config($domein, $root, $rootF, $google, $twitter, $facebook, $keys, true, $_POST['Kleuren']);
 	showSuccess('Webiste opgezet.');
 	
 	function showSuccess($errorMessage) {
