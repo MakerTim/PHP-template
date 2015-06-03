@@ -4,7 +4,14 @@
  ?>
  .SocialMedia {
 	display: block;
-	position: absolute;
+}
+
+.Pagina .SocialMedia {
+	position: absolute;	
+}
+	
+.Mobiel .SocialMedia {
+	position: relative;	
 }
 
 .SocialMedia .sub{

@@ -9,7 +9,6 @@
 
 .Mobiel .Header{
 	float : left;
-	height : 130px;
 	margin-bottom: 10px;
 }
 

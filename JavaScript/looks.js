@@ -141,8 +141,7 @@ function resizeBanner(width, height) {
 	
 	g2d.drawImage(img, (st-((vw-mob)/2)), 0, vw, ht, 0, 0, nvw, ht);
 	
-	$(".SocialMedia").css("top", $("#Banner").height() - 10)
-			.css("right", width * 0.1);
+	$(".SocialMedia").css("top", $("#Banner").height() - 10).css("right", width * 0.1);
 }
 
 function resizeMenu(width, height) {
