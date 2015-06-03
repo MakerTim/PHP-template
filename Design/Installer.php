@@ -1,4 +1,3 @@
-<?php $sec = ''; // Verander dit direct met https://www.base64encode.org/ ?> 
 <!DOCTYPE html>
 <html lang="nl">
 	<head>
@@ -12,13 +11,6 @@
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 	</head>
 	<body>
-		<?php 
-			if((!isset($_POST) || empty($_POST['sec'])) || $_POST['sec'] != base64_decode($sec)) {
-				echo '<form action="?security=true" method="POST"> <p>Security Token:</p> <input type="password" name="sec" /> <input type="submit" /> </form>';
-				echo '</body></html>';
-				exit;
-			}
-		?>
 		<div class="row">
 			<div id="error" class="col-md-6 col-md-offset-3 text-center text-error bg-danger" style="display: none;">
 				There was an error:
@@ -28,10 +20,6 @@
 			<div class="col-md-6 col-md-offset-3 panel panel-default">
 				<h1 class="text-center text-success panel-heading">PHP-Template setup</h1>
 				<form class="panel-body" action="" method="POST">
-					<?php
-						echo '<input type="hidden" id="sec" name="sec" value="' . $_POST['sec'] . '"/>';
-						echo '<input type="hidden" id="sec" name="sec2" value="' . base64_encode($_POST['sec']) . '"/>';
-					?>
 					<div class="form-group">
 						<label class="text-primary" for="Domein">Domein Naam</label>
 						<input type="text" class="form-control" id="Domein" name="Domein" placeholder="makertim.nl" required="true" />
@@ -102,11 +90,7 @@
 
 
 <?php
-	if(!isset($_POST) || empty($_POST['sec2']) || $_POST['sec2'] != $sec) {
-		exit;
-	}
-	if(empty($_POST['Domein'])) {
-		showError('Domein is nog niet ingevuld.');
+	if(!isset($_POST) || empty($_POST['Domein'])) {
 		exit;
 	}
 	if(empty($_POST['Kleuren'])) {
