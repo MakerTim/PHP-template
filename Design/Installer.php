@@ -1,4 +1,4 @@
-<?php $sec = 'bWFrZXJ0aW1hZG1pbg=='; // Verander dit direct met https://www.base64encode.org/ ?> 
+<?php $sec = ''; // Verander dit direct met https://www.base64encode.org/ ?> 
 <!DOCTYPE html>
 <html lang="nl">
 	<head>
