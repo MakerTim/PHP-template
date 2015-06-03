@@ -1,4 +1,4 @@
-# How to
+# How to do.
 ---
 **Gebruik maken van Markdown.**  
 Omdat we gebruik maken van Markdown vind je hieronder twee linkjes met uitleg.
