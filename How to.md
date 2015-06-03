@@ -33,11 +33,12 @@ de volgende dingen moet je voor elk nieuw domain aanpassen.
 
 ---
 **Updaten:**  
-1. Download de nieuwste versie van git.    
-2. Open de map classes en verwijder MktConfig.php  
-3. Verwijder de map content.  
-4. Upload alle bestanden naar de server.
-
+1. Kopieer de `"Updater.php"` uit de design map.  
+2. Zet de `"Updater.php"` in de root van je site.  
+3. Ga naar je website en vervang `"Page/Index/"` voor `"Updater.php"`  
+4. Verwijder evt. `"Updater.php"`, `"temp.zip"` en de map `"PHP-template-master"` 
+> Mocht dit nog niet gedaan zijn.  
+  
 **Update uitbrengen:**  
 1. Maak een fork van de nieuwste versie van Git.   
 2. Open de Git Terminal - https://msysgit.github.io/  
