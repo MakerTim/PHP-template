@@ -64,7 +64,9 @@
 			foreach(Header::$scriptCollection as $script) {
 				$ret .= $script . PHP_EOL;
 			}
-			$ret .= file_get_contents(MktUtils::file(array('.', 'Content', 'IncludeScripts.html')));
+			if(file_exists(MktUtils::file(array('.', 'Content', 'IncludeScripts.html')))) {
+				$ret .= file_get_contents(MktUtils::file(array('.', 'Content', 'IncludeScripts.html')));
+			}
 			return MktUtils::rootString($ret);
 		}
 		
