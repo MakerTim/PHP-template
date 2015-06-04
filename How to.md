@@ -15,6 +15,7 @@ Omdat we gebruik maken van Markdown vind je hieronder twee linkjes met uitleg.
 1. Ga naar de design server.  
 2. Open map "Backup php template".  
 3. Upload deze bestanden op je domain.  
+4. Volg de stappen voor het updaten.
 
 ---
 **MktConfig configureren:**  
