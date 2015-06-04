@@ -8,10 +8,7 @@ body {
 }
 
 @media print{
-	.SocialMedia{
-		display: none;	
-	}
-	.sub{
+	.Header{
 		display: none;	
 	}
 	.Menu{
@@ -25,6 +22,9 @@ body {
 	}
 	.ContentButtons {
 		display: none;	
+	}
+	.TopBorder {
+		border-top-width: 0px !important;
 	}
 }
 
