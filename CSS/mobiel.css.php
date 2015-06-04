@@ -69,7 +69,7 @@
 
 .Mobiel .ContentButtons{
 	position: absolute;
-    margin-top: 10px;
+	margin-top: 10px;
 	z-index: 20;
 }
 

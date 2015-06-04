@@ -105,7 +105,7 @@ body {
 
 .Pagina .ContentButtons{
 	position: absolute;
-    margin-top: 3px;
+	margin-top: 3px;
 	z-index: 20;
 }
 
