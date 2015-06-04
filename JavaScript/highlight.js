@@ -44,11 +44,9 @@ function split(to_split, words){
 	return ar ? [ar[1], to_split.substr(ar[1].length)] : [to_split, '']
 }
 
-var t;
 function onDownload() {
 	pdf = new jsPDF();
 	content = $(".Content").children()[1];
-	t = content;
 	specialElementHandlers = { };
 	margins = { top: 10, bottom: 10, left: 10, width: 150 };
 	pdf.fromHTML(content, margins.left, margins.top, {
