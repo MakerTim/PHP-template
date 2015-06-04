@@ -18,4 +18,5 @@
 	require 'Header.php';
 	require 'Menu.php';
 	require 'MktPage.php';
+	require 'SiteMapGen.php';
 ?>

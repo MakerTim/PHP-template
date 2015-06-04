@@ -159,6 +159,7 @@ function resizeContent(width, height) {
 	} else {
 		$(".Content").width(width * 0.8);
 	}
+	$(".ContentButtons").css("margin-left", $(".Content").width() - $(".ContentButtons").width() - 10);
 	$(".Content").css("margin-bottom", 15);
 }
 

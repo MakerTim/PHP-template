@@ -67,6 +67,17 @@
 	margin-bottom: -16px;
 }
 
+.Mobiel .ContentButtons{
+	position: absolute;
+    margin-top: 10px;
+	z-index: 20;
+}
+
+.Mobiel .ContentButtons img{
+	padding-right: 6px;
+	cursor: pointer;
+}
+	
 .Mobiel .Content{
 	float : left;
 	background-color: <?php echo MktColor::$Markdown_Background; ?>

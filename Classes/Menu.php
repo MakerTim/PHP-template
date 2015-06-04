@@ -33,7 +33,7 @@
 		
 		public function printMenu() {
 			$ret = PHP_EOL . '<ul class="ulMainMenu">' . PHP_EOL
-			. '<li class="menuImg"> <img src="Pictures/menu.svg" alt="" /> </li>' . PHP_EOL;
+			. '<li class="menuImg"> <img src="Pictures/menu.svg" alt="menu" /> </li>' . PHP_EOL;
 			foreach($this->items as $menuEntry) {
 				$ret .= '<li class="menuItem" id="Menu_' . str_replace(" ", "", $menuEntry->name) . '">';
 				$ret .= '<a href="' . $menuEntry->href . '">' . $menuEntry->name . '</a>';
@@ -54,6 +54,7 @@
 		var $alt;
 		var $href;
 		var $prio;
+		var $lastMod;
 		var $errorMessage;
 		
 		public function __construct($FileLocation) {
@@ -62,6 +63,7 @@
 			$xml = file_get_contents($FileLocation);
 			$xml = str_replace('&', '\\quot\\', $xml);
 			$xml = simplexml_load_string($xml);
+			$this->lastMod = filemtime($FileLocation);
 			$xmlError = libxml_get_errors();
 			foreach($xmlError as $error) {
 				$this->errorMessage .= '<div class="error"><b>XML ERROR:</b> <br /> File: ' . $FileLocation . 

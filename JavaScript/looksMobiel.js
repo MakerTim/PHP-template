@@ -151,6 +151,7 @@ function resizeMenuMobiel(width, height) {
 function resizeContentMobiel(width, height) {
 	$(".Content").width(width - 20);
 	$(".Content").css("margin-bottom", $(".Footer").height() + 35);
+	$(".ContentButtons").css("margin-left", width - $(".ContentButtons").width() - 35);
 }
 
 function resizeFooterMobiel(width, height) {

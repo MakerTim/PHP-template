@@ -1,5 +1,12 @@
 <?php
 	//error_reporting(E_ERROR & E_PARSE);
+	
+	$seconds_to_cache = 1209600; // Two Weeks
+	$ts = gmdate("D, d M Y H:i:s", time() + $seconds_to_cache) . " GMT";
+	header("Expires: $ts");
+	header("Pragma: cache");
+	header("Cache-Control: max-age=$seconds_to_cache");
+	
 	require(join(DIRECTORY_SEPARATOR, array('.', 'Classes', 'IncludeManager.php')));
 	if(strpos("http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]", '&') !== false) {
 		header('Location: ' . str_replace('&', '-', "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"));
@@ -7,9 +14,10 @@
 	$pageContent = MktPage::getPage();
 	Counter::Count($pageContent);
 	$menu = Menu::getMainMenu($pageContent);
+	refreshSiteMap();
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="nl">
 	<head>
 <?php 
 	echo Header::getMetaTags(); 
@@ -31,7 +39,7 @@
 				if($pageContent->hasBanner == "true") {
 					echo PHP_EOL .
 					'<div class="Header">' . PHP_EOL . 
-					'<img id="BannerSrc" alt="" src="Pictures/header.jpg" style=" position: fixed; left: 1px; top: 1px; width: 1px; height: 1px;" />' .
+					'<img id="BannerSrc" alt="header" src="Pictures/header.jpg" style=" position: fixed; left: 1px; top: 1px; width: 1px; height: 1px;" />' .
 					'<canvas id="Banner" class="RoundedTop"> </canvas>' . PHP_EOL .
 					MktPage::buildSocialBanner() .
 					'</div>' . PHP_EOL;
@@ -54,14 +62,11 @@
 				if(isset($pageContent->sub) && !empty($pageContent->sub)) {
 					$SIDEBAR = SideBar::createSidebar($pageContent->sub);
 					if(!$SIDEBAR->hasError){
-						echo PHP_EOL .
-						'<div class="sidebar TopBorder">' . PHP_EOL .
+						echo PHP_EOL . '<div class="sidebar TopBorder">' . PHP_EOL .
 						'<div class="MenuButton"> <img alt="" src="Pictures/menu.svg" /> </div>' . PHP_EOL .
-						$SIDEBAR->PrintBar() .
-						'</div>';
+						$SIDEBAR->PrintBar() . '</div>';
 					} else {
-						echo PHP_EOL .
-						'<div class="sidebar"> </div>' . PHP_EOL;
+						echo PHP_EOL . '<div class="sidebar"> </div>' . PHP_EOL;
 					}
 				}
 			?>
@@ -69,6 +74,11 @@
 			
 			<!-- Starting Content -->
 			<div class="Content TopBorder">
+				<div class="ContentButtons">
+					<img class="contentbuddon" id="download" onClick="onDownload();" src="Pictures/icon-download.png" alt="download" />
+					<img class="contentbuddon" id="mail" onClick="onMail();" src="Pictures/icon-mail.png" alt="mail" />
+					<img class="contentbuddon" id="print" onClick="onPrint();" src="Pictures/icon-print.png" alt="print" />
+				</div>
 				<div class="markdown-body">
 					<?php 
 						echo $pageContent->content; 

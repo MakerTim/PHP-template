@@ -6,6 +6,7 @@
 		private static $scriptCollection = array(
 			'<script src="%root%/JavaScript/libs/jquery.min.js"></script>',
 			'<link rel="stylesheet" href="%root%/CSS/libs/jquery-ui.css" />',
+			'<script src="%root%/JavaScript/libs/jsPDF.js"></script>',
 			'<script src="%root%/JavaScript/libs/jquery-ui.min.js"></script>',
 			'<link href="%root%/CSS/libs/css_VarelaRound.css" rel="stylesheet" type="text/css" />',
 			'<link href="%root%/CSS/style.css.php" type="text/css" rel="stylesheet" />',
@@ -37,7 +38,7 @@
 				$ret .= '<meta name="googlebot" content="noodp" />'. PHP_EOL;
 				$ret .= '<meta name="Slurp" content="noydir" />'. PHP_EOL;
 			}
-			$ret .= '<meta name="description" content=' . str_replace(array('\n.', '\n\n', '\n', '  '), ' ', json_encode(strip_tags(implode(' ', array_slice(explode(' ', $GLOBALS['pageContent']->content), 0, 200))))) . ' />'. PHP_EOL;
+			$ret .= '<meta name="description" content=' . str_replace(array('\n.', '\n\n', '\n', '  '), ' ', json_encode(strip_tags(implode(' ', array_slice(explode(' ', $GLOBALS['pageContent']->content), 0, 50))))) . ' />'. PHP_EOL;
 			$builder = '';
 			foreach(MktConfig::$keys as $key) {
 				$builder .= $key . ', ';
@@ -62,7 +63,7 @@
 			foreach(Header::$scriptCollection as $script) {
 				$ret .= $script . PHP_EOL;
 			}
-			$ret .= file_get_contents(MktUtils::file(array('.', 'IncludeScripts.html')));
+			$ret .= file_get_contents(MktUtils::file(array('.', 'Content', 'IncludeScripts.html')));
 			return MktUtils::rootString($ret);
 		}
 		
@@ -98,6 +99,7 @@
 			$ret .= 'PHP.page.hasSideBar = ' . json_encode(isset($MktPage->sub) && !empty($MktPage->sub)) . ';';
 			$ret .= 'PHP.page.highlightSubMenu = ' . json_encode($MktPage->SubIndex) . ';';
 			$ret .= 'PHP.page.highlightSubColor = ' . json_encode(MktColor::$Sub_Item_Highlight) . ';';
+			$ret .= 'PHP.page.title = ' . json_encode($GLOBALS['pageContent']->getTitle()) . ';';
 			$ret .= 'PHP.isMobiel = ' . json_encode($GLOBALS['mob']->isMobile()) . ';';
 			
 			$ret .= '</script>' . PHP_EOL;

@@ -38,3 +38,33 @@ function highlightSubMenu() {
 		}
 	}
 }
+
+function onDownload() {
+	pdf = new jsPDF();
+	content = $(".Content").children()[1];
+	specialElementHandlers = { };
+	margins = { top: 10, bottom: 10, left: 10, width: 500 };
+	pdf.fromHTML(content, margins.left, margins.top, {
+		'width': margins.width,
+		'elementHandlers': specialElementHandlers
+		},
+		function (dispose) {
+			pdf.save(PHP.page.title + '.pdf');
+		},
+		margins
+	);
+}
+
+function onMail() {
+	content = $(PHP.page.content).text();
+	content = content.replace(/[!-/:-@[-`{-~]+/g, '') + "\n\nDeze content is afkomstig van: " + window.location.href;
+	link = "mailto:?subject=" + PHP.page.title + "&body=" + escape(content);
+	success = window.open(link, "_blank");
+	if(!success){
+		window.location.href = link;
+	}
+}
+
+function onPrint() {
+	print();
+}

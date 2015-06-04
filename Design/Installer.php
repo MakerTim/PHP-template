@@ -23,7 +23,8 @@
 					<div class="form-group">
 						<label class="text-primary" for="Domein">Domein Naam</label>
 						<input type="text" class="form-control" id="Domein" name="Domein" placeholder="makertim.nl" required="true" />
-						<label class="text-muted" for="Domein">* Domein zonder http / https</label>
+						<label class="text-muted" for="Domein">* Domein zonder http / https</label> <br />
+						<label class="text-muted" for="Domein">* Met www is beter dan zonder</label>
 					</div>
 					<div class="Template Kleuren">
 						<label class="text-primary" for="Kleuren">Kleuren Schema</label>
@@ -55,6 +56,11 @@
 						<input type="text" class="form-control" id="Root" name="Root" placeholder="/" />
 						<label class="text-muted" for="Root">* / of /MAP NAAM/</label> <br />
 						<label class="text-muted" for="Root">Locatie waar de site geupload moet worden.</label>
+					</div>
+					<div class="form-group">
+						<label class="text-primary" for="Path">Path Variabel</label>
+						<input type="text" class="form-control" id="Path" name="Path" placeholder="Page" />
+						<label class="text-muted" for="Path">* Het deel dat na je domein komt en voor de pagina naam</label>
 					</div>
 					<div class="form-group">
 						<label class="text-primary" for="Vergeten">Keyswords</label>
@@ -104,6 +110,7 @@
 	
 	$domein 	= $_POST['Domein'];
 	$root 		= $_POST['Root'];
+	$path 		= $_POST['Path'];
 	$rootF 		= '.' . preg_replace('/\/$/', '', $_POST['Root']);
 	$google 	= "$_POST[Google]";
 	$twitter 	= "$_POST[Twitter]";
@@ -112,6 +119,7 @@
 	
 	downlaodTemplate($rootF);
 	config($domein, $root, $rootF, $google, $twitter, $facebook, $keys, true, $_POST['Kleuren']);
+	htaccess($path, $rootF, $root);
 	showSuccess('Webiste opgezet.');
 	
 	function showSuccess($errorMessage) {
@@ -122,6 +130,14 @@
 	function showError($errorMessage) {
 		echo '<script> $("#error").show(); $("#error").html($("#error").html() + "<br /> <p>' . 
 				$errorMessage . '</p>"); </script>';
+	}
+	
+	function htaccess($page = 'Page', $rootF = '.', $root = '/') {
+		$htaccess = trim(file_get_contents($rootF .'/.htaccess', $htaccess));
+		$htaccess = preg_replace(
+			'/ErrorDocument 404[\s!-~\n]*?index\.php\?404=404/', 
+			"ErrorDocument 404 $root$page/index.php?404=404", $htaccess);
+		file_put_contents($rootF .'/.htaccess', $htaccess);
 	}
 	
 	function config($domein = '', $root = '/', $rootF = '.', 

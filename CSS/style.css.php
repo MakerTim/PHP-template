@@ -7,6 +7,27 @@ body {
 	word-wrap: break-word;
 }
 
+@media print{
+	.SocialMedia{
+		display: none;	
+	}
+	.sub{
+		display: none;	
+	}
+	.Menu{
+		display: none;	
+	}
+	.sidebar{
+		display: none;	
+	}
+	.Footer {
+		display: none;	
+	}
+	.ContentButtons {
+		display: none;	
+	}
+}
+
 .bcColor {
 	background-color: <?php echo MktColor::$Menu_Background; ?>
 }
@@ -80,6 +101,16 @@ body {
 
 .Pagina .MenuButton{
 	display: none;
+}
+
+.Pagina .ContentButtons{
+	position: absolute;
+    margin-top: 3px;
+	z-index: 20;
+}
+
+.Pagina .ContentButtons img{
+	cursor: pointer;
 }
 
 .Pagina .Content{
