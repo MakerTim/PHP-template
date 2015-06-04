@@ -90,7 +90,7 @@
 				$ret .= '<div class="sub"><div class="tweet"><div class="g-plusone" data-annotation="none" data-size="medium" data-href="https://plus.google.com/+' . MktConfig::$google . '/posts"></div></div></div>';
 			}
 			if(!empty(MktConfig::$twitter)){
-				$ret .= '<div class="sub"><div class="tweet"><a href="https://twitter.com/share" class="twitter-share-button" data-via="' . MktConfig::$twitter . '" data-count="none" data-dnt="true">Tweet</a></div></div>';
+				$ret .= '<div class="sub"><div class="tweet"><a href="https://twitter.com/share" rel="nofollow" class="twitter-share-button" data-via="' . MktConfig::$twitter . '" data-count="none" data-dnt="true">Tweet</a></div></div>';
 			}
 			$ret .= '</div>';			
 			return $ret;

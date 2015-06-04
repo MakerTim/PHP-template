@@ -38,7 +38,7 @@
 		// Pagina footer text, variable zijn: {pageCount} {siteCount} {siteUniqueCount} {siteUniqueIPCount}
 		public static $footerStats = '<p>Pagina bekeken {pageCount}, Site bezocht {siteCount}, Unieke bezoekers {siteUniqueCount}, Unieke IPs {siteUniqueIPCount}</p>';
 		// De text dat in de footer van elke pagina komt!
-		public static $footer = '<p>Hosted by <a href="http://www.xmlhosting.nl/">XMLHosting.nl</a> U kunt uw vakantie boeken bij:<a href="http://www.VakantieStunt.nl/">VakantieStunt</a> & <a href="http://www.Duikreizen.nl/">Duikreizen</a></p>';
+		public static $footer = '<p>Hosted by <a href="http://www.xmlhosting.nl/" rel="nofollow">XMLHosting.nl</a> U kunt uw vakantie boeken bij:<a href="http://www.VakantieStunt.nl/" rel="nofollow">VakantieStunt</a> & <a href="http://www.Duikreizen.nl/" rel="nofollow">Duikreizen</a></p>';
 	}
 	
 	class MktColor {

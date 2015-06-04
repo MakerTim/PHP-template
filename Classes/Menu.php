@@ -36,7 +36,7 @@
 			. '<li class="menuImg"> <img src="Pictures/menu.svg" alt="menu" /> </li>' . PHP_EOL;
 			foreach($this->items as $menuEntry) {
 				$ret .= '<li class="menuItem" id="Menu_' . str_replace(" ", "", $menuEntry->name) . '">';
-				$ret .= '<a href="' . $menuEntry->href . '">' . $menuEntry->name . '</a>';
+				$ret .= '<a href="' . $menuEntry->href . '" rel="nofollow">' . $menuEntry->name . '</a>';
 				$ret .= '</li>' . PHP_EOL;
 			}
 			$ret .= '</ul>' . PHP_EOL;

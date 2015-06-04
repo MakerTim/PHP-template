@@ -104,7 +104,7 @@
 				<div class="markdown-body">
 					<?php 
 						echo Counter::loadStats(MKTConfig::$footerStats) . PHP_EOL;
-						echo '<p><a href="http://'. MKTConfig::$domein. MKTConfig::$rootDir .'">'. MKTConfig::$domein .'</a> 2015 All rights reserved.</p>';
+						echo '<p><a href="http://'. MKTConfig::$domein. MKTConfig::$rootDir .'" rel="nofollow">'. MKTConfig::$domein .'</a> 2015 All rights reserved.</p>';
 						echo MKTConfig::$footer;
 					?>
 				</div>
