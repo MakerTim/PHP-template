@@ -63,7 +63,7 @@
 					$SIDEBAR = SideBar::createSidebar($pageContent->sub);
 					if(!$SIDEBAR->hasError){
 						echo PHP_EOL . '<div class="sidebar TopBorder">' . PHP_EOL .
-						'<div class="MenuButton"> <img alt="" src="Pictures/menu.svg" alt="menu" /> </div>' . PHP_EOL .
+						'<div class="MenuButton"> <img src="Pictures/menu.svg" alt="menu" /> </div>' . PHP_EOL .
 						$SIDEBAR->PrintBar() . '</div>';
 					} else {
 						echo PHP_EOL . '<div class="sidebar"> </div>' . PHP_EOL;
