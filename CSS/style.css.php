@@ -7,14 +7,14 @@ body {
 	word-wrap: break-word;
 }
 
-@media print{
-	.Header{
+@media print {
+	.Header {
 		display: none;	
 	}
-	.Menu{
+	.Menu {
 		display: none;	
 	}
-	.sidebar{
+	.sidebar {
 		display: none;	
 	}
 	.Footer {
