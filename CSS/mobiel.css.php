@@ -1,4 +1,4 @@
-<?php 
+loca<?php 
 	header('Content-Type: text/css');
 	require(join(DIRECTORY_SEPARATOR, array('..', 'Classes', 'IncludeManager.php')));
  ?>
@@ -69,7 +69,6 @@
 
 .Mobiel .ContentButtons{
 	position: absolute;
-	margin-top: 10px;
 	z-index: 20;
 }
 
