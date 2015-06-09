@@ -24,11 +24,11 @@
 		$dir = opendir($src); 
 		@mkdir($dst); 
 		while(false !== ($file = readdir($dir))) { 
-			if(($file != '.') && ($file != '..') && ($file != 'Content')) { 
+			if(($file[0] != '.') && ($file != 'Content')) { 
 				if(is_dir("$src/$file")) { 
 					recurse_copy("$src/$file", "$dst/$file"); 
 				} else {
-					if(!$overwrite  || $file == 'MktConfig.php'){
+					if(!$overwrite || $file == 'MktConfig.php'){
 						if(file_exists("$dst/$file") || $file == 'MktConfig.php'){
 							continue;
 						}
