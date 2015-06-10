@@ -17,12 +17,7 @@
 			'<link href="%root%/CSS/SubMenuStyle.css.php" type="text/css" rel="stylesheet" />',
 			'<link href="%root%/CSS/SubMenuStyleMobiel.css.php" type="text/css" rel="stylesheet" />',
 			'<script src="https://apis.google.com/js/platform.js" async defer></script>',
-			'<script src="%root%/JavaScript/jCookie.js"></script>',
-			'<script src="%root%/JavaScript/socialMedia.js"></script>',
-			'<script src="%root%/JavaScript/cookie.js"></script>',
-			'<script src="%root%/JavaScript/looks.js"></script>',
-			'<script src="%root%/JavaScript/looksMobiel.js"></script>',
-			'<script src="%root%/JavaScript/highlight.js"></script>'
+			'<script src="%root%/JavaScript/.min.php"></script>',
 		);		
 		
 		public static function getMetaTags() {
