@@ -1,6 +1,7 @@
 <?php 
 	header('Content-Type: text/css');
 	require(join(DIRECTORY_SEPARATOR, array('..', 'Classes', 'IncludeManager.php')));
+	ob_start('ob_gzhandler');
  ?>
  .Mobiel{
 	margin : 20px auto 0 auto;

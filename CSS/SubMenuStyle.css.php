@@ -1,6 +1,7 @@
 <?php 
 	header('Content-Type: text/css');
 	require(join(DIRECTORY_SEPARATOR, array('..', 'Classes', 'IncludeManager.php')));
+	ob_start('ob_gzhandler');
  ?>
  .Pagina .sidebar ul, .Pagina .sidebar ul li a, .Pagina .sidebar ul li  {
 	margin: 0;
