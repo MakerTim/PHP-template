@@ -53,17 +53,11 @@
 
 .ui-front {
 	z-index: 100;
-}
-
-
-/* Interaction Cues
+}/* Interaction Cues
 ----------------------------------*/
 .ui-state-disabled {
 	cursor: default !important;
-}
-
-
-/* Icons
+}/* Icons
 ----------------------------------*/
 
 /* states and images */
@@ -72,10 +66,7 @@
 	text-indent: -99999px;
 	overflow: hidden;
 	background-repeat: no-repeat;
-}
-
-
-/* Misc visuals
+}/* Misc visuals
 ----------------------------------*/
 
 /* Overlays */
@@ -1177,10 +1168,7 @@ body .ui-tooltip {
 .ui-icon-grip-solid-vertical { background-position: -32px -224px; }
 .ui-icon-grip-solid-horizontal { background-position: -48px -224px; }
 .ui-icon-gripsmall-diagonal-se { background-position: -64px -224px; }
-.ui-icon-grip-diagonal-se { background-position: -80px -224px; }
-
-
-/* Misc visuals
+.ui-icon-grip-diagonal-se { background-position: -80px -224px; }/* Misc visuals
 ----------------------------------*/
 
 /* Corner radius */

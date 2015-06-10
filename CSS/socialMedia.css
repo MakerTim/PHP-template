@@ -1,9 +1,4 @@
-<?php 
-	header('Content-Type: text/css');
-	require(join(DIRECTORY_SEPARATOR, array('..', 'Classes', 'IncludeManager.php')));
-	ob_start('ob_gzhandler');
- ?>
- .SocialMedia {
+.SocialMedia {
 	display: block;
 }
 
@@ -18,7 +13,7 @@
 .SocialMedia .sub{
 	display: inline;
 	margin: 2px;
-	background: <?php echo MktColor::$Media_Background;?>
+	background: $Media_Background;
 	padding: 6px 6px 5px 6px;
 }
 

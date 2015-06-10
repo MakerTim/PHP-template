@@ -1,12 +1,7 @@
-<?php 
-	header('Content-Type: text/css');
-	require(join(DIRECTORY_SEPARATOR, array('..', 'Classes', 'IncludeManager.php')));
-	ob_start('ob_gzhandler');
- ?>
- .markdown-body {
+.markdown-body {
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
-	color: <?php echo MktColor::$Markdown_Text; ?>
+	color: $Markdown_Text;
 	overflow: hidden;
 	font-family: 'Varela Round', Helvetica, 'Segoe UI', Arial, freesans, sans-serif;
 	line-height: 1.6;
@@ -88,7 +83,7 @@
 }
 
 .markdown-body a {
-  color: <?php echo MktColor::$Markdown_Link; ?>
+  color: $Markdown_Link;
   text-decoration: none;
 }
 
@@ -101,7 +96,7 @@
   height: 4px;
   padding: 0;
   margin: 16px 0;
-  background-color: <?php echo MktColor::$Markdown_Balk; ?>
+  background-color: $Markdown_Balk;
   border: 0 none;
 }
 
@@ -253,7 +248,7 @@
 .markdown-body h5 .octicon-link,
 .markdown-body h6 .octicon-link {
   display: none;
-  color: <?php echo MktColor::$Markdown_Text; ?>
+  color: $Markdown_Text;
   vertical-align: middle;
 }
 
@@ -281,7 +276,7 @@
   padding-bottom: 0.3em;
   font-size: 2.25em;
   line-height: 1.2;
-  border-bottom: 1px solid <?php echo MktColor::$Markdown_HeaderLine; ?>
+  border-bottom: 1px solid $Markdown_HeaderLine;
 }
 
 .markdown-body h1 .anchor {
@@ -292,7 +287,7 @@
   padding-bottom: 0.3em;
   font-size: 1.75em;
   line-height: 1.225;
-  border-bottom: 1px solid <?php echo MktColor::$Markdown_HeaderLine; ?>
+  border-bottom: 1px solid $Markdown_HeaderLine;
 }
 
 .markdown-body h2 .anchor {
@@ -326,7 +321,7 @@
 
 .markdown-body h6 {
   font-size: 1em;
-  color: <?php echo MktColor::$Markdown_Text; ?>
+  color: $Markdown_Text;
 }
 
 .markdown-body h6 .anchor {
@@ -380,8 +375,8 @@
 
 .markdown-body blockquote {
   padding: 0 15px;
-  color: <?php echo MktColor::$Markdown_Text; ?>
-  border-left: 4px solid <?php echo MktColor::$Markdown_HeaderLine; ?>
+  color: $Markdown_Text;
+  border-left: 4px solid $Markdown_HeaderLine;
 }
 
 .markdown-body blockquote>:first-child {
@@ -407,16 +402,16 @@
 .markdown-body table th,
 .markdown-body table td {
   padding: 6px 13px;
-  border: 1px solid <?php echo MktColor::$Markdown_TableBorder; ?>
+  border: 1px solid $Markdown_TableBorder;
 }
 
 .markdown-body table tr {
-  background-color: <?php echo MktColor::$Markdown_TableBackground; ?>
-  border-top: 1px solid <?php echo MktColor::$Markdown_HeaderLine; ?>
+  background-color: $Markdown_TableBackground;
+  border-top: 1px solid $Markdown_HeaderLine;
 }
 
 .markdown-body table tr:nth-child(2n) {
-  background-color: <?php echo MktColor::$Markdown_TableBackground2; ?>
+  background-color: $Markdown_TableBackground2;
 }
 
 .markdown-body img {
@@ -464,7 +459,7 @@
   overflow: auto;
   font-size: 85%;
   line-height: 1.45;
-  background-color: <?php echo MktColor::$Markdown_TableBackground; ?>
+  background-color: $Markdown_TableBackground;
   border-radius: 3px;
 }
 
@@ -499,13 +494,13 @@
   padding: 3px 5px;
   font-size: 11px;
   line-height: 10px;
-  color: <?php echo MktColor::$Markdown_Text; ?>
+  color: $Markdown_Text;
   vertical-align: middle;
-  background-color: <?php echo MktColor::$Markdown_Highlight; ?>
-  border: solid 1px <?php echo MktColor::$Markdown_HeaderLine; ?>
-  border-bottom-color: <?php echo MktColor::$Markdown_HeaderLine; ?>
+  background-color: $Markdown_Highlight;
+  border: solid 1px $Markdown_HeaderLine;
+  border-bottom-color: $Markdown_HeaderLine;
   border-radius: 3px;
-  box-shadow: inset 0 -1px 0 <?php echo MktColor::$Markdown_HeaderLine; ?>
+  box-shadow: inset 0 -1px 0 $Markdown_HeaderLine;
 }
 
 .markdown-body .pl-c {
@@ -628,13 +623,13 @@
   padding: 3px 5px;
   font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
   line-height: 10px;
-  color: <?php echo MktColor::$Markdown_Text; ?>
+  color: $Markdown_Text;
   vertical-align: middle;
-  background-color: <?php echo MktColor::$Markdown_TableBackground; ?>
-  border: solid 1px <?php echo MktColor::$Markdown_TableBorder; ?>;
-  border-bottom-color: <?php echo MktColor::$Markdown_TableBorder; ?>
+  background-color: $Markdown_TableBackground;
+  border: solid 1px $Markdown_TableBorder;;
+  border-bottom-color: $Markdown_TableBorder;
   border-radius: 3px;
-  box-shadow: inset 0 -1px 0 <?php echo MktColor::$Markdown_Text; ?>
+  box-shadow: inset 0 -1px 0 $Markdown_Text;
 }
 
 .markdown-body .task-list-item {
@@ -653,5 +648,5 @@
 .markdown-body :checked+.radio-label {
   z-index: 1;
   position: relative;
-  border-color: <?php echo MktColor::$Markdown_Link; ?>
+  border-color: $Markdown_Link;
 }

@@ -1,9 +1,4 @@
-<?php 
-	header('Content-Type: text/css');
-	require(join(DIRECTORY_SEPARATOR, array('..', 'Classes', 'IncludeManager.php')));
-	ob_start('ob_gzhandler');
- ?>
- .Pagina .sidebar ul, .Pagina .sidebar ul li a, .Pagina .sidebar ul li  {
+.Pagina .sidebar ul, .Pagina .sidebar ul li a, .Pagina .sidebar ul li  {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -15,7 +10,7 @@
 
 .Pagina .sidebar {
 	width: 220px;
-	color: <?php echo MktColor::$Sub_Text; ?>
+	color: $Sub_Text;
 	float: left;
 	margin-right: 15px;
 }
@@ -37,13 +32,13 @@
 	cursor: pointer;
 	z-index: 2;
 	text-decoration: none;
-	color: <?php echo MktColor::$Sub_Text; ?>
-	background: <?php echo MktColor::$Sub_Item; ?>
+	color: $Sub_Text;
+	background: $Sub_Item;
 }
 
 .Pagina .sidebar > ul > li > a:hover {
-	color: <?php echo MktColor::$Sub_Text; ?>
-	background-color: <?php echo MktColor::$Sub_Item_Hover; ?>
+	color: $Sub_Text;
+	background-color: $Sub_Item_Hover;
 }
 
 .Pagina .sidebar ul > li.has-sub > a:after {
@@ -54,7 +49,7 @@
 	display: block;
 	height: 10px;
 	width: 2px;
-	background: <?php echo MktColor::$Sub_Text; ?>
+	background: $Sub_Text;
 	content: "";
 }
 
@@ -65,7 +60,7 @@
 	display: block;
 	width: 10px;
 	height: 2px;
-	background: <?php echo MktColor::$Sub_Text; ?>
+	background: $Sub_Text;
 	content: "";
 }
 
@@ -82,8 +77,8 @@
 	cursor: pointer;
 	z-index: 2;
 	text-decoration: none;
-	color: <?php echo MktColor::$Sub_Text; ?>
-	background: <?php echo MktColor::$Sub_Item_Sub; ?>
+	color: $Sub_Text;
+	background: $Sub_Item_Sub;
 }
 
 .Pagina .sidebar ul ul ul li a {
@@ -91,8 +86,8 @@
 }
 
 .Pagina .sidebar ul ul li a:hover {
-	color: <?php echo MktColor::$Sub_Text; ?>
-	background-color: <?php echo MktColor::$Sub_Item_Sub_Hover; ?>
+	color: $Sub_Text;
+	background-color: $Sub_Item_Sub_Hover;
 }
 
 .Pagina .sidebar ul ul > li.has-sub > a:after {

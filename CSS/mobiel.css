@@ -1,9 +1,4 @@
-<?php 
-	header('Content-Type: text/css');
-	require(join(DIRECTORY_SEPARATOR, array('..', 'Classes', 'IncludeManager.php')));
-	ob_start('ob_gzhandler');
- ?>
- .Mobiel{
+.Mobiel{
 	margin : 20px auto 0 auto;
 	font-family: 'Varela Round', Helvetica, Arial, sans-serif;
 }
@@ -21,7 +16,7 @@
 
 .Mobiel .Menu{
 	float : left;
-	background-color: <?php echo MktColor::$Menu_Background; ?>
+	background-color: $Menu_Background;
 	margin-bottom: 10px;
 	font-size: 125% !important;
 }
@@ -32,12 +27,12 @@
 
 .Mobiel .Menu ul li {
 	padding: 15px;
-	border: 0px solid <?php echo MktColor::$Menu_Outline; ?>
+	border: 0px solid $Menu_Outline;
 	margin-left: -40px;
 }
 
 .Mobiel .Menu ul li a{ 
-    color: <?php echo MktColor::$Menu_Text; ?>
+    color: $Menu_Text;
 	text-decoration: none;
 	margin:auto; 
 	text-align:center; 
@@ -45,7 +40,7 @@
 }
 
 .Mobiel .Menu ul li a:active { 
-    color: <?php echo MktColor::$Menu_Text; ?>
+    color: $Menu_Text;
 	text-decoration: none;
 }
 
@@ -80,13 +75,13 @@
 	
 .Mobiel .Content{
 	float : left;
-	background-color: <?php echo MktColor::$Markdown_Background; ?>
+	background-color: $Markdown_Background;
 	margin-top: 10px;
 }
 
 .Mobiel .Footer{
 	float : left;
-	background-color: <?php echo MktColor::$Footer_Background; ?>
+	background-color: $Footer_Background;
 	margin-top: 10px;
 	margin-bottom: 5px;
 	text-align:center;
@@ -94,12 +89,12 @@
 }
 
 .Mobiel .Footer a{ 
-    color: <?php echo MktColor::$Footer_Text; ?>
+    color: $Footer_Text;
 	text-decoration: none;
 }
 
 .Mobiel .Footer a:active { 
-    color: <?php echo MktColor::$Footer_Text; ?>
+    color: $Footer_Text;
 	text-decoration: none;
 }
 
@@ -122,5 +117,5 @@
 }
 
 .Mobiel .TopBorder{
-	border-top: <?php echo MktColor::$LijntjeDikte; ?> solid <?php echo MktColor::$Lijntje; ?>
+	border-top: $LijntjeDikte; solid $Lijntje;
 }
