@@ -1,10 +1,13 @@
 <?php
+	header('Content-Encoding: gzip');
 	$j = new JSqueeze();
+	$site = "";
 	foreach(scandir('.') as $file) {
 		if($file[0] != '.' && !is_dir($file) && $file[0] != '-') {
-			echo $j->squeeze(file_get_contents($file), true, false) . PHP_EOL;
+			$site .= $j->squeeze(file_get_contents($file), true, false) . PHP_EOL;
 		}
 	}
+	echo gzencode($site);
 ?>
 
 <?php // vi: set fenc=utf-8 ts=4 sw=4 et:
