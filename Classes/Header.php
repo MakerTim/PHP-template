@@ -17,7 +17,7 @@
 			'<link href="%root%/CSS/SubMenuStyle.css.php" type="text/css" rel="stylesheet" />',
 			'<link href="%root%/CSS/SubMenuStyleMobiel.css.php" type="text/css" rel="stylesheet" />',
 			'<script src="https://apis.google.com/js/platform.js" async defer></script>',
-			'<script src="%root%/JavaScript/.min.php"></script>',
+			'<script src="%root%/JavaScript/-min.php"></script>',
 		);		
 		
 		public static function getMetaTags() {

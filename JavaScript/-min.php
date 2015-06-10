@@ -1,7 +1,7 @@
 <?php
 	$j = new JSqueeze();
 	foreach(scandir('.') as $file) {
-		if($file[0] != '.' && !is_dir($file) && $file != __FILE__) {
+		if($file[0] != '.' && !is_dir($file) && $file[0] != '-') {
 			echo $j->squeeze(file_get_contents($file), true, false) . PHP_EOL;
 		}
 	}
