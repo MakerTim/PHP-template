@@ -16,8 +16,8 @@ function highlightMenu() {
 		.animate({
 			backgroundColor: "rgba(" + color[0] + "," + color[1] + "," + color[2] + "," + PHP.mainmenu.opacity + ")",
 			paddingBottom: 25,
-			paddingLeft: 14,
-			paddingRight: 14,
+			paddingLeft: 5,
+			paddingRight: 5,
 			borderWidth: 2
 			}, 500)
 			.css("borderBottomRightRadius", 15)
