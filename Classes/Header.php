@@ -28,7 +28,7 @@
 				$ret .= '<meta name="Slurp" content="noydir" />'. PHP_EOL;
 			}
 			$ret .= '<meta name="description" content=' . str_replace(array('\n.', '\n\n', '\n', '  '), ' ', 
-					json_encode(strip_tags(implode(' ', array_slice(explode(' ', $GLOBALS['pageContent']->content), 0, 25))))) . ' />'. PHP_EOL;
+					json_encode(strip_tags(implode(' ', array_slice(explode(' ', $GLOBALS['pageContent']->content), 0, 20))))) . ' />'. PHP_EOL;
 			$builder = '';
 			foreach(MktConfig::$keys as $key) {
 				$builder .= $key . ', ';

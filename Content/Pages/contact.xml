@@ -1,0 +1,13 @@
+<Page>
+	<Menu>
+		<Index>Contact</Index>
+		<Banner>true</Banner>
+		<SideBar>true</SideBar>
+		<Sub>test</Sub>
+	</Menu>
+	<Md>
+# Contact
+---
+
+	</Md>
+</Page>
