@@ -74,6 +74,7 @@ body {
 .Pagina .Menu ul li a{ 
     color: $Menu_Text;
 	text-decoration: none;
+	display: inline-block;
 }
 
 .Pagina .Menu ul li a:active { 
