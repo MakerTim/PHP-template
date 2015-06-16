@@ -15,7 +15,7 @@ function highlightMenu() {
 		$(".menuSelected")
 		.animate({
 			backgroundColor: "rgba(" + color[0] + "," + color[1] + "," + color[2] + "," + PHP.mainmenu.opacity + ")",
-			paddingBottom: 25,
+			paddingBottom: 21,
 			paddingLeft: 4,
 			paddingRight: 4,
 			borderWidth: 2
