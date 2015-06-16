@@ -16,8 +16,8 @@ function highlightMenu() {
 		.animate({
 			backgroundColor: "rgba(" + color[0] + "," + color[1] + "," + color[2] + "," + PHP.mainmenu.opacity + ")",
 			paddingBottom: 25,
-			paddingLeft: 5,
-			paddingRight: 5,
+			paddingLeft: 4,
+			paddingRight: 4,
 			borderWidth: 2
 			}, 500)
 			.css("borderBottomRightRadius", 15)
@@ -31,10 +31,12 @@ function highlightSubMenu() {
 		if(highlight.length > 0) { 
 			$("#Side_" + highlight[0]).addClass("open");
 			if(highlight.length > 1) {
-				$("#Side_Sub_" + highlight[1] + ">a").attr("style", "background-color: " + PHP.page.highlightSubColor);
+				selector = $("#Side_Sub_" + highlight[1] + ">a");
 			} else {
-				$("#Side_" + highlight[0] + ">a").attr("style", "background-color: " + PHP.page.highlightSubColor);
+				selector = $("#Side_" + highlight[0] + ">a");
 			}
+			selector.attr("style", "background-color: " + PHP.page.highlightSubColor + 
+										"; color: "+ PHP.page.highlightSubTxtColor);
 		}
 	}
 }

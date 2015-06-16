@@ -62,6 +62,7 @@
 		// SubMenu
 		public static $Sub_Text = 					'rgba(46,  46,  46,   1.0);';
 		public static $Sub_Item = 					'rgba(192, 192, 192,  1.0);';
+		public static $Sub_Text_Highlight = 		'rgba(255, 255, 255,  1.0);';
 		public static $Sub_Item_Highlight = 		'rgba(90,  90,  90,   0.5);';
 		public static $Sub_Item_Hover = 			'rgba(90,  90,  90,   1.0);';
 		public static $Sub_Item_Sub = 				'rgba(222, 222, 222,  1.0);';

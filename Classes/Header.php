@@ -91,6 +91,7 @@
 			$ret .= 'PHP.page.hasSideBar = ' . json_encode(isset($MktPage->sub) && !empty($MktPage->sub)) . ';';
 			$ret .= 'PHP.page.highlightSubMenu = ' . json_encode($MktPage->SubIndex) . ';';
 			$ret .= 'PHP.page.highlightSubColor = ' . json_encode(MktColor::$Sub_Item_Highlight) . ';';
+			$ret .= 'PHP.page.highlightSubTxtColor = ' . json_encode(MktColor::$Sub_Text_Highlight) . ';';
 			$ret .= 'PHP.page.title = ' . json_encode($GLOBALS['pageContent']->getTitle()) . ';';
 			$ret .= 'PHP.isMobiel = ' . json_encode($GLOBALS['mob']->isMobile()) . ';';
 			
