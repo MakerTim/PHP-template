@@ -121,7 +121,9 @@
 		
 		public function PrintBar() {
 			$ret = '<ul class="ulSidebar">' . PHP_EOL;
-			$ret .= '<li><h3>' . $this->name . '</h3></li>';
+			if(isset($this->name) && !empty($this->name)) {
+				$ret .= '<li><h3>' . $this->name . '</h3></li>';
+			}
 			foreach($this->options as $option) {
 				$hasSub = isset($option->subs) && !empty($option->subs);
 				$ret .= '<li id="Side_' . $option->id . '" '. ($hasSub ? 'class="has-sub"' : '') . '>' . PHP_EOL .
