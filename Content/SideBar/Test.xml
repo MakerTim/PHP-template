@@ -1,4 +1,5 @@
 <SideBar>
+	<Name>Test Sidebar</Name>
 	<Option>
 		<Name>Home</Name>
 		<Href>../Index/</Href>

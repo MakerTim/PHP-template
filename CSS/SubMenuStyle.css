@@ -27,6 +27,15 @@
 	float: right;
 }
 
+.Pagina .sidebar > ul > li > h3 {
+	padding: 16px 22px;
+	z-index: 2;
+	margin: 0px;
+	text-decoration: none;
+	color: $Sub_Text;
+	background: $Sub_Item;
+}
+
 .Pagina .sidebar > ul > li > a {
 	padding: 16px 22px;
 	cursor: pointer;

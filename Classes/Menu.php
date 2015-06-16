@@ -82,6 +82,7 @@
 	
 	class SideBar {
 		
+		var $name;
 		var $options;
 		var $hasError;
 		
@@ -108,6 +109,7 @@
 				}
 				libxml_clear_errors();
 				if(!is_null($xmlError) && sizeof($xmlError) == 0) {
+					$this->name = $xml->Name;
 					foreach($xml->Option as $option) {
 						array_push($this->options, new SideBarItem($option));
 					}
@@ -119,6 +121,7 @@
 		
 		public function PrintBar() {
 			$ret = '<ul class="ulSidebar">' . PHP_EOL;
+			$ret .= '<li><h3>' . $this->name . '</h3></li>';
 			foreach($this->options as $option) {
 				$hasSub = isset($option->subs) && !empty($option->subs);
 				$ret .= '<li id="Side_' . $option->id . '" '. ($hasSub ? 'class="has-sub"' : '') . '>' . PHP_EOL .
