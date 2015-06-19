@@ -1,176 +1,8 @@
-<!DOCTYPE html>
-<html lang="nl">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<!-- Latest compiled and minified CSS -->
-		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
-		<!-- jQuery library -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-		<!-- Latest compiled JavaScript -->
-		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-	</head>
-	<body>
-		<div class="row">
-			<div id="error" class="col-md-6 col-md-offset-3 text-center text-error bg-danger" style="display: none;">
-				There was an error:
-			</div>
-			<div id="success" class="col-md-6 col-md-offset-3 text-center text-error bg-success" style="display: none;">
-			</div>
-			<div class="col-md-6 col-md-offset-3 panel panel-default">
-				<h1 class="text-center text-success panel-heading">PHP-Template setup</h1>
-				<form class="panel-body" action="" method="POST">
-					<div class="form-group">
-						<label class="text-primary" for="Domein">Domein Naam</label>
-						<input type="text" class="form-control" id="Domein" name="Domein" placeholder="makertim.nl" required="true" />
-						<label class="text-muted" for="Domein">* Domein zonder http / https</label> <br />
-						<label class="text-muted" for="Domein">* Met www is beter dan zonder</label>
-					</div>
-					<div class="Template Kleuren">
-						<label class="text-primary" for="Kleuren">Kleuren Schema</label>
-						<select class="form-control" id="Kleuren" name="Kleuren" placeholder="Template Kleuren Schema">
-							<option>Amerika</option>
-							<option>Gray</option>
-							<option>mint</option>
-							<option>Zomer</option>
-						</select>
-						<br />
-					</div>
-					<div class="form-group">
-						<label class="text-primary" for="Google">Google+ Link</label>
-						<input type="text" class="form-control" id="Google" name="Google" placeholder="Google+ linkje" />
-						<label class="text-muted" for="Google">* https://plus.google.com/u/0/113110556789967759093/posts</label>
-					</div>
-					<div class="form-group">
-						<label class="text-primary" for="Twitter">Twitter Account</label>
-						<input type="text" class="form-control" id="Twitter" name="Twitter" placeholder="MakerTim" />
-						<label class="text-muted" for="Twitter">* Alleen username</label>
-					</div>
-					<div class="form-group">
-						<label class="text-primary" for="Facebook">Facebook link</label>
-						<input type="text" class="form-control" id="Facebook" name="Facebook" placeholder="Facebook Pagina link" />
-						<label class="text-muted" for="Facebook">* https://www.facebook.com/pages/Aanbiedingreizennl/424178287687819</label>
-					</div>
-					<div class="form-group">
-						<label class="text-primary" for="Root">Root Directory</label>
-						<input type="text" class="form-control" id="Root" name="Root" placeholder="/" />
-						<label class="text-muted" for="Root">* / of /MAP NAAM/</label> <br />
-						<label class="text-muted" for="Root">Locatie waar de site geupload moet worden.</label>
-					</div>
-					<div class="form-group">
-						<label class="text-primary" for="Path">Path Variabel</label>
-						<input type="text" class="form-control" id="Path" name="Path" placeholder="Page" />
-						<label class="text-muted" for="Path">* Het deel dat na je domein komt en voor de pagina naam</label>
-					</div>
-					<div class="form-group">
-						<label class="text-primary" for="Vergeten">Keyswords</label>
-						<input type="text" class="form-control" id="Sleutel" name="Sleutel" placeholder="None" disabled="true" />
-						<input type="text" class="form-control" id="Vergeten" name="Vergeten" placeholder="toAdd" />
-						<button id="Add" class="form-control" onClick="return false;">Voeg toe</button>
-						<button id="Reset" class="form-control" onClick="return false;">Reset Tags</button>
-						<label class="text-muted" for="Vergeten">* Zoek woorden waarop de site gevonden moet worden</label>
-						<script>
-							$("#Reset").click(function() {
-								$("#Sleutel").val("");
-								$("#Vergeten").val("");
-								$("#Vergeten").focus();
-							});
-							$("#Add").click(function() {
-								add =  $("#Vergeten").val().replace(/\\/g, '\\\\').replace(/'/g, "\\'");
-								$("#Sleutel").val($("#Sleutel").val() + "'" + add + "', ");
-								$("#Vergeten").val("");
-								$("#Vergeten").focus();
-							});
-						</script>
-					</div>
-					<br />
-					<div class="form-group bg-warning">
-						<h3 class="text-danger text-center">Submit</h3>
-						<p class="text-muted text-center">Maak de website</p>
-						<input type="submit" onClick="$('#Sleutel').removeAttr('disabled');" id="submit" class="form-control" value="Bouw website" />
-					</div>
-				</form>
-			</div>
-		</div>
-
-
-
 <?php
-	if(!isset($_POST) || empty($_POST['Domein'])) {
-		exit;
-	}
-	if(empty($_POST['Kleuren'])) {
-		showError('Selecteer een Kleuren profiel.');
-		exit;
-	}
-	if(empty($_POST['Root'])) {
-		showError('Vul de map in waar je de Root van de site wilt installeren.');
-		exit;
-	}
+	downlaodTemplate();
+	unlink(__FILE__);
+	echo 'Done.';
 	
-	$domein 	= $_POST['Domein'];
-	$root 		= $_POST['Root'];
-	$path 		= $_POST['Path'];
-	$rootF 		= '.' . preg_replace('/\/$/', '', $_POST['Root']);
-	$google 	= "$_POST[Google]";
-	$twitter 	= "$_POST[Twitter]";
-	$facebook 	= "$_POST[Facebook]";
-	$keys 	  	= str_replace("\'", "'", "$_POST[Sleutel]");
-	
-	downlaodTemplate($rootF);
-	config($domein, $root, $rootF, $google, $twitter, $facebook, $keys, true, $_POST['Kleuren']);
-	htaccess($path, $rootF, $root);
-	showSuccess('Webiste opgezet.');
-	
-	function showSuccess($errorMessage) {
-		echo '<script> $("#success").show(); $("#success").html($("#success").html() + "<br /> <p>' . 
-				$errorMessage . '</p>"); </script>';
-	}
-	
-	function showError($errorMessage) {
-		echo '<script> $("#error").show(); $("#error").html($("#error").html() + "<br /> <p>' . 
-				$errorMessage . '</p>"); </script>';
-	}
-	
-	function htaccess($page = 'Page', $rootF = '.', $root = '/') {
-		$htaccess = trim(file_get_contents($rootF .'/.htaccess', $htaccess));
-		$htaccess = preg_replace(
-			'/ErrorDocument 404[\s!-~\n]*?index\.php\?404=404/', 
-			"ErrorDocument 404 $root$page/index.php?404=404", $htaccess);
-		file_put_contents($rootF .'/.htaccess', $htaccess);
-	}
-	
-	function config($domein = '', $root = '/', $rootF = '.', 
-			$google = '', $twitter = '', $facebook = '', $keys = '',
-			$newConfig = true, $colorTemplate = 'Zomer') {
-		$config = trim(file_get_contents($rootF .'/Classes/MktConfig.php'));
-		if($newConfig){
-			$replace = array(
-				"/google.+;/",
-				"/twitter.+;/",
-				"/facebook.+;/",
-				"/domein.+;/",
-				"/rootDir.+;/",
-				"/keys[\s!-~\n]*?;/",
-			);
-			$for = array(
-				"google = '$google';",
-				"twitter = '$twitter';",
-				"facebook = '$facebook';",
-				"domein = '$domein';",
-				"rootDir = '$root';",
-				"keys = array($keys);",
-			);
-		} else {
-			$replace = '/google/';
-			$for = 'google';
-		}
-		if(!is_null($colorTemplate)) {
-			$config = preg_replace('/\/\/ Algemeen[\s!-~\n]*?}/', file_get_contents("Classes/Template/$colorTemplate.txt") . '}', $config);
-		}
-		file_put_contents($rootF .'/Classes/MktConfig.php', preg_replace($replace, $for, $config));
-	}
-
 	function downlaodTemplate($dir = '.') {
 		file_put_contents('temp.zip', file_get_contents('https://github.com/MakerTim/PHP-template/archive/master.zip'));
 		$unzip = new Unzip();
@@ -192,7 +24,7 @@
 		$dir = opendir($src); 
 		@mkdir($dst); 
 		while(false !== ($file = readdir($dir))) { 
-			if(($file != '.') && ($file != '..') && ($file != 'Content')) { 
+			if(($file[0] != '.') && ($file != 'Content')) { 
 				if(is_dir("$src/$file")) { 
 					recurse_copy("$src/$file", "$dst/$file"); 
 				} else {
@@ -873,8 +705,6 @@
 			return FALSE;
 		}
 	}
-	unlink(__FILE__);
-	echo 'Done.';
 ?>
 	</body>
 </html>
